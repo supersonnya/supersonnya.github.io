@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="records">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">收藏的链接</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jul 20, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="外语学习">外语学习</h3>
+<ul>
+<li><a href="https://www.up-6.com/" target="_blank">英语学习导航</a></li>
+<li><a href="http://enpuz.com/" target="_blank">英语句子语法分析</a></li>
+<li><a href="http://lecoinfrancais.org/" target="_blank">法语角</a></li>
+<li><a href="https://babyyoung.gitbook.io/english-level-up-tips" target="_blank">English Level Up Tips</a></li>
+<li><a href="http://fayufaguo.com/" target="_blank">法语法国词典</a></li>
+<li><a href="https://www.elllo.org/index.htm" target="_blank">ELLLO</a></li>
+<li><a href="https://ieltsonlinetests.com/zh-hans/ielts-exam-library" target="_blank">雅思在线</a></li>
+<li><a href="https://www.ebooksgratuits.com/" target="_blank">Ebooks libres et gratuits</a></li>
+<li><a href="https://www.fun-mooc.fr/" target="_blank">Se former en liberté</a></li>
+<li><a href="https://dailysciencefiction.com/" target="_blank">Dailysciencefiction</a></li>
+<li><a href="https://americanliterature.com/" target="_blank">Short Stories&amp;Classic Literature</a></li>
+<li><a href="http://www.qsbdc.com/" target="_blank">轻松背单词</a></li>
+<li><a href="https://en-yinbiao.xiao84.com/ybinput/" target="_blank">英语音标输入</a></li>
+<li><a href="http://www.dailywritingtips.com/" target="_blank">Dailywritingtips</a></li>
+<li><a href="https://crashcourse.club/" target="_blank">Dailywritingtips</a></li>
+</ul>
+<h3 id="技术参考">技术参考</h3>
+<ul>
+<li><a href="http://www.codebaoku.com/" target="_blank">编程宝库</a></li>
+<li><a href="http://www.yunweipai.com/" target="_blank">运维派</a></li>
+<li><a href="https://www.linuxidc.com/" target="_blank">Linux公社</a></li>
+<li><a href="https://www.centoschina.cn/" target="_blank">CentOS中文站</a></li>
+<li><a href="https://05x-docs.pyecharts.org/#/zh-cn/prepare" target="_blank">PyeCharts</a></li>
+<li><a href="https://www.zabbix.com/documentation/5.0/zh/manual" target="_blank">Zabbix</a></li>
+<li><a href="https://www.linuxcool.com/" target="_blank">Linux命令行大全</a></li>
+<li><a href="https://books.studygolang.com/" target="_blank">Golang</a></li>
+<li><a href="https://pkgs.org/" target="_blank">Packages For Linux</a></li>
+<li><a href="https://github.com/jobbole" target="_blank">伯乐在线</a></li>
+<li><a href="http://frontendjs.com/" target="_blank">前端导航</a></li>
+<li><a href="https://zh.javascript.info/" target="_blank">Javascript教程</a></li>
+<li><a href="https://enjoycss.com/" target="_blank">EnjoyCSS</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank">Web开发技术</a></li>
+<li><a href="https://caniuse.com/" target="_blank">CanIUse</a>
+<a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html#">Linux工具快速教程</a><br/>
+<a href="https://gywbd.github.io/posts/2014/8/50-linux-commands.html">Linux常用50命令</a><br/>
+<a href="https://www.cnblogs.com/skyhu365/p/12698013.html">Linux运维</a><br/>
+<a href="https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/">鸟哥的Linux私房菜</a></li>
+</ul>
+<h3 id="在线工具">在线工具</h3>
+<ul>
+<li><a href="http://www.biguolunwen.com/" target="_blank">论文检测</a></li>
+<li><a href="https://www.xinhuokj.com/ocr/table" target="_blank">在线识别</a></li>
+<li><a href="https://www.xinhuokj.com/ocr/tahttps://www.mygraphpaper.com/index.php?lang=zh-hansble" target="_blank">图形方格纸</a></li>
+<li><a href="https://tool.oschina.net/" target="_blank">在线工具</a></li>
+<li><a href="https://www.cleverpdf.com/cn" target="_blank">在线PDF转换</a></li>
+<li><a href="https://zxxgj.net/" target="_blank">在线小工具</a></li>
+<li><a href="https://paste.wmlabs.net/" target="_blank">在线文本</a></li>
+<li><a href="https://codegen.cc/" target="_blank">开发工具箱</a></li>
+<li><a href="https://darebee.com/" target="_blank">DAREBEE</a></li>
+<li><a href="https://www.jarhu.com/chinesebook.html" target="_blank">中国图书分类</a></li>
+<li><a href="https://www.officeplus.cn/" target="_blank">Office模板</a></li>
+<li><a href="https://www.tianyancha.com/" target="_blank">天眼查</a></li>
+<li><a href="https://huajian.smallpig.site/" target="_blank">化简</a></li>
+<li><a href="https://thetypingcat.com/typing-courses" target="_blank">Typing-Courses</a></li>
+</ul>
+<h3 id="图片图标">图片图标</h3>
+<ul>
+<li><a href="https://nightchina.net" target="_blank">夜空中国</a></li>
+<li><a href="https://wallhaven.cc/" target="_blank">Wallhaven</a></li>
+<li><a href="https://www.pexels.com/zh-cn/" target="_blank">图片素材</a></li>
+<li><a href="https://www.photopea.com/" target="_blank">Photopea</a></li>
+<li><a href="http://www.395.net.cn/" target="_blank">生成电子印章</a></li>
+<li><a href="https://www.iconshock.com/vectoricons/" target="_blank">Vectoricons</a></li>
+<li><a href="http://yeelogo.com/" target="_blank">Yeelogo</a></li>
+<li><a href="https://hatchful.shopify.com/" target="_blank">Shopify</a></li>
+</ul>
+<h3 id="软件工具">软件工具</h3>
+<ul>
+<li><a href="https://glados.rocks/" target="_blank">GLaDOS</a></li>
+<li><a href="https://v2cross.com/" target="_blank">V2cross</a></li>
+<li><a href="https://www.appinn.com/" target="_blank">小众软件</a></li>
+<li><a href="http://www.fast8.com/" target="_blank">快吧软件</a></li>
+<li><a href="https://msdn.itellyou.cn" target="_blank">MSDN</a></li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华开源镜像</a></li>
+<li><a href="https://doku.pub/" target="_blank">Essay and primary document</a></li>
+<li><a href="https://greasyfork.org/zh-CN" target="_blank">GreasyFork</a></li>
+</ul>
+<h3 id="聚合搜索">聚合搜索</h3>
+<ul>
+<li><a href="https://www.siguso.com/" target="_blank">思谷搜</a></li>
+<li><a href="https://ujuso.com/" target="_blank">优聚搜</a></li>
+<li><a href="https://search.chongbuluo.com/" target="_blank">虫部落</a></li>
+<li><a href="https://meow.tg/" target="_blank">TG搜索</a></li>
+<li><a href="https://www.xue8nav.com/" target="_blank">学吧导航</a></li>
+</ul>
+<h3 id="阅读参考">阅读参考</h3>
+<ul>
+<li><a href="https://zh.usa1lib.org/" target="_blank">数字图书馆</a></li>
+<li><a href="https://ebook2.lorefree.com/" target="_blank">Lore Free</a></li>
+<li><a href="http://shu.ziyuandi.cn/" target="_blank">电子书导航</a></li>
+<li><a href="https://www.sulery.com/" target="_blank">书乐里</a></li>
+<li><a href="https://www.zdic.net/" target="_blank">漢典</a></li>
+<li><a href="https://www.justlaws.cn/" target="_blank">Just Laws</a></li>
+<li><a href="https://pkulaw.com/" target="_blank">法律数据库</a></li>
+<li><a href="https://www.acc5.com/baike" target="_blank">财税百科</a></li>
+</ul>
+<h3 id="影音工具">影音工具</h3>
+<ul>
+<li><a href="https://cupfox.app/" target="_blank">CupFox</a></li>
+<li><a href="https://soupian.app/" target="_blank">SouPian</a></li>
+<li><a href="https://www.rrdynb.com/" target="_blank">人人电影网</a></li>
+<li><a href="https://www.pyqn168.com/" target="_blank">影视网</a></li>
+<li><a href="https://www.549.tv/" target="_blank">影视森林</a></li>
+<li><a href="https://www.dianyinggou.com">电影狗搜索</a></li>
+<li><a href="https://www.juhi.cc">剧嗨</a></li>
+<li><a href="https://www.nnyy6.top">努努影院</a></li>
+<li><a href="https://www.dandanzan10.top">蛋蛋赞影院</a></li>
+<li><a href="https://tv.syrme.top">简影</a></li>
+<li><a href="https://yanetflix.com">奈飞中文电影站</a></li>
+<li><a href="https://www.nfyingshi.com">奈飞影视</a></li>
+<li><a href="http://www.o8tv.com">555电影</a></li>
+<li><a href="https://bit.ly/3yCVo8Z ">泥巴影院</a></li>
+<li><a href="http://open.nlc.cn/onlineedu/client/index.htm" target="_blank">国图公开课</a></li>
+<li><a href="https://theonestopradio.com/" target="_blank">OnestopRadio</a></li>
+<li><a href="https://onelist.top/" target="_blank">Onelist</a></li>
+<li><a href="https://www.anfuns.cc/" target="_blank">AnFuns动漫</a></li>
+</ul>
+<h3 id="资料文献">资料文献</h3>
+<ul>
+<li><a href="https://pdc.capub.cn/" target="_blank">出版物数据中心</a></li>
+<li><a href="http://www.koovin.com/" target="_blank">库问搜索</a></li>
+<li><a href="https://www.cn-ki.net/" target="_blank">iData</a></li>
+<li><a href="https://www.oalib.com/" target="_blank">OpenAccessLib</a></li>
+<li><a href="http://www.nlc.cn/dsb_zyyfw/sytc/sp/" target="_blank">国家数字图书馆</a></li>
+<li><a href="https://www.allhistory.com/" target="_blank">全历史</a></li>
+<li><a href="https://shitidaquan.com/" target="_blank">试题大全</a></li>
+<li><a href="https://tk.enncy.cn/" target="_blank">enncy题库</a></li>
+<li><a href="https://qzjwxt.ynau.edu.cn/jsxsd/" target="_blank">教务系统</a></li>
+<li><a href="https://ssoo.ynau.edu.cn/lyuapServer/login" target="_blank">统一身份认证</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

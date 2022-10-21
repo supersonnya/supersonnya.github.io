@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/golang/</link>
+    <description>Recent content in golang on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Aug 2022 17:22:48 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据结构</title>
+      <link>https://supersonnya.github.io/programlang/golang-datastructure/</link>
+      <pubDate>Thu, 18 Aug 2022 17:22:48 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/golang-datastructure/</guid>
+      <description>字符串转换 package main func main() { str := &amp;#34;hello&amp;#34; // 字符串转成切片 slice := []byte(str) // 切片转字符 str2 := string(slice) } // 其他类型转字符 str := strconv.FormatBool(bool) str := strconv.FormatInt(123, 2|8|16) // 2-36进制 str := strconv.FormatFloat(3.14, &amp;#39;f&amp;#39;, 6, 64) // f格式，保留6位小数，64位 str := strconv.Itoa(123) // 字符转成其他类型，转换出错为默认值 b, err := strconv.ParseBool(&amp;#34;bool&amp;#34;) // if err == nil 转换出错 n, _ := strconv.ParseInt(&amp;#34;123&amp;#34;, 16, 64) f, _ := strconv.ParseFloat(&amp;#34;3.14&amp;#34;, 64) n, _ := strconv.Atoi(&amp;#34;123&amp;#34;) // 其他类型转换字符串添加到切片 slice := make([]byte, 0, 1024) slice = strconv.</description>
+    </item>
+    
+    <item>
+      <title>Golang Base</title>
+      <link>https://supersonnya.github.io/programlang/golang-base/</link>
+      <pubDate>Wed, 27 Jul 2022 10:48:16 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/golang-base/</guid>
+      <description>1. Golang的学习方向 区块链研发 Go服务器端/游戏软件 Golang分布式/云计算软件 2. Golang的应用 区块链 后端服务器 云计算/云平台后台 3. 学习思想 先know how，再know why 先建立框架，再研究细节 做了才会，不是会了才做，动手 琢磨别人怎么做，不是自己认为怎么做 4. 解决问题的思路 发现新的问题 使用现有技术解决问题不够好，使用新技术 学习新技术的基本语法和原理 通过一个快速入门案例了解新技术的基本使用 深入学习新技术的细节，使用规范，解决方案，常见陷阱 应用新技术解决问题 1. Golang的特点 静态语言的安全和性能 动态语言开发维护的高效率 继承C理念，表达式语法，控制结构，基础数据类型，参数传值，保留了指针 引入包的概念，每个文件都要归属于一个包 内存自动回收垃圾 天然并发，语言层面支持并发，可实现大并发处理 管道通信机制 函数返回多个值 创新：切片slice，延时执行defer 2. 配置环境变量 GOROOT PATH GOPATH 3. 运行.go文件 go build name.go: build之后生成name.exe name.exe（.\name.exe）: 直接运行可执行文件 4. 执行流程 go build编译生成.exe，执行.exe，没有go环境也可执行 go run直接执行，编译运行一步完成，必须有go环境 5. 编译运行 go build -o myhello.exe hello.go: 指定编译生成的文件，如果程序有错误，编译时报错 6. 语法要求和注意事项 文件以.go为扩展名 程序入口为main()函数 严格区分大小写 不需要分号（自动在每行后加分号） 一行一条语句 定义的变量或引入的包没有用到，代码不能通过编译 大括号成对出现，缺一不可 7.</description>
+    </item>
+    
+  </channel>
+</rss>

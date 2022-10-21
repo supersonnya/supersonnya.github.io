@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <link rel="alternate" type="application/rss+xml" href="https://supersonnya.github.io/index.xml" title="Sonnya" />
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li class="uk-active "><a style="font-size: 18px; text-transform: none"
+                        href="https://supersonnya.github.io/"> Home </a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li class="uk-active"><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+<!-- Hexagon Stylesheet -->
+
+<link rel="stylesheet" href="/css/hexagon.min.css">
+<!-- Index -->
+
+<link rel="stylesheet" href="/css/index.min.css">
+
+
+
+
+
+<div class="uk-text-center uk-margin-bottom uk-margin-top">
+    <ul id="links" class="icons">
+        
+        
+        
+        <li><a href="https://github.com/supersonnya"> <img
+                    class="contain" src="images/homepage/github.svg" alt="GitHub" loading="lazy"> </a></li>
+         
+        <li><a href="https://gitee.com/supersonnya"> <img
+                    class="contain" src="images/homepage/gitee.svg" alt="Gitee" loading="lazy"></a></li>
+         
+        <li><a><img class="contain" src="images/homepage/wechat.svg" alt="Wechat" loading="lazy"></a><div id="wechatimg"></div></li>
+         
+        <li><a><img class="contain" src="images/homepage/qq.svg" alt="QQ" loading="lazy"></a><div id="qqimg"></div></li>
+         
+        <li><a href="mailto:supersonnya@gmail.com" > <img
+                    class="contain" src="images/homepage/gmail.svg" alt="Gmail" loading="lazy"></a></li>
+         
+        <li><a href="mailto:supersonnya@outlook.com"> <img
+                    class="contain" src="images/homepage/outlook.svg" alt="Outlook" loading="lazy"></a></li>
+                  
+    </ul>
+</div>
+
+
+
+<section class="uk-margin-top" style="z-index: 99;">
+    <div class="uk-container">
+        <div class="uk-text-center">
+            
+            <p class="uk-text-lead">Road long long, Go up, Go down~</p>
+            
+            <a class="uk-button uk-button-text" href="https://supersonnya.github.io/about">Find more</a>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<div id="modal_Git" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header"><h2 class="uk-modal-title">Git</h2></div>
+        <p>Details coming soon, contact me if you want to know more</p>
+    </div>
+</div>
+
+<div id="modal_Hugo" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header"><h2 class="uk-modal-title">Hugo</h2></div>
+        <p>Details coming soon, contact me if you want to know more</p>
+    </div>
+</div>
+
+<div id="modal_Linux" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header"><h2 class="uk-modal-title">Linux</h2></div>
+        <p>Details coming soon, contact me if you want to know more</p>
+    </div>
+</div>
+
+<div id="modal_Python" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header"><h2 class="uk-modal-title">Python</h2></div>
+        <p>Details coming soon, contact me if you want to know more</p>
+    </div>
+</div>
+
+<div id="modal_SQL" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header"><h2 class="uk-modal-title">SQL</h2></div>
+        <p>Details coming soon, contact me if you want to know more</p>
+    </div>
+</div>
+
+
+<section class="uk-margin-medium-top uk-margin-medium-bottom">
+    <div class="uk-container">
+        <h1 class="uk-heading-line uk-text-center uk-heading"><span>Skills<sub class="uk-text-center uk-text-lead"><i>  Click to find out more</i></sub></span></h1>
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+            uk-grid>
+            
+            <div class="imagemargin">
+                <img class="contain skills" src="images/operation/git.svg" alt="" loading="lazy" style="cursor: pointer"
+                    uk-toggle="target: #modal_Git">
+                <h4>Git</h4>
+            </div>
+            
+            <div class="imagemargin">
+                <img class="contain skills" src="images/operation/hugo.svg" alt="" loading="lazy" style="cursor: pointer"
+                    uk-toggle="target: #modal_Hugo">
+                <h4>Hugo</h4>
+            </div>
+            
+            <div class="imagemargin">
+                <img class="contain skills" src="images/operation/linux.svg" alt="" loading="lazy" style="cursor: pointer"
+                    uk-toggle="target: #modal_Linux">
+                <h4>Linux</h4>
+            </div>
+            
+            <div class="imagemargin">
+                <img class="contain skills" src="images/homepage/python.svg" alt="" loading="lazy" style="cursor: pointer"
+                    uk-toggle="target: #modal_Python">
+                <h4>Python</h4>
+            </div>
+            
+            <div class="imagemargin">
+                <img class="contain skills" src="images/operation/sql.svg" alt="" loading="lazy" style="cursor: pointer"
+                    uk-toggle="target: #modal_SQL">
+                <h4>SQL</h4>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sonnya</title>
+    <link>https://supersonnya.github.io/tags/</link>
+    <description>Recent content in Tags on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 20 Sep 2022 15:57:46 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>劝学</title>
+      <link>https://supersonnya.github.io/tags/%E5%8A%9D%E5%AD%A6/</link>
+      <pubDate>Tue, 20 Sep 2022 15:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/tags/%E5%8A%9D%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>古诗</title>
+      <link>https://supersonnya.github.io/tags/%E5%8F%A4%E8%AF%97/</link>
+      <pubDate>Tue, 20 Sep 2022 15:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/tags/%E5%8F%A4%E8%AF%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Book</title>
+      <link>https://supersonnya.github.io/tags/book/</link>
+      <pubDate>Wed, 04 Aug 2021 23:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>偏见的本质</title>
+      <link>https://supersonnya.github.io/tags/%E5%81%8F%E8%A7%81%E7%9A%84%E6%9C%AC%E8%B4%A8/</link>
+      <pubDate>Wed, 04 Aug 2021 23:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/tags/%E5%81%8F%E8%A7%81%E7%9A%84%E6%9C%AC%E8%B4%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://supersonnya.github.io/tags/github/</link>
+      <pubDate>Tue, 03 Aug 2021 11:57:40 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="wenwen">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+<section class="page-header blog-single-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          余生，愿你活出自己的精彩
+        </h2>
+        <div class="post-meta">
+          <ul>
+            <li>
+              <img src="https://supersonnya.github.io/images/client/client-2.png" alt="author-thumb" />
+            </li>
+            <li>
+              <h5>
+                William Rick
+              </h5>
+            </li>
+            <li>
+              October 1, 2020
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <article class="blog-single-post">
+          <h6 id="曾几何时为了让自己显得合群选择去做自己不喜欢的事为了讨好喜欢的人一次次地委屈自己甚至为了陌生人的一个眼神就陷入了深深的自我怀疑">曾几何时，为了让自己显得合群，选择去做自己不喜欢的事；为了讨好喜欢的人，一次次地委屈自己；甚至，为了陌生人的一个眼神，就陷入了深深的自我怀疑。</h6>
+<h6 id="可是这样小心翼翼的你一定很累吧你以为照顾了所有人的想法就能得到他们的喜欢你以为逼着自己合群就能真的合群直到后来才发现在日复一日对自己的为难中你逐渐弄丢了真实的自己">可是，这样小心翼翼的你，一定很累吧。你以为照顾了所有人的想法，就能得到他们的喜欢；你以为逼着自己合群，就能真的合群。直到后来才发现，在日复一日对自己的为难中，你逐渐弄丢了真实的自己。</h6>
+<h6 id="有一句话说世上没有不快乐的人只有不肯让自己快乐的心">有一句话说：“世上没有不快乐的人，只有不肯让自己快乐的心。”</h6>
+<h6 id="如果一段关系让你变得卑微你可以选择抽身离去如果一个人总是让你悲伤哭泣你要学会放手">如果一段关系让你变得卑微，你可以选择抽身离去；如果一个人总是让你悲伤哭泣，你要学会放手。</h6>
+<p><img src="/images/blog/single-blog-1.jpg" alt="blog image"></p>
+<h6 id="始终相信每个人最初的样子都是最美好的真正喜欢你的人会喜欢你原来的样子真正爱你的人从来不需要你的委曲求全">始终相信，每个人最初的样子，都是最美好的。真正喜欢你的人，会喜欢你原来的样子；真正爱你的人，从来不需要你的委曲求全。</h6>
+<h2 id="working-from-home-healthy-practices-to-stay-productive">Working from Home: Healthy Practices to Stay Productive</h2>
+<ul>
+<li>Setting a Healthy Routine</li>
+<li>Proper Ergonomics</li>
+<li>Exercise Regularly</li>
+<li>Find Work-Life Balance When Working from Home</li>
+<li>Dealing with Family Members and Coworkers</li>
+</ul>
+<p><img src="/images/blog/single-blog-3.jpg" alt="blog image"></p>
+<h6 id="后半生请把身上的枷锁全部解除去做喜欢的事去聆听自己内心的声音你会发现这世上没有什么事情比活出自己更加幸福">后半生，请把身上的枷锁，全部解除。去做喜欢的事，去聆听自己内心的声音。你会发现，这世上没有什么事情比活出自己更加幸福。</h6>
+<h6 id="要相信真实的自己亦是一道风景线你若盛开清风自来愿你此生尽兴不负韶华殊不知人生在世最不值得的事情就是在别人的眼光中迷失自己其实正如世界上没有十全十美的人你也同样无法做到让每个人满意">要相信，真实的自己亦是一道风景线。你若盛开，清风自来。愿你此生尽兴，不负韶华。殊不知，人生在世，最不值得的事情，就是在别人的眼光中，迷失自己。其实，正如世界上没有十全十美的人，你也同样无法做到让每个人满意。</h6>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Themify -->
+<link rel="stylesheet" href="https://supersonnya.github.io/themify/themify.css">
+
+<!-- Critical CSS -->
+
+<link href="https://supersonnya.github.io/scss/critical.min.css" rel="stylesheet" />
+
+
+<link href="https://supersonnya.github.io/scss/non-critical.min.css" rel="stylesheet" />
+
+<script src="https://supersonnya.github.io/js/vendor.min.js"></script>
+
+<script src="https://supersonnya.github.io/js/script.min.js"></script>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/tools/</link>
+    <description>Recent content in tools on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Jul 2022 10:57:39 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows使用技巧</title>
+      <link>https://supersonnya.github.io/records/tools-win_tips/</link>
+      <pubDate>Wed, 27 Jul 2022 10:57:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-win_tips/</guid>
+      <description>win+R快捷命令 calc：计算器 mstsc：远程桌面连接 winver：Windows版本查看 nslookup：IP地址检测器 control：控制面板 触摸板使用 选择项目：点击触摸板 滚动：两个手指放在触摸板上，水平或垂直滑动 放大缩小：两个手指放在触摸板上，收缩或拉伸 显示右键菜单：两根手指点击触摸板 查看所有打开窗口：三根手指外扫 显示桌面：三根手指内扫 切换窗口：三根手指左右扫 打开搜索：三根手指点击触摸板 打开操作中心：四根手指点击触摸板 快捷键 F2：重命名 F4：在文件资源管理器中显示地址栏列表 Alt+带下划线字母：执行相关指令 Alt+Enter：显示项目属性 Alt+向左：返回 Alt+向右：前进 ctrl+alt+break：远程桌面切换全屏 </description>
+    </item>
+    
+    <item>
+      <title>Regexp基础知识</title>
+      <link>https://supersonnya.github.io/operation/tools-regexp/</link>
+      <pubDate>Tue, 26 Jul 2022 14:39:54 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-regexp/</guid>
+      <description>简介 Regexg是正则表达式Regular Expression的简称，用于匹配、查找和管理文本。正则表达式是表示搜索模式的字符串，常用于查找和替换文本中的字词。 基础使用 基本匹配 直接输入查找的字符或单词，类似搜索 模式匹配 . : 匹配任何字符，包括特殊字符和空格 [abc] : 可选字符匹配 [^abc] ： 否定字符集 [a-z] : 字母范围，包括首尾 [0-9] : 数字范围，包括首尾 * ： 一个字符不出现、出现一次或多次 + ： 一个字符出现一次或多次 ？ ： 一个字符不出现或出现一次 {n} ： 一个字符出现的确切次数 {n, } ： 一个字符至少出现多少次 {m, n} : 至少和至多出现的次数 () : 分组 ()-\1 : 引用组 (?: ) : 非捕获分组 | ： 允许表达式包含多个不同的分支，在表达式层面上运作 \ : 匹配特殊字符 ^ : 加在表达式前，仅查找行首 $ : 匹配字符串的结束 \w : 用于查找字母、数字和下划线 \W : 除字母、数字和下划线之外的字符 \d : 匹配数字 \D : 除数字之外的字符 \s : 空白字符 \S : 除空白符之外的字符 零宽断言 需要匹配的字符出现在另一个词语之前或之后，使用零宽断言 正向先行断言: (?</description>
+    </item>
+    
+    <item>
+      <title>Scoop安装及使用</title>
+      <link>https://supersonnya.github.io/operation/tools-scoop/</link>
+      <pubDate>Tue, 26 Jul 2022 11:15:21 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-scoop/</guid>
+      <description>Scoop安装 Windows包管理器 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) iwr -useb get.scoop.sh | iex Set-ExecutionPolicy RemoteSigned -scope CurrentUser Scoop常用命令 scoop search &amp;lt;app_name&amp;gt; scoop install &amp;lt;app_name&amp;gt; scoop uninstall &amp;lt;app_name&amp;gt; scoop list scoop cache rm &amp;lt;app_name&amp;gt; | scoop cache rm * scoop bucket known scoop bucket add &amp;lt;bucket_url&amp;gt; Scoop使用 scoop install -g aria2 # 修改aria配置 scoop config aria2-enabled true # default: true scoop config aria2-retry-wait 8 # default: 2 scoop config aria2-split 8 # default: 5 scoop config aria2-max-connection-per-server 8 # default: 5 scoop config aria2-min-split-size] 2M # default: 5M 安装常用软件 scoop install -g dingtalk scoop install -g git scoop install -g hugo-extended scoop install -g koodo-reader scoop install -g lx-music scoop install -g mobaxterm scoop install -g mysql-workbench scoop install -g neteasemusic scoop install -g potplayer scoop install -g python@3.</description>
+    </item>
+    
+    <item>
+      <title>Adb命令</title>
+      <link>https://supersonnya.github.io/operation/tools-adbcmds/</link>
+      <pubDate>Tue, 26 Jul 2022 09:31:03 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-adbcmds/</guid>
+      <description>adb连接Android设备 adb connect &amp;lt;device_ip&amp;gt; # 显示连接设备 adb devices fastboot devices 操作指令 查看应用列表 # 查看所有应用 adb shell pm list packages # 查看系统应用 adb shell pm list packages -s # 查看第三方应用 adb shell pm list packages -3 # 查看禁用应用 adb shell pm list packages -d # 查看启用应用 adb shell pm list packages -e # 查询应用详情 adb shell dumpsys package &amp;lt;package_name&amp;gt; # 查看应用安装路径 adb shell pm path &amp;lt;package_name&amp;gt; # 查看应用安装路径 安装应用 # 普通安装 adb install &amp;lt;apk_path&amp;gt; # 安装到SD存储卡 adb install -s &amp;lt;apk_path&amp;gt; # 覆盖安装 adb install -r &amp;lt;apk_path&amp;gt; # 降级覆盖安装 adb install -d &amp;lt;apk_path&amp;gt; # 允许应用所需全部权限 adb install -g &amp;lt;apk_path&amp;gt; 禁用恢复应用 # 禁用 adb shell pm disable-user &amp;lt;package_name&amp;gt; # 恢复 adb shell pm enable &amp;lt;package_name&amp;gt; # 删除 adb shell pm uninstall [-k] --user 0 &amp;lt;package_name&amp;gt; 强制停止应用 adb shell am force-stop &amp;lt;package_name&amp;gt; 重启系统 # 普通重启 adb reboot # 重启到Recovery模式 adb reboot recovery # 重启到Fastboot模式 adb reboot bootloader 其他 # 切换到Shell模式 adb shell # 电脑文件传送到Android adb push &amp;lt;file_name&amp;gt; /sdcard/ # Android文件下载到电脑 adb pull /sdcard/&amp;lt;filename&amp;gt; &amp;lt;local_path&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>Git基本使用</title>
+      <link>https://supersonnya.github.io/operation/tools-git/</link>
+      <pubDate>Thu, 21 Jul 2022 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-git/</guid>
+      <description>Git本地使用 初始化一个Git仓库：git init 添加文件到Git仓库 将文件添加到暂存区，可多次使用，添加多个文件：git add &amp;lt;file&amp;gt;； 将添加的文件全部提交到仓库的当前分支：git commit -m &amp;lt;message&amp;gt;。 查看仓库当前状态：git status 查看修改的文件内容：git diff 本地仓库管理 HEAD指向当前版本 查看提交历史版本：git log 回退到指定版本：git reset --hard &amp;lt;commit_id&amp;gt; HEAD^表示上一版本，HEAD^^上两个版本，HEAD~100上100版本 查看命令历史，确定回到未来的版本：git reflog 丢弃工作区修改，用版本库或暂存区的文件替换工作区文件：git checkout -- filename 将文件从暂存区取回，替换工作区文件：git reset HEAD filename 删除文件：git rm filename; git commit 恢复误删文件：git checkout -- filename Git远程仓库 添加远程仓库：git remote add &amp;lt;name default origin&amp;gt; &amp;lt;url&amp;gt; 首次推送全部文件：git push -u origin master 后续提交：git push origin master 查看远程仓库信息：git remote -v 删除远程仓库：git remote rm &amp;lt;name&amp;gt; 克隆远程仓库：git clone &amp;lt;git_path&amp;gt; 免输密码推送远程仓库 https方式 url = https://userName:password@github.</description>
+    </item>
+    
+    <item>
+      <title>ChartJS介绍及基础使用</title>
+      <link>https://supersonnya.github.io/operation/tools-chartjs/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-chartjs/</guid>
+      <description>介绍 chartjs 是可以画各种图表的一款前端工具 chart.min.js 基于 ctx Chart对象，并传递如下参数进去 type: &amp;#39;line&amp;#39; 表示这个是一个线型图表。 bar表示柱状图。 data: 提供要显示的数据 labels 表示数据下方的文字。 datasets 表示数据集合。 一组数据一条线。 label: 这组数据的名称 data: 具体数据 borderColor: 线条颜色 borderWidth: 线条宽度 fill: false. 不进行填充 options: 其他选项 tooltips 表示鼠标移动到图标的时候的提示信息。 intersect: false. 表示鼠标不放在数据点上时，也会显示提示信息。 model: &amp;#39;index&amp;#39; 显示模式 var ctx = document.getElementById(&amp;#39;myChart&amp;#39;).getContext(&amp;#39;2d&amp;#39;); var myChart = new Chart(ctx, { type: &amp;#39;line&amp;#39;, data: { labels: [&amp;#39;红&amp;#39;, &amp;#39;蓝&amp;#39;, &amp;#39;黄&amp;#39;, &amp;#39;绿&amp;#39;, &amp;#39;紫&amp;#39;, &amp;#39;橙&amp;#39;], datasets: [{ label: &amp;#39;示例&amp;#39;, data: [12, 19, 3, 5, 2, 3], borderColor:&amp;#39;blue&amp;#39;, borderWidth: 1, fill: false, }] }, options: { tooltips: { intersect: false, mode: &amp;#39;index&amp;#39; } } }); 柱状图 &amp;lt;script&amp;gt; var ctx = document.</description>
+    </item>
+    
+    <item>
+      <title>常用应用工具</title>
+      <link>https://supersonnya.github.io/records/tools-perferapps/</link>
+      <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-perferapps/</guid>
+      <description>Windows应用 eDiary FreePDF SQLiteStudio Scoop NVM EV录屏 Notable PotPlayer Wing FTP Server MobaXterm ToDesk 向日葵 Snipaste Quicklook Mouseinc Ultraliso Fiddler Android应用 酷安 阅读 Via IPad应用 Alook </description>
+    </item>
+    
+    <item>
+      <title>收藏的链接</title>
+      <link>https://supersonnya.github.io/records/tools-bookmark/</link>
+      <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-bookmark/</guid>
+      <description>外语学习 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips 技术参考 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 在线工具 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses 图片图标 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify 软件工具 GLaDOS V2cross 小众软件 快吧软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 聚合搜索 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 阅读参考 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 影音工具 CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 资料文献 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
+    </item>
+    
+    <item>
+      <title>Hugo Post Format</title>
+      <link>https://supersonnya.github.io/operation/tools-hugo_postformat/</link>
+      <pubDate>Sun, 21 Jun 2020 09:51:43 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-hugo_postformat/</guid>
+      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 </description>
+    </item>
+    
+    <item>
+      <title>Markdown基础语法</title>
+      <link>https://supersonnya.github.io/operation/tools-markdown_basicalgrammer/</link>
+      <pubDate>Sat, 20 Jun 2020 09:56:18 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-markdown_basicalgrammer/</guid>
+      <description>1. 标题 1.1 使用=和-标记一级和二级标题 一级标题 ======= 二级标题 ------- 1.2 使用#标记 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 2. 段落 使用两个以上空格加上换行来开始下一个段落 直接使用一个空行表示开始一个段落 3. 字体 可以使用*或_ *斜体* **粗体** ***粗斜体*** 4. 线条效果 4.1 分割线 可以使用三个以上*、-或_ *** * * * --- - - - ___ _ _ _ 4.2 删除线 使用两个~ ~~删除线~~ 4.3 下划线 使用&amp;lt;u&amp;gt;&amp;lt;/u&amp;gt; &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt; 4.4 脚注 脚注[^foot] [^foot]: 添加脚注 5. 列表 5.1 无序列表 使用*、+或-加空格 * 第一项 + 第二项 - 第三项 5.</description>
+    </item>
+    
+  </channel>
+</rss>

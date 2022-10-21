@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="frontend">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Typescript Base</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jul 27, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 30 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="声明文件">声明文件</h3>
+<h4 id="1-声明文件">1. 声明文件</h4>
+<ul>
+<li>使用第三方库时，需要引用声明文件才能有对应的代码补全、接口提示等功能</li>
+</ul>
+<h5 id="11-声明语句">1.1 声明语句</h5>
+<ol>
+<li><code>JavaScript</code>中使用第三方库<code>jQuery</code>，使用<code>&lt;script&gt;</code>引入，使用全局变量<code>$</code>或<code>jQuery</code></li>
+<li>在<code>Typescript</code>中，没有<code>$</code>和<code>jQuery</code>，需要使用<code>declare var</code>来定义它的类型</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 定义全局变量jQuery的类型，用于编译时检查，编译结束后会被删除
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// declare var就是声明语句
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">var</span> jQuery: (selector: <span style="color:#6ab825;font-weight:bold">string</span>) =&gt; <span style="color:#6ab825;font-weight:bold">any</span>;
+</span></span><span style="display:flex;"><span>jQuery(<span style="color:#ed9d13">&#39;#name&#39;</span>);
+</span></span></code></pre></div><h5 id="12-声明文件">1.2 声明文件</h5>
+<ul>
+<li>存放声明语句的单独文件，必须以<code>.d.ts</code>为后缀</li>
+</ul>
+<h5 id="13-第三方声明文件">1.3 第三方声明文件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用@types统一管理第三方库的声明文件
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>npm install <span style="color:#6ab825;font-weight:bold">@types</span>/jquery --save-dev
+</span></span></code></pre></div><h4 id="2-书写声明文件">2. 书写声明文件</h4>
+<ul>
+<li>当第三方库没有提供声明文件时，需要自己书写</li>
+</ul>
+<h5 id="21-全局变量">2.1 全局变量</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 全局变量声明语法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 一般来说，全局变量都是禁止修改的常量，大部分情况应使用const定义
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明语句只能定义类型，不能有具体实现
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">var</span>|<span style="color:#6ab825;font-weight:bold">let</span>|<span style="color:#6ab825;font-weight:bold">const</span> jQuery: (selector: <span style="color:#6ab825;font-weight:bold">string</span>) =&gt; <span style="color:#6ab825;font-weight:bold">any</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 定义全局函数类型，支持重载
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">function</span> jQuery(selector: <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">any</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 定义全局类，不能有具体实现，只定义类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">class</span> Animal {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">constructor</span>(name: <span style="color:#6ab825;font-weight:bold">string</span>);
+</span></span><span style="display:flex;"><span>    sayHi(): <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明全局枚举类型，被称作外部枚举
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 仅用于定义类型，而不是具体的值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">enum</span> Colors { Red, Green, Blue}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明（含有子属性的）全局对象
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">//  declare namespace内部，直接使用function ajax声明函数，不用declare function ajax
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用嵌套的namespace来声明深层的属性的类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">namespace</span> jQuery {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">function</span> ajax(url: <span style="color:#6ab825;font-weight:bold">string</span>, settings?: <span style="color:#6ab825;font-weight:bold">any</span>): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明一个全局接口或类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 应尽可能的减少全局变量或全局类型的数量，最好放到namespace下
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">interface</span>|<span style="color:#6ab825;font-weight:bold">type</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 可以组合多个声明语句进行声明合并
+</span></span></span></code></pre></div><h5 id="22-npm包的声明文件语法">2.2 <code>npm</code>包的声明文件语法</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 在声明文件中使用export导出，在使用方import导入
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#a61717;background-color:#e3d2d2">导出变量</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 导出（含有子属性的）对象
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#6ab825;font-weight:bold">namespace</span> foo {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">const</span> name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">namespace</span> bar {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">function</span> baz(): <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#6ab825;font-weight:bold">default</span> ES6 <span style="color:#a61717;background-color:#e3d2d2">默认导出</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">export</span> = commonjs <span style="color:#a61717;background-color:#e3d2d2">导出模块</span>
+</span></span></code></pre></div><h4 id="3-发布声明文件">3. 发布声明文件</h4>
+<h5 id="31-将声明文件和源码放在一起优先选择">3.1 将声明文件和源码放在一起（优先选择）</h5>
+<h5 id="32-将声明文件发布到types下">3.2 将声明文件发布到<code>@types</code>下</h5>
+<h3 id="变量声明">变量声明</h3>
+<h4 id="1-javascript">1. JavaScript</h4>
+<ul>
+<li>
+<p>var, const</p>
+<blockquote>
+<p>var声明可以在包含它的函数，模块，命名空间或全局作用域内部任何位置被访问，称为var作用域或函数作用域</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-typescript">2. TypeScript</h4>
+<ul>
+<li>
+<p>let, const</p>
+<blockquote>
+<p>let声明的变量是词法作用域或块作用域，不能在被声明之前读或写，但可以使用，存在暂时性死区</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="3-重定义及屏蔽">3. 重定义及屏蔽</h4>
+<ul>
+<li>var声明多次得到一个变量</li>
+<li>let只能声明一次相同变量</li>
+<li>所有除了计划修改的变量使用const</li>
+</ul>
+<h4 id="4-解构">4. 解构</h4>
+<ul>
+<li>解构表达式较复杂，谨慎使用</li>
+</ul>
+<h5 id="41-解构数组">4.1 解构数组</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> input = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> [first, second] = input;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 交换变量
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[first, second] = [second, first]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 作用于函数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> f([first, second]: [<span style="color:#6ab825;font-weight:bold">number</span>, <span style="color:#6ab825;font-weight:bold">number</span>]) {
+</span></span><span style="display:flex;"><span>  console.log(first);
+</span></span><span style="display:flex;"><span>  console.log(second);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>f(input);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用...语法创建剩余变量
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> [first, ...rest] = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>]
+</span></span><span style="display:flex;"><span>console.log(rest) <span style="color:#999;font-style:italic">// [2, 3, 4]
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 指定需要获取的元素
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> [, second, , fourth] = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>]
+</span></span></code></pre></div><h5 id="42-对象解构">4.2 对象解构</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 先创建对象再解构
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> person = {
+</span></span><span style="display:flex;"><span>  name: <span style="color:#ed9d13">&#34;springer&#34;</span>,
+</span></span><span style="display:flex;"><span>  age: <span style="color:#6ab825;font-weight:bold">22</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> { name, age } = person;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 直接解构
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>({ name, age } = { name: <span style="color:#ed9d13">&#34;springer&#34;</span>, age: <span style="color:#6ab825;font-weight:bold">22</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 对象里也可以创建剩余变量
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> { name, ...rest } = person;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 可以给属性重命名
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> { name: <span style="color:#6ab825;font-weight:bold">a</span>, age: <span style="color:#6ab825;font-weight:bold">b</span> } = person;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 默认值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> f(person: { name: <span style="color:#6ab825;font-weight:bold">string</span>, age?: <span style="color:#6ab825;font-weight:bold">number</span> }){
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">let</span> { name, age = <span style="color:#3677a9">20</span> } = person;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="43-函数声明">4.3 函数声明</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 一般使用
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">type</span> person = { name: <span style="color:#6ab825;font-weight:bold">string</span>, b?: <span style="color:#6ab825;font-weight:bold">number</span> }
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> f({ name, age }: person): <span style="color:#6ab825;font-weight:bold">void</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>}
+</span></span></code></pre></div><h4 id="5-展开">5. 展开</h4>
+<ul>
+<li>效果与解构相反，展开并组合成更大的数据</li>
+</ul>
+<h5 id="51-展开数组">5.1 展开数组</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> first = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> second = [<span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> third = [<span style="color:#3677a9">0</span>, first, second, <span style="color:#3677a9">5</span>];
+</span></span></code></pre></div><h5 id="52-展开对象">5.2 展开对象</h5>
+<ul>
+<li>展开对象后对于同一属性名，后面的值会覆盖前面的值</li>
+<li>当展开一个对象实例时，会丢失实例的方法</li>
+</ul>
+<h3 id="声明合并">声明合并</h3>
+<h4 id="1-声明合并">1. 声明合并</h4>
+<ul>
+<li>如果定义了两个相同名字的函数、接口或类，那么它们会合并成一个类型</li>
+</ul>
+<h5 id="11-函数的合并">1.1 函数的合并</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用重载定义多个函数类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">number</span> | <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">number</span> | <span style="color:#6ab825;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> x === <span style="color:#ed9d13">&#39;number&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">Number</span>(x.toString().split(<span style="color:#ed9d13">&#39;&#39;</span>).reverse().join(<span style="color:#ed9d13">&#39;&#39;</span>));
+</span></span><span style="display:flex;"><span>    } <span style="color:#6ab825;font-weight:bold">else</span> <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> x === <span style="color:#ed9d13">&#39;string&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> x.split(<span style="color:#ed9d13">&#39;&#39;</span>).reverse().join(<span style="color:#ed9d13">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="12-接口的合并">1.2 接口的合并</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Alarm {
+</span></span><span style="display:flex;"><span>    price: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Alarm {
+</span></span><span style="display:flex;"><span>    weight: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 相当于
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">interface</span> Alarm {
+</span></span><span style="display:flex;"><span>    price: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>    weight: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>合并接口时相同属性的类型必须时唯一的</li>
+<li>接口中方法的合并于函数的合并一样</li>
+</ul>
+<h5 id="13-类的合并">1.3 类的合并</h5>
+<ul>
+<li>与接口合并的规则一致</li>
+</ul>
+<h3 id="基础类型">基础类型</h3>
+<h4 id="1-typescript基础类型">1. Typescript基础类型</h4>
+<ol>
+<li>boolean: true/false</li>
+<li>number: 所有数字都是浮点数，支持二、八、十、十六进制</li>
+<li>string: &ldquo;&ldquo;或''</li>
+</ol>
+<ul>
+<li>模板字符串：<code>I am ${ name }</code></li>
+</ul>
+<ol start="4">
+<li>array：个元素类型相同</li>
+</ol>
+<ul>
+<li>①let list: number[] = [1, 2, 3];</li>
+<li>②let list: Array<number> = [1, 2, 3]</li>
+</ul>
+<ol start="5">
+<li>tuple：各元素的类型不必相同</li>
+</ol>
+<ul>
+<li>let x: [string, number];</li>
+<li>访问越界元素时，使用联合类型替代</li>
+</ul>
+<ol start="6">
+<li>enum: 为一组数值赋值友好的名字</li>
+</ol>
+<ul>
+<li>enum Color { Red = 1, Green, Blue}</li>
+<li>let c: Color = Color.Green;</li>
+<li>默认从0开始为元素编号，可以手动指定成员的起始值或全部手动赋值</li>
+</ul>
+<ol start="7">
+<li>any: 不确定类型的变量，编译时不检查类型</li>
+</ol>
+<ul>
+<li>Object：只允许赋任意值，却不能调用任意方法，即使真的由这些方法</li>
+<li>只知道一部分数据的类型，用any[]存储</li>
+</ul>
+<ol start="8">
+<li>void: 没有任何类型，没有返回值时，返回类型是void</li>
+</ol>
+<ul>
+<li>void变量只能赋值undefined和null</li>
+</ul>
+<ol start="9">
+<li>null和undefined</li>
+</ol>
+<ul>
+<li>默认情况下是所有类型的子类型，可以赋值给任意类型变量</li>
+<li>指定&ndash;strictNullChecks标记，null和undefined只能赋值给void和它们各自</li>
+</ul>
+<ol start="10">
+<li>never: 永不存在的值的类型</li>
+</ol>
+<ul>
+<li>是任何类型的子类型，可以赋值给任何类型</li>
+</ul>
+<h4 id="2-类型断言">2. 类型断言</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 尖括号语法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> someValue: <span style="color:#6ab825;font-weight:bold">any</span> = <span style="color:#ed9d13">&#39;this is a string&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> strLength: <span style="color:#6ab825;font-weight:bold">number</span> = (&lt;<span style="color:#6ab825;font-weight:bold">string</span>&gt;someValue).length;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// as语法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> strLength: <span style="color:#6ab825;font-weight:bold">number</span> = (someValue <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#6ab825;font-weight:bold">string</span>).length;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 当在Typescript里使用JSX时，只有as语法是被允许的
+</span></span></span></code></pre></div><p><em>Typescript实现了let，使用let代替var</em></p>
+<h3 id="别名字面量">别名字面量</h3>
+<h4 id="1-类型别名">1. 类型别名</h4>
+<ul>
+<li>使用<code>type</code>创建类型别名</li>
+<li>类型别名常用于联合类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// string类型别名为name
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">type</span> m = <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 函数别名为n
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">type</span> n = () =&gt; <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> mn = m | n;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> getName(x: <span style="color:#6ab825;font-weight:bold">mn</span>): Name {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> x === <span style="color:#ed9d13">&#39;string&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> x;
+</span></span><span style="display:flex;"><span>    } <span style="color:#6ab825;font-weight:bold">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#999;font-style:italic">// 返回函数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">return</span> x();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-字符串字面量类型">2. 字符串字面量类型</h4>
+<ul>
+<li>用来约束取值只能是某字符串中的一个</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用type定义，与类型别名不同
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">type</span> str = <span style="color:#ed9d13">&#39;one&#39;</span> | <span style="color:#ed9d13">&#39;two&#39;</span> | <span style="color:#ed9d13">&#39;three&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> printStr(s: <span style="color:#6ab825;font-weight:bold">str</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// s取值只能是str三个中的一个
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    console.log(s);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="数组">数组</h3>
+<h4 id="1-数组的类型">1. 数组的类型</h4>
+<h5 id="11-type表示法">1.1 <code>type[]</code>表示法</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 数组元素不允许其他类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> a: <span style="color:#6ab825;font-weight:bold">number</span>[] = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>];
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 数组的方法参数会进行类型限制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>a.push(<span style="color:#3677a9">8</span>);
+</span></span></code></pre></div><h5 id="12-数组泛型">1.2 数组泛型</h5>
+<ul>
+<li>使用<code>Array&lt;elementType&gt;</code>表示数组</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a: <span style="color:#6ab825;font-weight:bold">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">number</span>&gt; = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>]
+</span></span></code></pre></div><h5 id="13-接口表示数组">1.3 接口表示数组</h5>
+<ul>
+<li>相对复杂，一般不使用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> NumberArray {
+</span></span><span style="display:flex;"><span>    [index: <span style="color:#6ab825;font-weight:bold">number</span>]: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a: <span style="color:#6ab825;font-weight:bold">NumberArray</span> = [<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>]
+</span></span></code></pre></div><h5 id="14-类数组">1.4 类数组</h5>
+<ul>
+<li>类数组不是数组类型，不能用普通数组的方式描述，应该用接口</li>
+<li>常用的类数组都有系统内置的定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> IArguments {
+</span></span><span style="display:flex;"><span>    [index: <span style="color:#6ab825;font-weight:bold">number</span>]: <span style="color:#6ab825;font-weight:bold">any</span>;
+</span></span><span style="display:flex;"><span>    length: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>    callee: <span style="color:#6ab825;font-weight:bold">Function</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="15-在数组中使用any">1.5 在数组中使用<code>any</code></h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a: <span style="color:#6ab825;font-weight:bold">any</span>[] = [<span style="color:#3677a9">1</span>, <span style="color:#ed9d13">&#39;a&#39;</span>, <span style="color:#6ab825;font-weight:bold">true</span> {site: <span style="color:#ed9d13">&#39;example.com&#39;</span>}];
+</span></span></code></pre></div><h3 id="元组">元组</h3>
+<h4 id="1-元组">1. 元组</h4>
+<h5 id="11-简单使用">1.1 简单使用</h5>
+<ul>
+<li>数组合并相同类型，元组合并不同类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 定义元组直接赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> a: [<span style="color:#6ab825;font-weight:bold">string</span>, <span style="color:#6ab825;font-weight:bold">number</span>] = [<span style="color:#ed9d13">&#39;abc&#39;</span>, <span style="color:#3677a9">666</span>];
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 根据索引访问元素，有类型限制，可只对任一项赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>a[<span style="color:#3677a9">0</span>] = <span style="color:#ed9d13">&#39;ef&#39;</span>;
+</span></span><span style="display:flex;"><span>a[<span style="color:#3677a9">1</span>] = <span style="color:#3677a9">999</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 直接对元组类型变量赋值时，要提供所有元素的值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> a: [<span style="color:#6ab825;font-weight:bold">string</span>, <span style="color:#6ab825;font-weight:bold">number</span>];
+</span></span><span style="display:flex;"><span>a = [<span style="color:#ed9d13">&#39;aaa&#39;</span>, <span style="color:#3677a9">333</span>];
+</span></span></code></pre></div><h5 id="12-越界元素">1.2 越界元素</h5>
+<ul>
+<li>当添加元素越界时，类型会被限制为元组中每个类型的联合类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a: [<span style="color:#6ab825;font-weight:bold">string</span>, <span style="color:#6ab825;font-weight:bold">number</span>] = [<span style="color:#ed9d13">&#39;aaa&#39;</span>, <span style="color:#3677a9">111</span>];
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 编译失败，类型只能为string或number
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>a.push(<span style="color:#6ab825;font-weight:bold">false</span>);
+</span></span></code></pre></div><h4 id="2-枚举">2. 枚举</h4>
+<h5 id="21-简单使用">2.1 简单使用</h5>
+<ul>
+<li>对取值范围进行限定</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 枚举元素默认从0开始赋值，依次递增
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">enum</span> Colors {Red, Blue, Green};
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 手动赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// Blue=4, Green=5, 未赋值项接着上一个枚举项递增，步长始终为1
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 数字重复时会发生覆盖
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">enum</span> Colors {Red = <span style="color:#3677a9">3</span>, Blue, Green};
+</span></span></code></pre></div><ul>
+<li>手动赋值的枚举项不一定是数字，需要使用类型断言来让 tsc 忽略类型检查</li>
+</ul>
+<h5 id="22-常数项和计算所得项">2.2 常数项和计算所得项</h5>
+<ul>
+<li>枚举项包括：常数项和计算所得项</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 前两项是常数项，&#34;green&#34;.length是计算所得项
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">enum</span> Colors {Red, Blue, Green=<span style="color:#ed9d13">&#34;green&#34;</span>.length};
+</span></span></code></pre></div><h5 id="23-常数枚举">2.3 常数枚举</h5>
+<ul>
+<li>使用<code>const enum</code>定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 在编译阶段被删除，不能包含计算所得项
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">const</span> <span style="color:#6ab825;font-weight:bold">enum</span> Colors {Red, Blue, Green};
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> colors = [Colors.Red, Colors.Blue, Colors.Green];
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 编译结果
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> colors = [<span style="color:#3677a9">0</span>, <span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>];
+</span></span></code></pre></div><h5 id="24-外部枚举">2.4 外部枚举</h5>
+<ul>
+<li>使用<code>declare enum</code>定义</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 只用于编译时的检查，编译结果中会被删除
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">declare</span> <span style="color:#6ab825;font-weight:bold">enum</span> Colors {Red, Blue, Green};
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> colors = [Colors.Red, Colors.Blue, Colors.Green];
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 编译结果
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> colors = [<span style="color:#3677a9">0</span>, <span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>];
+</span></span></code></pre></div><h3 id="原始数据类型">原始数据类型</h3>
+<h4 id="1-布尔值">1. 布尔值</h4>
+<ol>
+<li>使用<code>boolean</code>定义布尔值类型</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> isChoose: <span style="color:#6ab825;font-weight:bold">boolean</span> = <span style="color:#6ab825;font-weight:bold">true</span>;
+</span></span></code></pre></div><ol start="2">
+<li>使用构造函数<code>Boolean</code>创造的对象返回的是一个<code>Boolean</code>对象</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> objBoolean: <span style="color:#6ab825;font-weight:bold">Boolean</span> = <span style="color:#6ab825;font-weight:bold">new</span> <span style="color:#24909d">Boolean</span>(<span style="color:#3677a9">1</span>);
+</span></span></code></pre></div><ol start="3">
+<li>直接调用<code>Boolean</code>返回一个<code>boolean</code>类型</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> baseBoolean: <span style="color:#6ab825;font-weight:bold">boolean</span> = <span style="color:#24909d">Boolean</span>(<span style="color:#3677a9">1</span>);
+</span></span></code></pre></div><ol start="4">
+<li>Typescript中，<code>boolean</code>是<code>JavaScript</code>中的基本类型，<code>Boolean</code>是<code>JavaScript</code>中的构造函数</li>
+</ol>
+<h4 id="2-数值">2. 数值</h4>
+<ol>
+<li>使用<code>number</code>定义数值类型</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n1: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 十六进制表示，编译时不转换
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> hexLiteral: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">0xffff</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// ES6中的二进制表示，编译时转成十进制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> binaryLiteral: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">0</span>b1111;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// ES6中的八进制表示，编译时转成十进制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> octalLiteral: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">0</span>o777;
+</span></span></code></pre></div><h4 id="3-字符串">3. 字符串</h4>
+<ol>
+<li>使用<code>string</code>定义字符串类型</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> name: <span style="color:#6ab825;font-weight:bold">string</span> = <span style="color:#ed9d13">&#39;Springer&#39;</span>;
+</span></span></code></pre></div><ol start="2">
+<li>模板字符串两种使用方式</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// ①使用&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> sentence: <span style="color:#6ab825;font-weight:bold">string</span> = <span style="color:#ed9d13">&#34;I am &#34;</span> + name;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// ②使用``(ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> sentence: <span style="color:#6ab825;font-weight:bold">string</span> = <span style="color:#ed9d13">`I am </span><span style="color:#ed9d13">${</span>name<span style="color:#ed9d13">}</span><span style="color:#ed9d13">`</span>
+</span></span></code></pre></div><h4 id="4-空值">4. 空值</h4>
+<ul>
+<li><code>JavaScript</code>没有<code>void</code>的概念，<code>Typescript</code>中，可以用<code>void</code>表示没有任何返回值的函数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> alertName: <span style="color:#6ab825;font-weight:bold">void</span> {
+</span></span><span style="display:flex;"><span>  alert(<span style="color:#ed9d13">&#39;I am Springer&#39;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>void</code>类型的变量只能赋值为<code>undefined</code>和<code>null</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> unusable: <span style="color:#6ab825;font-weight:bold">void</span> = <span style="color:#6ab825;font-weight:bold">undefined</span> | <span style="color:#6ab825;font-weight:bold">null</span>;
+</span></span></code></pre></div><ul>
+<li><code>void</code>类型的变量不能赋值给其他类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> u: <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 编译出错
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">number</span> = u;
+</span></span></code></pre></div><h4 id="4-null">4. null</h4>
+<ul>
+<li><code>null</code>是所有类型的子类型，可以赋值给其他类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">null</span> = <span style="color:#6ab825;font-weight:bold">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#6ab825;font-weight:bold">null</span>;
+</span></span></code></pre></div><h4 id="5-undefined">5. undefined</h4>
+<ul>
+<li><code>undefined</code>是所有类型的子类型，可以赋值给其他类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">undefined</span> = <span style="color:#6ab825;font-weight:bold">undefined</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#6ab825;font-weight:bold">undefined</span>;
+</span></span></code></pre></div><h4 id="6-symboles6">6. Symbol(ES6)</h4>
+<ul>
+<li>表示独一无二的值</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 不能使用new，生成的是一个原始数据的值，不是对象
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> s = Symbol();
+</span></span></code></pre></div><h3 id="任意值">任意值</h3>
+<h4 id="1-任意值">1. 任意值</h4>
+<ul>
+<li>任意值类型<code>any</code>用来表示允许赋值为任意类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> n: <span style="color:#6ab825;font-weight:bold">any</span> = <span style="color:#ed9d13">&#39;abc&#39;</span>;
+</span></span><span style="display:flex;"><span>n = <span style="color:#3677a9">666</span>;
+</span></span><span style="display:flex;"><span>n = <span style="color:#6ab825;font-weight:bold">true</span>;
+</span></span></code></pre></div><ul>
+<li>在任意值上允许访问任何属性和任何方法</li>
+<li>声明一个变量为任意值后，对它的所有操作返回的内容类型都是任意值</li>
+</ul>
+<h4 id="2-类型推断">2. 类型推断</h4>
+<ul>
+<li>Typescript会在没有明确指定类型的时候根据变量赋值内容推测一个类型</li>
+<li>如果变量声明的时候没有赋值，系统自动识别为任意值类型</li>
+</ul>
+<h4 id="3-联合类型">3. 联合类型</h4>
+<ul>
+<li>取值可以是多种类型中的一种，使用<code>|</code>分隔每个类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a: <span style="color:#6ab825;font-weight:bold">string</span> | <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>a = <span style="color:#ed9d13">&#39;abc&#39;</span>;
+</span></span><span style="display:flex;"><span>a = <span style="color:#ed9d13">&#39;666&#39;</span>;
+</span></span></code></pre></div><ul>
+<li><code>Typescript</code>不确定一个联合类型变量是哪个类型时，只能访问所有类型里共有的属性和方法</li>
+<li>联合类型的变量在被赋值时，系统为变量类型推断出一个类型，只能访问类型拥有的属性和方法</li>
+</ul>
+<h3 id="内置对象">内置对象</h3>
+<h4 id="1-内置对象">1. 内置对象</h4>
+<ul>
+<li>JavaScript中有很多内置对象，可以直接在Typescript中当作定义好的类型</li>
+<li>内置对象是指根据标准在全局作用域上存在的对象</li>
+</ul>
+<h5 id="11-ecmascript的内置对象">1.1 <code>ECMAScript</code>的内置对象</h5>
+<ul>
+<li><code>Boolean</code>, <code>Error</code>, <code>Date</code>, <code>RegExp</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> b: <span style="color:#6ab825;font-weight:bold">Boolean</span> = <span style="color:#6ab825;font-weight:bold">new</span> <span style="color:#24909d">Boolean</span>(<span style="color:#3677a9">1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> e: <span style="color:#6ab825;font-weight:bold">Error</span> = <span style="color:#6ab825;font-weight:bold">new</span> <span style="color:#24909d">Error</span>(<span style="color:#ed9d13">&#39;Error&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> d: <span style="color:#6ab825;font-weight:bold">Date</span> = <span style="color:#6ab825;font-weight:bold">new</span> <span style="color:#24909d">Date</span>();
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> r: <span style="color:#6ab825;font-weight:bold">RegExp</span> = <span style="color:#ed9d13">/[a-z]/</span>;
+</span></span></code></pre></div><h5 id="12-dom和bom的内置对象">1.2 <code>DOM</code>和<code>BOM</code>的内置对象</h5>
+<ul>
+<li><code>Document</code>, <code>HTMLElement</code>, <code>Event</code>, <code>NodeList</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> body: <span style="color:#6ab825;font-weight:bold">HTMLElement</span> = <span style="color:#24909d">document</span>.body;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> allDiv: <span style="color:#6ab825;font-weight:bold">NodeList</span> = <span style="color:#24909d">document</span>.querySelectorAll(<span style="color:#ed9d13">&#39;div&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#24909d">document</span>.addEventListener(<span style="color:#ed9d13">&#39;click&#39;</span>, <span style="color:#6ab825;font-weight:bold">function</span>(e: <span style="color:#6ab825;font-weight:bold">MouseEvent</span>) {
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#ed9d13">&#39;Listen&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h5 id="13-typescript核心库的定义文件">1.3 <code>Typescript</code>核心库的定义文件</h5>
+<ul>
+<li><code>Typescript</code>核心库的定义文件中定义了所有浏览器环境需要用到的类型，并且预置在<code>Typescript</code>中。比如使用方法时，<code>Typescript</code>进行参数类型判断</li>
+</ul>
+<h5 id="14-用typescript写nodejs">1.4 用<code>Typescript</code>写<code>Node.js</code></h5>
+<ul>
+<li>Node.js不是内置对象的一部分</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span>npm install <span style="color:#6ab825;font-weight:bold">@types</span>/node --save-dev
+</span></span></code></pre></div><h3 id="类型断言">类型断言</h3>
+<h4 id="1-类型断言">1. 类型断言</h4>
+<h5 id="11-语法">1.1 语法</h5>
+<ul>
+<li>类型断言用来手动指定一个值的类型</li>
+<li>语法：<code>value as type</code>(推荐)或<code>&lt;type&gt;value</code></li>
+</ul>
+<h5 id="12-用途">1.2 用途</h5>
+<h6 id="121-将一个联合类型断言为其中一个类型">1.2.1 将一个联合类型断言为其中一个类型</h6>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Cat {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    run(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Fish {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    swim(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 弥补联合类型不确定类型时的访问限制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 滥用会导致运行时错误
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> isFish(animal: <span style="color:#6ab825;font-weight:bold">Cat</span> | Fish) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> (animal <span style="color:#6ab825;font-weight:bold">as</span> Fish).swim === <span style="color:#ed9d13">&#39;function&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h6 id="122-将一个父类断言为更加具体的子类">1.2.2 将一个父类断言为更加具体的子类</h6>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">class</span> ApiError <span style="color:#6ab825;font-weight:bold">extends</span> <span style="color:#24909d">Error</span> {
+</span></span><span style="display:flex;"><span>    code: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">class</span> HttpError <span style="color:#6ab825;font-weight:bold">extends</span> <span style="color:#24909d">Error</span> {
+</span></span><span style="display:flex;"><span>    statusCode: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">200</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 类之间有继承关系时，确定更加具体的子类
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// instanceof适用于class，但不适用于interface
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> isApiError(error: <span style="color:#6ab825;font-weight:bold">Error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> (error <span style="color:#6ab825;font-weight:bold">as</span> ApiError).code === <span style="color:#ed9d13">&#39;number&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h6 id="123-将任何一个类型断言为any">1.2.3 将任何一个类型断言为<code>any</code></h6>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 确定代码不会出错，但编译无法通过
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#24909d">window</span>.foo = <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 可以对变量断言为any类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 在any类型的变量上，可以访问任何属性
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>(<span style="color:#24909d">window</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#6ab825;font-weight:bold">any</span>).foo = <span style="color:#3677a9">1</span>;
+</span></span></code></pre></div><ul>
+<li>不能滥用<code>as any</code>，需要在类型的严格性和开发的便利性之间掌握平衡</li>
+</ul>
+<h6 id="124-将any断言为一个具体的类型">1.2.4 将<code>any</code>断言为一个具体的类型</h6>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> getCacheData(key: <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">any</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> (<span style="color:#24909d">window</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#6ab825;font-weight:bold">any</span>).cache[key];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Cat {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    run(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 将返回值类型断言成一个精确的类型，方便后续操作，提高代码可维护性
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">const</span> tom = getCacheData(<span style="color:#ed9d13">&#39;tom&#39;</span>) <span style="color:#6ab825;font-weight:bold">as</span> Cat;
+</span></span><span style="display:flex;"><span>tom.run();
+</span></span></code></pre></div><h4 id="2-类型断言的限制">2. 类型断言的限制</h4>
+<ol>
+<li>并不是任何一个类型都可以被断言为任何另一个类型</li>
+<li>要使<code>A</code>能够被断言为<code>B</code>，需要<code>A</code>兼容<code>B</code>或<code>B</code>兼容<code>A</code></li>
+</ol>
+<h4 id="3-双重断言">3. 双重断言</h4>
+<ol>
+<li>使用<code>value as any as type</code> 来将任何一个类型断言为任何另一个类型</li>
+<li>慎用，有可能导致运行时错误</li>
+</ol>
+<h4 id="4-类型断言vs类型转换">4. 类型断言VS类型转换</h4>
+<ol>
+<li>类型断言只会影响<code>Typescript</code>编译时的类型，类型断言语句在编译结果中会被删除，不会真的影响到变量的类型</li>
+<li>类型转换需要直接调用类型转换的方法</li>
+</ol>
+<h4 id="5-类型断言vs类型声明">5. 类型断言VS类型声明</h4>
+<ol>
+<li><code>animal</code>断言为<code>Cat</code>，只需要满足<code>Animal</code>兼容<code>Cat</code>或<code>Cat</code>兼容<code>Animal</code>即可</li>
+<li><code>animal</code>赋值给<code>tom</code>，需要满足<code>Cat</code>容<code>nimal</code>行</li>
+<li>类型声明是比类型断言更加严格，最好优先使用类型声明</li>
+</ol>
+<h4 id="6-类型断言vs泛型">6. 类型断言VS泛型</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 添加泛型，规范实现对函数返回值的控制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 去除了代码中的any，最优解决方案
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> getCacheData&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;(key: <span style="color:#6ab825;font-weight:bold">string</span>): T {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> (<span style="color:#24909d">window</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#6ab825;font-weight:bold">any</span>).cache[key];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Cat {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    run(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明时指定类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">const</span> tom = getCacheData&lt;<span style="color:#6ab825;font-weight:bold">Cat</span>&gt;(<span style="color:#ed9d13">&#39;tom&#39;</span>);
+</span></span><span style="display:flex;"><span>tom.run();
+</span></span></code></pre></div><h3 id="函数">函数</h3>
+<h4 id="1-函数声明">1. 函数声明</h4>
+<h5 id="11-函数声明">1.1 函数声明</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> sum(x: <span style="color:#6ab825;font-weight:bold">number</span>, y: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">number</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> x + y;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="12-函数表达式">1.2 函数表达式</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> sum = <span style="color:#6ab825;font-weight:bold">function</span> (x: <span style="color:#6ab825;font-weight:bold">number</span>, y <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">number</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> x + y;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// Typescript中=&gt;表示函数的定义，左边时输入类型，用括号括起来，右边是输出类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> mySum: (x: <span style="color:#6ab825;font-weight:bold">number</span>, y: <span style="color:#6ab825;font-weight:bold">number</span>) =&gt; <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#6ab825;font-weight:bold">function</span> (x: <span style="color:#6ab825;font-weight:bold">number</span>, y: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">number</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> x + y;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h4 id="2-接口定义函数">2. 接口定义函数</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> update {
+</span></span><span style="display:flex;"><span>    (id: <span style="color:#6ab825;font-weight:bold">string</span>, content: <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">boolean</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用函数表达式和接口定义函数，要对等号左侧进行类型限制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 保证后续使用参数个数、参数类型、返回值类型不变
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> myUpdate: <span style="color:#6ab825;font-weight:bold">update</span>;
+</span></span><span style="display:flex;"><span>myUpdate = <span style="color:#6ab825;font-weight:bold">function</span>(id: <span style="color:#6ab825;font-weight:bold">string</span>, content: <span style="color:#6ab825;font-weight:bold">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> update(id) !== -<span style="color:#3677a9">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="3-可选参数">3. 可选参数</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 参数m可选
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 可选参数后面不能再出现必需参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> sum (n: <span style="color:#6ab825;font-weight:bold">number</span>, m?: <span style="color:#6ab825;font-weight:bold">number</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (m) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> n;
+</span></span><span style="display:flex;"><span>    } <span style="color:#6ab825;font-weight:bold">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> n + m;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="4-参数默认值">4. 参数默认值</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 添加默认值的参数会被识别为可选参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 与可选参数不同，没有顺序限制
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> sum (n: <span style="color:#6ab825;font-weight:bold">number</span>, m: <span style="color:#6ab825;font-weight:bold">number</span> = <span style="color:#3677a9">4</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> n + m;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="5--剩余参数">5.  剩余参数</h4>
+<ul>
+<li>使用<code>...rest</code>的方式获取函数的剩余参数</li>
+<li><code>rest</code>参数只能是函数的最后一个参数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> sum (n: <span style="color:#6ab825;font-weight:bold">number</span>, ...elements) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">let</span> sumNum: <span style="color:#6ab825;font-weight:bold">int</span> = <span style="color:#3677a9">0</span>;
+</span></span><span style="display:flex;"><span>    elements.forEach(<span style="color:#6ab825;font-weight:bold">function</span>(element) {
+</span></span><span style="display:flex;"><span>        sumNum = sumNum + element;
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="6-重载">6. 重载</h4>
+<ul>
+<li><code>TypeScript </code>会从最前面的函数定义开始匹配，多个函数定义如果有包含关系，需要优先把精确的定义写在前面</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 函数定义
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 函数实现
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> reverse(x: <span style="color:#6ab825;font-weight:bold">number</span> | <span style="color:#6ab825;font-weight:bold">string</span>): <span style="color:#6ab825;font-weight:bold">number</span> | <span style="color:#6ab825;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> x === <span style="color:#ed9d13">&#39;number&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">Number</span>(x.toString().split(<span style="color:#ed9d13">&#39;&#39;</span>).reverse().join(<span style="color:#ed9d13">&#39;&#39;</span>));
+</span></span><span style="display:flex;"><span>    } <span style="color:#6ab825;font-weight:bold">else</span> <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#6ab825;font-weight:bold">typeof</span> x === <span style="color:#ed9d13">&#39;string&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> x.split(<span style="color:#ed9d13">&#39;&#39;</span>).reverse().join(<span style="color:#ed9d13">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="类和接口">类和接口</h3>
+<h4 id="1-接口的简单使用">1. 接口的简单使用</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 参数必须有label属性并且类型为string
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">interface</span> Label {
+</span></span><span style="display:flex;"><span>  label: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 不能说参数对象实现了接口
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 而是系统对参数值所具有的结构进行检查
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> printLabel(labelObj: <span style="color:#6ab825;font-weight:bold">Label</span>) {
+</span></span><span style="display:flex;"><span>  console.log(labelObj.label);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 属性只要存在即可，不会检查属性顺序
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> labelObj = {
+</span></span><span style="display:flex;"><span>  size: <span style="color:#6ab825;font-weight:bold">10</span>,
+</span></span><span style="display:flex;"><span>  label: <span style="color:#ed9d13">&#34;Label&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>printLabel(labelObj);
+</span></span></code></pre></div><h4 id="2-注意事项">2. 注意事项</h4>
+<ol>
+<li>变量跟接口的属性要保持一致</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> person {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    age: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 必须保持一致，不能增加或减少属性
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> springer: <span style="color:#6ab825;font-weight:bold">person</span> = {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#ed9d13">&#39;Springer&#39;</span>,
+</span></span><span style="display:flex;"><span>    age: <span style="color:#6ab825;font-weight:bold">22</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ol start="2">
+<li>使用可选属性</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> person {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    age?: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// age属性对变量来说是可选的
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> springer: <span style="color:#6ab825;font-weight:bold">person</span> = {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#ed9d13">&#39;Springer&#39;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ol start="3">
+<li>任意属性：允许有任意的属性</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> person {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    age: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 可以添加值为string的任意属性
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    [proName: <span style="color:#6ab825;font-weight:bold">string</span>]: <span style="color:#6ab825;font-weight:bold">any</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> springer: <span style="color:#6ab825;font-weight:bold">person</span> = {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#ed9d13">&#39;Springer&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 一旦定义任意属性，确定属性和可选属性必须是它的类型子集
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#999;font-style:italic">// 给age赋number类型的值会报错
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    age: <span style="color:#6ab825;font-weight:bold">33</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="4">
+<li>一个接口只能定义一个任意类型，可以使用联合类型定义</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> person {
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>    age?: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>    [proName: <span style="color:#6ab825;font-weight:bold">string</span>]: <span style="color:#6ab825;font-weight:bold">string</span> | <span style="color:#6ab825;font-weight:bold">number</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="5">
+<li>使用<code>readonly</code>定义只读属性</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> person {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">readonly</span> id: <span style="color:#6ab825;font-weight:bold">number</span>;
+</span></span><span style="display:flex;"><span>    name: <span style="color:#6ab825;font-weight:bold">string</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 只读约束存在于第一次给对象赋值的时候，而不是第一次给只读属性赋值的时候
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">let</span> springer: <span style="color:#6ab825;font-weight:bold">person</span> = {
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 对象赋值没有给id赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    name: <span style="color:#ed9d13">&#39;Springer&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 对象赋值后不能更改id
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>springer.id = <span style="color:#3677a9">666</span>;
+</span></span></code></pre></div><h4 id="3-类">3. 类</h4>
+<h5 id="31-类的用法">3.1 类的用法</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用extends关键字实现继承，子类中使用super关键字来调用父类的构造函数方法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">class</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 属性
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#6ab825;font-weight:bold">public</span> name;
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 定义构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#6ab825;font-weight:bold">constructor</span>(name) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">this</span>.name = name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 方法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    sayHi() {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">`My name is </span><span style="color:#ed9d13">${</span><span style="color:#6ab825;font-weight:bold">this</span>.name<span style="color:#ed9d13">}</span><span style="color:#ed9d13">`</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 存取器
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#6ab825;font-weight:bold">get</span> name() {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">&#39;Jack&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">set</span> name(value) {
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#ed9d13">&#39;setter: &#39;</span> + value);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 静态方法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#6ab825;font-weight:bold">static</span> isAnimal(a) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">return</span> a <span style="color:#6ab825;font-weight:bold">instanceof</span> Animal;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> a = <span style="color:#6ab825;font-weight:bold">new</span> Animal(<span style="color:#ed9d13">&#39;Jack&#39;</span>);
+</span></span></code></pre></div><h5 id="32-类的用法">3.2 类的用法</h5>
+<ul>
+<li><code>public</code>修饰的属性或方法可以在任何地方被访问，默认 <code>public</code></li>
+<li><code>private</code>修饰的属性或方法私有，不能在声明它的类外部访问
+<ul>
+<li>构造函数为 <code>private</code>，类不允许被继承或者实例化</li>
+</ul>
+</li>
+<li><code>protected</code>修饰的属性或方法是受保护的，在子类中允许被访问
+<ul>
+<li>构造函数为<code>protected</code>时，类只允许被继承</li>
+</ul>
+</li>
+</ul>
+<h5 id="33-抽象类">3.3 抽象类</h5>
+<ul>
+<li>抽象类不允许被实例化</li>
+<li>抽象类中的抽象方法必须被子类实现</li>
+</ul>
+<h4 id="4-类与接口">4. 类与接口</h4>
+<h5 id="41-类实现接口">4.1 类实现接口</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> ISwim {
+</span></span><span style="display:flex;"><span>    swim(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 类实现接口
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 一个类可以实现多个接口
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">class</span> People <span style="color:#6ab825;font-weight:bold">implements</span> ISwim {
+</span></span><span style="display:flex;"><span>    swim() {
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#ed9d13">&#39;Swim&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="42-接口集成接口">4.2 接口集成接口</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Animal {
+</span></span><span style="display:flex;"><span>    run(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">interface</span> Dog <span style="color:#6ab825;font-weight:bold">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    cry(): <span style="color:#6ab825;font-weight:bold">void</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="43-接口继承类">4.3 接口继承类</h5>
+<ul>
+<li>常见的面向对象语言中，接口不能集成类</li>
+<li>Typescript中接口可以继承类</li>
+<li>接口继承类的时候，只会继承类的实例属性和实例方法</li>
+</ul>
+<h3 id="泛型">泛型</h3>
+<h4 id="1-泛型">1. 泛型</h4>
+<h5 id="11-简单使用-1">1.1 简单使用</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> createArray&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;(length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>) <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">let</span> result: <span style="color:#6ab825;font-weight:bold">T</span>[] = [];
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> i = <span style="color:#3677a9">0</span>; i &lt; length; i++) {
+</span></span><span style="display:flex;"><span>        result[i] = value;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>createArray&lt;<span style="color:#6ab825;font-weight:bold">string</span>&gt;(<span style="color:#3677a9">3</span>, <span style="color:#ed9d13">&#39;aaa&#39;</span>);
+</span></span></code></pre></div><h5 id="12-多个类型参数">1.2 多个类型参数</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> swap&lt;<span style="color:#6ab825;font-weight:bold">T</span><span style="color:#a61717;background-color:#e3d2d2">,</span> <span style="color:#bbb">U</span>&gt;(tuple: [T, U]): [U, T] {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> [tuple[<span style="color:#3677a9">1</span>], tuple[<span style="color:#3677a9">0</span>]];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>swap([<span style="color:#3677a9">3</span>, <span style="color:#ed9d13">&#39;aaa&#39;</span>]);
+</span></span></code></pre></div><h5 id="13-泛型约束">1.3 泛型约束</h5>
+<ul>
+<li>在函数内部使用泛型变量时，由于事先不知道变量类型，不能随意操作属性和方法</li>
+</ul>
+<h5 id="14-泛型接口">1.4 泛型接口</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用含有泛型的接口来定义函数的形状
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">interface</span> CreateArrayFunc {
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;(length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> createArray: <span style="color:#6ab825;font-weight:bold">CreateArrayFunc</span>;
+</span></span><span style="display:flex;"><span>createArray = <span style="color:#6ab825;font-weight:bold">function</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;(length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">let</span> result: <span style="color:#6ab825;font-weight:bold">T</span>[] = [];
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> i = <span style="color:#3677a9">0</span>; i &lt; length; i++) {
+</span></span><span style="display:flex;"><span>        result[i] = value;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 泛型参数提前到接口名
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">interface</span> CreateArrayFunc&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    (length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">let</span> createArray: <span style="color:#6ab825;font-weight:bold">CreateArrayFunc</span>&lt;<span style="color:#6ab825;font-weight:bold">any</span>&gt;;
+</span></span><span style="display:flex;"><span>createArray = <span style="color:#6ab825;font-weight:bold">function</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt;(length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">let</span> result: <span style="color:#6ab825;font-weight:bold">T</span>[] = [];
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> i = <span style="color:#3677a9">0</span>; i &lt; length; i++) {
+</span></span><span style="display:flex;"><span>        result[i] = value;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="15-泛型类">1.5 泛型类</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 泛型可用于类的类型定义
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">class</span> GenericNumber&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    zeroValue: <span style="color:#6ab825;font-weight:bold">T</span>;
+</span></span><span style="display:flex;"><span>    add: (x: <span style="color:#6ab825;font-weight:bold">T</span>, y: <span style="color:#6ab825;font-weight:bold">T</span>) =&gt; T;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="16-泛型参数的默认类型">1.6 泛型参数的默认类型</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// TypeScript2.3以后,可以为泛型中的类型参数指定默认类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 当没有直接指定类型参数，也无法推测类型时使用默认类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">function</span> createArray&lt;<span style="color:#6ab825;font-weight:bold">T</span> <span style="color:#a61717;background-color:#e3d2d2">=</span> <span style="color:#bbb">string</span>&gt;(length: <span style="color:#6ab825;font-weight:bold">number</span>, value: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#24909d">Array</span>&lt;<span style="color:#6ab825;font-weight:bold">T</span>&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">let</span> result: <span style="color:#6ab825;font-weight:bold">T</span>[] = [];
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> i = <span style="color:#3677a9">0</span>; i &lt; length; i++) {
+</span></span><span style="display:flex;"><span>        result[i] = value;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="工程">工程</h3>
+<h4 id="1-代码检查">1. 代码检查</h4>
+<h5 id="11-安装eslint">1.1 安装ESLint</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 安装ESLint
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>npm install --save-dev eslint
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 替代默认的Espree解析器
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>npm install --save-dev typescript <span style="color:#6ab825;font-weight:bold">@typescript</span>-eslint/parser
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 提供额外的ts语法规则支持
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>npm install --save-dev <span style="color:#6ab825;font-weight:bold">@typescript</span>-eslint/eslint-plugin
+</span></span></code></pre></div><h5 id="12-创建配置文件">1.2 创建配置文件</h5>
+<ul>
+<li><code>.eslintrc.js|.eslintrc.json</code></li>
+</ul>
+<h4 id="2-编译选项">2. 编译选项</h4>
+<h5 id="21-allowjs">2.1 <code>allowJs</code></h5>
+<ul>
+<li>设为<code>true</code>时，js文件会被编译，js和ts混合开发时使用</li>
+</ul>
+<h5 id="22-allowsyntheticdefaultimports">2.2 <code>allowSyntheticDefaultImports</code></h5>
+<ul>
+<li>允许对不包含默认导出的模块使用默认导入，不影响代码生成，只影响类型检查</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

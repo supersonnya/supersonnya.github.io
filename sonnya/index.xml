@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>abc on Sonnya</title>
+    <link>https://supersonnya.github.io/sonnya/</link>
+    <description>Recent content in abc on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Aug 2022 14:04:34 +0600</lastBuildDate><atom:link href="https://supersonnya.github.io/sonnya/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/sonnya/example/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/sonnya/example/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

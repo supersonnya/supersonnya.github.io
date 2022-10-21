@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="foreignlang">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">音素示例及对比</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jun 28, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 4 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h4 id="1-音素表">1. 音素表</h4>
+<table>
+<thead>
+<tr>
+<th>Short vowels</th>
+<th>Long vowels</th>
+<th>Diphthongs(double vowel sounds)</th>
+<th>Voiceless consonants</th>
+<th>Voiced consonants</th>
+<th>Other consonants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ɪ</td>
+<td>iː</td>
+<td>eɪ</td>
+<td>p</td>
+<td>b</td>
+<td>m</td>
+</tr>
+<tr>
+<td>ʊ</td>
+<td>ɜː</td>
+<td>aɪ</td>
+<td>t</td>
+<td>d</td>
+<td>n</td>
+</tr>
+<tr>
+<td>ʌ</td>
+<td>ɔː</td>
+<td>ɔɪ</td>
+<td>k</td>
+<td>ɡ</td>
+<td>ŋ</td>
+</tr>
+<tr>
+<td>ɒ</td>
+<td>uː</td>
+<td>aʊ</td>
+<td>f</td>
+<td>v</td>
+<td>h</td>
+</tr>
+<tr>
+<td>ə</td>
+<td>ɑː</td>
+<td>əʊ</td>
+<td>θ</td>
+<td>ð</td>
+<td>l</td>
+</tr>
+<tr>
+<td>e</td>
+<td></td>
+<td>ɪə</td>
+<td>s</td>
+<td>z</td>
+<td>r</td>
+</tr>
+<tr>
+<td>æ</td>
+<td></td>
+<td>eə</td>
+<td>ʃ</td>
+<td>ʒ</td>
+<td>j</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>ʊə</td>
+<td>tʃ</td>
+<td>dʒ</td>
+<td>w</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-短元音short-vowels">2. 短元音(Short vowels)</h4>
+<h5 id="21-ɪ">2.1 <code>ɪ</code></h5>
+<ul>
+<li>kit</li>
+<li>bid</li>
+<li>hymn</li>
+<li>minute</li>
+<li>VS iː
+<ul>
+<li>hit - heat</li>
+<li>lip - leap</li>
+<li>sick - seek</li>
+<li>will - wheel</li>
+</ul>
+</li>
+</ul>
+<h5 id="22-ʊ">2.2 <code>ʊ</code></h5>
+<ul>
+<li>foot</li>
+<li>put</li>
+<li>good</li>
+</ul>
+<h5 id="23-ʌ">2.3 <code>ʌ</code></h5>
+<ul>
+<li>strut</li>
+<li>mud</li>
+<li>love</li>
+<li>blood</li>
+<li>VS <code>æ</code>
+<ul>
+<li>uncle - ankle</li>
+<li>bunk - bank</li>
+<li>but - bat</li>
+<li>cup - cap</li>
+<li>swum - swam</li>
+</ul>
+</li>
+</ul>
+<h5 id="24-ɒ">2.4 <code>ɒ</code></h5>
+<ul>
+<li>lot</li>
+<li>odd</li>
+<li>wash</li>
+</ul>
+<h5 id="25-ə">2.5 <code>ə</code></h5>
+<ul>
+<li>a</li>
+<li>the</li>
+<li>of</li>
+<li>that</li>
+<li>about</li>
+<li>common</li>
+<li>standard</li>
+<li>butter</li>
+<li>accuse</li>
+<li>banana</li>
+<li>father</li>
+<li>camera</li>
+</ul>
+<h5 id="26-e">2.6 <code>e</code></h5>
+<ul>
+<li>dress</li>
+<li>head</li>
+<li>bed</li>
+<li>many</li>
+<li>VS <code>ɪ</code>
+<ul>
+<li>bed - bid</li>
+<li>medal - middle</li>
+<li>dead - did</li>
+<li>fell - fill</li>
+<li>pen - pin</li>
+</ul>
+</li>
+</ul>
+<h5 id="27-æ">2.7 <code>æ</code></h5>
+<h4 id="3-长元音long-vowels">3. 长元音(Long vowels)</h4>
+<h5 id="31-iː">3.1 <code>iː</code></h5>
+<ul>
+<li>fleece</li>
+<li>sea</li>
+<li>machine</li>
+<li>VS <code>ɪ</code>
+<ul>
+<li>litre - litter</li>
+<li>cheap - chip</li>
+<li>feet - fit</li>
+<li>he&rsquo;s - his</li>
+<li>peach - pitch</li>
+<li>sheep - ship</li>
+</ul>
+</li>
+</ul>
+<h5 id="32-ɜː">3.2 <code>ɜː</code></h5>
+<ul>
+<li>nurse</li>
+<li>stir</li>
+<li>learn</li>
+<li>refer</li>
+</ul>
+<h5 id="33-ɔː">3.3 <code>ɔː</code></h5>
+<ul>
+<li>thought</li>
+<li>law</li>
+<li>north</li>
+<li>war</li>
+</ul>
+<h5 id="34-uː">3.4 <code>uː</code></h5>
+<ul>
+<li>goose</li>
+<li>two</li>
+<li>blue</li>
+<li>group</li>
+</ul>
+<h5 id="35-ɑː">3.5 <code>ɑː</code></h5>
+<ul>
+<li>father</li>
+<li>start</li>
+<li>hard</li>
+</ul>
+<h4 id="4-双元音diphthongs">4. 双元音(Diphthongs)</h4>
+<h5 id="41-eɪ">4.1 <code>eɪ</code></h5>
+<ul>
+<li>face</li>
+<li>day</li>
+<li>break</li>
+<li>VS <code>iː</code>
+<ul>
+<li>ate - eat</li>
+<li>faced - feast</li>
+<li>great - greet</li>
+<li>mate - meet</li>
+</ul>
+</li>
+</ul>
+<h5 id="42-aɪ">4.2 <code>aɪ</code></h5>
+<ul>
+<li>price</li>
+<li>high</li>
+<li>try</li>
+</ul>
+<h5 id="43-ɔɪ">4.3 <code>ɔɪ</code></h5>
+<ul>
+<li>choice</li>
+<li>noise</li>
+<li>boy</li>
+</ul>
+<h5 id="44-aʊ">4.4 <code>aʊ</code></h5>
+<ul>
+<li>mouth</li>
+<li>now</li>
+<li>fowl</li>
+<li>VS <code>əʊ</code>
+<ul>
+<li>couch - coach</li>
+<li>clown - clone</li>
+<li>loud - load</li>
+<li>found - phoned</li>
+</ul>
+</li>
+</ul>
+<h5 id="45-əʊ">4.5 <code>əʊ</code></h5>
+<ul>
+<li>boat</li>
+<li>show</li>
+<li>know</li>
+<li>VS <code>ɔː</code>
+<ul>
+<li>coat - caught</li>
+<li>dough - door</li>
+<li>sew - saw</li>
+<li>flow - floor</li>
+</ul>
+</li>
+</ul>
+<h5 id="46-ɪə">4.6 <code>ɪə</code></h5>
+<ul>
+<li>hear</li>
+<li>near</li>
+<li>weary</li>
+</ul>
+<h5 id="47-eə">4.7 <code>eə</code></h5>
+<ul>
+<li>squre</li>
+<li>fair</li>
+<li>pair</li>
+<li>VS <code>æ</code>
+<ul>
+<li>dared - dad</li>
+<li>glared - glad</li>
+<li>Mary - marry</li>
+</ul>
+</li>
+</ul>
+<h5 id="48-ʊə">4.8 <code>ʊə</code></h5>
+<ul>
+<li>tour</li>
+<li>pure</li>
+<li>cure</li>
+</ul>
+<h4 id="5-清辅音voiceless-consonants">5. 清辅音(Voiceless consonants)</h4>
+<h5 id="51-p">5.1 <code>p</code></h5>
+<ul>
+<li>pack</li>
+<li>pan</li>
+<li>copy</li>
+<li>happen</li>
+<li>hop</li>
+<li>pop</li>
+<li>VS <code>b</code>
+<ul>
+<li>pack - back</li>
+<li>punch - bunch</li>
+<li>pump - bump</li>
+<li>pull - bull</li>
+</ul>
+</li>
+</ul>
+<h5 id="52-t">5.2 <code>t</code></h5>
+<ul>
+<li>tin</li>
+<li>button</li>
+<li>get</li>
+<li>tight</li>
+<li>VS <code>d</code>
+<ul>
+<li>tin - din</li>
+<li>to - do</li>
+<li>town - down</li>
+<li>eight - aid</li>
+<li>bet - bed</li>
+</ul>
+</li>
+</ul>
+<h5 id="53-k">5.3 <code>k</code></h5>
+<ul>
+<li>came</li>
+<li>lucky</li>
+<li>sick</li>
+<li>clock</li>
+<li>VS <code>g</code>
+<ul>
+<li>came - game</li>
+<li>back - bag</li>
+<li>cage - gauge</li>
+<li>calories - galleries</li>
+</ul>
+</li>
+</ul>
+<h5 id="54-f">5.4 <code>f</code></h5>
+<ul>
+<li>fat</li>
+<li>coffee</li>
+<li>rough</li>
+<li>fluff</li>
+<li>VS <code>v</code>
+<ul>
+<li>fan - van</li>
+<li>leaf - leave</li>
+<li>off - of</li>
+<li>rifle - rival</li>
+</ul>
+</li>
+</ul>
+<h5 id="55-θ">5.5 <code>θ</code></h5>
+<ul>
+<li>thin</li>
+<li>throw</li>
+<li>thumb</li>
+<li>author</li>
+<li>healthy</li>
+<li>birth</li>
+<li>path</li>
+</ul>
+<h5 id="56-s">5.6 <code>s</code></h5>
+<ul>
+<li>soon</li>
+<li>mister</li>
+<li>hiss</li>
+<li>cease</li>
+<li>VS <code>z</code>
+<ul>
+<li>hiss - hiz</li>
+<li>course - cause</li>
+<li>please - plays</li>
+<li>gross - grows</li>
+</ul>
+</li>
+</ul>
+<h5 id="57-ʃ">5.7 <code>ʃ</code></h5>
+<ul>
+<li>ship</li>
+<li>sure</li>
+<li>nation</li>
+<li>fish</li>
+<li>shush</li>
+<li>VS <code>s</code>
+<ul>
+<li>ship - sip</li>
+<li>show - so</li>
+<li>shy - sigh</li>
+<li>chauffeur - sofa</li>
+<li>shock - sock</li>
+</ul>
+</li>
+</ul>
+<h5 id="58-tʃ">5.8 <code>tʃ</code></h5>
+<ul>
+<li>choke</li>
+<li>teacher</li>
+<li>match</li>
+<li>church</li>
+<li>VS <code>dʒ</code>
+<ul>
+<li>choke - joke</li>
+<li>chunk - junk</li>
+<li>rich - ridge</li>
+<li>lunch - lunge</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-浊辅音voiced-consonants">6. 浊辅音(Voiced consonants)</h4>
+<h5 id="61-b">6.1 <code>b</code></h5>
+<ul>
+<li>back</li>
+<li>bag</li>
+<li>hobby</li>
+<li>habit</li>
+<li>job</li>
+<li>bob</li>
+<li>VS <code>p</code>
+<ul>
+<li>back - pack</li>
+<li>bare - pair</li>
+<li>cab - cap</li>
+<li>symbol - simple</li>
+</ul>
+</li>
+</ul>
+<h5 id="62-d">6.2 <code>d</code></h5>
+<ul>
+<li>dame</li>
+<li>ladder</li>
+<li>odd</li>
+<li>did</li>
+<li>VS <code>b</code>
+<ul>
+<li>dame - tame</li>
+<li>doom - tomb</li>
+<li>medal - metal</li>
+<li>heard - hurt</li>
+</ul>
+</li>
+</ul>
+<h5 id="63-g">6.3 <code>g</code></h5>
+<ul>
+<li>glue</li>
+<li>struggle</li>
+<li>bag</li>
+<li>gig</li>
+<li>VS <code>k</code>
+<ul>
+<li>glue - clue</li>
+<li>ghost - coast</li>
+<li>log - lock</li>
+<li>pig - pick</li>
+</ul>
+</li>
+</ul>
+<h5 id="64-v">6.4 <code>v</code></h5>
+<ul>
+<li>very</li>
+<li>heavy</li>
+<li>move</li>
+<li>verve</li>
+<li>VS <code>f</code>
+<ul>
+<li>vault - fault</li>
+<li>believe - belief</li>
+<li>live - life</li>
+</ul>
+</li>
+<li>VS <code>b</code>
+<ul>
+<li>very - berry</li>
+<li>vet - bet</li>
+<li>vote - boat</li>
+<li>vowel - bowel</li>
+</ul>
+</li>
+</ul>
+<h5 id="65-ð">6.5 <code>ð</code></h5>
+<ul>
+<li>then</li>
+<li>this</li>
+<li>there</li>
+<li>that</li>
+<li>other</li>
+<li>smooth</li>
+</ul>
+<h5 id="66-z">6.6 <code>z</code></h5>
+<ul>
+<li>zero</li>
+<li>music</li>
+<li>buzz</li>
+<li>roses</li>
+<li>VS <code>s</code>
+<ul>
+<li>buzz - bus</li>
+<li>rise - rice</li>
+<li>zip - sip</li>
+<li>lazy - lacy</li>
+</ul>
+</li>
+</ul>
+<h5 id="67-ʒ">6.7 <code>ʒ</code></h5>
+<ul>
+<li>leisure</li>
+<li>pleasure</li>
+<li>vision</li>
+<li>beige</li>
+</ul>
+<h5 id="68-dʒ">6.8 <code>dʒ</code></h5>
+<ul>
+<li>joke</li>
+<li>lodger</li>
+<li>bridge</li>
+<li>judge</li>
+<li>VS <code>tʃ</code>
+<ul>
+<li>joke - choke</li>
+<li>junk - chunk</li>
+<li>lunge - lunch</li>
+<li>surge - search</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-其他辅音other-consonants">7. 其他辅音(Other consonants)</h4>
+<h5 id="71-m">7.1 <code>m</code></h5>
+<ul>
+<li>more</li>
+<li>hammer</li>
+<li>sum</li>
+<li>mime</li>
+<li>VS <code>n</code> <code>ŋ</code>
+<ul>
+<li>sum - sun - sung</li>
+<li>rum - run - rung</li>
+</ul>
+</li>
+</ul>
+<h5 id="72-n">7.2 <code>n</code></h5>
+<ul>
+<li>nice</li>
+<li>funny</li>
+<li>son</li>
+<li>none</li>
+<li>VS <code>ŋ</code>
+<ul>
+<li>son - sung</li>
+<li>pin - ping</li>
+<li>ran - rang</li>
+<li>thin - thing</li>
+<li>wind - winged</li>
+</ul>
+</li>
+</ul>
+<h5 id="73-ŋ">7.3 <code>ŋ</code></h5>
+<ul>
+<li>rung</li>
+<li>anger</li>
+<li>thanks</li>
+<li>VS <code>n</code>
+<ul>
+<li>tongue - ton</li>
+<li>wing - win</li>
+<li>robbing - robin</li>
+<li>singer - sinner</li>
+</ul>
+</li>
+</ul>
+<h5 id="74-h">7.4 <code>h</code></h5>
+<ul>
+<li>hear</li>
+<li>hot</li>
+<li>hello</li>
+<li>ahead</li>
+<li>height</li>
+<li>hedge</li>
+<li>how</li>
+</ul>
+<h5 id="75-l">7.5 <code>l</code></h5>
+<ul>
+<li>light</li>
+<li>valley</li>
+<li>bell</li>
+<li>level</li>
+<li>VS <code>r</code>
+<ul>
+<li>led - red</li>
+<li>clash - crash</li>
+<li>climb - crime</li>
+<li>lice - rice</li>
+<li>lock - rock</li>
+</ul>
+</li>
+</ul>
+<h5 id="76-r">7.6 <code>r</code></h5>
+<ul>
+<li>right</li>
+<li>wrong</li>
+<li>sorry</li>
+<li>arrange</li>
+<li>VS <code>l</code>
+<ul>
+<li>wrong - long</li>
+<li>royal - loyal</li>
+<li>misread - misled</li>
+<li>pirate - pilot</li>
+<li>pray - play</li>
+</ul>
+</li>
+</ul>
+<h5 id="77-j">7.7 <code>j</code></h5>
+<ul>
+<li>wet</li>
+<li>one</li>
+<li>when</li>
+<li>beware</li>
+<li>quick</li>
+<li>queen</li>
+<li>VS <code>v</code>
+<ul>
+<li>wet - vet</li>
+<li>worse - verse</li>
+<li>while - vile</li>
+<li>west - vest</li>
+<li>wary - very</li>
+</ul>
+</li>
+</ul>
+<h5 id="78-w">7.8 <code>w</code></h5>
+<ul>
+<li>yet</li>
+<li>use</li>
+<li>yellow</li>
+<li>useful</li>
+<li>beauty</li>
+<li>few</li>
+<li>cute</li>
+<li>accuse</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

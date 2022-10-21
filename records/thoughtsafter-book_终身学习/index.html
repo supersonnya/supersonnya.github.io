@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="records">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">终身学习</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jul 13, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 28 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="成长聚焦器">成长聚焦器</h3>
+<h4 id="一将来为上过往次之">一：将来为上，过往次之</h4>
+<ul>
+<li>寻找更大可能性</li>
+<li>设定目标</li>
+<li>找到新的志向</li>
+</ul>
+<h4 id="二学习为上经历次之">二：学习为上，经历次之</h4>
+<ul>
+<li>看看什么事行得通，什么事行不通</li>
+<li>把过往经历用作“原材料”</li>
+</ul>
+<h4 id="三付出为上回报次之">三：付出为上，回报次之</h4>
+<ul>
+<li>学会不为回报做事</li>
+<li>付出，因为觉得那样做是对的</li>
+</ul>
+<h4 id="四表现为上赞誉次之">四：表现为上，赞誉次之</h4>
+<ul>
+<li>一心只想发挥出最佳水平</li>
+<li>做身心投入的实干者</li>
+</ul>
+<h4 id="五感恩为上成功次之">五：感恩为上，成功次之</h4>
+<ul>
+<li>看到别人的付出并向其表示感谢</li>
+<li>感谢使自己的人生有今天的一切</li>
+</ul>
+<h4 id="六乐趣为上劳累次之">六：乐趣为上，劳累次之</h4>
+<ul>
+<li>将任务变成游戏</li>
+<li>投入热情和“玩心”去获取成果</li>
+</ul>
+<h4 id="七合作为上地位次之">七：合作为上，地位次之</h4>
+<ul>
+<li>通过团队合作将成果做大</li>
+<li>抛掉自负之心</li>
+<li>真心听取他人意见</li>
+</ul>
+<h4 id="八信心为上安乐次之">八：信心为上，安乐次之</h4>
+<ul>
+<li>敢于冒风险打造新能力</li>
+<li>直面恐惧</li>
+<li>戒掉借口</li>
+</ul>
+<h4 id="九目标为上金钱次之">九：目标为上，金钱次之</h4>
+<ul>
+<li>把价值观放在首位</li>
+<li>把钱看作取得更好成果的工具</li>
+</ul>
+<h4 id="十问题为上答案次之">十：问题为上，答案次之</h4>
+<ul>
+<li>自问一个能拓宽思路的问题</li>
+<li>拥抱未知，将其当作一切成长的汇集之地</li>
+</ul>
+<h3 id="实践">实践</h3>
+<h4 id="1-将来为上过往次之">1. 将来为上，过往次之</h4>
+<h5 id="11-你如何设计将来就能拥有多大未来">1.1 你如何设计将来，就能拥有多大未来</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 美好的将来是设想，成长是使设想成真的方法。
+</span></span><span style="display:flex;"><span>2. 无论身处人生的哪个阶段，无论当下境况如何，美好的将来是可以达成的。
+</span></span><span style="display:flex;"><span>3. 美好的将来不必宏伟而华丽，不必是大跨步或飞越。成长更多的时候是小步积累的结果，关键在于脚步不停。
+</span></span><span style="display:flex;"><span>4. 美好的将来不在于还有多少时间，而是在于如何度过这段时间。
+</span></span></code></pre></div><h5 id="12-起步">1.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 自问一个与未来相关的问题。建立与美好将来的联系。
+</span></span><span style="display:flex;"><span>2. 设定目标。
+</span></span><span style="display:flex;"><span>    a. 成就的扩建：在纸上写下5～10个去年以来取得的成就，思考每个成就前景如何。
+</span></span><span style="display:flex;"><span>    b. 回想最令自己充满干劲的事情里，最喜欢的是哪个，怎么变的更好？
+</span></span><span style="display:flex;"><span>3. 眼光长远。目标的时限设置要长一些（比如25年）。
+</span></span></code></pre></div><h4 id="2-学习为上经历次之">2. 学习为上，经历次之</h4>
+<h5 id="21-将精力转为学习将人生赋予终身学习">2.1 将精力转为学习，将人生赋予终身学习</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 单有经历并不足以保证一生的成长。关键在于把经历转化为思想和行为上的突破。
+</span></span><span style="display:flex;"><span>2. 任何一次经历都包括有益的部分和无益的部分。认清每次经历中的两部分，有意识地设法将有益的部分最大化，绕开或排除无益的部分。
+</span></span><span style="display:flex;"><span>3. 经历可以作为学习的原材料，利用其背后的情感力量，驱动自己去吸取其中的经验教训。
+</span></span><span style="display:flex;"><span>4. 个人的经历中蕴含着大量学习的机会，只要用心就能找到。将经历转化为学识，你就不会感觉厌世，也不会背负过往的包袱（积极的态度对待过往）。
+</span></span></code></pre></div><h5 id="22-起步">2.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 将经历转化为经验教训，把注意力集中在某一次经历上面。尽量是一个特定的事件；最好是对自己的情感有影响的事件。
+</span></span><span style="display:flex;"><span>2. 改变谈话方式。判断自己关注的是学习还是经历。（一旦从经历中提取出经验教训，一遍遍将其重复讲述的冲动一般都会消失）。你是惯于倾诉，还是惯于聆听、学习？你是纯粹想让别人听你讲，还是推动谈话向前发展？回想一下，当你身边有个人一遍遍向你重复他的故事时，你是什么感受。你说的内容，是发生的事，还是从事件中得来的经验教训？在你与他人的谈话过程中，你所述的事件，是整个谈话的起点，还是终点？
+</span></span></code></pre></div><h4 id="3-付出为上回报次之">3. 付出为上，回报次之</h4>
+<h5 id="31-所得易使人沉沦付出使人成长">3.1 所得易使人沉沦，付出使人成长</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 奉献或付出能巩固并扩展你与外部世界的联系，这种联系为人一生的成长提供支持和动力。
+</span></span><span style="display:flex;"><span>2. 把创造价值放在首位：全身贯注于真正的付出，让受众去决定你的回报。
+</span></span><span style="display:flex;"><span>3. 付出就是成长，付出也是收获。
+</span></span><span style="display:flex;"><span>3. 回报并非天经地义：在获得回报前，要先向别人做出有价值的贡献。
+</span></span><span style="display:flex;"><span>4. 人们都想跟愿意付出的人交往。反过来说，人们都不愿意跟付出少却索取多的人合作，也不愿为其付出。
+</span></span></code></pre></div><h5 id="32-起步">3.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 领悟回报并非天经地义的心态。我们有权获得某物：发出这种声音的人或组织机构，往往是想以某种方式操控我们，或是将我们拉进他们一伙。
+</span></span><span style="display:flex;"><span>2. 寻找付出的渠道。看看哪里有未解决的需求，自己恰好能出上力。自愿参与进去，做职责之外的事。付出的结果是一个指示器，表示你是否选错了付出的对象，决定是否重新评估一下对方的需求。
+</span></span><span style="display:flex;"><span>3. 领悟互惠精神。关注付出、共赢而不是得到的利益的多少。
+</span></span></code></pre></div><h4 id="4-表现为上赞誉次之">4. 表现为上，赞誉次之</h4>
+<h5 id="41-你无法控制他人的赞誉但你能把握自己的表现">4.1 你无法控制他人的赞誉，但你能把握自己的表现</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 未来是通过行动、表现创造的。美好的未来行动起来、全神贯注地去达成。
+</span></span><span style="display:flex;"><span>2. 表现所带来地赞誉只是一种副产品，可能很有用、很有价值，但它不应该是关注的重心。关注的重心一直应该是表现，而非别人对其表现的反应。
+</span></span><span style="display:flex;"><span>3. 我们能控制自己的表现，永远无法控制别人的反应、认可或赞誉。变得越来越好，满意现在的情况，同时努力走得更远，总是使明天比昨天更好。美好的将来需要自身有更好的表现，需要不断提高自身的知识和技能。
+</span></span><span style="display:flex;"><span>4. 努力提升表现时，我们会投入热情和才能，并设法将提升表现的过程及成长的过程提升到新的高度。对提升表现的渴望会给我们动力和关注的重心，使我们能应对并解决挑战。
+</span></span><span style="display:flex;"><span>5. 作为促进成长的一种方式，赞誉非常有用。它能打开一扇门，通往各种机遇、资源，以及将表现提高到更高层次的能力。但若将赞誉放在中心，它就会阻碍成长，它会扼杀你的想象力，束缚你的动力。把注意力放在提升表现上面，将赞誉当成谢而受之的副产品，就能确保不断成长。
+</span></span><span style="display:flex;"><span>6. 赞誉令人陶醉，在其诱惑之下，你就会围绕别人的认可和赞美去构建人生，不断重复最初给你带来赞誉的做法，而不是继续前行，去尝试新的、更好的、不同的东西。
+</span></span></code></pre></div><h5 id="42-起步">4.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 为自己的表现设定标准。设定自身表现的标准，时时对照，衡量取得的进步、庆贺胜利，免于在外界的标准和认可上浪费太多注意力。
+</span></span><span style="display:flex;"><span>2. 区分表现与奉献。一个是你是如何取得这些工作业绩（表现）的（完全取决于 你自身）；另一个是这些工作业绩为公司或团队所做的贡献有多少（由别人评判）。
+</span></span><span style="display:flex;"><span>3. 怀着感恩之心看待赞誉，而非将其当作应得之物。摆脱渴望认同的诱惑。
+</span></span><span style="display:flex;"><span>4. 关注当下。表演结束前就想着结束时的情形及随后而来的掌声会对表现有损，分散注意力。
+</span></span></code></pre></div><h4 id="5-感恩为上成功次之">5. 感恩为上，成功次之</h4>
+<h5 id="51-学会主动感恩而不是被动拥有">5.1 学会主动感恩，而不是被动拥有</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 能不断取得成功的人只是极少数。每一次的成功，都离不开别人的帮助和配合，要心怀感激。
+</span></span><span style="display:flex;"><span>2. 成长永远是个过程，而不是目的地。成功地活着，就是不断成长，而心怀感恩，自然会不断成长。
+</span></span><span style="display:flex;"><span>3. 在一生的时间里，对不断地、成功地与世界相互作用而言，感恩就是最好的保证。所有的成就和能力都是建立在别人的才能和付出之上。
+</span></span><span style="display:flex;"><span>4. 学会主动感恩。通过主动感恩，我们能看到人和物身上的价值。
+</span></span><span style="display:flex;"><span>5. 平凡的事物在我们的生活里非常重要。只要用心，就能找到这层意义。在这个过程中，人在成长，同时加深了与平凡事物的联系。
+</span></span><span style="display:flex;"><span>6. 感恩带给人终身成长的三个关键元素：纽带、承诺、谦逊。
+</span></span><span style="display:flex;"><span>7. 三个心理特征会妨碍个人成功：孤芳自赏、以自我为中心、傲慢自大。孤芳自赏的人往往自绝于他人能提供的重要学识、才智和能力；以自我为中心的人总是毁灭别人的好意和支持；傲慢自大的人往往引起别人的反感和敌意。
+</span></span></code></pre></div><h5 id="52-起步">5.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 写下感恩的对象。养成感恩的心态。
+</span></span><span style="display:flex;"><span>2. 把感恩之情表达出来。
+</span></span><span style="display:flex;"><span>3. 感谢方式要因人而异。不同的人喜欢不同的感谢方式，若要向某个特定的人表达感激之情，务必要以对方感觉有意义的方式，这样才行之有效。
+</span></span></code></pre></div><h4 id="6-乐趣为上劳累次之">6. 乐趣为上，劳累次之</h4>
+<h5 id="61-带着取乐的心态做事其结果一定不差">6.1 带着取乐的心态做事，其结果一定不差</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 要保证不断成长，一个方法就是在途中找到越来越多的乐趣。无论做什么事，创造力与乐趣，都息息相关。
+</span></span><span style="display:flex;"><span>2. 设法在工作中找到乐趣，能激发人的创造力，并给人尽在掌握的感觉，而非被工作任务过支配、压制，从而拓宽思路去探索自我。
+</span></span><span style="display:flex;"><span>3. 快乐的精神能产生杰出的品质，还能以难以预知的方式鼓舞他人。让事情变得有趣好玩会给人激励，使其愿意投入其中、出一份力。
+</span></span><span style="display:flex;"><span>4. 我们最擅长的、最有热情的以及能为无尽的提高和成长带来最好机遇的事，正是那些能给我们带来乐趣的事。
+</span></span><span style="display:flex;"><span>5. 人们往往会被擅长却没有热情的事情所困。尽管这些劳累会带来回报，但带不来乐趣和长远的、重要的成长。
+</span></span><span style="display:flex;"><span>6. 倘若你发现自己的劳累多过乐趣，也许是一个迹象：你手头的事，其实不如不做。
+</span></span><span style="display:flex;"><span>7. 做自己喜欢的事，设法往里面加进乐趣，如此一来，就能找到此前未知的持续成长的机会。
+</span></span></code></pre></div><h5 id="62-起步">6.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 利用衡量工具和挑战，将任务变成游戏。通过不断给自己挑战的方式，使原本重复而令人生畏的任务变得有趣。
+</span></span><span style="display:flex;"><span>2. 以更有乐趣的方式取得期盼的结果。（改变心态）
+</span></span><span style="display:flex;"><span>3. 使用乐趣过滤器。每个人都有其独特的能力，人与人是不同的，你不喜欢的事一定有人会喜欢。
+</span></span><span style="display:flex;"><span>4. 乐趣并不是不认真。在真正培育和欣赏成长的工作环境中，乐在工作中是正常现象，而非反常特例。
+</span></span></code></pre></div><h4 id="7-合作为上地位次之">7. 合作为上，地位次之</h4>
+<h5 id="71-感谢并欢迎别人的贡献而不是囿于个人得失">7.1 感谢并欢迎别人的贡献，而不是囿于个人得失</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 合作与促进合作并不意味着别人说什么你就做什么，或一味回应他们的需求。所谓合作，就是大家都关注同一个目标，各出其力。
+</span></span><span style="display:flex;"><span>2. 贪恋地位的表现：从不承认犯错；总是抢功劳；总表现得比别人优越。
+</span></span></code></pre></div><h5 id="72-起步">7.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 坦诚面对自己的动机。倘若自负和对地位的需求妨碍了你为他人创造最好的成果，那就要小心了，这样做会令你停滞不前。
+</span></span><span style="display:flex;"><span>2. 感谢并欢迎别人的才能和贡献。主动感恩，提前感谢；事后感谢。没有人愿意跟那些把功劳都据为己有的人共事。有问题的人与试图为其解决问题的人之间的合作越深，解决方案就越是有效。
+</span></span><span style="display:flex;"><span>3. 要掌管，不要控制。前者是与团队成员清晰地交流设想和目标，并支持团队取得预期成果；后者是认为自己得推动工作过程的每个环节，并通过命令把事情做成。
+</span></span></code></pre></div><h4 id="8-信心为上安乐次之">8. 信心为上，安乐次之</h4>
+<h5 id="81-在赢得小目标后保持自信去迎接更大的挑战">8.1 在赢得小目标后，保持自信去迎接更大的挑战</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 安稳和舒适都是达成目标后令人心醉的副产品，但是，倘若二者被当成奋斗的目标，那人一生的成长立刻戛然而止。我们应把愈来愈安乐的生活看作实现更大目标过程中的暂时阶段。不断为更高的目标、更大的成就而努力。
+</span></span><span style="display:flex;"><span>2. 要想实现不断成长的目标，就得在两件事上把握好平衡。一是把自己赶出“舒适区”，将信心提升到新的高度；二 是在 这些新层面上舒适地小憩，使它们变成正常状态。
+</span></span><span style="display:flex;"><span>3. 致力于提升信心，会使我们有勇气克服恐惧，保持上升势头，不断迈入更美好的未来。
+</span></span><span style="display:flex;"><span>4. 勇气是一种能力，能把恐惧转化为专心致志的思考和行动。在不适和气馁的时候勇敢坚持，其回报是能力的提升，信心也会随之增强。
+</span></span></code></pre></div><h5 id="82-起步">8.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 设定目标，行动起来。重要的不是你是否达成目标，而是看它能否让你努力奋斗了，因为努力奋斗能造就成长。
+</span></span><span style="display:flex;"><span>2. 倘若需要，就稍微休息一下。
+</span></span><span style="display:flex;"><span>3. 借鉴以往经历。
+</span></span><span style="display:flex;"><span>4. 回顾以往经历，想想你是如何培养新能力的：开始是下决心，决定离开“舒适区”，尝试新事物；然后是鼓起勇气，克服学习过程中的恐惧和不快，以及因棘手而产生的不确定感。一旦克服了恐惧，你就能学得新能力并且增强信心。回顾以往经历，写下你对以上几个阶段的感受，你就能弄明白当初是如何做成的。下次再遇到需要勇气下决心的机遇时，你就能在心中规划出每个过程的情况，胸有成竹地走过每个阶段。
+</span></span></code></pre></div><h4 id="9-目标为上金钱次之">9. 目标为上，金钱次之</h4>
+<h5 id="91-你的眼光要放在目标上金钱只是顺便的事">9.1 你的眼光要放在目标上，金钱只是顺便的事</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 只把金钱当成目标，会阻碍人的成长。而一个超越了金钱的目标能给你持续不断的奋斗动力。人生因目标而有了意义，也因而能把才能和精力集中于此。汇合。把金钱仅仅看作实现更大目标的一种方式，你就能聚集所有的资源和回报，打造一个丰富多彩的人生，而非仅仅拥有金钱。
+</span></span><span style="display:flex;"><span>2. 目标不必宏伟，它可以像“做个好人”一样简单实际，只按你自己的标准来评判即可。
+</span></span><span style="display:flex;"><span>3. 妥协的后果一发而不可收：一旦你在价值观上做出了让步，那在你心中，其重要性已经不在，下次再有类似情况，你会轻易地重蹈覆辙，而在不经意间你就变成金钱至上了。
+</span></span><span style="display:flex;"><span>4. 在金钱的诱惑面前不为所动，而是忠于自己的价值观，信守目标，这样做会逼着你成长。它会给你一个机会，让你强化价值观的信念，并开动脑筋，发挥想象力，去寻找其他既符合目标，又能解决经济需求的方法。
+</span></span><span style="display:flex;"><span>5. 倘若成长是你真正关注的东西，那么长远看来，很少有值得单单为钱去做的事；反过来说，仅仅是为了目标和成长的话，有很多事情是值得去做的，不管其挣钱与否。然而，愿意不挣钱去做事，并不意味着你不应设法从中挣钱。最好的解决方案是两者兼顾。有了目标的支撑，金钱能帮我们打造长久、稳定的成长。
+</span></span><span style="display:flex;"><span>6. 即使是寻找目标的过程，也能引领人走向成长。
+</span></span><span style="display:flex;"><span>7. 即便你不知道自己的目标是什么，你也能通过寻找目标来达到对目标的关注。寻找目标，本身就是一种目标，在你发现真正的目标之前一直如此。想一想，打动你的是什么，给你激情和活力的是什么，这就是你的起点。寻找目标，永远都比寻找金钱能带给你更多成长。
+</span></span></code></pre></div><h5 id="92-起步">9.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 聆听心声，相信直觉。目标感与心、与直觉有关，与理性的关系则不那么大。
+</span></span><span style="display:flex;"><span>2. 把目标写在纸上。首先，选择合适的词句会逼着你清晰表达自己的目标。其次，把目标陈述出来，能让别人理解你，与你合作，从而帮助你实现设想。
+</span></span><span style="display:flex;"><span>3. 目标会随着时间而进化演变，在人生不同阶段可能有不同的目标，这些都是正常的。
+</span></span></code></pre></div><h4 id="10-问题为上答案次之">10. 问题为上，答案次之</h4>
+<h5 id="101-真正的好问题能使你一生都在思考成长">10.1 真正的好问题，能使你一生都在思考、成长</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 问题能打开探究的大门：我们就是这样想象并发现新的可能性的。成长并非源自拥有所有确凿的答案，而是源自围绕一个问题所展开的对话。
+</span></span><span style="display:flex;"><span>2. 好问题都是开放式的，也就是说，它不是简简单单一个答案就能打发的。
+</span></span><span style="display:flex;"><span>3. 宏大。只要是真正以探索的精神发问，任何问题都能助你成长。只要你真心想知道问题的答案，你只需通过问自己这个问题就能成长——即使得不到答案也行。因为问题能开启对话，它们能以新的纽带为我们建立与世界的联系。
+</span></span><span style="display:flex;"><span>4. 带着探究答案的渴望，而不是对答案怀有预想，这样问出的问题，才是能促进成长的好问题。
+</span></span><span style="display:flex;"><span>5. 为能做到不断问出好问题，就得放弃任何可能的恐惧：不知道答案是什么，看上去很无知等等。但是，我们可以换个视角。倘若你能看重问题，看轻答案，那么，你是否知道答案就无关紧要了。事实上，最好的问题其实都是没有答案的。始终抱着开放的心态，承认自己的理解可能存在缺陷；始终愿意接受一个观点——总会有一个做事的方法比你已知的这个更好。只要你愿意接纳这些可能性，学习和进步就会水到渠成。
+</span></span><span style="display:flex;"><span>6. 人生就是通过不断的对话、听取每个人的观点塑造而成的。
+</span></span><span style="display:flex;"><span>7. 不断问出好问题，能使你明白——尽管未知的事物有时令人恐惧，但它同样是兴奋、奇遇、成长机遇的源头，从而使你的人生更有趣，同时增加你的信心。好的问题能帮我们找到目标，给人生指引。
+</span></span></code></pre></div><h5 id="102-起步">10.2 起步</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>1. 调动好奇心。倘若你不知怎样才能问出好问题，可以借鉴以下办法：去接触一些能将你带进未知领域的新事物；读一本书或看一部纪录片，内容是你此前从未有过了解的事物；与某个不在你日常交流圈里的人交流一下；组织或加入一个讨论组，谈谈你未曾读过的文章或书籍，最好是谈一些你知之甚少的话题。带着最真挚的探究精神——亦即禅师所称的“初心”——去接触这些新事物，这样就有很多可以发问的话题了。
+</span></span><span style="display:flex;"><span>2. 把谈话维持下去。与别人交谈时，倘若双方都有时间，那就尽量用问题将交谈持续下去。认真聆听对方说话的内容，你就能找到下一步要开口问的问题。
+</span></span></code></pre></div><h4 id="11-帮助起步的好问题">11. 帮助起步的好问题</h4>
+<ul>
+<li>如果迄今为止我所做的一切都只是开始，下一步将会怎样？</li>
+<li>在随后21天时间里，我想养成什么习惯？</li>
+<li>我如果用25年时间来做一件大事，会是什么？</li>
+<li>过去1年时间里，我最骄傲的10个成就是什么？下一步我怎样将它们一一发扬光大？</li>
+<li>在我的人生里，已经无法接受的是什么？</li>
+<li>在我的人生里，想发扬光大的是什么？想抑制减少的是什么？</li>
+<li>我能发展到什么程度？</li>
+</ul>
+<h4 id="12-成长聚焦器">12. 成长聚焦器</h4>
+<ul>
+<li>所有进步都始于说实话。</li>
+<li>要想使成长最大化，一个最有效的方法就是：始终如一地关注自己成长的方向。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>首先，把第一栏的内容填写好。倘若并非每周都有全部10条法则的对应事例，也不用担心。第二栏要记录的是你采取了这些行动之后所产生的任何结果。接着，把下面两种法则圈出来：一个是你对本周所取得的成就里最满意的那条，另一个是你下周最想有所突破的那条。针对以上两条法则，写出你选择它们的理由，以及下一步的打算。倘若你是跟朋友或在小组里一起使用“成长聚焦器”，那么，与他们分享一下上面两条内容，往往会是一次很好的交流机会。请你的同事、朋友、伙伴、家人也做做这个练习，这样你们就能交流彼此的看法、观点。如此一来，这个练习的功效就成倍增长。其好处是，你能清晰表达出自己的观点，能听听别人成长的体会，能相互提出意见建议，并在以上过程中有所收获。
+</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

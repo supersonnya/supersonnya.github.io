@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clang on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/clang/</link>
+    <description>Recent content in clang on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Aug 2022 17:16:49 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/clang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础语法与数据类型</title>
+      <link>https://supersonnya.github.io/programlang/clang-basicalgram/</link>
+      <pubDate>Thu, 18 Aug 2022 17:16:49 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/clang-basicalgram/</guid>
+      <description>语言特点 易于学习。 结构化语言。 高效率的程序。 处理底层的活动。 在多种计算机平台上编译。 基础语法 令牌 关键字、标识符、常量、字符串值或一个符号 分号 每个语句必须以;结束 注释 //单行注释 /**/多行注释 标识符 标识变量、函数及其他用户自定义项目的名称 A-Z或a-z或_开头，后跟零个或多个字母、_和数字 标识符内不允许出现标点字符和特殊字符，区分大小写 关键字 保留字不能作为常量名、变量名或其他标识符名称 C 中的空格 只包含空格的行，被称为空白行，可能带有注释，C 编译器会完全忽略它。 在 C 中，空格用于描述空白符、制表符、换行符和注释。 程序结构 // 预处理指令 // 函数 // 变量 // 语句&amp;amp;表达式 // 注释 #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello world\n&amp;#34;); return 0; } gcc hello.c ./a.out gcc test1.c test2.c -o main.out ./main.out 数据类型 基本类型 整数类型 char、unsigned char、signed char（1字节） int、unsigned int（2或4字节） short、unsigned short（2字节） long、unsigned long（4字节） 浮点类型 float（4字节，1位符号、8位指数、23位小数） double（8字节，1位符号、11位指数、52位小数） long double（16字节） 枚举类型 离散整数值变量 void类型 没有可用的值 函数返回为空、函数参数为空、指针指向void 派生类型 指针类型 聚合类型：数组类型，结构类型 共用体类型 函数类型：返回值的类型 printf(&amp;#34;%lu\n&amp;#34;, sizeof(int)); 存储类 auto 所有局部变量默认的存储类 只能用在函数内，即只能修饰局部变量 register 定义存储在寄存器中而不是RAM中的局部变量 不能应用&amp;amp;，没有地址 只用于需要快速访问的变量 static 修饰的变量可以在函数调用之间保持局部变量的值 修饰全局变量，将变量的作用于限制在声明它的文件内 extern </description>
+    </item>
+    
+  </channel>
+</rss>

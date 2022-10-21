@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>storage on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/storage/</link>
+    <description>Recent content in storage on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 30 Aug 2022 09:25:24 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Storage Netapp</title>
+      <link>https://supersonnya.github.io/operation/storage-netapp/</link>
+      <pubDate>Tue, 30 Aug 2022 09:25:24 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/storage-netapp/</guid>
+      <description>netapp硬盘更换 sysconfig -r ## 查看数据重建进度和磁盘状态 disk show -v ## 坏盘状态为failed aggr status -s | -f ## 查看热备盘|坏盘 priv set advanced ## 进入维护模式 blink_on diskname ## 点亮磁盘黄灯 disk assign diskname ## 分配磁盘 disk unfail -s diskname ## 将磁盘转换为热备盘 disk zero spares ## 格式化热备盘 rdfile /etc/messages ## 出现reconstruction completed可以更换硬盘 </description>
+    </item>
+    
+  </channel>
+</rss>

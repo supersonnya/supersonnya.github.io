@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="函数、数组、正则表达式">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Shell编程基础</h1>
+    
+    <p class="uk-text-center uk-text-muted">Sep 01, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 28 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h2 id="函数">函数</h2>
+<h3 id="基本介绍">基本介绍</h3>
+<h4 id="1什么是函数">1、什么是函数</h4>
+<ul>
+<li>对于一个单独的 Shell 脚本来说，在执行的时候，会为其创建一个新的Shell 进程，来解释并执行脚本中的代码，当脚本执行完成，该 Shell 进程就会自动结束；而对于一个函数来说，在调用的时候，系统并不会为其单独创建一个 Shell 进程，而是在调用者的 Shell 进程中直接解释并执行函数中的代码。</li>
+</ul>
+<h4 id="2函数的定义">2、函数的定义</h4>
+<ul>
+<li><code>Shell</code>规定，函数必须在调用前定义。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>[<span style="color:#6ab825;font-weight:bold">function</span>] function_name ()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   statement1
+</span></span><span style="display:flex;"><span>   statement2
+</span></span><span style="display:flex;"><span>   ...
+</span></span><span style="display:flex;"><span>   statement n
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="3函数的调用">3、函数的调用</h4>
+<ul>
+<li>通过函数名来调用该函数：<code>function_name param1 param2 …</code>。</li>
+<li>当用户定义一个函数后，该函数就成为一个合法的<code>Shell</code>命令，可在后继的脚本中使用。定义函数时需要使用圆括号，调用函数时无需圆括号。</li>
+</ul>
+<h4 id="4函数链接">4、函数链接</h4>
+<ul>
+<li>函数链接指在某个<code>Shell</code>函数中调用另外一个函数的过程，<code>Shell</code>允许用户函数的嵌套调用。</li>
+<li>函数链接不仅仅局限于在某个函数中调用另外一个函数，还可进行多层嵌套调用，或在某个函数中调用多个函数。</li>
+</ul>
+<h4 id="5函数的返回值">5、函数的返回值</h4>
+<ul>
+<li>用户可使用<code>return</code>语句返回某个数值，在<code>Shell</code>中，<code>return</code>只能返回<code>0～255</code>之间的整数值。</li>
+<li>在函数中，用户将需要返回的数据写入到标准输出，通常使用<code>echo</code>语句完成，然后在调用程序中将函数的执行结果赋给一个变量。通过<code>echo</code>可以将各种数据作为返回值返回给函数调用者，而不仅仅局限于整数。</li>
+</ul>
+<h4 id="6函数和别名">6、函数和别名</h4>
+<ul>
+<li>与函数相比，别名的功能比较简单，不能为一组命令指定别名，别名中不能通过系统变量操作参数列表。</li>
+</ul>
+<h3 id="函数参数">函数参数</h3>
+<h4 id="1含有参数的函数的调用方法">1、含有参数的函数的调用方法</h4>
+<ul>
+<li><code>function_name arg1 arg2 ...</code>。</li>
+</ul>
+<h4 id="2获取函数参数的个数">2、获取函数参数的个数</h4>
+<ul>
+<li>在函数内部，通过位置变量来接收参数的值。</li>
+<li>通过系统变量<code>$#</code>来获取脚本的参数的个数。</li>
+<li>参数以空格隔开，如果某个参数中含有空格，应该使用引号将其引用起来。</li>
+</ul>
+<h4 id="3通过位置变量接收参数值">3、通过位置变量接收参数值</h4>
+<ul>
+<li>使用位置变量来获取参数值，<code>$0</code>表示脚本名称，<code>$1</code>表示第1个参数，<code>$2</code>表示第2个参数等。通过系统变量<code>$@</code>和<code>$*</code>获取所有参数的值。</li>
+</ul>
+<h4 id="4移动位置参数">4、移动位置参数</h4>
+<ul>
+<li>在函数中，用户可以使用<code>shift</code>命令来使得脚本的所有的位置参数向左移动一个位置，使用户可通过9以内的位置变量来获取超过9个的参数。</li>
+<li><code>shift</code>命令会影响到系统变量<code>$#</code>的值。</li>
+</ul>
+<h4 id="5通过getopts接收函数参数">5、通过getopts接收函数参数</h4>
+<ul>
+<li><code>getopts</code>是<code>bash</code>内置的一个命令，该命令可以获取函数的<code>选项</code>以及<code>参数值</code>，或者是脚本的命令行选项以及参数值，基本语法：<code>getopts optstring [args]</code>。参数<code>optstring</code>包含一个可以被<code>getopts</code>命令识别的选项名称列表。如果选项名称的后面带冒号，表示可为该选项提供参数值，参数值将被保存到一个名称为<code>$OPTARG</code>的内置系统变量中。<code>getopts</code>命令会依次遍历每个选项，选项名称将被保存到<code>args</code>变量中。</li>
+</ul>
+<h4 id="6间接参数传递">6、间接参数传递</h4>
+<ul>
+<li>间接参数传递指通过间接变量引用来实现函数参数的传递。如果某个变量的值又是另外一个变量的变量名，则该变量称为间接变量。</li>
+<li>变量的间接引用语法：<code>${!var_name}</code>。</li>
+</ul>
+<h4 id="7通过全局变量传递数据">7、通过全局变量传递数据</h4>
+<ul>
+<li>参数的作用是在主程序和函数之间传递数据。除了使用参数传递数据外，还可通过全局变量来传递。</li>
+</ul>
+<h4 id="8传递数组参数">8、传递数组参数</h4>
+<ul>
+<li>严格地讲，<code>Shell</code>不支持将数组作为参数传递给函数，但可通过一些变通的方法实现数组参数的传递。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span> 
+</span></span><span style="display:flex;"><span>func() 
+</span></span><span style="display:flex;"><span>{ 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;number of elements is </span><span style="color:#40ffff">$#</span><span style="color:#ed9d13">.&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">while</span> [ <span style="color:#40ffff">$#</span> -gt <span style="color:#3677a9">0</span> ] 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">shift</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span><span style="display:flex;"><span>} 
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">a</span>=(a b <span style="color:#ed9d13">&#34;c d&#34;</span> e)
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 如果将${a[@]}外面的双引号去掉，第3个元素会误认为是2个元素</span>
+</span></span><span style="display:flex;"><span>func <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">a</span>[@]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span>
+</span></span></code></pre></div><h3 id="函数库文件">函数库文件</h3>
+<h4 id="1函数库文件的定义">1、函数库文件的定义</h4>
+<ul>
+<li>脚本与库文件之间的唯一区别在于函数库文件通常只包括函数，脚本中可以既包括函数和变量的定义，又包括可执行的代码。函数库文件与普通的脚本的结构完全相同。</li>
+<li>通常情况下应该为函数库文件提供有意义的名称，为了便于管理应将所有的库文件单独放到一个目录中。</li>
+<li>函数库文件是由主程序载入并执行的，用户无需拥有库文件的执行权限，只要拥有读取权限即可。</li>
+</ul>
+<h4 id="2函数库文件的调用">2、函数库文件的调用</h4>
+<ul>
+<li>当库文件定义好后就可以在程序中载入库文件，并且调用其中的函数，语法为：<code>. filename</code>。</li>
+<li>库文件可使用相对路径，也可使用绝对路径。圆点命令和库文件名之间有一个空格。</li>
+<li>使用函数库文件时，必须在调用函数前将库文件载入。</li>
+</ul>
+<h3 id="递归函数">递归函数</h3>
+<ul>
+<li><code>Linux</code>的<code>Shell</code>支持函数的递归调用，函数可以直接或者间接地调用自身。在函数的递归调用中，函数既是调用者，又是被调用者。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span>fact() 
+</span></span><span style="display:flex;"><span>{ 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">local</span> <span style="color:#40ffff">n</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">if</span> [ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$n</span><span style="color:#ed9d13">&#34;</span> -eq <span style="color:#3677a9">0</span> ] 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#40ffff">result</span>=<span style="color:#3677a9">1</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">else</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;m=n-1&#34;</span> 
+</span></span><span style="display:flex;"><span>      fact <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$m</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;result=</span><span style="color:#40ffff">$n</span><span style="color:#ed9d13"> * </span><span style="color:#40ffff">$?</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">fi</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#40ffff">$result</span> 
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>fact <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Factorial of </span><span style="color:#40ffff">$1</span><span style="color:#ed9d13"> is </span><span style="color:#40ffff">$?</span><span style="color:#ed9d13">&#34;</span>
+</span></span></code></pre></div><h2 id="数组">数组</h2>
+<h3 id="定义数组">定义数组</h3>
+<ul>
+<li>数组是指将具有相同类型的若干变量按照一定的顺序组织起来的一种数据类型。<code>Shell</code>语言对于数组的支持非常强大，可通过多种方式来创建一个数组。</li>
+</ul>
+<h4 id="1通过指定元素值来定义数组">1、通过指定元素值来定义数组</h4>
+<ul>
+<li>数组的下标从0开始，基本语法：<code>array[key]=value</code>，可定义名称为<code>array</code>的新数组变量。</li>
+</ul>
+<h4 id="2通过declare语句定义数组">2、通过declare语句定义数组</h4>
+<ul>
+<li>基本语法：<code>declare -a array</code>。</li>
+<li>实际上这样的声明不是非常必要的。在<code>Shell</code>中，所有的变量都不必显式定义就可以用做数组。在某种意义上讲，所有的变量都是数组，赋值给没有下标的变量与赋值给下标为0的元素的效果是相同的。</li>
+</ul>
+<h4 id="3通过元素值集合定义数组">3、通过元素值集合定义数组</h4>
+<ul>
+<li>基本语法：<code>array=( v0 v1 v2 ... vn)</code>。</li>
+</ul>
+<h4 id="4通过键值对定义数组">4、通过键值对定义数组</h4>
+<ul>
+<li>基本语法：<code>array=([0]=value0 [1]=vlaue1 [2]=value2 ... [n]=valuen)</code>。</li>
+<li><code>Shell</code>中的数组的索引并不仅仅是数字，还可以是字符串，称为关联数组。在使用关联数组时，需要首先使用 <code>declare</code>语句来声明数组，然后再通过键值对的形式为数组元素提供值：<code>declare -A array</code>。</li>
+<li>关联数组在<code>bash 4.0</code>及以上版本获得支持。</li>
+</ul>
+<h4 id="5数组和普通变量">5、数组和普通变量</h4>
+<ul>
+<li>在<code>Shell</code>中，所有的普通变量都可以当做数组变量来使用。对普通变量操作与对相同名称的下标为0的元素的操作是等效的。</li>
+</ul>
+<h3 id="数组的赋值">数组的赋值</h3>
+<h4 id="1按索引为元素赋值">1、按索引为元素赋值</h4>
+<ul>
+<li>基本语法：<code>array[n]=valuen</code>。</li>
+</ul>
+<h4 id="2通过集合为数组赋值">2、通过集合为数组赋值</h4>
+<ul>
+<li>通过集合为数组赋值与通过集合定义数组的语法完全相同。当为某个数组提供一组值时，会从第1个元素开始，依次将这些值赋给每个元素。当新的值的个数超过原来的数组长度时，会在数组末尾追加新的元素；当新的值的个数少于原来的数组长度时，会将新的值从第1个元素开始赋值，然后删除超出的元素。</li>
+</ul>
+<h4 id="3在数组末尾追加新元素">3、在数组末尾追加新元素</h4>
+<ul>
+<li>在通过索引为数组元素赋值时，如果指定的索引不存在，会自动添加一个新的元素，并将指定的值赋给该元素。</li>
+<li>无论以何种方式为关联数组赋值，都需要显示指定元素的下标。</li>
+</ul>
+<h4 id="4通过循环为数组元素赋值">4、通过循环为数组元素赋值</h4>
+<ul>
+<li>最常用的数组赋值方法是通过一个循环语句逐个为每个元素提供值，可以是任意一种循环语句。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> i in {1..10} 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   array[<span style="color:#40ffff">$i</span>]=<span style="color:#40ffff">$i</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>  
+</span></span><span style="display:flex;"><span><span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">array</span>[@]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span> 
+</span></span></code></pre></div><h3 id="访问数组">访问数组</h3>
+<h4 id="1访问第1个数组元素">1、访问第1个数组元素</h4>
+<ul>
+<li>直接使用数组名来访问数组时，得到的是下标为0的元素的值。</li>
+</ul>
+<h4 id="2通过下标访问数组元素">2、通过下标访问数组元素</h4>
+<ul>
+<li>基本语法：<code>array[n]</code>。</li>
+</ul>
+<h4 id="3计算数组的长度">3、计算数组的长度</h4>
+<ul>
+<li>基本语法：<code>${#array[@]}</code>或<code>${#array[*]}</code>。</li>
+<li>获取具体元素的长度：<code>${#array[n]}</code>。</li>
+</ul>
+<h4 id="4通过循环遍历数组元素">4、通过循环遍历数组元素</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#40ffff">array</span>=(Mon Tue Wed Thu Fri Sat Sun) 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 获取数组长度  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">len</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${#</span><span style="color:#40ffff">array</span>[@]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> ((<span style="color:#40ffff">i</span>=0;i&lt;<span style="color:#40ffff">$len</span>;i++)) 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">array</span>[<span style="color:#40ffff">$i</span>]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h4 id="5引用所有的数组元素">5、引用所有的数组元素</h4>
+<ul>
+<li>指定下标为<code>@</code>或者<code>*</code>，表示引用当前数组中的所有的元素：<code>${array[@|*]}</code>。</li>
+</ul>
+<h4 id="6以切片方式获取部分数组元素">6、以切片方式获取部分数组元素</h4>
+<ul>
+<li>基本语法：<code>${array [@|*]:start:length}</code>，得到的切片是一个字符串，并非数组。</li>
+<li>基本语法：<code>(${array [@|*]:start:length})</code>，得到的结果是一个数组。</li>
+<li>对数组元素进行切片：<code>${array [n]:start:length}</code>，得到一个子字符串。</li>
+<li>长度值超过数组或者数组元素的长度，都会截取到数组或者数组元素的末尾为止。</li>
+</ul>
+<h4 id="7数组元素的替换">7、数组元素的替换</h4>
+<ul>
+<li>基本语法：<code>${array[@|*]/pattern/replacement}</code>，部分内容用其他的字符串来代替，不影响原来的数组的值。</li>
+<li>为得到一个新的数组变量，需要使用圆括号操作符，否则得到一个字符串变量：<code>a=(${a[@]/3/100})</code>。</li>
+</ul>
+<h3 id="删除数组">删除数组</h3>
+<h4 id="1删除指定数组元素">1、删除指定数组元素</h4>
+<ul>
+<li>基本语法：<code>unset array[n]</code>。</li>
+</ul>
+<h4 id="2删除整个数组">2、删除整个数组</h4>
+<ul>
+<li>基本语法：<code>unset array</code>。</li>
+</ul>
+<h3 id="数组的其他操作">数组的其他操作</h3>
+<h4 id="1复制数组">1、复制数组</h4>
+<ul>
+<li>实现语法：<code>newarray=(&quot;${array[@]}&quot;)</code>。</li>
+</ul>
+<h4 id="2连接数组">2、连接数组</h4>
+<ul>
+<li>实现语法：<code>(&quot;$array1[@]}&quot; &quot;${array2[@]}&quot;)</code>。</li>
+</ul>
+<h4 id="3加载文件内容到数组">3、加载文件内容到数组</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 加载文件内容  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">content</span>=(<span style="color:#ed9d13">`</span>cat <span style="color:#ed9d13">&#34;demo.txt&#34;</span><span style="color:#ed9d13">`</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> s in <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">content</span>[@]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$s</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h2 id="正则表达式">正则表达式</h2>
+<h3 id="什么是正则表达式">什么是正则表达式</h3>
+<ul>
+<li>来描述某些字符串匹配规则的工具。</li>
+</ul>
+<h4 id="1为什么使用正则表达式">1、为什么使用正则表达式</h4>
+<ul>
+<li>查找符合某些比较复杂规则的字符串时如果单纯依靠程序设计语言本身，往往需要复杂的代码来实现。使用正则表达式，则会以非常简短的代码完成。</li>
+</ul>
+<h4 id="2如何学习正则表达式">2、如何学习正则表达式</h4>
+<ol>
+<li>重点在于理解元字符。</li>
+<li>掌握好正则表达式的语法。</li>
+<li>开拓思路，寻找最佳的表达方法。</li>
+</ol>
+<h3 id="正则表达式基础">正则表达式基础</h3>
+<h4 id="1正则表达式的原理">1、正则表达式的原理</h4>
+<ul>
+<li>正则表达式是对文本进行过滤的工具，它定义了一系列的元字符，通过元字符配合其他的字符来表达出一种规则，只有符合该规则的文本才能保留下来，不符合该规则的文本则被过滤掉。</li>
+<li>元字符是指用来描述字符的字符。元字符的作用在于对字符表达式的内容、转换以及各种操作信息进行描述。</li>
+</ul>
+<h4 id="2基本正则表达式">2、基本正则表达式</h4>
+<ul>
+<li>基本正则表达式<code>（Basic Regular Expression，BRE）</code>，又称为标准正则表达式，是最早制订的正则表达式规范，仅支持最基本的元字符集。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>^ <span style="color:#999;font-style:italic">## 行首定位符,匹配行首的字符,定位符用来匹配某个具体的位置</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#34;^app&#34;</span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#999;font-style:italic">## 行尾定位符</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#34;conf</span>$<span style="color:#ed9d13">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 完全匹配cat</span>
+</span></span><span style="display:flex;"><span>^cat$
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配所有的空行,行中没有任何字符，包括空白字符</span>
+</span></span><span style="display:flex;"><span>^$
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配所有行，包括^$表示的空行</span>
+</span></span><span style="display:flex;"><span>^ | $
+</span></span><span style="display:flex;"><span>. <span style="color:#999;font-style:italic">## 匹配任意单个字符，包括空格，不包括换行符,可连续使用圆点符号来匹配多个字符</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 限定符本身不代表任何字符，指定其前面的一个字符必须重复出现多少次才能满足匹配</span>
+</span></span><span style="display:flex;"><span>* <span style="color:#999;font-style:italic">## 匹配其前导字符的任意次数，包括0次</span>
+</span></span><span style="display:flex;"><span>[] <span style="color:#999;font-style:italic">## 字符集匹配,指定一个字符集合</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 元字符*或者.等位于字符集匹配符后，变成普通字符，只有字面意义，没有特殊意义</span>
+</span></span><span style="display:flex;"><span>[abc] | [a-f] | [0-9]
+</span></span><span style="display:flex;"><span>[^] <span style="color:#999;font-style:italic">## 字符集不匹配</span>
+</span></span><span style="display:flex;"><span>[^abc]
+</span></span></code></pre></div><h4 id="3扩展正则表达式">3、扩展正则表达式</h4>
+<ul>
+<li>扩展正则表达式<code>（Extended Regular Expression，ERE）</code>支持比基本正则表达式更多的元字符，但扩展正则表达式对有些基本正则表达式所支持的元字符并不支持。</li>
+<li>扩展正则表达式取消了子表达式<code>()</code>和次数匹配<code>{m,n}</code>语法符号的转义符引用语法，在使用这两种语法符号时，不再需要添加转义符。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>+ <span style="color:#999;font-style:italic">## 限定符,限定前面的字符至少出现1次</span>
+</span></span><span style="display:flex;"><span>? <span style="color:#999;font-style:italic">## 限定符,限定前面的字符最多只出现1次</span>
+</span></span><span style="display:flex;"><span>| <span style="color:#999;font-style:italic">## 表示多个正则表达式之间 或 的关系</span>
+</span></span><span style="display:flex;"><span>() <span style="color:#999;font-style:italic">## 表示一组可选值的集合,|和()经常在一起使用，表示一组可选值</span>
+</span></span></code></pre></div><h4 id="4perl正则表达式">4、Perl正则表达式</h4>
+<ul>
+<li><code>Shell</code>中的<code>grep</code>和<code>egrep</code>命令都支持<code>Perl</code>正则表达式。<code>Perl</code>正则表达式的元字符与扩展正则表达式的元字符大致相同，扩展正则表达式中的元字符在<code>Perl</code>正则表达式中都得到了支持。<code>Perl</code>正则表达式还增加了一些元字符。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ed9d13">\d</span> <span style="color:#999;font-style:italic">## 匹配0～9中的任意一个数字字符，等价于[0-9]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\D</span> <span style="color:#999;font-style:italic">## 匹配一个非数字字符,等价于表达式[^0-9]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\s</span> <span style="color:#999;font-style:italic">## 匹配任何空白字符，包括空格、制表符以及换页符,等价于[\f\n\r\t\v]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\S</span> <span style="color:#999;font-style:italic">## 匹配任何非空白字符，等价于[^\f\n\r\t\v]</span>
+</span></span></code></pre></div><h4 id="5正则表达式字符集">5、正则表达式字符集</h4>
+<ul>
+<li>POSIX字符类也需要放在方括号：<code>[[:alnum:]]</code>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用的POSIX字符类 </span>
+</span></span><span style="display:flex;"><span>[:alnum:] <span style="color:#999;font-style:italic">## 匹配任意一个字母或者数字，等价于A-Za-z0-9 </span>
+</span></span><span style="display:flex;"><span>[:alpha:] <span style="color:#999;font-style:italic">## 匹配任意一个字母，等价于A-Za-z </span>
+</span></span><span style="display:flex;"><span>[:digit:] <span style="color:#999;font-style:italic">## 匹配任意一个数字，等价于0-9 </span>
+</span></span><span style="display:flex;"><span>[:lower:] <span style="color:#999;font-style:italic">## 匹配任意一个小写字母，等价于a-z </span>
+</span></span><span style="display:flex;"><span>[:upper:] <span style="color:#999;font-style:italic">## 匹配任意一个大写字母，等价于A-Z </span>
+</span></span><span style="display:flex;"><span>[:space:] <span style="color:#999;font-style:italic">## 匹配任意一个空白字符，包括空格、制表符、换行符，以及分页符等  </span>
+</span></span><span style="display:flex;"><span>[:blank:] <span style="color:#999;font-style:italic">## 匹配空格和制表符  </span>
+</span></span><span style="display:flex;"><span>[:graph:] <span style="color:#999;font-style:italic">## 匹配任意一个看得见的可打印字符，不包括空白字符  </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配任何一个可以打印的字符，包括空白字符</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 不包括控制字符、字符串结束符 &#39;\0&#39; 、 EOF文件结束符（ -1 ） </span>
+</span></span><span style="display:flex;"><span>[:print:]
+</span></span><span style="display:flex;"><span>[:cntrl:] <span style="color:#999;font-style:italic">## 匹配任何一个控制字符，即ASCII字符集中前32个字符 </span>
+</span></span><span style="display:flex;"><span>[:punct:] <span style="color:#999;font-style:italic">## 匹配任何一个标点符号，例如[]、{}或者,等  </span>
+</span></span><span style="display:flex;"><span>[:xdigit:] <span style="color:#999;font-style:italic">## 匹配十六进制数字，即0-9、a-f以及A-F </span>
+</span></span></code></pre></div><h3 id="正则表达式应用">正则表达式应用</h3>
+<h4 id="1匹配单个字符">1、匹配单个字符</h4>
+<ul>
+<li>单个一般字符：除了正则表达式中已经定义的元字符之外的所有字符，直接将该字符作为表达式或者是表达式的一部分。</li>
+<li>转义后的元字符：想要匹配元字符本身，需要在这些字符的前面加上转义字符<code>\</code>，关闭元字符的特殊意义，只保留其字面意义。<code>\</code>也是一个元字符，匹配反斜线，也需要在其前面加上转义字符。</li>
+<li><code>.</code>表达式和<code>[]</code>表达式。</li>
+<li>当元字符位于方括号中时，除了极少的几个元字符，例如<code>-</code>或<code>^</code>外，其他元字符都将失去其特殊意义，只保留字面意义。</li>
+</ul>
+<h4 id="2匹配多个字符">2、匹配多个字符</h4>
+<ul>
+<li>将多个字符按照指定的顺序拼接起来：<code>matter</code>。</li>
+<li>将普通字符和其他字符集混用：<code>o[ru]</code>。</li>
+</ul>
+<h4 id="3匹配字符串的开头或者结尾">3、匹配字符串的开头或者结尾</h4>
+<ul>
+<li>定位符仅仅影响到其后置字符或者前置字符，而不是一个字符串。</li>
+</ul>
+<h4 id="4运算符优先级">4、运算符优先级</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 正则表达式运算符优先级 </span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\ </span> <span style="color:#999;font-style:italic">## 转义符  </span>
+</span></span><span style="display:flex;"><span>[]  <span style="color:#999;font-style:italic">## 方括号表达式  </span>
+</span></span><span style="display:flex;"><span>()  <span style="color:#999;font-style:italic">## 分组  </span>
+</span></span><span style="display:flex;"><span>* 、 + 、 ? 、 {m} 、 {m,} 、 {m, n}  <span style="color:#999;font-style:italic">## 限定符  </span>
+</span></span><span style="display:flex;"><span>普通字符   <span style="color:#999;font-style:italic">## 按照从左到右的顺序  </span>
+</span></span><span style="display:flex;"><span>^ 、 $  <span style="color:#999;font-style:italic">## 定位符  </span>
+</span></span><span style="display:flex;"><span>|  <span style="color:#999;font-style:italic">## 或运算</span>
+</span></span></code></pre></div><h4 id="5子表达式">5、子表达式</h4>
+<ul>
+<li>子表达式，是指由多个普通字符或者元字符组成的一个小的正则表达式。子表达式本身也是一个完整的表达式，在使用时作为一个大的正则表达式的一部分来使用的，而不是单独使用。在正则表达式中，子表达式作为一个整体来看待。子表达式使用<code>()</code>括起来。</li>
+<li>使用圆括号将表达式分组，对执行结果没有影响，但会影响表达式的解释效率。</li>
+</ul>
+<h4 id="6通配符">6、通配符</h4>
+<ul>
+<li><code>Shell</code>本身不支持正则表达式，使用正则表达式的是一些<code>Shell</code>命令和工具，<code>Shell</code>使用了正则表达式中的某些元字符作为其通配符，常用的有<code>*、?、[]、{}、^</code>等，这些字符在<code>Shell</code>中的意义与在正则表达式中的意义有些区别。例如<code>ex*</code>、<code>[de]*</code>、<code>ex8-[1-9].sh</code>。</li>
+</ul>
+<h3 id="grep命令">grep命令</h3>
+<h4 id="1grep命令的基本语法">1、grep命令的基本语法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 从一个或者多个文件中搜索满足指定模式的文本行，并且打印出来</span>
+</span></span><span style="display:flex;"><span>grep [options] pattern [file…]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用的grep 命令options    ## </span>
+</span></span><span style="display:flex;"><span>-c <span style="color:#999;font-style:italic">## 只打印匹配的文本行的行数，不显示匹配的内容  </span>
+</span></span><span style="display:flex;"><span>-i <span style="color:#999;font-style:italic">## 匹配时忽略字母的大小写  </span>
+</span></span><span style="display:flex;"><span>-h <span style="color:#999;font-style:italic">## 当搜索多个文件时，不显示匹配文件名前缀  </span>
+</span></span><span style="display:flex;"><span>-l <span style="color:#999;font-style:italic">## 只列出含有匹配的文本行的文件的文件名，而不显示具体的匹配的内容  </span>
+</span></span><span style="display:flex;"><span>-n <span style="color:#999;font-style:italic">## 列出所有的匹配的文本行，并显示行号  </span>
+</span></span><span style="display:flex;"><span>-s <span style="color:#999;font-style:italic">## 不显示关于不存在或者无法读取文件的错误信息  </span>
+</span></span><span style="display:flex;"><span>-v <span style="color:#999;font-style:italic">## 只显示不匹配的文本行  </span>
+</span></span><span style="display:flex;"><span>-w <span style="color:#999;font-style:italic">## 匹配整个单词  </span>
+</span></span><span style="display:flex;"><span>-x <span style="color:#999;font-style:italic">## 匹配整个文本行  </span>
+</span></span><span style="display:flex;"><span>-r <span style="color:#999;font-style:italic">## 递归搜索，不仅搜索当前目录，还要搜索其各级子目录  </span>
+</span></span><span style="display:flex;"><span>-q <span style="color:#999;font-style:italic">## 禁止输出任何匹配结果，以退出状态码的形式表示搜索是否成功，0表示找到了匹配的文本行  </span>
+</span></span><span style="display:flex;"><span>-b <span style="color:#999;font-style:italic">## 打印匹配的文本行到文件头的偏移量，以字节为单位  </span>
+</span></span><span style="display:flex;"><span>-E <span style="color:#999;font-style:italic">## 支持扩展正则表达式  </span>
+</span></span><span style="display:flex;"><span>-P <span style="color:#999;font-style:italic">## 支持 Perl 正则表达式  </span>
+</span></span><span style="display:flex;"><span>-F <span style="color:#999;font-style:italic">## 不支持正则表达式，将模式按字面意义匹配</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## pattern表示要匹配的模式,可以是字符串、变量、正则表达式</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 如果模式中含有空格，需要将模式使用双引号引起来</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## file表示一系列的文件名，模式后面的所有的字符串参数都被看做文件名</span>
+</span></span></code></pre></div><h4 id="2grep命令族简介">2、grep命令族简介</h4>
+<ul>
+<li><code>grep</code>命令族已经包括<code>grep</code>、<code>egrep</code>、<code>fgrep</code>等3个命令。<code>egrep</code>是<code>grep</code>的扩展，使用扩展正则表达式作为默认的正则表达式引擎，<code>egrep</code>支持更多的元字符。<code>fgrep</code>是<code>fixed  grep</code>或<code>fast grep</code>的缩写。在<code>fgrep</code>中，所有的正则表达式中的元字符都将作为一般字符，仅拥有字面意义，不再拥有特殊意义。</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

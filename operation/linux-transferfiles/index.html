@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">文件传输工具</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 11, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 5 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="nfs----linux主机间共享文件">NFS -  Linux主机间共享文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">##  安装NFS文件系统</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 需指定远程主机名或IP</span>
+</span></span><span style="display:flex;"><span>mount hostname:/pathname pathname/
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 以可读写方式安装文件系统，若服务器不允许外部可写，会自动选择只读安装</span>
+</span></span><span style="display:flex;"><span>mount -o rw hostname:/pathname pathname/
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 以可读写、硬安装、可中断、后台重试安装请求的方式安装文件系统</span>
+</span></span><span style="display:flex;"><span>mount -o rw,hard,intr,bg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看服务器端导出的目录</span>
+</span></span><span style="display:flex;"><span>showmount -e [hostname | IP]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 卸载NFS文件系统，卸载时没有其他进程使用</span>
+</span></span><span style="display:flex;"><span>umount pathname/
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 强制卸载文件系统</span>
+</span></span><span style="display:flex;"><span>umount -f pathname/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 启动时自动安装远程文件系统，写入/etc/fstab</span>
+</span></span><span style="display:flex;"><span>10.171.37.1:/srv/nfs_share   /home/lewis/share   nfs   rw,hard,intr,bg   <span style="color:#3677a9">0</span>   <span style="color:#3677a9">0</span> 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### fstab文件中对NFS的配置立即生效</span>
+</span></span><span style="display:flex;"><span>mount -a -t nfs
+</span></span></code></pre></div><h3 id="samba----linux与windows间共享文件">Samba -  Linux与Windows间共享文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 列出当前网络上的共享主机列表</span>
+</span></span><span style="display:flex;"><span>smbtree -S
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 连接共享主机</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -U指定用户名，-b使用广播的方式搜寻整个网络</span>
+</span></span><span style="display:flex;"><span>smbtree -b -U smbuser
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查询主机对应的IP</span>
+</span></span><span style="display:flex;"><span>nmblookup hostname
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## Linux下的Samba客户端: smbclient</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 基本语法，不允许匿名用户登录时应使用-U指定用户名</span>
+</span></span><span style="display:flex;"><span>smbclient //servername/sharename [-U username]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 修改当前本地目录 </span>
+</span></span><span style="display:flex;"><span>lcd /pathname
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 下载文件</span>
+</span></span><span style="display:flex;"><span>get filename
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 退出</span>
+</span></span><span style="display:flex;"><span>quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 挂载Windows共享目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 不允许匿名用户登录时应使用-o跟上user指定用户名</span>
+</span></span><span style="display:flex;"><span>mount.cifs //servername/sharename mount-point [-o <span style="color:#40ffff">user</span>=smbuser]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 直接使用mount挂载共享目录</span>
+</span></span><span style="display:flex;"><span> mount -t cifs //servername/sharename mount-point -o <span style="color:#40ffff">user</span>=smbuser
+</span></span></code></pre></div><h3 id="ftp">FTP</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 连接服务器，默认端口21，自定义需指定；匿名登录用户anonymous</span>
+</span></span><span style="display:flex;"><span>ftp hostname | IP [port]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## ftp常用命令</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 在本地端执行命令</span>
+</span></span><span style="display:flex;"><span>!&lt;command&gt; 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 显示 ftp 命令的帮助信息</span>
+</span></span><span style="display:flex;"><span>? <span style="color:#999;font-style:italic"># 显示所有命令</span>
+</span></span><span style="display:flex;"><span>?&lt;command&gt; 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 连接 FTP 服务器</span>
+</span></span><span style="display:flex;"><span>open 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 关闭连接但不退出 FTP 程序</span>
+</span></span><span style="display:flex;"><span>close | disconnect 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 退出 FTP 程序</span>
+</span></span><span style="display:flex;"><span>bye | quit 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 切换远程所在的目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 列出远程目录中的内容</span>
+</span></span><span style="display:flex;"><span>ls | dir   
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 下载文件</span>
+</span></span><span style="display:flex;"><span>get 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 一次下载多个文件，配合通配符</span>
+</span></span><span style="display:flex;"><span>mget 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 上传文件，可上传多个文件，配合通配符</span>
+</span></span><span style="display:flex;"><span>put
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 一次上传多个文件</span>
+</span></span><span style="display:flex;"><span>mput 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 在 FTP 服务器上建立目录</span>
+</span></span><span style="display:flex;"><span>mkdir 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 删除 FTP 服务器上的目录</span>
+</span></span><span style="display:flex;"><span>rmdir 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 删除 FTP 服务器上的文件</span>
+</span></span><span style="display:flex;"><span>delete 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 显示当前远程所在的目录 </span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">pwd</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 切换本地所在的目录</span>
+</span></span><span style="display:flex;"><span>lcd   
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 切换交互和非交互模式</span>
+</span></span><span style="display:flex;"><span>prompt off | on
+</span></span></code></pre></div><h3 id="sftpscp---基于ssh的文件传输">sftp、scp - 基于SSH的文件传输</h3>
+<h4 id="安全的ftp---sftp">安全的FTP - sftp</h4>
+<ul>
+<li>传统的<code>FTP</code>采用不加密的传输方式，使用<code>sftp</code>传输文件有助于保护用户账户和传输安全。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 建立连接</span>
+</span></span><span style="display:flex;"><span>sftp username@hostname | IP
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## sftp常用命令</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span>  <span style="color:#999;font-style:italic"># 切换远程所在的目录 </span>
+</span></span><span style="display:flex;"><span>ls | dir  <span style="color:#999;font-style:italic"># 显示当前目录下的文件列表 </span>
+</span></span><span style="display:flex;"><span>mkdir  <span style="color:#999;font-style:italic"># 建立目录 </span>
+</span></span><span style="display:flex;"><span>rmdir  <span style="color:#999;font-style:italic"># 删除目录 </span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">pwd</span>  <span style="color:#999;font-style:italic"># 显示当前所在的远程目录 </span>
+</span></span><span style="display:flex;"><span>chgrp  <span style="color:#999;font-style:italic"># 修改文件（目录）的属组 </span>
+</span></span><span style="display:flex;"><span>chown  <span style="color:#999;font-style:italic"># 修改文件（目录）的属主 </span>
+</span></span><span style="display:flex;"><span>chmod  <span style="color:#999;font-style:italic"># 修改文件（目录）权限 </span>
+</span></span><span style="display:flex;"><span>rm  <span style="color:#999;font-style:italic"># 删除文件和目录 </span>
+</span></span><span style="display:flex;"><span>rename oldname newname  <span style="color:#999;font-style:italic"># 修改文件名 </span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">exit</span> | bye | quit  <span style="color:#999;font-style:italic"># 关闭 sftp 客户端程序 </span>
+</span></span><span style="display:flex;"><span>lcd  <span style="color:#999;font-style:italic"># 切换本地所在目录 </span>
+</span></span><span style="display:flex;"><span>lls  <span style="color:#999;font-style:italic"># 显示本地所在目录下的文件列表 </span>
+</span></span><span style="display:flex;"><span>lmkdir  <span style="color:#999;font-style:italic"># 在本地所在目录下建立目录 </span>
+</span></span><span style="display:flex;"><span>lpwd  <span style="color:#999;font-style:italic"># 显示当前所在的本地目录 </span>
+</span></span><span style="display:flex;"><span>put  <span style="color:#999;font-style:italic"># 上传文件 </span>
+</span></span><span style="display:flex;"><span>get  <span style="color:#999;font-style:italic"># 下载文件 </span>
+</span></span></code></pre></div><h4 id="利用ssh通道复制文件---scp">利用SSH通道复制文件 - scp</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将远程主机文件复制到本地</span>
+</span></span><span style="display:flex;"><span>scp username@hostname:/remotepath /localpath 
+</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

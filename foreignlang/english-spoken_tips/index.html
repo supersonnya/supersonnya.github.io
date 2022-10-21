@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="foreignlang">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">英语口语技巧</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jun 19, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 14 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h4 id="t的同化现象"><code>/t/</code>的同化现象</h4>
+<hr>
+<ul>
+<li>如果一个单词以<code>/t/</code>结尾，下一个单词以<code>/p/</code>开头。这时<code>/t/</code>的发音发生同化，近似于<code>/p/</code>。所以<code>white piece of paper</code>发音就变成了<code>whi(te) piece of paper</code>。例如：
+<ol>
+<li>It&rsquo;s a whi(te) piece of paper.</li>
+<li>There are lots of grea(t) parks in London.</li>
+<li>I love spli(t) pea soup.</li>
+<li>I ha(te) potatoes.</li>
+<li>My ma(te) picked us up from the airport.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="关联r">关联<code>/r/</code></h4>
+<hr>
+<ul>
+<li>在<code>war</code>后面的单词以元音音素开头，在这种情况下，字母<code>r</code>发音。本土发音中使用这种方式使句子发音更流畅。例如：
+<ol>
+<li>War and Peace.</li>
+<li>You know, I really like my mother-in-law.</li>
+<li>Have you been to the Tower of London?</li>
+<li>You&rsquo;ve got something in your eye.</li>
+<li>Never again!</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="辅音延长s">辅音延长<code>/s/</code></h4>
+<hr>
+<ul>
+<li>当一个单词以<code>/s/</code>结尾，下一个单词以<code>/s/</code>开头。 这时不拼读两个<code>/s/</code>的音，也不拼读一个<code>/s/</code>的音，而是品读比一个<code>/s/</code>稍长的音。例如：
+<ol>
+<li>He looks sad.</li>
+<li>She&rsquo;s silly.</li>
+<li>He&rsquo;s sitting over there.</li>
+<li>Can you come this Saturday?</li>
+<li>That&rsquo;s so unfair!</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="音节省略t">音节省略<code>/t/</code></h4>
+<hr>
+<ul>
+<li>在日常口语中, 当<code>/t/</code>音素出现在两个辅音之间时不发音，以使语句表达更流畅。这是因为当<code>/t/</code> 在中间时，连续发三个辅音很困难。例如：
+<ol>
+<li>I can&rsquo;t do it.</li>
+<li>I can&rsquo;t stand the rain.</li>
+<li>It must be time to leave</li>
+<li>Am I the first person here?</li>
+<li>I don&rsquo;t want it.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="插入音素r">插入音素<code>/r/</code></h4>
+<hr>
+<ul>
+<li>如果一个单词以<code>/ɔː/</code>音素结尾，比如<code>law</code>，并且下一个单词以<code>/ə/</code>音素开头，在中间会出现一个<code>/r/</code>音素来把它们连接到一起，<code>/r/</code>音不是特别重。比如<code>Law-r-and order</code>。这不会出现在所有的口音中，但可能会听到。 例如：
+<ol>
+<li>I think law and order is important.</li>
+<li>Can you draw a circle freehand?</li>
+<li>My dog hurt its paw on some broken glass.</li>
+<li>There was a flaw in the argument.</li>
+<li>I saw a good film last night.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="中性元音ә">中性元音<code>/ә/</code></h4>
+<hr>
+<ul>
+<li>音素<code> /ә/</code> 是英语中最常见的发音，一般很难听到这个发音因为它不被重读。例如：
+<ol>
+<li>It&rsquo;s a piece of cake</li>
+<li>I like a cup of tea in the morning.</li>
+<li>Could you get a packet of biscuits?</li>
+<li>Can you give it to me?</li>
+<li>I had an apple for lunch today.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="连接w">连接<code>/w/</code></h4>
+<hr>
+<ul>
+<li>当一个单词以<code>/u:/</code>音结尾，并且下一个单词以元音开头，此时可以在这个发音中间听到一个<code>/w/</code>音。但是并不是一个完整的<code>/w/</code>音，是因为由<code>/u:/</code>音过渡到元音时的口型与<code>/w/</code> 音相同。例如：
+<ol>
+<li>The shoe is on the wrong foot.</li>
+<li>When do I have to be there?</li>
+<li>I haven&rsquo;t got a clue at all.</li>
+<li>That glue is really strong.</li>
+<li>I really can&rsquo;t do it.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化n">同化<code>/n/</code></h4>
+<hr>
+<ul>
+<li>当单词以<code>/n/</code>结尾并且下一个单词以<code>/p/</code>，<code>/b/</code>，<code>/w/</code> 或<code>/m/</code>开始。结尾的<code>/n/</code>会变成一个<code>/m/</code>，以便为发下一个音做准备。<code>Green Park</code>会变成<code>Greempark</code>。例如：
+<ol>
+<li>I own ten pairs of socks.</li>
+<li>He didn&rsquo;t do it on purpose.</li>
+<li>I would love to live in Paris.</li>
+<li>Can you come on Wednesday?</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="音节省略d">音节省略<code>/d/</code></h4>
+<hr>
+<ul>
+<li>当<code>/d/</code>在两个辅音中间时发音会变的困难，一般这种情况下<code>/d/</code>会被省略。比如<code>Boiled potatoes</code>变成<code>boilpotatoes</code>，<code>steamed potatoes</code>变成<code>steampotatoes</code>。例如：
+<ol>
+<li>My best friend let me borrow his car.</li>
+<li>Don’t hold back - say what you mean.</li>
+<li>His bike rolled down the hill without him.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化nd">同化<code>/nd/</code></h4>
+<hr>
+<ul>
+<li>对话中会听到<code>samwich</code>而不是<code>sandwich</code>。首先<code>/d/</code>在两个辅音之间时会消失，此时<code>sandwich</code> 变成 <code>sanwich</code>。然后，当<code>/n/</code>后面是<code>/w/</code>时，<code>/n/</code>会变成<code>/m/</code>。最后<code>sandwich</code> 就变成了<code>samwich</code>。比如：
+<ol>
+<li>My grandparents have been married for 50 years.</li>
+<li>I got a standby ticket.</li>
+<li>The band played until midnight.</li>
+<li>I left my handbag on the train.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="have-to"><code>Have to</code></h4>
+<hr>
+<ul>
+<li>使用<code>have to</code>时，<code>have</code>词尾的<code>/v/</code>变成<code>/f/</code>。 同时<code>to</code>中的元音会变成弱读元音Also<code>/ә/</code>。所以<code>have to</code> 发音变成<code>/hæftә/</code>。
+<ol>
+<li>They have to be there by 10.</li>
+<li>We have to find another flat.</li>
+<li>You have to tell me the gossip.</li>
+<li>I always have to take the train.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="and"><code>And</code></h4>
+<hr>
+<ul>
+<li><code>And</code>是一个低级连接词并且经常弱读。在元音和辅音前弱读时，词尾的<code>/d/</code>不发音，前面的元音发音也变成弱读元音<code>/ә/</code>，所以<code>and</code>的常见发音就变成了<code>/әn/</code>甚至是<code>/n/</code>。例如：
+<ol>
+<li>I&rsquo;m going to go and get the shopping.</li>
+<li>Apples and oranges are my favourite fruits.</li>
+<li>I’ve been thinking and thinking but I can&rsquo;t decide.</li>
+<li>We went for a coffee and something to eat.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="was和were"><code>Was</code>和<code>were</code></h4>
+<hr>
+<ul>
+<li>单词<code>was</code>发音由<code>/w/</code>, <code>/ɔ:/</code>和 <code>/ z/</code>组成。当单词弱读的时候，元音变为弱读元音 <code>/ә/</code>。所以<code>was</code>读音变成<code>/wәz/</code>，<code>were</code>读音变成<code>/wә/</code>，被称作弱读式。例如：
+<ol>
+<li>I was there when it happened.</li>
+<li>We were delighted with the results.</li>
+<li>We were having a good time until it rained.</li>
+<li>He was feeling much better last night.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="consonant-vowel-linking"><code>Consonant-Vowel linking</code></h4>
+<hr>
+<ul>
+<li>当一个单词以辅音结尾，下一个单词以元音开头，这两个音素被连读，中间没有停顿。<code>an egg</code>变成<code>anegg</code>。 例如：
+<ol>
+<li>He’s in the garden.</li>
+<li>I used to believe in Father Christmas, but not any more.</li>
+<li>I had to give up jogging.</li>
+<li>He had it in his office.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化d">同化<code>/d/</code></h4>
+<hr>
+<ul>
+<li>当在 <code>/g/</code>或<code>/k/</code>前时，<code>/d/</code>变为<code>/g/</code>。所以<code>bad girl</code> 变为<code>bagirl</code>。 例如：
+<ol>
+<li>He’s a really good cook.</li>
+<li>Last night we had guests for dinner.</li>
+<li>Can you print out the hard copy?</li>
+<li>I’d love to walk down the red carpet one day.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="can"><code>Can</code></h4>
+<hr>
+<ul>
+<li>当情态动词<code>can</code>不重读时，发音由<code>/kæn/</code>变为<code>/kәn/</code>。例如：
+<ol>
+<li>Can you help me bring in the shopping, please?</li>
+<li>I can swim further than I can run.</li>
+<li>You can succeed if you work hard.</li>
+<li>How far can you throw a tennis ball?</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="爆破音">爆破音</h4>
+<hr>
+<ul>
+<li>爆破音有<code>/d/``/t/</code> <code>/p/``/k/</code> and <code>/g/</code>。当一个单词以爆破音结尾，下个单词以辅音开头时，会听不到爆破音的爆破。<code>I'd like to</code>变为<code>Idliketuh</code>。 这被称为无声除阻。例如：
+<ol>
+<li>How about a quick chat?</li>
+<li>You should thank her.</li>
+<li>It was a sad time in his life.</li>
+<li>Why don&rsquo;t you sit down?</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="the">The</h4>
+<hr>
+<ul>
+<li><code>The</code>在辅音开头的单词前读<code>/ðә/</code>。例如：
+<ol>
+<li>I prefer the blue one.</li>
+<li>Autumn is the best time of year.</li>
+</ol>
+</li>
+<li><code>The</code>在元音开头的单词前读<code>/ðɪː/</code>。例如：
+4. Some examples of phrases where this might happen include:
+5. I always order the apple pie.
+6. I prefer the orange one.</li>
+<li><code>/ɪː/</code>和元音之间要加<code>/j/</code>。例如：
+<ol>
+<li>I always order the/j/apple pie.</li>
+<li>I prefer the/j/orange one.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="linking-j">Linking /j/</h4>
+<hr>
+<ul>
+<li>当一个单词以<code>/aɪ/</code>、<code>/ɪː/</code>、 <code>/eɪ/</code>或<code>/ɔɪ/</code>结尾，下个单词以元音开头，添加一个<code>/j/</code>帮助过渡。注意是口型变化的自然过渡，并不是一个完整的<code>/j/</code>音。例如：
+<ol>
+<li>I ate the whole cake.</li>
+<li>It was too high up to reach.</li>
+<li>That boy is mine.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="been"><code>Been</code></h4>
+<hr>
+<ul>
+<li>当助动词<code>been</code>不重读时，发音为<code>/bɪn/</code>。弱读形式，发音更加流利自然。例如：
+<ol>
+<li>I&rsquo;ve been working here for several years.</li>
+<li>How long have you been waiting?</li>
+<li>It&rsquo;s been years since I went to the cinema.</li>
+<li>What have you been up to since we last met?</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化s">同化<code>/s/</code></h4>
+<hr>
+<ul>
+<li>当一个<code>/s/</code>后跟<code>/j/</code>或<code>/ʃ/</code>时，<code>/s/</code>变为<code>/ʃ/</code>。 因为<code>/t/</code>在两个辅音中间时会消失，<code>/s/</code>后面是<code>/t/</code>时也可能发生这种情况。例如：
+<ol>
+<li>Can you just shut the door please?</li>
+<li>This yacht is beautiful.</li>
+<li>Don&rsquo;t worry, that&rsquo;s usual.</li>
+<li>He always makes you feel good.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="from">From</h4>
+<hr>
+<ul>
+<li><code>From</code>一般不重读。当位于句尾时，发音仍是<code>/frɒm/</code>。但当在句中时，<code>/ɒ/</code>变为弱读元音，所以<code>/frɒm/</code>变为<code>/frәm/</code>。例如：
+<ol>
+<li>I borrowed it from my brother.</li>
+<li>I read the book from cover to cover.</li>
+<li>The nearest post office is not far from here.</li>
+<li>Come over any time from seven o&rsquo;clock.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="辅音延长t">辅音延长<code>/t/</code></h4>
+<hr>
+<ul>
+<li>当<code>/t/</code>前是元音并且下个单词也以<code>/t/</code>开头时，两个<code>/t/</code> 一起变为一个稍强的<code>/t/</code>。例如：
+<ol>
+<li>It took him twenty years to get to the top.</li>
+<li>You don’t have to cheat to pass the test.</li>
+<li>You were right to be upset.</li>
+<li>We took the overnight train to Venice.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="would-you">Would you&hellip;?</h4>
+<hr>
+<ul>
+<li>当一个单词以<code>/d/</code>结尾，下一个单词以<code>/j/</code>开头，两个音变成 <code>/ʤ/</code>。<code>You</code>中的<code>/uː/</code>可能变为弱读元音。<code>would you</code>变成<code>woul/ʤ/ou</code>或者<code>woul/ʤә/</code>。例如：
+<ol>
+<li>I’m sad you decided to quit.</li>
+<li>Could you get here by midnight?</li>
+<li>Should you see him, can you give him a message?</li>
+<li>I don’t think the gold you bought was real</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化d和b">同化<code>/d/</code>和<code>/b/</code></h4>
+<hr>
+<ul>
+<li>如果一个单词以元音加<code>/d/</code>结尾并且下一个单词以<code>/b/</code>开头，<code>/d/</code>变成<code>/b/</code>并与下个单词的<code>/b/</code>合并。<code>speed boat</code>变为<code>speebboat</code>。例如：
+<ol>
+<li>My son is a really good boy.</li>
+<li>I’m sorry if I was rude before.</li>
+<li>My car had to be towed back to the garage.</li>
+<li>You should buy him a present.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="缩略have">缩略<code>have</code></h4>
+<hr>
+<ul>
+<li><code>have</code>做助动词时经常缩略。当出现在辅音后时读为<code>/әv/</code>，<code>I’d have been late</code>读为<code>I’d’ve been late</code>，这种发音经常出现在条件句中。例如：
+<ol>
+<li>Your parcel should’ve been delivered yesterday.</li>
+<li>I would’ve done it differently.</li>
+<li>We might’ve made a mistake.</li>
+<li>The police’ve arrived.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="省略h">省略<code>/h/</code></h4>
+<hr>
+<ul>
+<li>当<code>he</code>出现在主句或从句开头时， <code>h</code>发音为<code>/h/</code>。当出现在主句或从句中并且在辅音之后时，<code>h</code>不发音。<code>/hiː/</code>变为<code>/iː/</code>。 其他以<code>h</code>开头的单词也会出现这种情况，比如<code>him``his``her</code>。例如：
+<ol>
+<li>I really like his cooking.</li>
+<li>We think he’s left the country.</li>
+<li>They let him leave early.</li>
+<li>They offered her a promotion.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化t">同化<code>/t/</code></h4>
+<hr>
+<ul>
+<li>当一个单词以元音加<code>/t/</code>结尾，且下一个单词以<code>/k/</code>开头，<code>/t/</code>变为<code>/k/</code>。比如<code>/kredɪt kɑːd/</code>变为<code>/kredɪk kɑːd/</code>。 例如：
+<ol>
+<li>Don&rsquo;t let it get cold!</li>
+<li>You have to do it quickly.</li>
+<li>There&rsquo;s no short cut to learning a language.</li>
+<li>I didn&rsquo;t like that cake.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="同化t-1">同化<code>/t/</code></h4>
+<hr>
+<ul>
+<li>当一个单词以<code>/t/</code>结尾，且下个单词以<code>/j/</code>开头，比如<code>you</code>或<code>yours</code>，这两个发音会变为一个<code>/ʧ/</code>。<code>meet you</code>变为<code>/miːʧuː/</code>。当下个单词是<code>you</code>或<code>'your</code>时也会发生<code>/t/</code>在两个辅音中间消失的情况，但这种情况下<code>/t/</code>变为<code>/ʧ/</code>更常见。例如：
+<ol>
+<li>That shirt won&rsquo;t suit you.</li>
+<li>Don&rsquo;t you want to come to the party?</li>
+<li>I bet your boss doesn’t know.</li>
+<li>Can I get you anything?</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="中性元音schwa">中性元音<code>schwa</code></h4>
+<hr>
+<ul>
+<li>需要尤其关注中性元音，英语发音正确的关键就包含中性元音的正确使用。</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

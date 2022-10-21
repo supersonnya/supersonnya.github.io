@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/devops/</link>
+    <description>Recent content in devops on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 12 Oct 2022 09:05:24 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible基础</title>
+      <link>https://supersonnya.github.io/operation/devops-ansible/</link>
+      <pubDate>Wed, 12 Oct 2022 09:05:24 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/devops-ansible/</guid>
+      <description>ansible简介 ansible的特点 部署简单，没有客户端，只需在主控端部署ansible环境，被控端无需安装客户端； 模块化：调用特定的模块，完成特定任务； 默认使用SSH协议对设备进行管理； 主从集中化管理； 配置简单、功能强大、扩展性强； 支持API及自定义模块，可通过Python轻松扩展； 通过playbooks来定制强大的配置、状态管理 对云计算平台、大数据有很好的支持； 具有幂等性：一个操作在一个主机上执行一遍和执行N遍的结果是一样的。 ansible工作机制 ansible在管理节点将ansible模块通过SSH协议推送到被管理端执行，执行完之后自动删除，可以使用SVN等来管理自定义模块及编排。 ansible基于模块工作，本身没有批量部署的能力。真正具有批量部署的是ansible运行的模块，ansible只是提供一种框架。 Ansible： ansible的核心模块； Host Inventory：被管理的主机列表； Playbooks：ansible的执行脚本，批量执行任务； Core Modules：ansible的核心模块； Custom Modules：自定义模块； Connection Plugins：连接插件，用于与被管控主机之间基于SSH建立连接关系 Plugins：其他插件，包括记录日志等。 ansible安装 Ubuntu22安装ansible ## 更新软件包索引, 安装software-properties-common ## software-properties-common用于管理独立的软件存储库 sudo apt update sudo apt install software-properties-common ## 添加ansible PPA sudo apt-add-repository ppa:ansible/ansible ## 更新软件包索引, 安装ansible sudo apt update sudo apt install ansible ansible命令 基本命令 ## 查看ansible的版本 ansible --version ## 查看组下所有主机IP ansible all --list ## ansible的命令参数 ## 语法ansible [-i 主机文件] [-f 批次] [组名] [-m 模块名称] [-a 模块参数] -v	## 详细模式，如果执行成功，输出详细结果 -i	## 指定host文件路径，默认/etc/ansible/hosts -f,-forks=NUM	## NUM默认是整数5，指定fork开启同步进程的个数 -m	## 指定使用的module名称，默认command模块 -a	## 指定模块的参数 -k	## 提示输入SSH密码，而不是使用基于ssh密钥认证 -sudo ## 指定使用sudo获取root权限 -K	## 提示输入sudo密码 -u	## 指定移动端的执行用户 -C	## 测试命令执行会改变什么内容，不会真正的去执行 ansible-doc ## 列出所有模块列表 ansible-doc -l ## 查看指定模块的参数 ansible-doc -s &amp;lt;modulename&amp;gt; ansible的使用 自定义配置连接 ## 配置路径/etc/ansible/hosts ansible_ssh_port ## 指定ssh端口 ansible_ssh_user ## 指定 ssh 用户 ansible_ssh_pass ## 指定 ssh 用户登录是认证密码 ansible_sudo_pass ## 指明 sudo 时候的密码 ssh密钥访问 ssh-keygen ssh-copy-id username@host_ip 测试命令 ansible -m command -a &amp;#34;free -m &amp;#34; webservers ansible -m command -a &amp;#34;useradd sonnya&amp;#34; webservers ansible -m command -a &amp;#34;id sonnya&amp;#34; web-servers ansible高级用法 常用模块 3个远程模块的区别 command：ansible的默认模块，不指定-m参数时，使用command模块；常见的命令都可使用，但命令的执行不是通过shell来执行的，&amp;lt;, &amp;gt;, |, &amp;amp;这些操作不可用，不支持管道，无法批量执行命令； shell模块：使用shell模块时默认通过/bin/sh执行，在终端输入的各种命令都可使用； scripts模块：使用scripts模块可在本地写一个脚本，在远程服务器上执行。 copy模块 实现主控端向目标主机拷贝文件，类似scp。 ansible webservers -m copy -a &amp;quot;src=https://supersonnya.github.io/etc/hosts dest=/root owner=root group=root mode=0777&amp;quot; file模块 给文件设置权限。 ansible webservers -m file -a &amp;quot;path=/etc/hosts mode=0755&amp;quot; stat模块 获取远程文件信息。 ansible webservers -m stat -a &amp;quot;path=/etc/hosts&amp;quot; get_url模块 实现远程主机下载指定的url地址，支持sha256sum文件校验。 ansible webservers -m get_url -a &amp;quot;url=https://xxx dest=/tmp/ mode=0440 force=yes&amp;quot; yum模块 管理软件包。 ansible webservers -m yum -a &amp;quot;name=httpd state=installed&amp;quot; cron模块 远程管理主机crontab配置。 ansible webservers -m cron -a &amp;quot;name=&#39;echo_hello&#39; minute=&#39;*/30&#39; job=&#39;echo hello&#39;&amp;quot; service模块 远程管理主机系统服务。 ansible webservers -m service -a &amp;quot;name=httpd state=restarted&amp;quot; user模块 管理远程主机的用户。 ansible webservers -m user -a &amp;quot;name=sonnya state=present&amp;quot; </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="变量和引用、条件测试和判断语句、循环结构">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Shell编程基础</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 25, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 24 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h2 id="变量和引用">变量和引用</h2>
+<h3 id="深入认识变量">深入认识变量</h3>
+<h4 id="1什么是变量">1、什么是变量</h4>
+<ul>
+<li>变量就是在程序中保存用户数据的一块内存空间，变量名就是这块内存空间的地址。 在程序的执行过程中，保存数据的内存空间的内容可能会不断地发生变化，代表内存地址的变量名保持不变。</li>
+</ul>
+<h4 id="2变量的命名">2、变量的命名</h4>
+<ul>
+<li>变量名可以由字母、数字或者下划线组成，且只能以字母或者下划线开头，变量名的大小写是敏感的。</li>
+<li>通常应尽可能选择有明确意义的英文单词作为变量名。</li>
+</ul>
+<h4 id="3变量的类型">3、变量的类型</h4>
+<ul>
+<li>在<code>Shell</code>中，变量的数据类型无需显示地声明，变量的数据类型会根据不同的操作有所变化。<code>Shell</code>中的变量不分数据类型，统一地按照字符串存储。</li>
+<li>为执行加法运算，<code>Shell</code>自动进行数据类型的转换，如果遇到含有非数字的字符串、空串、没有定义的变量，该变量将被转换成整数<code>0</code>。</li>
+</ul>
+<h4 id="4变量的定义">4、变量的定义</h4>
+<ul>
+<li>当第一次使用某个变量名时就同时定义了这个变量，在变量的作用域内，都可以使用该变量。</li>
+<li>使用命令来声明变量</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## attribute 表示变量的属性，常用的属性 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -p 显示所有变量的值</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -i 将变量定义为整数，如果求值失败或者不是整数，就设置为0</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -r 将变量声明为只读变量，不允许修改，也不允许删除</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -a 变量声明为数组变量 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -f 显示所有自定义函数，包括名称和函数体 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -x 将变量设置成环境变量，在随后的脚本和程序中可以使用 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### declare又写做typeset</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">declare</span> attribute variable
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 求表达式的值  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">x</span>=$[6/3]
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">x</span>=<span style="color:#6ab825;font-weight:bold">$((</span><span style="color:#3677a9">6</span>/<span style="color:#3677a9">3</span><span style="color:#6ab825;font-weight:bold">))</span>  
+</span></span></code></pre></div><h4 id="5变量和引号">5、变量和引号</h4>
+<ul>
+<li><code>Shell</code>语言中一共有<code>3 </code>种引号，分别为单引号、双引号和反引号。</li>
+<li>单引号括起来的字符都作为普通字符出现。</li>
+<li>双引号括起来的字符，除<code>“$”</code>、<code>“\”</code>、<code>“'”</code>、<code>“&quot;”</code>这几个字符仍是特殊字符并保留其特殊功能外，其余字符仍作为普通字符对待。</li>
+<li>反引号括起来的字串被<code>Shell</code>解释为命令，在执行时首先执行该命令，并以它的标准输出结果取代整个反引号部分。</li>
+</ul>
+<h4 id="6变量的作用域">6、变量的作用域</h4>
+<ul>
+<li>全局变量：全局变量可以在脚本中定义，也可以在某个函数中定义。在脚本中定义的变量都是全局变量，函数内部定义的变量默认情况下也是全局变量，其作用域为从被定义的地方开始，一直到脚本结束或者被显式地删除。</li>
+<li>局部变量：仅限于某个程序段访问，在函数内部通过<code>local</code>关键字定义局部变量，函数的参数是局部变量。在出现同名的情况下，函数内部的局部变量会优先被使用。</li>
+<li><code>Shell</code>中变量的原型为<code>${var}</code>，常用的书写形式<code>$var</code>是一个简写。某些情况下，简写形式会导致程序执行错误。</li>
+</ul>
+<h4 id="7系统变量">7、系统变量</h4>
+<ul>
+<li>系统变量主要在对参数判断和命令返回值判断时使用，包括脚本和函数的参数，以及脚本和函数的返回值。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#40ffff">$n</span>  <span style="color:#999;font-style:italic">## n是一个整数，从1开始，表示参数的位置</span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$#</span>  <span style="color:#999;font-style:italic">## 命令行参数的个数  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$0</span>  <span style="color:#999;font-style:italic">## 当前脚本的名称  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$?</span>  <span style="color:#999;font-style:italic">## 前一个命令或者函数的返回状态码  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$*</span>  <span style="color:#999;font-style:italic">## 以“参数 1  参数 2 ……”的形式将所有的参数通过一个字符串返回  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$@</span>  <span style="color:#999;font-style:italic">## 以“参数 1 ”“参数 2 ”……的形式返回每个参数  </span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">$$</span>  <span style="color:#999;font-style:italic">## 返回本程序的进程ID（ PID ）</span>
+</span></span></code></pre></div><h4 id="8环境变量">8、环境变量</h4>
+<ul>
+<li><code>Shell</code>的环境变量是所有<code>Shell </code>程序都可以使用的变量。环境变量会影响到所有脚本的执行结果。</li>
+<li>可使用<code>set</code>命令列出所有的环境变量。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用的Shell环境变量 </span>
+</span></span><span style="display:flex;"><span>PATH <span style="color:#999;font-style:italic">## 命令搜索路径，以冒号为分隔符，当前目录不在系统路径里  </span>
+</span></span><span style="display:flex;"><span>HOME  <span style="color:#999;font-style:italic">## 用户主目录的路径名，cd命令的默认参数  </span>
+</span></span><span style="display:flex;"><span>COLUMNS  <span style="color:#999;font-style:italic">## 定义了命令编辑模式下可使用命令行的长度  </span>
+</span></span><span style="display:flex;"><span>HISTFILE  <span style="color:#999;font-style:italic">## 命令历史文件  </span>
+</span></span><span style="display:flex;"><span>HISTSIZE  <span style="color:#999;font-style:italic">## 命令历史文件中最多可包含的命令条数  </span>
+</span></span><span style="display:flex;"><span>HISTFILESIZE  <span style="color:#999;font-style:italic">## 命令历史文件中包含的最大行数  </span>
+</span></span><span style="display:flex;"><span>IFS  <span style="color:#999;font-style:italic">## Shell使用的分隔符  </span>
+</span></span><span style="display:flex;"><span>LOGNAME  <span style="color:#999;font-style:italic">## 当前的登录名  </span>
+</span></span><span style="display:flex;"><span>SHELL  <span style="color:#999;font-style:italic">## Shell的全路径名  </span>
+</span></span><span style="display:flex;"><span>TERM  <span style="color:#999;font-style:italic">## 终端类型  </span>
+</span></span><span style="display:flex;"><span>TMOUT  <span style="color:#999;font-style:italic">## Shell自动退出的时间，单位为秒，设为0则禁止Shell自动退出  </span>
+</span></span><span style="display:flex;"><span>PWD  <span style="color:#999;font-style:italic">## 当前工作目录  </span>
+</span></span></code></pre></div><h3 id="变量的赋值和清空">变量的赋值和清空</h3>
+<h4 id="1变量赋值">1、变量赋值</h4>
+<ul>
+<li>赋值语法：<code>variable_name=value</code>。</li>
+<li>如果<code>value</code>中包含空格、制表符和换行符，必须用单引号或者双引号引起来。</li>
+<li>中间的等于号称为赋值符号，赋值符号的左右两边不能直接跟空格，否则<code>Shell</code>会将其视为命令。</li>
+<li><code>Shell</code>允许只包含数字的变量值参与数值运算。</li>
+</ul>
+<h4 id="2引用变量的值">2、引用变量的值</h4>
+<ul>
+<li>可通过在变量名前面加上<code>$</code>来获取变量的值。</li>
+<li>为正确界定变量名，避免混淆，引用变量时使用大括号将变量名括起来：<code>${v4}</code>。</li>
+</ul>
+<h4 id="3清除变量">3、清除变量</h4>
+<ul>
+<li>变量不再需要时可以将清除，变量被清除后，代表的值也会消失：<code>unset variable_name</code>。</li>
+</ul>
+<h3 id="引用和替换">引用和替换</h3>
+<h4 id="1引用">1、引用</h4>
+<ul>
+<li>引用是指将字符串用引用符号包括起来，以防止其中的特殊字符被<code>Shell</code>解释为其他涵义。</li>
+<li>转义：反斜线屏蔽后的字符的特殊意义，<code>\$SHELL</code>。</li>
+<li>全引用：当一个字符串被单引号引用起来之后，其中所有的字符，除单引号本身之外，都将被解释为字面意义。</li>
+<li>部分引用：使用双引号将字符串引用起来，则其中所包含的字符除<code>$</code>、反引号、<code>\</code>外的其他字符，都将被解释为字面意义。</li>
+<li>命令替换：反引号和圆括号，<code>'shell_command'</code>，<code>$(shell_command)</code>。</li>
+</ul>
+<h2 id="条件测试和判断语句">条件测试和判断语句</h2>
+<h3 id="条件测试">条件测试</h3>
+<h4 id="1基本语法">1、基本语法</h4>
+<ul>
+<li>用户可以使用测试语句来测试指定的条件表达式的条件的真或者假。当指定的条件为真时，整个条件测试的返回值为<code>0</code>；如果指定的条件为假，则条件测试语句的返回值为非<code>0</code>值。</li>
+<li>条件测试的语法有两种，分别是<code>test</code>命令和<code>[</code>命令。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## expression表示需要进行测试的条件表达式</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 可由字符串、整数、文件名，以及各种运算符组成</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">test</span> expression
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## [是条件测试命令，expression的语法与test命令中的语法相同</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 条件表达式和左右方括号之间都必须有一个空格</span>
+</span></span><span style="display:flex;"><span>[ expression ]
+</span></span></code></pre></div><h4 id="2字符串测试">2、字符串测试</h4>
+<ul>
+<li>字符串中的字母是区分大小写的。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>string  <span style="color:#999;font-style:italic">## 判断指定的字符串是否为空，只能使用test测试是否为空串</span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">string1</span> = string2  <span style="color:#999;font-style:italic">## 判断两个字符串 string1 和 string2 是否相等  </span>
+</span></span><span style="display:flex;"><span>string1 != string2  <span style="color:#999;font-style:italic">## 判断两个字符串 string1 和 string2 是否不相等  </span>
+</span></span><span style="display:flex;"><span>-n string  <span style="color:#999;font-style:italic">## 判断 string 是否是非空串  </span>
+</span></span><span style="display:flex;"><span>-z string  <span style="color:#999;font-style:italic">## 判断 string 是否是空串</span>
+</span></span></code></pre></div><h4 id="3整数测试">3、整数测试</h4>
+<ul>
+<li>仅针对整数运算，字符串运算符和整数运算符不可以混用。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 两种形式</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## number1, number2表示两个整数，可以是常量或者变量，op表示运算符</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">test</span> number1 op number2
+</span></span><span style="display:flex;"><span>[ number1 op number2 ]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用运算符</span>
+</span></span><span style="display:flex;"><span>number1 -eq number2  <span style="color:#999;font-style:italic">## 比较是否相等，如果相等，结果为0 </span>
+</span></span><span style="display:flex;"><span>number1 -ne number2  <span style="color:#999;font-style:italic">## 比较是否不相等。如果不相等，结果为0 </span>
+</span></span><span style="display:flex;"><span>number1 -gt number2  <span style="color:#999;font-style:italic">## 比较number1是否大于number2，如果大于，结果为0 </span>
+</span></span><span style="display:flex;"><span>number1 -lt number2  <span style="color:#999;font-style:italic">## 测试number1是否小于number2，如果小于，结果为0 </span>
+</span></span><span style="display:flex;"><span>number1 -ge number2  <span style="color:#999;font-style:italic">## 测试number1是否大于等于number2，如果大于等于，结果为0 </span>
+</span></span><span style="display:flex;"><span>number1 -le number2  <span style="color:#999;font-style:italic">## 测试number1是否小于等于number2，如果小于等于，结果为0 </span>
+</span></span></code></pre></div><h4 id="4文件测试">4、文件测试</h4>
+<ul>
+<li>对文件的状态进行检测。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 测试语法</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">test</span> op file 
+</span></span><span style="display:flex;"><span>[ op file ]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用操作符</span>
+</span></span><span style="display:flex;"><span>-a file  <span style="color:#999;font-style:italic">## 文件是否存在，存在结果为0 </span>
+</span></span><span style="display:flex;"><span>-e file  <span style="color:#999;font-style:italic">## 同-a操作符</span>
+</span></span><span style="display:flex;"><span>-s file  <span style="color:#999;font-style:italic">## 长度是否大于0或者文件为非空文件，非空文件结果为0 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-b file  <span style="color:#999;font-style:italic">## 是否存在且为块文件，存在且为块文件结果为0 </span>
+</span></span><span style="display:flex;"><span>-c file  <span style="color:#999;font-style:italic">## 是否存在且为字符文件，存在且为字符文件结果为0 </span>
+</span></span><span style="display:flex;"><span>-d file  <span style="color:#999;font-style:italic">## 是否存在且为目录，存在且为目录结果为0 </span>
+</span></span><span style="display:flex;"><span>-f file  <span style="color:#999;font-style:italic">## 存在且为常规文件，存在且为常规文件结果为0 </span>
+</span></span><span style="display:flex;"><span>-L file  <span style="color:#999;font-style:italic">## 是否存在且为符号链接，且为符号链接结果为0 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-u file  <span style="color:#999;font-style:italic">## 是否设置suid位，已设置suid结果为0</span>
+</span></span><span style="display:flex;"><span>-w file  <span style="color:#999;font-style:italic">## 是否存在且可写，存在且可写结果为0 </span>
+</span></span><span style="display:flex;"><span>-r file  <span style="color:#999;font-style:italic">## 是否存在且可读，存在且可读结果为0 </span>
+</span></span><span style="display:flex;"><span>-x file  <span style="color:#999;font-style:italic">## 是否存在且可执行，存在且可执行结果为0 </span>
+</span></span></code></pre></div><h4 id="5逻辑操作符">5、逻辑操作符</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用的逻辑操作符 </span>
+</span></span><span style="display:flex;"><span>! expression  <span style="color:#999;font-style:italic">## 逻辑非，expression值为假，则运算结果为真  </span>
+</span></span><span style="display:flex;"><span>expression1 -a expresion2  <span style="color:#999;font-style:italic">## 逻辑与，expression1和expression2的值都是真时，值才为真  </span>
+</span></span><span style="display:flex;"><span>expression1 -o expression2 <span style="color:#999;font-style:italic">## 逻辑或，expression1或expression2的值有一个为真时，值为真  </span>
+</span></span></code></pre></div><h3 id="条件判断语句">条件判断语句</h3>
+<ul>
+<li><code>Shell</code>中，有一个特殊的命令，称为空命令，表示方法是一个冒号<code>:</code>，该命令不做任何事情，退出状态永远是<code>0</code>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 简单的if语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 如果想要将多条命令放在同一行中，需用分号隔开</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## if 语句中，条件测试可以使用test，也可以使用方括号[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">if</span> expression[; <span style="color:#6ab825;font-weight:bold">then</span>]  <span style="color:#999;font-style:italic">## expression代表条件表达式或Shell命令</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>  statement1 
+</span></span><span style="display:flex;"><span>  statement2 
+</span></span><span style="display:flex;"><span>  ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 使用&amp;&amp;操作符代替 if 语句  </span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">test</span> <span style="color:#ed9d13">&#34;</span><span style="color:#6ab825;font-weight:bold">$(</span>whoami<span style="color:#6ab825;font-weight:bold">)</span><span style="color:#ed9d13">&#34;</span> != <span style="color:#ed9d13">&#34;root&#34;</span> &amp;&amp; (<span style="color:#24909d">echo</span> you are using a non-privileged account; <span style="color:#24909d">exit</span> 1)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## if else语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">if</span> expression 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>  statement1 
+</span></span><span style="display:flex;"><span>  statement2 
+</span></span><span style="display:flex;"><span>  … 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">else</span> 
+</span></span><span style="display:flex;"><span>  statement3 
+</span></span><span style="display:flex;"><span>  statement4 
+</span></span><span style="display:flex;"><span>  … 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## if elif语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">if</span> expression1 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   … 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">elif</span> expression2 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>   statement3 
+</span></span><span style="display:flex;"><span>   statement4 
+</span></span><span style="display:flex;"><span>   … 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">elif</span> expression3 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>   statement5 
+</span></span><span style="display:flex;"><span>   statement6 
+</span></span><span style="display:flex;"><span>   … 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">else</span> 
+</span></span><span style="display:flex;"><span>   statementn 
+</span></span><span style="display:flex;"><span>   .. 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">fi</span>
+</span></span></code></pre></div><ul>
+<li><code>exit</code>语句的基本作用是终止<code>Shell</code>程序的执行。<code>exit</code>还可带一个可选的参数，指定程序退出时的状态码.基本语法如下：<code>exit status</code>。<code>status</code>表示退出状态，是一个整数值，取值范围为<code>0～255</code>。</li>
+</ul>
+<h3 id="多条件判断语句">多条件判断语句</h3>
+<ul>
+<li>使用<code>case</code>语句来处理选项参数在<code>Shell</code>中非常普遍，尤其是<code>/etc/init.d</code>目录中服务脚本，几乎都含有一个或者多个<code>case</code>语句。</li>
+<li>使用<code>case</code>语句还可处理用户多种不同的输入，根据不同的数据执行不同的代码。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## case的基本语法</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 遇到;;时，跳出case，执行esac后面的语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 没有值与variable的值相匹配，则执行*后面的语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">case</span> variable in  <span style="color:#999;font-style:italic">## 变量名variable，可使用双引号，也可不使用</span>
+</span></span><span style="display:flex;"><span>value1) 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span>   statementn;; 
+</span></span><span style="display:flex;"><span>value2) 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span>   statementn;; 
+</span></span><span style="display:flex;"><span>value3) 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span>   statementn;; 
+</span></span><span style="display:flex;"><span>... 
+</span></span><span style="display:flex;"><span>valuen) 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span>   statementn;; 
+</span></span><span style="display:flex;"><span>*) 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span>   statementn;; 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">esac</span>
+</span></span></code></pre></div><h3 id="运算符">运算符</h3>
+<h4 id="1算术运算符">1、算术运算符</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用算术运算符</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 运算符左右两边加空格</span>
+</span></span><span style="display:flex;"><span>+  <span style="color:#999;font-style:italic">## 求2个数的和，例如1+5</span>
+</span></span><span style="display:flex;"><span>-  <span style="color:#999;font-style:italic">## 求2个数的差，例如9-3</span>
+</span></span><span style="display:flex;"><span>*  <span style="color:#999;font-style:italic">## 求2个数的乘积，例如2*4</span>
+</span></span><span style="display:flex;"><span>/  <span style="color:#999;font-style:italic">## 求2个数的商，例如28/4</span>
+</span></span><span style="display:flex;"><span>%  <span style="color:#999;font-style:italic">## 求余，例如23%4</span>
+</span></span><span style="display:flex;"><span>**  <span style="color:#999;font-style:italic">## 幂运算，例如3**3</span>
+</span></span><span style="display:flex;"><span>+=  <span style="color:#999;font-style:italic">## 将左边的数加右边的数，和赋给左边的变量, 3 += 5 等于8 </span>
+</span></span><span style="display:flex;"><span>-=  <span style="color:#999;font-style:italic">## 将左边的数减右边的数，差赋给左边的变量，5 -= 2 等于3 </span>
+</span></span><span style="display:flex;"><span>*=  <span style="color:#999;font-style:italic">## 将左边的数乘右边的数，积赋给左边的变量，2 *= 8 等于16 </span>
+</span></span><span style="display:flex;"><span>/=  <span style="color:#999;font-style:italic">## 将左边的数除右边的数，商赋给左边的变量，6 /= 3 等于2 </span>
+</span></span><span style="display:flex;"><span>%=  <span style="color:#999;font-style:italic">## 将左边的数对右边的数求模，赋给左边的变量，22 /= 3 等于1</span>
+</span></span></code></pre></div><h5 id="执行算术运算方式">①执行算术运算方式</h5>
+<ol>
+<li><code>expr expression</code>: 使用单反引号将<code>expr</code>和算术表达式引起来，不能计算幂运算。</li>
+<li><code>$((… ))</code>: 无需对运算符和括号做转义处理，可采用松散或者紧凑的格式来书写表达式。</li>
+<li><code>$[…]</code>: 无需对运算符和括号做转义处理，可采用松散或者紧凑的格式来书写表达式。</li>
+<li><code>let 命令</code>: 可执行一个或者多个算术表达式，变量名无需使用<code>$</code>。如果表达式中含有空格或者其他特殊字符，则必须将其引用起来。</li>
+</ol>
+<h4 id="2位运算符">2、位运算符</h4>
+<ul>
+<li>位运算通常出现在整数间，针对的是整数二进制表示形式中的某个或者某些位。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 常用位运算符</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\&lt;</span>&lt;  <span style="color:#999;font-style:italic">## 左移   4 &lt;&lt; 2 ，将 4 左移 2 位，结果为 16 </span>
+</span></span><span style="display:flex;"><span>&gt;&gt;  <span style="color:#999;font-style:italic">## 右移   8 &gt;&gt; 2 ，将 8 右移 2 位，结果为 2 </span>
+</span></span><span style="display:flex;"><span>&amp;  <span style="color:#999;font-style:italic">## 按位与   8 &amp;&amp; 4 ，将 8 和 4 进行按位与运算，结果为 0 </span>
+</span></span><span style="display:flex;"><span>|  <span style="color:#999;font-style:italic">## 按位或   8 | 4 ，将 8 和 4 进行按位或运算，结果为 12 </span>
+</span></span><span style="display:flex;"><span>～   <span style="color:#999;font-style:italic">## 按位非   ～ 8 ，将 8 进行按位非运算，结果为 -9 </span>
+</span></span><span style="display:flex;"><span>^  <span style="color:#999;font-style:italic">## 按位异或   10 ^ 6 ，将 10 和 6 进行按二进制位异或运算，结果为 12 </span>
+</span></span></code></pre></div><h4 id="3自增自减运算符">3、自增、自减运算符</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>++variable  <span style="color:#999;font-style:italic">## 先将变量variable的值加1 ，再赋给variable </span>
+</span></span><span style="display:flex;"><span>--variable  <span style="color:#999;font-style:italic">## 先将变量variable的值减1 ，再赋给variable </span>
+</span></span><span style="display:flex;"><span>variable++  <span style="color:#999;font-style:italic">## 先使用variable的值，再将变量的值加1 </span>
+</span></span><span style="display:flex;"><span>variable--  <span style="color:#999;font-style:italic">## 先使用variable的值，再将变量的值减1</span>
+</span></span></code></pre></div><h4 id="4数字常量的进制">4、数字常量的进制</h4>
+<ul>
+<li>增加前缀：以<code>0</code>开头的数字表示八进制，以<code>0x</code>开头的数字表示十六进制。</li>
+<li>使用<code>#</code>：<code>2#1000</code>表示二进制，<code>8#42</code>表示八进制。</li>
+</ul>
+<h2 id="循环结构">循环结构</h2>
+<h3 id="for循环语句">for循环语句</h3>
+<h4 id="1带列表的for循环语句">1、带列表的for循环语句</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用于将一组语句执行已知的次数</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## variable称为循环变量</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## list是一个列表，可以是一系列的数字或者字符串，元素间用空格隔开，{}可省略</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 可使用范围，默认步长为1，可指定步长</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## $(ls)、`ls`、*: 作为参数，列出所有文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 通过系统变量$*一次获取所有的参数进行处理</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> variable in {list} | {start..end} | {start..end..step}
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>
+</span></span></code></pre></div><h4 id="2不带列表的for循环语句">2、不带列表的for循环语句</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 只能从命令行获取条件列表</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> variable [in [ <span style="color:#40ffff">$@</span> | <span style="color:#40ffff">$*</span> ] ]
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h4 id="3类c风格的for循环语句">3、类C风格的for循环语句</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 循环条件中的3个部分中的任何一部分都可省略掉，也可全部省略掉</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> ((expression1;expression2;expression3)) 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   statement1; 
+</span></span><span style="display:flex;"><span>   statement2; 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h4 id="4使用for循环语句处理数组">4、使用for循环语句处理数组</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## variable是循环变量，in后面表示要遍历的数组，array表示数组的名称</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> variable in <span style="color:#ed9d13">${</span><span style="color:#40ffff">array</span>[*]<span style="color:#ed9d13">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>
+</span></span></code></pre></div><h3 id="until循环语句">until循环语句</h3>
+<h4 id="1until语句的基本语法">1、until语句的基本语法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## expression是条件表达式, 表达式的值不为0时，执行do和done间的语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">until</span> expression
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   statement1 
+</span></span><span style="display:flex;"><span>   statement2 
+</span></span><span style="display:flex;"><span>   ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h4 id="2利用until语句批量增加用户">2、利用until语句批量增加用户</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">i</span>=<span style="color:#3677a9">1</span>  
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">until</span> [ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$i</span><span style="color:#ed9d13">&#34;</span> -eq <span style="color:#3677a9">21</span> ] 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span>  
+</span></span><span style="display:flex;"><span>   useradd user<span style="color:#40ffff">$i</span> | userdel -r user<span style="color:#40ffff">$i</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;password&#34;</span> | passwd --stdin user<span style="color:#40ffff">$i</span> &gt; /dev/null 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;i++&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h3 id="while循环语句">while循环语句</h3>
+<h4 id="1while语句的基本语法">1、while语句的基本语法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## expression通常代表一个测试表达式</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 表达式的值为0执行循环体中的语句</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">while</span> expression
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>  statement1 
+</span></span><span style="display:flex;"><span>  statement2 
+</span></span><span style="display:flex;"><span>  ... 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>
+</span></span></code></pre></div><h4 id="2通过计数器控制while循环结构">2、通过计数器控制while循环结构</h4>
+<ul>
+<li>计数器指一个循环变量，当该变量的值在某个范围内时，执行循环体；当超过该范围时，终止循环。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">i</span>=<span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">while</span> [[ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$i</span><span style="color:#ed9d13">&#34;</span> -lt 10]]
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;square=i*i&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$i</span><span style="color:#ed9d13">*</span><span style="color:#40ffff">$i</span><span style="color:#ed9d13">=</span><span style="color:#40ffff">$square</span><span style="color:#ed9d13">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;i=i+1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>
+</span></span></code></pre></div><h4 id="3通过结束标记控制while循环结构">3、通过结束标记控制while循环结构</h4>
+<ul>
+<li>某些情况下，不知道循环会执行多少次，无法使用计数器控制循环，可在程序中设置一个特殊的标记值，标记值出现时，终止循环。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Enter a number between 1 and 10.Enter 0 to exit.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">read</span> var
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">while</span> [[ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$var</span><span style="color:#ed9d13">&#34;</span> != <span style="color:#3677a9">0</span> ]]
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">if</span> [ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$var</span><span style="color:#ed9d13">&#34;</span> -lt <span style="color:#3677a9">5</span> ]
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Too small. Try again.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">read</span> var
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">elif</span> [ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$var</span><span style="color:#ed9d13">&#34;</span> -gt <span style="color:#3677a9">5</span> ]
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Too big. Try again.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">read</span> var
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Congratulation! You are right.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#24909d">exit</span> <span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span>
+</span></span></code></pre></div><h3 id="嵌套循环">嵌套循环</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">#! /bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> ((<span style="color:#40ffff">i</span>=1;i&lt;=9;i++)) 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">do</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">for</span> ((<span style="color:#40ffff">j</span>=1;j&lt;=i;j++)) 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">do</span>   
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">let</span> <span style="color:#ed9d13">&#34;product=i*j&#34;</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#999;font-style:italic">## printf语句不会自动换行, 也可使用echo -n</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#24909d">printf</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$i</span><span style="color:#ed9d13">*</span><span style="color:#40ffff">$j</span><span style="color:#ed9d13">=</span><span style="color:#40ffff">$product</span><span style="color:#ed9d13">&#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#6ab825;font-weight:bold">if</span> [[ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$product</span><span style="color:#ed9d13">&#34;</span> -gt <span style="color:#3677a9">9</span> ]] 
+</span></span><span style="display:flex;"><span>      <span style="color:#6ab825;font-weight:bold">then</span> 
+</span></span><span style="display:flex;"><span>         <span style="color:#24909d">printf</span> <span style="color:#ed9d13">&#34;   &#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#6ab825;font-weight:bold">else</span> 
+</span></span><span style="display:flex;"><span>         <span style="color:#24909d">printf</span> <span style="color:#ed9d13">&#34;    &#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#6ab825;font-weight:bold">fi</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#24909d">echo</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">done</span> 
+</span></span></code></pre></div><h3 id="使用breakcontinue">使用break、continue</h3>
+<h4 id="1利用break语句控制循环">1、利用break语句控制循环</h4>
+<ul>
+<li>立即跳出当前循环结构，默认仅退出一层循环，<code>break 2</code>表示退出两层循环。<code>break</code>可用在<code>for</code>、<code>while</code>或<code>until</code>等循环语句的循环体中。</li>
+</ul>
+<h4 id="2利用continue语句控制循环">2、利用continue语句控制循环</h4>
+<ul>
+<li>跳过当前循环体中该语句后面的语句，重新从循环语句开始的位置执行。<code>continue</code>也可附加一个整数作为参数，表示要跳过的循环层数。</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

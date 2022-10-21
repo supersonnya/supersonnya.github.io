@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Linux常用命令</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 04, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 12 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="命令">命令</h3>
+<ul>
+<li>要在命令后加上<code>&amp;</code>，指导程序在后台运行</li>
+</ul>
+<h4 id="---">&gt; | &gt; &gt;</h4>
+<ul>
+<li><code>&gt;</code>: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容</li>
+<li><code>&gt;&gt;</code>: 把程序的输出追加到目标文件</li>
+</ul>
+<h4 id="----1">&lt; | &lt; &lt;</h4>
+<ul>
+<li><code>&lt;</code>: 输入重定向，让程序从一个文件中获取输入</li>
+<li><code>&lt;&lt;</code>: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令</li>
+<li>输入重定向和输出重定向可结合在一起使用</li>
+</ul>
+<h4 id="heading">|</h4>
+<ul>
+<li>管道，将一条命令的输出连接到另一条命令输入</li>
+</ul>
+<h4 id="cat--more--less">cat | more | less</h4>
+<ul>
+<li><code>cat</code>: 查看文件内容，后跟文件名作为参数
+<ul>
+<li><code>-n</code>: 在每一行前显示行号</li>
+</ul>
+</li>
+<li><code>more</code>: 一页一页地显示文件内容
+<ul>
+<li>空格键向下翻动一页，<code>Enter</code>键向下滚动一行，<code>Q</code>键退出</li>
+</ul>
+</li>
+<li><code>less</code>: 更好的文本阅读工具
+<ul>
+<li><code>-M</code>: 阅读文件时在底部显示更多的文件信息</li>
+<li>空格键向下翻一页；<code>B</code>键向上翻一页；<code>/</code>跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入<code>/</code>，并按下回车键；<code>Q</code>键退出</li>
+</ul>
+</li>
+</ul>
+<h4 id="cd">cd</h4>
+<ul>
+<li>改变目录</li>
+</ul>
+<h4 id="chgrp">chgrp</h4>
+<ul>
+<li>设置文件的属组</li>
+<li><code>-R</code>: 改变一个目录及其下所有文件和子目录的所有权</li>
+</ul>
+<h4 id="chmod">chmod</h4>
+<ul>
+<li>改变文件的权限，只有文件的属主和<code>root</code>用户才有权修改文件的权限</li>
+<li>用户组包括文件属主<code>u</code>、文件属组<code>g</code>、其他人<code>o</code>和所有人<code>a</code>，权限包括读取<code>r</code>、写入<code>w</code>和执行<code>x</code></li>
+<li>设置权限规则：<code>用户组+/-权限</code>、<code>用户组=权限</code>、<code>用户组1=用户组2</code></li>
+<li>可使用八进制语法设置文件权限</li>
+</ul>
+<h4 id="chown-option-ownergroup-file">chown [OPTION]&hellip; [OWNER][:[GROUP]] FILE&hellip;</h4>
+<ul>
+<li>改变文件的所有权，参数<code>OWNER</code>或<code>:GROUP</code>可省略</li>
+<li><code>-R</code>: 改变一个目录及其下所有文件和子目录的所有权</li>
+</ul>
+<h4 id="cp">cp</h4>
+<ul>
+<li><code>-i</code>: 目标目录有同名文件时提示是否覆盖</li>
+<li><code>-b</code>: 在目标目录的同名文件的文件名后加<code>~</code></li>
+<li><code>-r</code>: 将子目录连同其中的文件一起复制到另一个子目录下</li>
+</ul>
+<h4 id="df">df</h4>
+<ul>
+<li>查看磁盘使用情况</li>
+<li><code>-t</code>: 用于显示特定的文件系统</li>
+</ul>
+<h4 id="dir--vdir">dir | vdir</h4>
+<ul>
+<li><code>dir</code>: 列出目录内容</li>
+<li><code>vdir</code>: 相当于为<code>ls</code>命令加上<code>-l</code>选项</li>
+</ul>
+<h4 id="fdisk">fdisk</h4>
+<ul>
+<li>建立分区表</li>
+<li><code>m</code>显示所有可用的命令及其简要介绍</li>
+</ul>
+<h4 id="find-option-path-expression">find [OPTION] [path&hellip;] [expression]</h4>
+<ul>
+<li>在指定范围内查找文件</li>
+<li><code>-name</code>: 指定文件名</li>
+<li><code>-type</code>: 指定文件类型</li>
+<li><code>-print</code>: 表示将结果输出到标准输出</li>
+<li><code>-atime +[-]n</code>: 最近<code>n</code>天[没有]使用过的文件</li>
+<li><code>-mtime +[-]n</code>: 最近<code>n</code>天[没有]修改过的文件</li>
+</ul>
+<h4 id="fsck">fsck</h4>
+<ul>
+<li>检查和修复文件系统，使用<code>fsck</code>检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候</li>
+<li><code>fsck 分区名</code>: 指定需要检查的文件系统</li>
+<li><code>fsck -p</code>: 会读取<code>fstab</code>文件来确定检查哪些文件系统</li>
+<li><code>-f</code>: 强制检查新的文件系统</li>
+</ul>
+<h4 id="grep-options-pattern-file">grep [OPTIONS] PATTERN [FILE&hellip;]</h4>
+<ul>
+<li>查找文件内容，返回所在行</li>
+<li>搜索内容包含空格时必须加单引号</li>
+</ul>
+<h4 id="groupadd">groupadd</h4>
+<h4 id="head--tail">head | tail</h4>
+<ul>
+<li>显示文件的开头和结尾</li>
+<li><code>-n</code>: 指定显示的行数</li>
+</ul>
+<h4 id="history">history</h4>
+<ul>
+<li>查看历史操作，仅在<code>BASH</code>中适用，只能列出当前用户的操作记录</li>
+<li>管理员需要查看其他用户的操作记录，可读取该用户主目录下的<code>.bash_history</code></li>
+<li><code>history n</code>: 列出最近使用的n条命令</li>
+</ul>
+<h4 id="id">id</h4>
+<ul>
+<li>查看当前用户的UID、GID及其所属的组</li>
+<li><code>id username</code>: 查看指定用户的信息</li>
+</ul>
+<h4 id="ifconfig">ifconfig</h4>
+<ul>
+<li>不带参数显示当前系统上所有网络接口的配置</li>
+<li>启动或禁用一个网络接口，设置IP地址、子网掩码以及其他网络选项</li>
+<li><code>ifconfig eth0 192.168.1.14 netmask 255.255.255.0 up</code></li>
+</ul>
+<h4 id="kill--signal-pid">kill [-signal] pid</h4>
+<ul>
+<li><code> kill -l</code>: 显示所有信号及其编号</li>
+<li>向进程发送信号，信号用于控制进程的行为，默认情况下，向进程发送TERM信号</li>
+<li><code>sudo kill -KILL pid</code>: KILL可在内核级别杀死一个进程，在绝大多数情况下，下可以确保结束进程号为pid的进程。</li>
+</ul>
+<h4 id="locate">locate</h4>
+<ul>
+<li>更快速地定位文件，自动建立整个文件名数据库</li>
+</ul>
+<h4 id="ln-target-link_name">ln TARGET LINK_NAME</h4>
+<ul>
+<li>创建硬链接，硬链接是直接引用，符号链接通过名称进行引用</li>
+<li><code>-s</code>: 创建软链接，可用于文件和目录</li>
+</ul>
+<h4 id="ls-option-file">ls [OPTION]&hellip; [FILE]&hellip;</h4>
+<ul>
+<li>列出目录内容</li>
+<li><code>-F</code>: 在每个目录后加上<code>/</code>，在可执行文件后加<code>*</code>，在链接文件后加上<code>@</code></li>
+<li><code>-a</code>: 用于显示所有文件</li>
+<li><code>-l</code>: 查看文件的各种属性</li>
+</ul>
+<h4 id="lsof">lsof</h4>
+<ul>
+<li>查看占用文件的进程，不带任何参数的lsof会列出当前系统中所有打开文件的进程信息，要找出占用某个特定文件的进程，需要提供文件名作为参数。</li>
+</ul>
+<h4 id="lsusb">lsusb</h4>
+<ul>
+<li>列出当前内核已经发现的<code>USB</code>设备</li>
+</ul>
+<h4 id="man">man</h4>
+<ul>
+<li>获取某个命令的帮助信息</li>
+</ul>
+<h4 id="mkdir">mkdir</h4>
+<ul>
+<li>一次建立一个或几个目录</li>
+<li><code>-p</code>: 完整创建目录结构，不存在父级目录时自动创建</li>
+</ul>
+<h4 id="mkfs">mkfs</h4>
+<ul>
+<li>建立文件系统，如果硬盘分区已经挂载到文件系统中，格式化之前必须用<code>umount</code> 卸载该分区</li>
+<li><code>-t</code>: 指定建立的文件系统类型</li>
+<li><code>-c</code>: 检查指定设备上损坏的块</li>
+</ul>
+<h4 id="mkswap">mkswap</h4>
+<ul>
+<li><code>mkswap /dev/sdb2</code>: 初始化交换分区</li>
+<li><code>swapon /dev/sdb2</code>:  检查并激活交换分区</li>
+<li><code>swapon -s</code>: 查看当前系统上已存在的交换分区</li>
+</ul>
+<h4 id="mount">mount</h4>
+<ul>
+<li>用户不能直接通过设备文件访问存储设备，所有的存储设备（包括硬盘、光盘等）在使用之前必须首先被挂载到一个目录下</li>
+<li><code>mount /dev/cdrom /mnt/cdrom/</code>: 挂载光盘</li>
+<li><code>-t</code>: 指明设备所使用的文件系统类型</li>
+<li><code>-r</code>: 以只读模式挂载设备</li>
+<li><code>-w</code>: 可读写模式挂载设备</li>
+</ul>
+<h4 id="mv">mv</h4>
+<ul>
+<li><code>-i</code>: 目标目录有同名文件时提示是否覆盖</li>
+<li><code>-b</code>: 在目标目录的同名文件的文件名后加<code>~</code></li>
+</ul>
+<h4 id="netstat">netstat</h4>
+<ul>
+<li><code>netstat -r</code>: 查看当前系统中的路由信息</li>
+</ul>
+<h4 id="nice">nice</h4>
+<ul>
+<li>查看默认谦让度</li>
+<li><code>nice -n 2 bc</code>: 启动程序时设置其谦让度增量，谦让度的值在–20～+19</li>
+<li><code>renice +12 -p 8567</code>: 在进程运行时调整其谦让度绝对值</li>
+</ul>
+<h4 id="passwd-username">passwd [username]</h4>
+<h4 id="ps">ps</h4>
+<ul>
+<li>监视进程</li>
+<li><code>ps aux</code>: 显示当前系统上运行的所有进程的信息</li>
+<li><code>ps lax</code>: 父进程 ID（PPID）和谦让度（NI）</li>
+</ul>
+<h4 id="pwd">pwd</h4>
+<ul>
+<li>显示当前目录</li>
+</ul>
+<h4 id="rm">rm</h4>
+<ul>
+<li>一次删除一个或几个文件，可用来删除目录</li>
+<li><code>-i</code>: 删除文件前给出提示</li>
+<li><code>-f</code>: 强制执行删除操作不给出提示</li>
+<li><code>-r</code>: 递归删除目录下所有的文件和子目录</li>
+</ul>
+<h4 id="rmdir">rmdir</h4>
+<ul>
+<li>只能删除空目录</li>
+</ul>
+<h4 id="route">route</h4>
+<ul>
+<li><code>route add default gw xx.xx.xx.xx</code>: 增加一条默认路由</li>
+<li><code>route add -net xx.xx.xx.xx/24 gw xx.xx.xx.xx [eth0]</code></li>
+<li><code>route add -host xx.xx.xx.xx gw xx.xx.xx.xx</code></li>
+<li><code>route del default</code>: 删除默认路由</li>
+</ul>
+<h4 id="su">su</h4>
+<ul>
+<li>用户间切换，不带参数的su会将用户提升至root权限，su获得的特权将一直持续到使用exit退出为止。</li>
+<li>Ubuntu默认情况系统没有合法的 root 口令，不能使用su提升至root权限，必须用sudo获得root访问权。</li>
+<li><code>su username</code>: 切换到其他用户。</li>
+<li>尽量通过绝对路径使用su命令，通常保存在/bin 目录下。这将在一定程度上防止溜入到搜索路径下的名为 su 的程序窃取用户口令。</li>
+</ul>
+<h4 id="sudo">sudo</h4>
+<ul>
+<li>受限的特权，管理员通过配置<code>/etc/sudoers </code>指定用户可以执行的特权命令。修改sudoers文件应该使用visudo命令。</li>
+<li><code>sudo -u username</code>: 改变执行命令用户身份</li>
+</ul>
+<h4 id="top">top</h4>
+<ul>
+<li>即时跟踪进程信息，显示的信息会占满一页，在默认情况下每10s更新一次。使用CPU最多的程序会排在最前面。使用q退出监视程序。</li>
+</ul>
+<h4 id="touch">touch</h4>
+<ul>
+<li>新建一个空文件</li>
+<li>更新一个文件的建立日期和时间</li>
+</ul>
+<h4 id="umount">umount</h4>
+<ul>
+<li>卸载前必须先退出挂载到的那个目录，统会提示设备忙并拒绝卸载</li>
+<li><code>-r</code>: 在无法卸载文件系统的情况下，尝试以只读方式重新载入</li>
+</ul>
+<h4 id="uname">uname</h4>
+<ul>
+<li>显示当前系统的版本信息</li>
+<li><code>-a</code>: 显示当前操作系统的所有有用信息</li>
+<li><code>-r</code>: 显示内核版本信息</li>
+</ul>
+<h4 id="useradd">useradd</h4>
+<ul>
+<li><code>-m</code>: 为新用户建立主目录，为建立主目录可登录到Shell，不能登录图形界面</li>
+<li><code>-g</code>: 指定用户所属的组，不带<code>-g</code>默认会创建一个同名的用户组</li>
+<li><code>-s</code>: 指定用户登录后使用的Shell，默认将使用 sh</li>
+</ul>
+<h4 id="userdel">userdel</h4>
+<ul>
+<li><code>-r</code>: 删除用户同时删除其主目录，默认不删除主目录</li>
+</ul>
+<h4 id="usermod">usermod</h4>
+<ul>
+<li><code>-d</code>: 修改用户主目录</li>
+<li><code>-e</code>: 修改账号的有效期限，以公元月/日/年的形式表示（MM/DD/YY）</li>
+<li><code>-g</code>: 修改用户所属的组</li>
+<li><code>-l</code>: 修改用户账号名称</li>
+<li><code>-s</code>: 修改用户登录后所使用的Shell</li>
+</ul>
+<h4 id="whatis--apropos">whatis | apropos</h4>
+<ul>
+<li><code>whatis</code>: 从某个程序的使用手册页中抽出一行简单的介绍性文字，介绍大致用途</li>
+<li><code>apropos</code>: 通过使用手册中反查到某个命令</li>
+</ul>
+<h4 id="whereis">whereis</h4>
+<ul>
+<li>查找程序文件，<code>whereis</code>检索的子目录固定编写在程序中</li>
+<li><code>-b</code>: 只查找二进制可执行文件</li>
+</ul>
+<h4 id="who">who</h4>
+<ul>
+<li>查看当前系统中登录的用户，以及工作的控制台</li>
+</ul>
+<h4 id="whoami">whoami</h4>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

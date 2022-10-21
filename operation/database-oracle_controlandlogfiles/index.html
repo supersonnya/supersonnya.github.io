@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="管理控制文件和日志文件">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_controlandlogfiles</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 19 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="管理控制文件">管理控制文件</h3>
+<ul>
+<li>控制文件是Oracle数据库最重要的物理文件之一，每个Oracle数据库至少有称控制文件。启动数据库实例时，根据初始化参数查找控制文件并读取控制文件中的内容，然后根据控制文件中的信息在实例和数据库之间建立起关联。如果无法找到控制文件或控制文件被损坏，数据库实例将无法启动，且很难修复。</li>
+</ul>
+<h4 id="控制文件简介">控制文件简介</h4>
+<ul>
+<li>Oracle数据库中，控制文件是一个很小（10MB范围内）的二进制文件，含有数据库的结构信息，包括数据文件和日志文件。控制文件在数据库创建时被自动创建，在数据库发生物理变化时更新。任何时候都不要手动编辑控制文件。</li>
+<li>Oracle系统提供了备份文件和多路复用的机制，当控制文件损坏时，用户可以通过先前的备份来恢复控制文件。</li>
+</ul>
+<h5 id="及时备份控制文件">及时备份控制文件</h5>
+<ul>
+<li>当数据库的物理组成发生变化时，控制文件也会变更，需要及时备份控制文件。</li>
+</ul>
+<h5 id="保护控制文件">保护控制文件</h5>
+<ul>
+<li>采用多种策略或准则保护控制文件，目前主要有多路复用控制文件和备份控制文件。</li>
+</ul>
+<h4 id="控制文件的多路复用">控制文件的多路复用</h4>
+<ul>
+<li>至少建立两个控制文件，并且两个控制文件最好分别保存在不同的磁盘中，避免由于某个磁盘故障而发生无法启动数据库的风险。即在系统不同的位置上同时存放多个控制文件的副本。</li>
+<li>初始化参数<code>CONTROL_FILES</code>中列出了当前数据库所有的控制文件名，Oracle根据<code>CONTROL_FILES</code>参数中的信息同时修改所有的控制文件，但只读取其中第一个控制文件的信息。在整个数据库运行期间，如果任何一个控制文件被损坏，实例就不能再继续运行。</li>
+<li>实现多路复用包括更改<code>CONTROL_FILES</code>参数和复制控制文件两个步骤：
+<ol>
+<li>更改<code>CONTROL_FILES</code>参数：在<code>SPFILE</code>中，使用<code>ALTER SYSTEM</code>更改<code>CONTROL_FILES</code>参数值。</li>
+<li>停止Oracle服务，关闭数据库，并将第一个控制文件复制到新增加的目录下并重命名，启动数据库验证。</li>
+</ol>
+</li>
+</ul>
+<h4 id="创建控制文件">创建控制文件</h4>
+<ul>
+<li>如果突发意外，导致数据库的所有控制文件全部丢失或损坏，只能手工创建一个新的控制文件。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">CREATE</span><span style="color:#666"> </span>CONTROLFILE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>REUSE<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span>db_name<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>LOGFILE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span><span style="color:#3677a9">1</span><span style="color:#666"> </span>redofiles_list1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span><span style="color:#3677a9">2</span><span style="color:#666"> </span>redofiles_list2<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span><span style="color:#3677a9">3</span><span style="color:#666"> </span>redofiles_list3<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>...<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>DATAFILE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>datafile1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>datafile2<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>datafile3<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>...<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>MAXLOGFILES<span style="color:#666"> </span>max_value1<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 永久性参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>MAXLOGMEMBERS<span style="color:#666"> </span>max_value2<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 永久性参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>MAXINSTANCES<span style="color:#666"> </span>max_value3<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 永久性参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>MAXDATAFILES<span style="color:#666"> </span>max_value4<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 永久性参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>NORESETLOGS|RESETLOGS<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>ARCHIVELOG|NOARCHIVELOG;<span style="color:#666">
+</span></span></span></code></pre></div><ul>
+<li>若需要修改数据库的某个永久性参数，必须重新创建控制文件。</li>
+</ul>
+<h5 id="创建控制文件过程">创建控制文件过程</h5>
+<ol>
+<li>查看数据文件和重做日志文件：若数据库中所有的控制文件和日志文件已经丢失，数据库已无法打开，就无法通过查询数据字典来获得数据文件和日志文件信息，只能查看告警日志文件中的内容。如果数据库可以打开，在<code>v$logfile</code>查看日志文件，在<code>v$datafile</code>查看数据文件，在<code>v$controlfile</code>查看控制文件。</li>
+<li>关闭数据库：若数据库处于打开状态，在system模式使用<code>SHUTDOWN IMMEDIATE</code>关闭数据库。</li>
+<li>备份文件：在操作系统备份国有的数据文件和重做日志文件，在使用<code>CREATE CONTROLFILE</code>创建新控制文件时，可能损坏数据文件和日志文件。</li>
+<li>启动数据库实例：启动但不加载数据库。</li>
+<li>创建新的控制文件：使用<code>CREATE CONTROLFILE</code>创建一个新的控制文件。</li>
+<li>编辑参数：编辑<code>SPFILE</code>文件中的<code>CONTROL_FILES</code>参数，使其指向新建的控制文件。</li>
+<li>打开数据库：<code>alter database open</code>。若创建控制文件使用了<code>RESETLOGS</code>语句，需要以恢复方式打开数据库，<code>alter database open resetlogs</code>。</li>
+</ol>
+<h4 id="备份和恢复控制文件">备份和恢复控制文件</h4>
+<h5 id="备份控制文件">备份控制文件</h5>
+<ul>
+<li>控制文件有两种备份方式，备份为二进制文件或脚本文件。
+<ul>
+<li>备份为二进制文件：<code>ALTER DATABASE BACKUP CONTROLFILE TO file_path;</code>。</li>
+<li>备份为脚本文件：<code>ALTER DATABASE BACKUP CONTROLFILE TO TRACE;</code>。脚本文件以文本形式备份，也称为跟踪文件，实际是一个SQL脚本，可以利用它来重新创建新的控制文件，跟踪文件存放位置由<code>USER_DUMP_DEST</code>参数决定。</li>
+</ul>
+</li>
+</ul>
+<h5 id="恢复控制文件">恢复控制文件</h5>
+<ul>
+<li>控制文件损坏后，重新指定<code>CONTROL_FILES</code>参数，使它指向备份的控制文件，即可重新启动数据库。
+<ul>
+<li>控制文件本身损坏，目录仍可访问：关闭数据库，复制一个多路复用文件覆盖损坏文件，重新启动数据库。</li>
+<li>磁盘介质永久性损坏：关闭数据库实例，修改初始化参数指向新的控制文件，重新启动数据库。</li>
+</ul>
+</li>
+</ul>
+<h4 id="删除控制文件">删除控制文件</h4>
+<ul>
+<li>关闭数据库，编辑初始化参数<code>CONTROL_FILES</code>，清除需要删除的控制文件名称，重新启动数据库。</li>
+<li>不能将控制文件全部删除，至少保留两个，否则数据库将无法启动。</li>
+</ul>
+<h4 id="查询控制文件信息">查询控制文件信息</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 包含所有控制文件的名称和状态信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$controlfile<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 包含控制文件中各个记录文档段的信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$control_record_section<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 包含系统所有初始化参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$parameter<span style="color:#666">
+</span></span></span></code></pre></div><h3 id="管理重做日志文件">管理重做日志文件</h3>
+<ul>
+<li>重做日志文件通常也称为日志文件，是保证数据库安全和数据库备份和恢复的文件，管理员可以根据日志文件和数据库文件，将崩溃的数据库恢复到最近一次记录日志时的状态。</li>
+</ul>
+<h4 id="重做日志文件">重做日志文件</h4>
+<ul>
+<li>重做日志文件用于记载事务操作引起的数据变化，当执行DDL或DML操作时，由LGWR进程将缓冲区中与该事务相关的重做记录全部写入重做日志文件。当丢失或损坏数据库中的数据时，Oracle会根据重做日志文件中的记录恢复丢失的数据。</li>
+</ul>
+<h5 id="日志文件的内容及数据恢复">日志文件的内容及数据恢复</h5>
+<ul>
+<li>重做日志文件由重做记录组成，重做记录又称为重做条目，由一组变更向量组成。每个变更向量都记录了数据库中某个数据块所做的修改。</li>
+<li>利用重做记录，不禁能够恢复对数据文件所做的修改操作，还能恢复对回退段所做的修改操作。</li>
+<li>重做记录以循环方式在SGA区的重做日志高速缓冲区中进行缓存。当一个事务被提交时，LGWR将该事务相关的所有重做记录全部写入重做日志文件中，同时生成一个系统变更码（SCN）。系统变更码会随着重做记录一起保存到重做日志文件组中，以标识与重做记录相关的事务。只有当某个事务所产生的重做记录全部被写入重做日志文件后，才会认为该事务提交成功。</li>
+<li>正在被LGWR进程写入的重做日志文件处于当前状态；正在被实例用于数据库恢复的重做日志文件处于活动状态；其他重做日志文件处于未活动状态。可查询v$logfile获取重做日志文件的状态。</li>
+</ul>
+<h4 id="增加日志组及其成员">增加日志组及其成员</h4>
+<ul>
+<li>一个数据库至少需要两个重做日志文件组，每个组可以包含一个或多个重做日志成员。对于重做日志文件的日常维护工作，需要具有ALTER DATABASE系统权限。Oracle会自动为新建的重做日志组设置编号，一般是在当前最大组号之后递增。也可指定编号，但日志组编号必须是连续的，不能跳跃。</li>
+</ul>
+<h5 id="添加新的重做日志文件组">添加新的重做日志文件组</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 通常大小10M-50M，默认为50M
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">ADD</span><span style="color:#666"> </span>LOGFILE<span style="color:#666"> </span>[<span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span>num]<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span>(<span style="color:#ed9d13">&#39;filename1&#39;</span>,<span style="color:#ed9d13">&#39;filename2&#39;</span>)<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SIZE</span><span style="color:#666"> </span><span style="color:#3677a9">20</span>M;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 添加一个单一的重做日志文件，并覆盖已存在的同名日志文件
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 使用reuse时不能使用size，大小由已存在日志文件的大小决定
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">ADD</span><span style="color:#666"> </span>LOGFILE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#ed9d13">&#39;filename&#39;</span><span style="color:#666"> </span>REUSE;<span style="color:#666">
+</span></span></span></code></pre></div><h5 id="创建日志成员文件">创建日志成员文件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 为重做日志组添加新成员
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 可通过指定重做日志文件组中其他成员名称确定重做日志组
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">ADD</span><span style="color:#666"> </span>LOGFILE<span style="color:#666"> </span>MEMBER<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#ed9d13">&#39;filename&#39;</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">TO</span><span style="color:#666"> </span>filename<span style="color:#666"> </span>|<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span>num;<span style="color:#666">
+</span></span></span></code></pre></div><h4 id="删除重做日志文件">删除重做日志文件</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 删除日志成员，只在数据字典和控制文件中删除，物理文件需手动删除
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DROP</span><span style="color:#666"> </span>LOGFILE<span style="color:#666"> </span>MEMBER<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#ed9d13">&#39;filename&#39;</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 删除日志文件组：不再使用或大小不合适时需要删除
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 无论日志组有多少成员，一个数据库至少需要两个日志组；只能删除处于INACTIVE的日志组；若数据库处于归档模式
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 删除前必须确定已经被归档，可查询v$log查看重做日志文件组的状态及是否归档
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DROP</span><span style="color:#666"> </span>LOGFILE<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span>num;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 清空重做日志文件，重做日志组处于CURRENT状态可执行
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span>CLEAR<span style="color:#666"> </span>LOGFILE<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">GROUP</span><span style="color:#666"> </span>num;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 若要清空的重做日志文件组未归档，还需使用ALTER DATABASE CLEAR UNARCHIVED LOGFILE
+</span></span></span></code></pre></div><h4 id="更改重做日志文件的位置或名称">更改重做日志文件的位置或名称</h4>
+<ol>
+<li>
+<p>关闭数据库：<code>shutdown</code>。</p>
+</li>
+<li>
+<p>手动复制源文件到目标位置。</p>
+</li>
+<li>
+<p>启动数据库实例，加载数据库，但不打开：<code>startup monut</code>。</p>
+</li>
+<li>
+<p>使用<code>ALTER DATABASE RENAME FILE</code>设置重做日志文件路径及名称。</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">RENAME</span><span style="color:#666"> </span>FILE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#ed9d13">&#39;filename1&#39;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#39;filename2&#39;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">TO</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#ed9d13">&#39;filename1_new&#39;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#39;filename2_new&#39;</span>;<span style="color:#666">
+</span></span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>打开数据库，新重做日志文件生效：<code>alter database open;</code>。</p>
+</li>
+</ol>
+<h4 id="重看重做日志信息">重看重做日志信息</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 控制文件中的日志文件信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$log<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 日志组和日志成员信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$logfile<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 日志历史信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$log_history<span style="color:#666">
+</span></span></span></code></pre></div><h3 id="管理归档日志文件">管理归档日志文件</h3>
+<ul>
+<li>如果任何由于物理磁盘损坏而造成的数据丢失都是不允许的，就只能使用归档模式；如果只强调应用系统的运行效率，将数据的丢失放在次一级考虑，可以采取非归档模式，但数据库需要定时进行完整备份。数据库默认使用非归档模式。</li>
+</ul>
+<h4 id="管理归档操作">管理归档操作</h4>
+<h5 id="日志模式切换">日志模式切换</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 改变日志操作模式，必须使用sysdba身份执行
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 查看当前日志模式
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">SELECT</span><span style="color:#666"> </span>log_mode<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">FROM</span><span style="color:#666"> </span>v$database;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 改变日志操作必须在MOUNT状态下进行
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>SHUTDOWN<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">IMMEDIATE</span>;<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 关闭数据库不能使用shutdown abort
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>STARTUP<span style="color:#666"> </span>MOUNT;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 改变日志模式
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span>ARCHIVELOG;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DATABASE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">OPEN</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 查看数据库是否处于归档模式
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>ARCHIVE<span style="color:#666"> </span>LOG<span style="color:#666"> </span>LIST;<span style="color:#666">
+</span></span></span></code></pre></div><h5 id="配置归档进程">配置归档进程</h5>
+<ul>
+<li>如果Oracle系统的后台进程LGWR经常出现等待的状态，可以考虑启动多个ARCN进程，修改初始化参数<code>LOG_GRCHIVE_MAX_PROCESSED</code>。默认启动两个归档日志进程。</li>
+</ul>
+<h4 id="设置归档文件位置">设置归档文件位置</h4>
+<ul>
+<li>归档日志文件保存的位置称为归档目标。归档目标在初始化参数<code>LOG_ARCHIVE_DEST_n</code>中设置，n为1-10的整数，可以为数据库指定1-10个归档目标。Oracle会将重做日志文件组以相同的方式归档到每一个归档目标中。设置归档目标时，可以指定本地机器或远程服务器作为归档目标。</li>
+</ul>
+<h5 id="本地归档目标">本地归档目标</h5>
+<ul>
+<li>一般当归档日志所在磁盘损坏或填满时，应暂时禁用该归档位置。仅用时<code>LOG_ARCHIVE_DEST_STATE_n</code>中n的值要大于<code>LOG_ARCHIVE_MIN_SUCCEED_DEST</code>的参数值，否则报错。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 使用LOCATION关键字，表示指定的归档目标在本地机器
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- OPTIONAL：默认选项，无论归档操作是否执行成功，都可以覆盖重做日志文件
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- MANDATORY：只有归档成功后，重做日志文件才可覆盖
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- REOPEN：设定重新归档时间间隔，必须跟在MANDATORY选项后
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SET</span><span style="color:#666"> </span>LOG-ARCHIVE_DEST_1=<span style="color:#ed9d13">&#39;LOCATION=filename1&#39;</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SET</span><span style="color:#666"> </span>LOG-ARCHIVE_DEST_1=<span style="color:#ed9d13">&#39;LOCATION=filename2 OPTIONAL&#39;</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SET</span><span style="color:#666"> </span>LOG-ARCHIVE_DEST_1=<span style="color:#ed9d13">&#39;LOCATION=filename2 MANDATORY&#39;</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SET</span><span style="color:#666"> </span>LOG-ARCHIVE_DEST_1=<span style="color:#ed9d13">&#39;LOCATION=filename2 MANDATORY REOPEN=400&#39;</span>;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 可使用初始化参数LOG_ARCHIVE_MIN_SUCCEED_DEST控制本地归档成功的最小个数，若成功个数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 小于最小个数，重做日志文件将不能被覆盖
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 可使用初始化参数LOG_ARCHIVE_DEST_STATE_n设置归档位置是否可用，取值ENABLE|DEFER
+</span></span></span></code></pre></div><h5 id="远程归档目标">远程归档目标</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 使用SERVICE关键字，表示指定的归档目标在远程服务器
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">ALTER</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SET</span><span style="color:#666"> </span>LOG-ARCHIVE_DEST_1=<span style="color:#ed9d13">&#39;SERVICE=服务器名&#39;</span>;<span style="color:#666">
+</span></span></span></code></pre></div><h4 id="查看归档日志信息">查看归档日志信息</h4>
+<h5 id="使用数据字典和动态性能视图">使用数据字典和动态性能视图</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 查询数据库是否处于归档模式
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$database<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 控制文件中所有已经归档的日志信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$archived_log<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 包含所有归档目标信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$archive_dest<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 包含已启动的ARCN进程状态信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$archive_processes<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 所有已经备份的归档日志信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$backup_redolog<span style="color:#666">
+</span></span></span></code></pre></div><h5 id="使用archive-log-list命令">使用ARCHIVE LOG LIST命令</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 必须以sysdba身份操作
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>ARCHIVE<span style="color:#666"> </span>LOG<span style="color:#666"> </span>LIST;<span style="color:#666">
+</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

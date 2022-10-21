@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <link rel="alternate" type="application/rss+xml" href="https://supersonnya.github.io/categories/linux/index.xml" title="Sonnya" />
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="categories">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<section class="uk-margin-large-bottom">
+    <div class="uk-container">
+        <ul class="js-filter uk-child-width-1-2 uk-child-width-1-2@m uk-text-center" uk-grid uk-height-match="target: > li > div > .fixy">
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-usefulcommands/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-usefulcommands/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Linux常用命令</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-04 11:00:54 &#43;0800 CST">Aug 4, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#Commands</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-packagemanager/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-packagemanager/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Linux 软件包管理</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-04 15:43:20 &#43;0800 CST">Aug 4, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#PackageManager</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-compressedarchives/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-compressedarchives/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">压缩存档备份</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-08 16:54:10 &#43;0800 CST">Aug 8, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#CompressedArchives</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-diskmanager/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-diskmanager/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">硬盘分区管理</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-08 22:37:27 &#43;0800 CST">Aug 8, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#DiskManager</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-transferfiles/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-transferfiles/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">文件传输工具</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-11 17:11:10 &#43;0800 CST">Aug 11, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#TransferFiles</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-remotelogin/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    Linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-remotelogin/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">远程登录</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-11 17:25:05 &#43;0800 CST">Aug 11, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#RemoteLogin</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-vim/"><img class="uk-border-rounded" src="../images/operation/vim.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-vim/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Vim编辑器</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">Vim编辑器的使用及常用命令<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-15 15:35:38 &#43;0800 CST">Aug 15, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#Vim</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-daemonmanager/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-daemonmanager/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">管理守护进程</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">系统引导、管理守护进程<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-22 10:09:55 &#43;0800 CST">Aug 22, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#Daemonmanager</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-httpserver/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-httpserver/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">HTTP服务器</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-22 16:08:56 &#43;0800 CST">Aug 22, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#Httpserver</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-shell_basical/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-shell_basical/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Shell入门基础</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">Shell执行方式、传递参数、退出状态<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-24 14:47:37 &#43;0800 CST">Aug 24, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#shell</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-shell_programbasical/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-shell_programbasical/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Shell编程基础</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">变量和引用、条件测试和判断语句、循环结构<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-08-25 16:16:48 &#43;0800 CST">Aug 25, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#Shell#编程</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-shell_programbasical_two/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-shell_programbasical_two/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Shell编程基础</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">函数、数组、正则表达式<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-09-01 09:18:38 &#43;0800 CST">Sep 1, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#shell</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-shell_programbasical_three/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-shell_programbasical_three/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Shell编程基础</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top">基本文本处理、流编辑、awk命令、操作文件、<b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-09-13 20:35:00 &#43;0800 CST">Sep 13, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#shell</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-sed/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-sed/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Linux Sed</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-10-14 16:29:22 &#43;0800 CST">Oct 14, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#sed</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-awk/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-awk/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Linux Awk</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-10-14 16:29:26 &#43;0800 CST">Oct 14, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#awk</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+                <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-width-1-3@m">
+                        <a href="/operation/linux-grep/"><img class="uk-border-rounded" src="../images/operation/linux.png" alt=""></a>
+                    </div>
+                    <div class="uk-card-default uk-width-2-3@m" id="content-card">
+                        <div class="uk-card-body">
+                            <div class="uk-grid-small uk-flex-middle uk-margin-remove-top uk-padding-bottom" uk-grid>
+                                <p class="uk-text-meta uk-text-lowercase">
+                                    
+                                    linux
+                                    
+                                </p>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                                <div class="uk-width-expand">
+                                    <a href="/operation/linux-grep/">
+                                    <h5 class="uk-card-small-title uk-text-bold uk-text-left uk-margin-small-top uk-margin-small-bottom">Linux Grep</h5></a>
+                                    <h6 class="uk-card-small-title uk-text-lighter uk-text-left uk-margin-remove-top"><b>......</b></h6>
+                                </div>
+                            </div>
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <a href='/about'><img class="uk-border-circle" width="20" height="20" src="../images/about/author.png"></a>
+                                <span uk-icon="icon: clock; ratio: 0.6;"></span>
+                                <p class="uk-text-meta uk-padding-remove-left uk-margin-remove-top"><time datetime="2022-10-14 16:30:38 &#43;0800 CST">Oct 14, 2022</time></p>
+                                
+                                <p class="uk-text-meta uk-text-lowercase uk-margin-remove-top">#grep</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+      </li>
+        
+      </ul>
+
+    </div>
+</section>
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

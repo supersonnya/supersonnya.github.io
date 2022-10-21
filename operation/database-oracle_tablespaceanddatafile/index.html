@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="管理表空间和数据文件">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_tablespaceanddatafile</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 8 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="表空间和数据文件的关系">表空间和数据文件的关系</h3>
+<ul>
+<li>一个数据库包含多个表空间，每个表空间包含一个或多个数据文件。创建表空间时必须创建数据文件，增加数据文件时必须指定表空间。一个段只能驻留在一个表空间内，段的下一层是盘区，一个或多个盘区组成一个段，每个盘区只能驻留在一个数据文件中，若一个段跨越多个数据文件，就只能由多个驻留在不同数据文件中的盘区构成。盘区的下一层是数据块，是磁盘空间管理中逻辑划分的最底层，一组连续的数据块组成一个盘区。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 表空间和对应数据文件的关系从dba_data_files数据字典中查询
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">select</span><span style="color:#666"> </span>tablespace,<span style="color:#666"> </span>file_name,<span style="color:#666"> </span>bytes<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">from</span><span style="color:#666"> </span>dba_data_files;<span style="color:#666">
+</span></span></span></code></pre></div><h3 id="oracle-11g的默认表空间">Oracle 11g的默认表空间</h3>
+<ul>
+<li>默认表空间是在创建数据库时，系统自动创建的表空间，用于存放Oracle系统内部数据和提供样例所需要的逻辑空间。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 安装时选择实例方案，存放个样例的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>EXAMPLE<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 存放数据字典，包括表、视图、存储过程的定义等
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">SYSTEM</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- SYSTEM的辅助空间，存放一些选件的对象，减少SYSTEM表空间的负荷
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 可以增加数据文件和监视等操作，但不能执行删除、重命名或设置只读等操作
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>SYSAUX<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 存放SQL语句处理的表和索引的信息，如数据排序
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>TEMP<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 存放撤销数据
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>UNDOTBA1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 存放应用系统所使用的数据库对象
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>USERS<span style="color:#666">
+</span></span></span></code></pre></div><h3 id="创建表空间">创建表空间</h3>
+<ul>
+<li>为简化表空间管理并提高系统性能，Oracle建议将不同类型的数据对象存放到不同的表空间中。在创建数据库之后，还应根据具体应用建立不同类型的表空间。
+<ul>
+<li>创建小文件表空间还是大文件表空间，默认小文件。</li>
+<li>使用局部盘区管理方式，还是使用传统目录盘区管理方式，默认局部盘区管理。</li>
+<li>手工管理段空间，还是自动管理，默认自动管理。</li>
+<li>是否使用临时段或撤销段的特殊表空间。</li>
+</ul>
+</li>
+</ul>
+<h4 id="创建表空间语法">创建表空间语法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">CREATE</span><span style="color:#666"> </span>[SMALLFILE|BIGFILE]<span style="color:#666"> </span>TABLESPACE<span style="color:#666"> </span>tablespace_name<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>DATAFILE<span style="color:#666"> </span><span style="color:#ed9d13">&#39;/path/filename&#39;</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SIZE</span><span style="color:#666"> </span>num<span style="color:#666"> </span>[k|m]<span style="color:#666"> </span>REUSE<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- reuse表示若文件存在，吃；出该文件再重建建立
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[,<span style="color:#666"> </span><span style="color:#ed9d13">&#39;/path/filename&#39;</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SIZE</span><span style="color:#666"> </span>num<span style="color:#666"> </span>[k|m]<span style="color:#666"> </span>REUSE]<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>[,<span style="color:#666"> </span>...]<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>[AUTOEXTEND<span style="color:#666"> </span>[<span style="color:#6ab825;font-weight:bold">ON</span>|<span style="color:#6ab825;font-weight:bold">OFF</span>]<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">NEXT</span><span style="color:#666"> </span>num[k|m]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 若自动扩展，需要设置next值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[MAXSIZE<span style="color:#666"> </span>[UNLIMITED<span style="color:#666"> </span>|<span style="color:#666"> </span>num[k|m]]]]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 自动扩展的最大值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[MININUM<span style="color:#666"> </span>EXTENT<span style="color:#666"> </span>num<span style="color:#666"> </span>[k|m]]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 指定最小长度，由操作系统和数据库块决定
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[<span style="color:#6ab825;font-weight:bold">DEFAULT</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">STORAGE</span><span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">storage</span>]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 指定以后要创建的表、索引及簇的存储参数值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[ONLINE<span style="color:#666"> </span>|<span style="color:#666"> </span>OFFLINE]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 创建表空间可指定在线或离线
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[LOGGING<span style="color:#666"> </span>|<span style="color:#666"> </span>NOLOGGING]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 加载表空间内表的时候是否产生日志，默认产生日志
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[PERMANENT<span style="color:#666"> </span>|<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">TEMPORARY</span>]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 永久表空间还是临时表空间，默认为永久表空间
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[EXTENT<span style="color:#666"> </span>MANAGEMENT<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">DICTIONARY</span><span style="color:#666"> </span>|<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">LOCAL</span><span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 表空间的扩展方式使用数据字典管理还是本地化管理，默认本地化
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>[AUTOALLOCATE<span style="color:#666"> </span>|<span style="color:#666"> </span>UNIFORM<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SIZE</span><span style="color:#666"> </span>num[k|m]]]<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 若采用本地化管理，扩展时指定每次盘区扩展大小是系统自动指定还是按照等同大小进行，若按照等同大小，默认每次扩展大小为1mb
+</span></span></span></code></pre></div><h4 id="通过本地化管理方式创建表空间">通过本地化管理方式创建表空间</h4>
+<ul>
+<li>本地化表空间管理使用位图跟踪表空间对应的数据文件的自由空间和块的使用状态，位图中每个单元对应一个块或一组块。当分配或释放一个扩展时，Oracle会改变位图的值以指示该块的状态。位图值得改变不会产生回滚信息。本地管理表空间有以下优点：
+<ul>
+<li>使用本地化得扩展管理功能可以避免发生重复的空间管理操作。</li>
+<li>本地化管理的自动扩展能够跟踪临近的自由空间，可以消除结合自由空间的麻烦。</li>
+</ul>
+</li>
+</ul>
+<h4 id="通过段空间管理方式创建表空间">通过段空间管理方式创建表空间</h4>
+<ul>
+<li>段空间管理方式是建立在本地化空间管理方式基础之上的，只有本地化管理方式的表空间，才能在其基础上进一步建立段空间管理方式。段空间管理又分为手工段和自动段两种方式。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>SEGMENT<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">SPACE</span><span style="color:#666"> </span>MANAGEMENT<span style="color:#666"> </span>MANUAL/AUTO<span style="color:#666">
+</span></span></span></code></pre></div><h5 id="手工段空间管理方式">手工段空间管理方式</h5>
+<ul>
+<li>手工段空间管理方式是为了向后兼容而保留，使用自由块列表和PCT_FREE和PCT_USED参数来标识可供插入操作使用的数据块。
+<ul>
+<li>每个INSERT或UPDATE操作后，比较数据块中剩余自由空间和PCT_FREE设置，小于则从自由块列表移除。</li>
+<li>每个UPDATE或DELETE操作后，比较数据块中已用空间和PCT_USED设置，小于则加入自由块列表。</li>
+</ul>
+</li>
+</ul>
+<h5 id="自动段空间管理方式">自动段空间管理方式</h5>
+<ul>
+<li>使用位图标识可用于插入操作的数据块，及需要从自由块列表取下的数据块。PCT_FREE和PCT_USED参数会被自动忽略，比手工段空间管理方式具有更好的性能，是创建表空间时的首选方式。
+<ul>
+<li>自动段空间不能用于创建临时表空间和系统表空间。</li>
+<li>默认情况是手工管理方式，创建表空间时需明确指定AUTO。</li>
+</ul>
+</li>
+</ul>
+<h4 id="创建非标准块表空间">创建非标准块表空间</h4>
+<ul>
+<li>通常块大小为8kb，允许创建大小与基本块不同的表空间，块大小由创建表空间时的BLOCKSIZE指定，有利于存储不同大小的对象。
+<ul>
+<li>非标准块的大小为基本块的倍数。</li>
+<li>块较大的表空间通常用来存放大对象（LOB）类型。</li>
+<li>Oracle 11通常使用SGA自动共享内存管理，需要设置初始化参数DB_16K_CACHE_SIZE=16K。</li>
+</ul>
+</li>
+</ul>
+<h3 id="维护表空间和数据文件">维护表空间和数据文件</h3>
+<h3 id="管理撤销表空间">管理撤销表空间</h3>
+<h3 id="管理临时表空间">管理临时表空间</h3>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SuperSonnya&#39;s Website on Sonnya</title>
+    <link>https://supersonnya.github.io/</link>
+    <description>Recent content in SuperSonnya&#39;s Website on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Grep</title>
+      <link>https://supersonnya.github.io/operation/linux-grep/</link>
+      <pubDate>Fri, 14 Oct 2022 16:30:38 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-grep/</guid>
+      <description>语法 grep用于查找文件里符合条件的字符串。grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。 grep [-abcEFGhHilLnqrsvVwxy][-A&amp;lt;显示行数&amp;gt;][-B&amp;lt;显示列数&amp;gt;][-C&amp;lt;显示列数&amp;gt;][-d&amp;lt;进行动作&amp;gt;][-e&amp;lt;范本样式&amp;gt;][-f&amp;lt;范本文件&amp;gt;][--help][范本样式][文件或目录...]。 参数说明 `-a 或 &amp;ndash;text** : 不要忽略二进制的数据。 `-A&amp;lt;显示行数&amp;gt; 或 &amp;ndash;after-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。 `-b 或 &amp;ndash;byte-offset** : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。 `-B&amp;lt;显示行数&amp;gt; 或 &amp;ndash;before-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合样式的那一行之外，并显示该行之前的内容。 `-c 或 &amp;ndash;count** : 计算符合样式的列数。 -C&amp;lt;显示行数&amp;gt; 或 --context=&amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt;：除了显示符合样式的那一行之外，并显。该行之前后的内容。 -d &amp;lt;动作&amp;gt; 或 --directories=&amp;lt;动作&amp;gt;：当指定要查找的是目录而非文件时，必须使用这项参数。否则grep指令将回报信息并停止动作。 -e&amp;lt;范本样式&amp;gt; 或 --regexp=&amp;lt;范本样式&amp;gt;：指定字符串做为查找文件内容的样式。 -E 或 --extended-regexp：将样式为延伸的正则表达式来使用。 -f&amp;lt;规则文件&amp;gt; 或 --file=&amp;lt;规则文件&amp;gt;：指定规则文件，其内容含有一个或多个规则样式，让gre。查找符合规则条件的文件内容，格式为每行一个规则样式。 -F 或 --fixed-regexp：将样式视为固定字符串的列表。 -G 或 --basic-regexp：将样式视为普通的表示法来使用。 -h 或 --no-filename：在显示符合样式的那一行之前，不标示该行所属的文件名称。 -H 或 --with-filename：在显示符合样式的那一行之前，表示该行所属的文件名称。 -i 或 --ignore-case：忽略字符大小写的差别。 -l 或 --file-with-matches：列出文件内容符合指定的样式的文件名称。 -L 或 --files-without-match：列出文件内容不符合指定的样式的文件名称。 -n 或 --line-number：在显示符合样式的那一行之前，标示出该行的列数编号。 -o 或 --only-matching：只显示匹配PATTERN 部分。 -q 或 --quiet或--silent：不显示任何信息。 -r 或 --recursive：此参数的效果和指定&amp;quot;-d recurse&amp;quot;参数相同。 -s 或 --no-messages：不显示错误信息。 -v 或 --invert-match：显示不包含匹配文本的所有行。 -V 或 --version：显示版本信息。 -w 或 --word-regexp：只显示全字符合的列。 -x --line-regexp：只显示全列符合的列。 -y：此参数的效果和指定&amp;quot;-i&amp;quot;参数相同。 实例 </description>
+    </item>
+    
+    <item>
+      <title>Linux Awk</title>
+      <link>https://supersonnya.github.io/operation/linux-awk/</link>
+      <pubDate>Fri, 14 Oct 2022 16:29:26 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-awk/</guid>
+      <description>语法 awk是一种处理文本文件的语言，是一个强大的文本分析工具。 awk [选项参数] &#39;script&#39; var=value file(s)或awk [选项参数] -f scriptfile var=value file(s)。 选项参数说明 -F fsor--field-separator fs：指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式。 -v var=valueor--asign var=value：赋值一个用户定义变量。 -f scripfileor--file scriptfile：从脚本文件中读取awk命令。 -mf nnn and -mr nnn：对nnn值设置内在限制，-mf选项限制分配给nnn的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。 -W compact or --compat, -W traditional or --traditional：在兼容模式下运行awk。所以gawk的行为和标准的awk完全一样，所有的awk扩展都被忽略。 -W copyleft or --copyleft, -W copyright or --copyright：打印简短的版权信息。 -W help or --help, -W usage or --usage：打印全部awk选项和每个选项的简短说明。 -W lint or --lint：打印不能向传统unix平台移植的结构的警告。 -W lint-old or --lint-old：打印关于不能向传统unix平台移植的结构的警告。 -W posix：打开兼容模式。但有以下限制，不识别：/x、函数关键字、func、换码序列以及当fs是一个空格时，将新行作为一个域分隔符；操作符和=不能代替^和^=；fflush无效。 -W re-interval or --re-inerval：允许间隔正则表达式的使用，参考(grep中的Posix字符类)，如括号表达式[[:alpha:]]。 -W source program-text or --source program-text：使用program-text作为源代码，可与-f命令混用。 -W version or --version：打印bug报告信息的版本。 实例 </description>
+    </item>
+    
+    <item>
+      <title>Linux Sed</title>
+      <link>https://supersonnya.github.io/operation/linux-sed/</link>
+      <pubDate>Fri, 14 Oct 2022 16:29:22 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-sed/</guid>
+      <description>语法 sed命令是利用脚本来处理文本文件，可依照脚本的指令来处理、编辑文本文件。主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。 sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script&amp;gt;] [filename]。 参数说明 -e&amp;lt;script&amp;gt;或--expression=&amp;lt;script&amp;gt;：以指定的script来处理输入的文本文件。 -f&amp;lt;script_file&amp;gt;或--file=&amp;lt;script_file&amp;gt;：以指定的script文件来处理输入的文本文件。 -h或--help：显示帮助。 -n或--quiet或--silent：仅显示script处理后的结果。 -V或--version：显示版本信息。 动作说明 a：新增，后面可以接字串，字符串插入在当前行后的新行。 c：取代，后面可以接字串，字串可以取代n1,n2之间的行。 d：删除，后面通常没有内容。 i：插入，后面可以接字串，字符串插入在当前行前的新行。 p：打印，将某个选择的数据印出，通常与参数sed -n一起运行。 s：取代，通常搭配正则表达式使用。 实例 </description>
+    </item>
+    
+    <item>
+      <title>Ansible基础</title>
+      <link>https://supersonnya.github.io/operation/devops-ansible/</link>
+      <pubDate>Wed, 12 Oct 2022 09:05:24 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/devops-ansible/</guid>
+      <description>ansible简介 ansible的特点 部署简单，没有客户端，只需在主控端部署ansible环境，被控端无需安装客户端； 模块化：调用特定的模块，完成特定任务； 默认使用SSH协议对设备进行管理； 主从集中化管理； 配置简单、功能强大、扩展性强； 支持API及自定义模块，可通过Python轻松扩展； 通过playbooks来定制强大的配置、状态管理 对云计算平台、大数据有很好的支持； 具有幂等性：一个操作在一个主机上执行一遍和执行N遍的结果是一样的。 ansible工作机制 ansible在管理节点将ansible模块通过SSH协议推送到被管理端执行，执行完之后自动删除，可以使用SVN等来管理自定义模块及编排。 ansible基于模块工作，本身没有批量部署的能力。真正具有批量部署的是ansible运行的模块，ansible只是提供一种框架。 Ansible： ansible的核心模块； Host Inventory：被管理的主机列表； Playbooks：ansible的执行脚本，批量执行任务； Core Modules：ansible的核心模块； Custom Modules：自定义模块； Connection Plugins：连接插件，用于与被管控主机之间基于SSH建立连接关系 Plugins：其他插件，包括记录日志等。 ansible安装 Ubuntu22安装ansible ## 更新软件包索引, 安装software-properties-common ## software-properties-common用于管理独立的软件存储库 sudo apt update sudo apt install software-properties-common ## 添加ansible PPA sudo apt-add-repository ppa:ansible/ansible ## 更新软件包索引, 安装ansible sudo apt update sudo apt install ansible ansible命令 基本命令 ## 查看ansible的版本 ansible --version ## 查看组下所有主机IP ansible all --list ## ansible的命令参数 ## 语法ansible [-i 主机文件] [-f 批次] [组名] [-m 模块名称] [-a 模块参数] -v	## 详细模式，如果执行成功，输出详细结果 -i	## 指定host文件路径，默认/etc/ansible/hosts -f,-forks=NUM	## NUM默认是整数5，指定fork开启同步进程的个数 -m	## 指定使用的module名称，默认command模块 -a	## 指定模块的参数 -k	## 提示输入SSH密码，而不是使用基于ssh密钥认证 -sudo ## 指定使用sudo获取root权限 -K	## 提示输入sudo密码 -u	## 指定移动端的执行用户 -C	## 测试命令执行会改变什么内容，不会真正的去执行 ansible-doc ## 列出所有模块列表 ansible-doc -l ## 查看指定模块的参数 ansible-doc -s &amp;lt;modulename&amp;gt; ansible的使用 自定义配置连接 ## 配置路径/etc/ansible/hosts ansible_ssh_port ## 指定ssh端口 ansible_ssh_user ## 指定 ssh 用户 ansible_ssh_pass ## 指定 ssh 用户登录是认证密码 ansible_sudo_pass ## 指明 sudo 时候的密码 ssh密钥访问 ssh-keygen ssh-copy-id username@host_ip 测试命令 ansible -m command -a &amp;#34;free -m &amp;#34; webservers ansible -m command -a &amp;#34;useradd sonnya&amp;#34; webservers ansible -m command -a &amp;#34;id sonnya&amp;#34; web-servers ansible高级用法 常用模块 3个远程模块的区别 command：ansible的默认模块，不指定-m参数时，使用command模块；常见的命令都可使用，但命令的执行不是通过shell来执行的，&amp;lt;, &amp;gt;, |, &amp;amp;这些操作不可用，不支持管道，无法批量执行命令； shell模块：使用shell模块时默认通过/bin/sh执行，在终端输入的各种命令都可使用； scripts模块：使用scripts模块可在本地写一个脚本，在远程服务器上执行。 copy模块 实现主控端向目标主机拷贝文件，类似scp。 ansible webservers -m copy -a &amp;quot;src=https://supersonnya.github.io/etc/hosts dest=/root owner=root group=root mode=0777&amp;quot; file模块 给文件设置权限。 ansible webservers -m file -a &amp;quot;path=/etc/hosts mode=0755&amp;quot; stat模块 获取远程文件信息。 ansible webservers -m stat -a &amp;quot;path=/etc/hosts&amp;quot; get_url模块 实现远程主机下载指定的url地址，支持sha256sum文件校验。 ansible webservers -m get_url -a &amp;quot;url=https://xxx dest=/tmp/ mode=0440 force=yes&amp;quot; yum模块 管理软件包。 ansible webservers -m yum -a &amp;quot;name=httpd state=installed&amp;quot; cron模块 远程管理主机crontab配置。 ansible webservers -m cron -a &amp;quot;name=&#39;echo_hello&#39; minute=&#39;*/30&#39; job=&#39;echo hello&#39;&amp;quot; service模块 远程管理主机系统服务。 ansible webservers -m service -a &amp;quot;name=httpd state=restarted&amp;quot; user模块 管理远程主机的用户。 ansible webservers -m user -a &amp;quot;name=sonnya state=present&amp;quot; </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/2022082001/</link>
+      <pubDate>Tue, 20 Sep 2022 15:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/2022082001/</guid>
+      <description>劝学诗 朱熹 〔宋代〕
+少年易老学难成，一寸光阴不可轻。
+未觉池塘春草梦，阶前梧叶已秋声。</description>
+    </item>
+    
+    <item>
+      <title>Shell编程基础</title>
+      <link>https://supersonnya.github.io/operation/linux-shell_programbasical_three/</link>
+      <pubDate>Tue, 13 Sep 2022 20:35:00 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical_three/</guid>
+      <description>基本文本处理 使用echo输出文本 1、显示普通字符串 echo基本语法：echo [options] string…，-n选项表示不输出行尾换行符。 2、显示转义字符 使用-e选项使echo支持转义字符。 ## echo命令的转义字符 \a ## 报警符，相当于ASCII码的BEL字符 \b ## 退格符 \c ## 禁止继续输出文本,包括最后的换行符 \f ## 换页符 \n ## 换行符 \r ## 回车符 \t ## 水平制表符 \v ## 垂直制表符 \\ ## 反斜线 3、显示变量 echo &amp;quot;$name&amp;quot;，有时需要使用花括号将变量名括起来。 如果变量名与不能作为变量名的字符，如-、’、/等连接在一起时，可以不使用花括号。 4、显示命令执行结果 echo可将Shell命令执行结果显示出来，在显示命令执行结果的时候，需使用反引号将命令引用起来。 文本的格式化输出 使用UNIX制表符。 使用fold命令格式化行。 ## options表示选项,file指定要输出的文件名，可以是多个文件，用空格隔开 fold [options] [file…] ## 常用的选项有如下所列。 -b ## 按字节计算宽度，默认情况下，fold按列来计算宽度 -s ## 在空格处折断行 -w ## 指定宽度，默认值是80列 使用fmt命令格式化段落：fmt比fold提供了更多的功能。 ## -width选项指定文本行的列数，默认为75列 ## file为要格式化内容的文件名，可以同时指定多个文件，用空格隔开 ## 如果指定文件名为-，会从标准输入即键盘读取文本 fmt [-width] [option].</description>
+    </item>
+    
+    <item>
+      <title>Shell编程基础</title>
+      <link>https://supersonnya.github.io/operation/linux-shell_programbasical_two/</link>
+      <pubDate>Thu, 01 Sep 2022 09:18:38 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical_two/</guid>
+      <description>函数 基本介绍 1、什么是函数 对于一个单独的 Shell 脚本来说，在执行的时候，会为其创建一个新的Shell 进程，来解释并执行脚本中的代码，当脚本执行完成，该 Shell 进程就会自动结束；而对于一个函数来说，在调用的时候，系统并不会为其单独创建一个 Shell 进程，而是在调用者的 Shell 进程中直接解释并执行函数中的代码。 2、函数的定义 Shell规定，函数必须在调用前定义。 [function] function_name () { statement1 statement2 ... statement n } 3、函数的调用 通过函数名来调用该函数：function_name param1 param2 …。 当用户定义一个函数后，该函数就成为一个合法的Shell命令，可在后继的脚本中使用。定义函数时需要使用圆括号，调用函数时无需圆括号。 4、函数链接 函数链接指在某个Shell函数中调用另外一个函数的过程，Shell允许用户函数的嵌套调用。 函数链接不仅仅局限于在某个函数中调用另外一个函数，还可进行多层嵌套调用，或在某个函数中调用多个函数。 5、函数的返回值 用户可使用return语句返回某个数值，在Shell中，return只能返回0～255之间的整数值。 在函数中，用户将需要返回的数据写入到标准输出，通常使用echo语句完成，然后在调用程序中将函数的执行结果赋给一个变量。通过echo可以将各种数据作为返回值返回给函数调用者，而不仅仅局限于整数。 6、函数和别名 与函数相比，别名的功能比较简单，不能为一组命令指定别名，别名中不能通过系统变量操作参数列表。 函数参数 1、含有参数的函数的调用方法 function_name arg1 arg2 ...。 2、获取函数参数的个数 在函数内部，通过位置变量来接收参数的值。 通过系统变量$#来获取脚本的参数的个数。 参数以空格隔开，如果某个参数中含有空格，应该使用引号将其引用起来。 3、通过位置变量接收参数值 使用位置变量来获取参数值，$0表示脚本名称，$1表示第1个参数，$2表示第2个参数等。通过系统变量$@和$*获取所有参数的值。 4、移动位置参数 在函数中，用户可以使用shift命令来使得脚本的所有的位置参数向左移动一个位置，使用户可通过9以内的位置变量来获取超过9个的参数。 shift命令会影响到系统变量$#的值。 5、通过getopts接收函数参数 getopts是bash内置的一个命令，该命令可以获取函数的选项以及参数值，或者是脚本的命令行选项以及参数值，基本语法：getopts optstring [args]。参数optstring包含一个可以被getopts命令识别的选项名称列表。如果选项名称的后面带冒号，表示可为该选项提供参数值，参数值将被保存到一个名称为$OPTARG的内置系统变量中。getopts命令会依次遍历每个选项，选项名称将被保存到args变量中。 6、间接参数传递 间接参数传递指通过间接变量引用来实现函数参数的传递。如果某个变量的值又是另外一个变量的变量名，则该变量称为间接变量。 变量的间接引用语法：${!var_name}。 7、通过全局变量传递数据 参数的作用是在主程序和函数之间传递数据。除了使用参数传递数据外，还可通过全局变量来传递。 8、传递数组参数 严格地讲，Shell不支持将数组作为参数传递给函数，但可通过一些变通的方法实现数组参数的传递。 #! /bin/bash func() { echo &amp;#34;number of elements is $#.</description>
+    </item>
+    
+    <item>
+      <title>Storage Netapp</title>
+      <link>https://supersonnya.github.io/operation/storage-netapp/</link>
+      <pubDate>Tue, 30 Aug 2022 09:25:24 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/storage-netapp/</guid>
+      <description>netapp硬盘更换 sysconfig -r ## 查看数据重建进度和磁盘状态 disk show -v ## 坏盘状态为failed aggr status -s | -f ## 查看热备盘|坏盘 priv set advanced ## 进入维护模式 blink_on diskname ## 点亮磁盘黄灯 disk assign diskname ## 分配磁盘 disk unfail -s diskname ## 将磁盘转换为热备盘 disk zero spares ## 格式化热备盘 rdfile /etc/messages ## 出现reconstruction completed可以更换硬盘 </description>
+    </item>
+    
+    <item>
+      <title>Shell编程基础</title>
+      <link>https://supersonnya.github.io/operation/linux-shell_programbasical/</link>
+      <pubDate>Thu, 25 Aug 2022 16:16:48 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical/</guid>
+      <description>变量和引用 深入认识变量 1、什么是变量 变量就是在程序中保存用户数据的一块内存空间，变量名就是这块内存空间的地址。 在程序的执行过程中，保存数据的内存空间的内容可能会不断地发生变化，代表内存地址的变量名保持不变。 2、变量的命名 变量名可以由字母、数字或者下划线组成，且只能以字母或者下划线开头，变量名的大小写是敏感的。 通常应尽可能选择有明确意义的英文单词作为变量名。 3、变量的类型 在Shell中，变量的数据类型无需显示地声明，变量的数据类型会根据不同的操作有所变化。Shell中的变量不分数据类型，统一地按照字符串存储。 为执行加法运算，Shell自动进行数据类型的转换，如果遇到含有非数字的字符串、空串、没有定义的变量，该变量将被转换成整数0。 4、变量的定义 当第一次使用某个变量名时就同时定义了这个变量，在变量的作用域内，都可以使用该变量。 使用命令来声明变量 ## attribute 表示变量的属性，常用的属性 ### -p 显示所有变量的值 ### -i 将变量定义为整数，如果求值失败或者不是整数，就设置为0 ### -r 将变量声明为只读变量，不允许修改，也不允许删除 ### -a 变量声明为数组变量 ### -f 显示所有自定义函数，包括名称和函数体 ### -x 将变量设置成环境变量，在随后的脚本和程序中可以使用 ### declare又写做typeset declare attribute variable ## 求表达式的值 x=$[6/3] x=$((6/3)) 5、变量和引号 Shell语言中一共有3 种引号，分别为单引号、双引号和反引号。 单引号括起来的字符都作为普通字符出现。 双引号括起来的字符，除“$”、“\”、“&#39;”、“&amp;quot;”这几个字符仍是特殊字符并保留其特殊功能外，其余字符仍作为普通字符对待。 反引号括起来的字串被Shell解释为命令，在执行时首先执行该命令，并以它的标准输出结果取代整个反引号部分。 6、变量的作用域 全局变量：全局变量可以在脚本中定义，也可以在某个函数中定义。在脚本中定义的变量都是全局变量，函数内部定义的变量默认情况下也是全局变量，其作用域为从被定义的地方开始，一直到脚本结束或者被显式地删除。 局部变量：仅限于某个程序段访问，在函数内部通过local关键字定义局部变量，函数的参数是局部变量。在出现同名的情况下，函数内部的局部变量会优先被使用。 Shell中变量的原型为${var}，常用的书写形式$var是一个简写。某些情况下，简写形式会导致程序执行错误。 7、系统变量 系统变量主要在对参数判断和命令返回值判断时使用，包括脚本和函数的参数，以及脚本和函数的返回值。 $n ## n是一个整数，从1开始，表示参数的位置 $# ## 命令行参数的个数 $0 ## 当前脚本的名称 $? ## 前一个命令或者函数的返回状态码 $* ## 以“参数 1 参数 2 ……”的形式将所有的参数通过一个字符串返回 $@ ## 以“参数 1 ”“参数 2 ”……的形式返回每个参数 $$ ## 返回本程序的进程ID（ PID ） 8、环境变量 Shell的环境变量是所有Shell 程序都可以使用的变量。环境变量会影响到所有脚本的执行结果。 可使用set命令列出所有的环境变量。 ## 常用的Shell环境变量 PATH ## 命令搜索路径，以冒号为分隔符，当前目录不在系统路径里 HOME ## 用户主目录的路径名，cd命令的默认参数 COLUMNS ## 定义了命令编辑模式下可使用命令行的长度 HISTFILE ## 命令历史文件 HISTSIZE ## 命令历史文件中最多可包含的命令条数 HISTFILESIZE ## 命令历史文件中包含的最大行数 IFS ## Shell使用的分隔符 LOGNAME ## 当前的登录名 SHELL ## Shell的全路径名 TERM ## 终端类型 TMOUT ## Shell自动退出的时间，单位为秒，设为0则禁止Shell自动退出 PWD ## 当前工作目录 变量的赋值和清空 1、变量赋值 赋值语法：variable_name=value。 如果value中包含空格、制表符和换行符，必须用单引号或者双引号引起来。 中间的等于号称为赋值符号，赋值符号的左右两边不能直接跟空格，否则Shell会将其视为命令。 Shell允许只包含数字的变量值参与数值运算。 2、引用变量的值 可通过在变量名前面加上$来获取变量的值。 为正确界定变量名，避免混淆，引用变量时使用大括号将变量名括起来：${v4}。 3、清除变量 变量不再需要时可以将清除，变量被清除后，代表的值也会消失：unset variable_name。 引用和替换 1、引用 引用是指将字符串用引用符号包括起来，以防止其中的特殊字符被Shell解释为其他涵义。 转义：反斜线屏蔽后的字符的特殊意义，\$SHELL。 全引用：当一个字符串被单引号引用起来之后，其中所有的字符，除单引号本身之外，都将被解释为字面意义。 部分引用：使用双引号将字符串引用起来，则其中所包含的字符除$、反引号、\外的其他字符，都将被解释为字面意义。 命令替换：反引号和圆括号，&#39;shell_command&#39;，$(shell_command)。 条件测试和判断语句 条件测试 1、基本语法 用户可以使用测试语句来测试指定的条件表达式的条件的真或者假。当指定的条件为真时，整个条件测试的返回值为0；如果指定的条件为假，则条件测试语句的返回值为非0值。 条件测试的语法有两种，分别是test命令和[命令。 ## expression表示需要进行测试的条件表达式 ## 可由字符串、整数、文件名，以及各种运算符组成 test expression ## [是条件测试命令，expression的语法与test命令中的语法相同 ## 条件表达式和左右方括号之间都必须有一个空格 [ expression ] 2、字符串测试 字符串中的字母是区分大小写的。 string ## 判断指定的字符串是否为空，只能使用test测试是否为空串 string1 = string2 ## 判断两个字符串 string1 和 string2 是否相等 string1 !</description>
+    </item>
+    
+    <item>
+      <title>Shell入门基础</title>
+      <link>https://supersonnya.github.io/operation/linux-shell_basical/</link>
+      <pubDate>Wed, 24 Aug 2022 14:47:37 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-shell_basical/</guid>
+      <description>什么是Shell Shell的存在，向普通的用户隐藏了许多关于系统内核的细节。Shell又称命令解释器，能识别用户输入的各种命令，并传递给操作系统。在UNIX或者Linux中，Shell既是用户交互的界面，也是控制系统的脚本语言。 获取当前系统默认Shell：echo $SHELL。 查看bash当前版本：echo $BASH_VERSION。 出于安全考虑，用户只能使用/etc/shells中列出的Shell。若要使用新的Shell，需要将其加入配置文件中。 Shell脚本程序执行方式： 交互式执行 [root@linux ~]$ for filename in &amp;#39;ls .&amp;#39; &amp;gt; do &amp;gt; if echo &amp;#34;$filename&amp;#34; | grep &amp;#34;xml&amp;#34; &amp;gt; then &amp;gt; echo &amp;#34;$filename&amp;#34; &amp;gt; fi &amp;gt; done 作为程序执行 将脚本文件授予用户执行权限之后，就可以执行脚本。 #! /bin/sh for filename in &amp;#39;ls .&amp;#39; do if echo &amp;#34;$filename&amp;#34; | grep &amp;#34;xml&amp;#34; then echo &amp;#34;$filename&amp;#34; fi done 向脚本传递参数 从命令行传递给Shell脚本的参数又称为位置参数，因为Shell脚本根据参数的位置来接收它们的值。 ## 常用的与参数传递有关的系统变量 $n ## 表示传递给脚本的第n个参数，$1 表示第1个参数 $# ## 命令行参数的个数 $0 ## 当前脚本的名称 $* ## 以&amp;#34;参数1 参数2 参数3 ……&amp;#34;的形式返回所有参数的值 $@ ## 以&amp;#34;参数1&amp;#34;&amp;#34;参数2&amp;#34;&amp;#34;参数3&amp;#34;……的形式返回所有参数的值 $_ ## 保存之前执行的命令的最后一个参数 对于包含空白字符或者其他的特殊字符的参数，需要使用单引号或者双引号进行传递。 如果用户传递的参数中包含空格或者其他的特殊字符，需使用$@来获取所有的参数的值，不能使用$*。 执行Shell程序 授予用户执行该脚本文件的权限: chmod u+x xxx.</description>
+    </item>
+    
+    <item>
+      <title>HTTP服务器</title>
+      <link>https://supersonnya.github.io/operation/linux-httpserver/</link>
+      <pubDate>Mon, 22 Aug 2022 16:08:56 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-httpserver/</guid>
+      <description>Apache基础 </description>
+    </item>
+    
+    <item>
+      <title>管理守护进程</title>
+      <link>https://supersonnya.github.io/operation/linux-daemonmanager/</link>
+      <pubDate>Mon, 22 Aug 2022 10:09:55 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-daemonmanager/</guid>
+      <description>系统引导 Linux启动的基本步骤 加载并初始化 Linux 内核。 配置硬件设备。 内核创建自发进程。 由用户决定是否进入手工引导模式。 （由 init 进程）执行系统启动脚本。 进入多用户模式。 init和运行级 Linux的init进程总共支持10个运行级，但实际定义的运行级只有7个。 0 ## 系统关闭 1 或 S ## 单用户模式，用于系统救援 2 ## 功能受限的多用户模式 3 ## 完整的多用户模式 4 ## 一般不用，留作用户自己定义 5 ## 多用户模式，运行 X 窗口系统 6 ## 重新启动 ## telinit 命令强制系统进入某个运行级 telinit 6 init的配置文件是/etc/inittab，文件中定义了每个运行级上需要做的事。inittab文件通常并不会列出所有应该执行的脚本，而是调用rc脚本（通常是/etc/init.d/rc）改变运行级。rc脚本随后根据传给它的参数查找与运行级有关的目录，并执行其中的脚本。 这些目录在/etc或/etc/init.d 目录下。 服务器启动脚本 用于启动服务器应用程序服务器守护进程的脚本全部位于/etc/init.d目录下，每个脚本控制一个特定的守护进程。所有的脚本都应该认识start和stop参数，分别表示启动和停止服务器守护进程。 init在执行脚本的时候，会给以字母S开头的脚本文件传递start参数，给以字母K开头的脚本文件传递stop参数。 脚本文件名中的数字描述了脚本运行的先后顺序，数字较小的脚本首先被执行。 管理守护进程 一种是随系统启动而启动，并持续在后台监听连接请求，称为standalone模式。 借助于inetd/xinetd，在需要的时候启动，完成任务后把监听任务交还给inetd/xinetd，称为inetd/xinetd模式。 并不是所有的服务器守护进程都支持inetd和xinetd。应用程序必须在编写的时候加入对这种模式的支持。 xinetd xinetd守护进程依照/etc/xinetd.conf配置执行。不推荐通过直接编辑/etc/xinetd.conf来添加服务，应为每个服务单独开辟一个文件，存放在/etc/xinetd.d目录下。 通过 xinetd 启动 SSH 服务 在xinetd中添加服务步骤 ## 修改（增加）配置文件 vi /etc/xinetd.d/ssh service ssh { socket_type = stream protocol = tcp wait = no user = root server = /usr/sbin/sshd server_args = -i log_on_success += DURATION disable = no } ## 停用该服务的守护进程 /etc/init.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts Book_2021</title>
+      <link>https://supersonnya.github.io/records/thoughtsafter-book_2021/</link>
+      <pubDate>Mon, 22 Aug 2022 09:22:47 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/thoughtsafter-book_2021/</guid>
+      <description>人生的智慧 不管其他人是吹捧我们、满足我们的虚荣心，还是贬低我们、伤害我们的感情，都要尽可能不卑不亢、宠辱不惊。否则，一个人就会沦为其他人看法或意见的奴隶。“要搅乱或抚慰那些渴求赞美的人的心，是多么容易啊，只需要一点点撩拨”。 幸福主要依赖思想平和与内心满足。要增进幸福感，必须减少人类天性的冲动，并将其控制在一个合理的范围内。 我们乐于受人尊敬，并不是热爱尊敬本身，我们爱的只是受人尊敬带来的好处。 鼠疫 面对这个世界并不孤独，而且，在某种程度上，与他们共同生活的人还在他们的天地里。要么无缘无故地感到痛苦，要么无缘无故地怀抱希望。软弱和不理智。将自己的软弱归咎于孤独，其实真正作祟的是自己的软弱和不理智。无缘无故的痛苦和希望也与软弱和不理智有关。热情的和理智充分调和才能带来改变。 交谈要么完全无法相互理解，要么就是买卖形式的相互交换。认清这一事实，对于有目的的沟通就将目的作为导向。对无目的的沟通则不要太过苛刻，重要的是过程和对象。 大家有共同的感受，如别离和恐惧，但人人都继续把自己操心的私事放在首位。还没有一个人真正承认发生了疫病。大多数人最敏感的还是打乱了他们习惯、损害了他们利益的那一切。他们为此而不快，而气愤，但这些情绪是不可能对抗鼠疫的。对待病情的真实状态。 所有的答案都在人生里 波伏娃：“人们将女人关闭在厨房或者闺房内，却惊奇于她的视野有限；人们折断了她的翅膀，却哀叹她不会飞翔。但愿人们给她开放未来，她就再也不会被迫待在目前。” 杨绛翻译：我和谁都不争，和谁争我都不屑；我爱大自然，其次是艺术；我双手烤着生命之火取暖；火萎了，我也准备走了。 “有些人之所以不断成长，就绝对是有一种坚持下去的力量。好读书，肯下功夫，不仅读，还做笔记。人要成长，必有原因，背后的努力与积累一定数倍于普通人。所以，关键还在于自己。” </description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>https://supersonnya.github.io/programlang/golang-datastructure/</link>
+      <pubDate>Thu, 18 Aug 2022 17:22:48 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/golang-datastructure/</guid>
+      <description>字符串转换 package main func main() { str := &amp;#34;hello&amp;#34; // 字符串转成切片 slice := []byte(str) // 切片转字符 str2 := string(slice) } // 其他类型转字符 str := strconv.FormatBool(bool) str := strconv.FormatInt(123, 2|8|16) // 2-36进制 str := strconv.FormatFloat(3.14, &amp;#39;f&amp;#39;, 6, 64) // f格式，保留6位小数，64位 str := strconv.Itoa(123) // 字符转成其他类型，转换出错为默认值 b, err := strconv.ParseBool(&amp;#34;bool&amp;#34;) // if err == nil 转换出错 n, _ := strconv.ParseInt(&amp;#34;123&amp;#34;, 16, 64) f, _ := strconv.ParseFloat(&amp;#34;3.14&amp;#34;, 64) n, _ := strconv.Atoi(&amp;#34;123&amp;#34;) // 其他类型转换字符串添加到切片 slice := make([]byte, 0, 1024) slice = strconv.</description>
+    </item>
+    
+    <item>
+      <title>基础语法与数据类型</title>
+      <link>https://supersonnya.github.io/programlang/clang-basicalgram/</link>
+      <pubDate>Thu, 18 Aug 2022 17:16:49 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/clang-basicalgram/</guid>
+      <description>语言特点 易于学习。 结构化语言。 高效率的程序。 处理底层的活动。 在多种计算机平台上编译。 基础语法 令牌 关键字、标识符、常量、字符串值或一个符号 分号 每个语句必须以;结束 注释 //单行注释 /**/多行注释 标识符 标识变量、函数及其他用户自定义项目的名称 A-Z或a-z或_开头，后跟零个或多个字母、_和数字 标识符内不允许出现标点字符和特殊字符，区分大小写 关键字 保留字不能作为常量名、变量名或其他标识符名称 C 中的空格 只包含空格的行，被称为空白行，可能带有注释，C 编译器会完全忽略它。 在 C 中，空格用于描述空白符、制表符、换行符和注释。 程序结构 // 预处理指令 // 函数 // 变量 // 语句&amp;amp;表达式 // 注释 #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello world\n&amp;#34;); return 0; } gcc hello.c ./a.out gcc test1.c test2.c -o main.out ./main.out 数据类型 基本类型 整数类型 char、unsigned char、signed char（1字节） int、unsigned int（2或4字节） short、unsigned short（2字节） long、unsigned long（4字节） 浮点类型 float（4字节，1位符号、8位指数、23位小数） double（8字节，1位符号、11位指数、52位小数） long double（16字节） 枚举类型 离散整数值变量 void类型 没有可用的值 函数返回为空、函数参数为空、指针指向void 派生类型 指针类型 聚合类型：数组类型，结构类型 共用体类型 函数类型：返回值的类型 printf(&amp;#34;%lu\n&amp;#34;, sizeof(int)); 存储类 auto 所有局部变量默认的存储类 只能用在函数内，即只能修饰局部变量 register 定义存储在寄存器中而不是RAM中的局部变量 不能应用&amp;amp;，没有地址 只用于需要快速访问的变量 static 修饰的变量可以在函数调用之间保持局部变量的值 修饰全局变量，将变量的作用于限制在声明它的文件内 extern </description>
+    </item>
+    
+    <item>
+      <title>博科光交</title>
+      <link>https://supersonnya.github.io/operation/switch-brocade_zone/</link>
+      <pubDate>Thu, 18 Aug 2022 17:09:01 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/switch-brocade_zone/</guid>
+      <description>常用命令 uptime ## 显示交换机工作时间 ipaddrshow ## 显示交换机IP地址信息 licenseshow ## 显示光前交换机所添加的license信息 switchshow ## 检查交换机信息及端口状态 switchstatusshow ## 显示交换机的运行状态 firmwareshow ## 显示微码版本 fanshow ## 显示风扇运行状态 tempshow ## 显示交换机当前温度信息 psshow ## 显示电源运行状态 slotshow ## 显示板卡运行状态 hashow ## 显示CP版卡HA状态, errdump ## 显示错误日志 fabricshow ## 显示fabric信息 cfgshow ## 显示交换机配置信息 porterrshow ## 显示交换机端口的错误统计 ## Frame(tx/rx)：tx代表端口发送的数据帧，rx代表端口收到的数据帧 chassisshow ## 显示外壳信息及序列号 version ## 查看版本 userconfig --show -a ## 查看登录帐号 domainsshow ## 查看交换机的domain信息 aliashow ## 查看别名 博科光交划Zone 规划好主机和存储模块在交换机上对应的端口。
+确认交换机IP信息、域信息以及当前活跃cfg配置信息。
+创建zone
+zonecreate &amp;#34;ocr_fc1&amp;#34;,&amp;#34;1,94;1,68;1,69&amp;#34; zonecreate &amp;#34;ocr_fc2&amp;#34;,&amp;#34;1,95;1,68;1,69&amp;#34; # 将zone添加到当前活动的cfg配置文件中 cfgadd &amp;#34;cfg01&amp;#34;,&amp;#34;ocr_fc1&amp;#34; cfgadd &amp;#34;cfg01&amp;#34;,&amp;#34;ocr_fc2&amp;#34; # 使cfg生效并保存cfg cfgenable &amp;#34;cfg01&amp;#34; cfgsave 删除zone并生效</description>
+    </item>
+    
+    <item>
+      <title>英语发音基础</title>
+      <link>https://supersonnya.github.io/foreignlang/english-spoken_basical/</link>
+      <pubDate>Thu, 18 Aug 2022 17:04:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-spoken_basical/</guid>
+      <description>/i/&amp;amp;/i:/ 要领：裂开嘴角，牵动脖子 要领VS特点：特点是要领的外在展现 英汉不同音，发音不要中式化 练习需要夸张，用力 一般情况下的发音方式决定“长/短” 一般情况下：叙述语气 发音方式：口型 发音方式：说/弹 元音不是成对。 /ɪ/ 要领：嘴角放松，轻轻弹出。 /æ/ 要领：挤、弹；压紧嗓子，张大嘴。 舌根抬高，看到舌面，舌尖接触下齿。 纵向三指，横向四指。 音标不是静止的符号标志，是动态的声音区间。 /e/ 要领：口型不大，发音靠前，舌抵齿尖。 音标重要，声音更重要 开始领会节奏——最大的音准。 /ɜ/ ago, early, teacher 夸张，力度 berdern, murder, seeker, modern /ɔ/ 弹 normal /ɔː/ 说 </description>
+    </item>
+    
+    <item>
+      <title>倒装</title>
+      <link>https://supersonnya.github.io/foreignlang/english-grammarinversion/</link>
+      <pubDate>Thu, 18 Aug 2022 16:59:19 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-grammarinversion/</guid>
+      <description>语法倒装 虚拟条件句中的倒装 若虚拟条件句中谓语部分含有were、had、should，可以把它们放在句首，省去连词if，变成倒装句。 副词位于句首 当句首为here、there、now、then等副词，谓语动词为be、go、come等时，主谓要求倒装。 若主语为人称代词，则不用倒装：There he comes。 There be/appear句型中，若地点状语放在句首，there有时可以省略。 On the top of the hill (there) are huge bare rocks. many a time、often和next等表示时间、次数或顺序的副词（短语）位于句首时的倒装 Many a time have I seen her taking a walk alone. Often did she come to my home in the past. well、so、gladly等表示方式、程度的副词位于句首时常倒装。 副词短语位于句首时，常把主语和谓语倒装。若主语为代词，不用倒装。 On her left sat her husband. Behind the counter she stood, beautiful and pale. 副词或介词+with+其他成分 表示祈使命令的倒装结构，句中省略了动词。 Down with it! = Take it down! so can we&amp;amp;so he is 若前面句子中所说的情况也适合后面的句子，后面句子常用so、nor、either、no more引导倒装句，并用do、does、did代替实义动词。 若不是表示情况的适合，而是表示对前面句子内容的同意或肯定，则不能用倒装句。 倒装结构中的nor可换为and nor或but nor；表另一人或物也不时，也可用and neither。 感叹句中的倒装 what与how引起的感叹句，主语较长时，特别是带有后置定语，常要用倒装主谓语。 表语前置：How happy the children are.</description>
+    </item>
+    
+    <item>
+      <title>句子成分</title>
+      <link>https://supersonnya.github.io/foreignlang/english-grammerelements/</link>
+      <pubDate>Thu, 18 Aug 2022 16:55:52 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-grammerelements/</guid>
+      <description>主语 句子叙述的主体。 名词、代词、数词、动名词、不定式、词组、从句、名词化的词。 谓语 说明主语所发出的动作或具有的特征和状态。 谓语分为简单谓语和复合谓语两类。不论何种时态，语态，语气，凡由一个动词（或动词词组）构成的谓语都是简单谓语。复合谓语多由两部分构成，一类由一个系动词加一个不定式(带to或不带to)构成，一类由系动词加表语构成。 宾语 动作的对象或承受者。 宾语可由名词、代词、数词、名词化的形容词、不定式（短语）、动名词（短语）、复合结构（复合宾语）、宾语从句等来担任。 复合宾语：名词(或代词)+不定式、名词(或代词)+不带to的不定式、名词(或代词)+现在分词、名词(或代词)+过去分词、名词(或代词)+名词、名词(或代词)+形容词、名词(或代词)+介词短语、名词(或代词)+副词、个别介词后也可跟复合宾语。 表语 表语是用来说明主语的性质，身份，特征和状态。表语须和连系动词一起构成句子的复合谓语。表语一般放在系动词之后。become（成为）、look（看起来）、turn（变成）、go（变成）、seem（似乎）、appear（似乎、显得）、feel（摸起来）、sound（听起来）、smell（闻起来）、stay(保持)等。 形容词、代词、名词、分词、动名词、数词、介词短语或副词和从句。 定语 用于描述名词，代词，短语或从句的性质，特征范围等情况。 定语可以由名词名词所有格，代词，数词，形容词，分词（短词)，不定式(短语)，介词短语，副词，词组，从句担任。如果定语是单个词，定语放在被修饰词的前面，如果是词组，定语放在被修饰词的后面。 状语 说明事物发生的时间，地点，原因，目的，结果方式，条件或伴随情况，程度等情况。 状语一般由副词、形容词短语、名词短语、介词短语、分词和分词短语、不定式或相当于副词的词或短语或从句来担当。其位置一般放在句末，但也可放在句首或句中，修饰动词、形容词、副词等。 补足语 英语中补语的作用对象是主语和宾语，具有鲜明的定语性描写或限制性功能，在句法上是不可或缺的。补语是起补充说明作用的成份。最常见的是宾语补足语。名词、动名词、形容词、副词、不定式、现在分词、过去分词都可以在句子中作宾补。 同位语 一个名词或代词后面有时可跟一名词(或起类似作用的其他东西)，对它作进一步的解释，说明它是谁，是什么，称为同位语。 名词、形容词、数词或代词、某些名词后面可用从句。 </description>
+    </item>
+    
+    <item>
+      <title>Middleware Whatismiddleware</title>
+      <link>https://supersonnya.github.io/operation/middleware-whatismiddleware/</link>
+      <pubDate>Thu, 18 Aug 2022 16:49:48 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/middleware-whatismiddleware/</guid>
+      <description>1. 中间件是什么 中间件是一种独立的系统软件或服务程序，分布式应用软件借助这种软件在不同的技术之间共享资源。中间件位于客户机/ 服务器的操作系统之上，管理计算机资源和网络通讯，是连接两个独立应用程序或独立系统的软件。相连接的系统，即使它们具有不同的接口，但通过中间件相互之间仍能交换信息。通过中间件，应用程序可以工作于多平台或 OS 环境。 中间件是介于操作系统和应用软件之间，为应用软件提供服务功能的软件，有消息中间件，交易中间件，应用服务器等。由于介于两种软件之间，所以，称为中间件。 中间件屏蔽了底层操作系统的复杂性，使程序开发人员面对一个简单而统一的开发环境，减少程序设计的复杂性，将注意力集中在自己的业务上，不必再为程序在不同系统软件上的移植而重复工作，从而大大减少了技术上的负担。中间件带给应用系统的，不只是开发的简便、开发周期的缩短，也减少了系统的维护、运行和管理的工作量，还减少了计算机总体费用的投入。 2. 主要中间件的分类 2.1 Hadoop Hadoop就是一个分布式计算平台，用Java语言开发，包含 Common、MapReduce 和HDFS三个核心部件（HDFS 和 MapReduce 是最核心的两个部件）。其中： Common 为 Hadoop 的其他项目提供了一些常用工具，主要包括系统配置工具 Configuration、远程过程调用 RPC、序列化机制和 Hadoop 抽象文件系统等。 MapReduce 是处理海量数据的计算模型。 而 HDFS 用于存储海量数据，它具备高度容错性，能在低成本的通用硬件机器上稳定运行。 Hadoop 实现了分布式计算中的基础算法（如一致算法、选举算法、故障检测、快照等），同时为用户提供了编程和命令接口。程序员调用这些函数能轻松写出分布式应用程序。 基于 Hadoop 平台衍生出来的开源项目主要有 Yarn、HBase、Hive、ZooKeeper、Avro、Sqoop、Mahout、Crossbow 等。 用 Hadoop 构建的应用实例对于计算资源的消耗具备两个明显的特征：资源需求量大；资源需求具备季节性。 2.2 LVS(Linux Virtual Server) 把许多台物理Linux计算机逻辑上整合成一台超级计算机，对用户来说感觉只有一台计算能力很强的服务器。LVS 就是一个由软件实现的负载均衡器，工作在网络OSI的第四层（应用层）。负载均衡器的作用就是把任务分配给最合适的服务器。 两个较为流行的第七层负载均衡器是 Nginx 和 HAProxy，针对应用做均衡，所以能适应的负载种类没有 LVS 多。 2.3 Linux-HA 如果负载均衡器出现故障，那么整个系统（如网店）将会瘫痪。所以人们开发了各种集群软件，如 Linux-HA 和 Keepalive 等。集成故障转移集群软件的核心思想是，实时检测故障机器并及时让好的机器接管工作，对外提供高可用性。 Linux-HA组件： Heartbeat：负责维护集群中各节点的信息及它们之间的心跳通信。 Pacemaker：集群资源管理器，是核心组件，客户端通过 Pacemaker 来配置、管理并监控整个集群。 Resource Agent：为用于控制服务启停、监控服务状态的脚本集合，本地资源管理器（LRM）调用这些脚本来启动、停止、监控各种集群资源。 Cluster Glue：包含一套函数库和工具，在集群栈中，除集群消息传输（由 Heartbeat 承担）、集群资源管理（由 Pacemaker 承担）和资源代理（由 Resource Agent 承担）功能外，其他功能都由 Cluster Glue 来完成。它包含的两个主要部分是 LRM 和 Stonith，前者是本地资源管理器，后者的任务是隔离故障机器。 2.</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_tablespaceanddatafile</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_tablespaceanddatafile/</link>
+      <pubDate>Thu, 18 Aug 2022 16:29:00 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_tablespaceanddatafile/</guid>
+      <description>表空间和数据文件的关系 一个数据库包含多个表空间，每个表空间包含一个或多个数据文件。创建表空间时必须创建数据文件，增加数据文件时必须指定表空间。一个段只能驻留在一个表空间内，段的下一层是盘区，一个或多个盘区组成一个段，每个盘区只能驻留在一个数据文件中，若一个段跨越多个数据文件，就只能由多个驻留在不同数据文件中的盘区构成。盘区的下一层是数据块，是磁盘空间管理中逻辑划分的最底层，一组连续的数据块组成一个盘区。 -- 表空间和对应数据文件的关系从dba_data_files数据字典中查询 select tablespace, file_name, bytes from dba_data_files; Oracle 11g的默认表空间 默认表空间是在创建数据库时，系统自动创建的表空间，用于存放Oracle系统内部数据和提供样例所需要的逻辑空间。 -- 安装时选择实例方案，存放个样例的数据 EXAMPLE -- 存放数据字典，包括表、视图、存储过程的定义等 SYSTEM -- SYSTEM的辅助空间，存放一些选件的对象，减少SYSTEM表空间的负荷 -- 可以增加数据文件和监视等操作，但不能执行删除、重命名或设置只读等操作 SYSAUX -- 存放SQL语句处理的表和索引的信息，如数据排序 TEMP -- 存放撤销数据 UNDOTBA1 -- 存放应用系统所使用的数据库对象 USERS 创建表空间 为简化表空间管理并提高系统性能，Oracle建议将不同类型的数据对象存放到不同的表空间中。在创建数据库之后，还应根据具体应用建立不同类型的表空间。 创建小文件表空间还是大文件表空间，默认小文件。 使用局部盘区管理方式，还是使用传统目录盘区管理方式，默认局部盘区管理。 手工管理段空间，还是自动管理，默认自动管理。 是否使用临时段或撤销段的特殊表空间。 创建表空间语法 CREATE [SMALLFILE|BIGFILE] TABLESPACE tablespace_name DATAFILE &amp;#39;/path/filename&amp;#39; SIZE num [k|m] REUSE -- reuse表示若文件存在，吃；出该文件再重建建立 [, &amp;#39;/path/filename&amp;#39; SIZE num [k|m] REUSE] [, ...] [AUTOEXTEND [ON|OFF] NEXT num[k|m] -- 若自动扩展，需要设置next值 [MAXSIZE [UNLIMITED | num[k|m]]]] -- 自动扩展的最大值 [MININUM EXTENT num [k|m]] -- 指定最小长度，由操作系统和数据库块决定 [DEFAULT STORAGE storage] -- 指定以后要创建的表、索引及簇的存储参数值 [ONLINE | OFFLINE] -- 创建表空间可指定在线或离线 [LOGGING | NOLOGGING] -- 加载表空间内表的时候是否产生日志，默认产生日志 [PERMANENT | TEMPORARY] -- 永久表空间还是临时表空间，默认为永久表空间 [EXTENT MANAGEMENT DICTIONARY | LOCAL -- 表空间的扩展方式使用数据字典管理还是本地化管理，默认本地化 [AUTOALLOCATE | UNIFORM SIZE num[k|m]]] -- 若采用本地化管理，扩展时指定每次盘区扩展大小是系统自动指定还是按照等同大小进行，若按照等同大小，默认每次扩展大小为1mb 通过本地化管理方式创建表空间 本地化表空间管理使用位图跟踪表空间对应的数据文件的自由空间和块的使用状态，位图中每个单元对应一个块或一组块。当分配或释放一个扩展时，Oracle会改变位图的值以指示该块的状态。位图值得改变不会产生回滚信息。本地管理表空间有以下优点： 使用本地化得扩展管理功能可以避免发生重复的空间管理操作。 本地化管理的自动扩展能够跟踪临近的自由空间，可以消除结合自由空间的麻烦。 通过段空间管理方式创建表空间 段空间管理方式是建立在本地化空间管理方式基础之上的，只有本地化管理方式的表空间，才能在其基础上进一步建立段空间管理方式。段空间管理又分为手工段和自动段两种方式。 SEGMENT SPACE MANAGEMENT MANUAL/AUTO 手工段空间管理方式 手工段空间管理方式是为了向后兼容而保留，使用自由块列表和PCT_FREE和PCT_USED参数来标识可供插入操作使用的数据块。 每个INSERT或UPDATE操作后，比较数据块中剩余自由空间和PCT_FREE设置，小于则从自由块列表移除。 每个UPDATE或DELETE操作后，比较数据块中已用空间和PCT_USED设置，小于则加入自由块列表。 自动段空间管理方式 使用位图标识可用于插入操作的数据块，及需要从自由块列表取下的数据块。PCT_FREE和PCT_USED参数会被自动忽略，比手工段空间管理方式具有更好的性能，是创建表空间时的首选方式。 自动段空间不能用于创建临时表空间和系统表空间。 默认情况是手工管理方式，创建表空间时需明确指定AUTO。 创建非标准块表空间 通常块大小为8kb，允许创建大小与基本块不同的表空间，块大小由创建表空间时的BLOCKSIZE指定，有利于存储不同大小的对象。 非标准块的大小为基本块的倍数。 块较大的表空间通常用来存放大对象（LOB）类型。 Oracle 11通常使用SGA自动共享内存管理，需要设置初始化参数DB_16K_CACHE_SIZE=16K。 维护表空间和数据文件 管理撤销表空间 管理临时表空间 </description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_controlandlogfiles</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_controlandlogfiles/</link>
+      <pubDate>Thu, 18 Aug 2022 16:28:08 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_controlandlogfiles/</guid>
+      <description>管理控制文件 控制文件是Oracle数据库最重要的物理文件之一，每个Oracle数据库至少有称控制文件。启动数据库实例时，根据初始化参数查找控制文件并读取控制文件中的内容，然后根据控制文件中的信息在实例和数据库之间建立起关联。如果无法找到控制文件或控制文件被损坏，数据库实例将无法启动，且很难修复。 控制文件简介 Oracle数据库中，控制文件是一个很小（10MB范围内）的二进制文件，含有数据库的结构信息，包括数据文件和日志文件。控制文件在数据库创建时被自动创建，在数据库发生物理变化时更新。任何时候都不要手动编辑控制文件。 Oracle系统提供了备份文件和多路复用的机制，当控制文件损坏时，用户可以通过先前的备份来恢复控制文件。 及时备份控制文件 当数据库的物理组成发生变化时，控制文件也会变更，需要及时备份控制文件。 保护控制文件 采用多种策略或准则保护控制文件，目前主要有多路复用控制文件和备份控制文件。 控制文件的多路复用 至少建立两个控制文件，并且两个控制文件最好分别保存在不同的磁盘中，避免由于某个磁盘故障而发生无法启动数据库的风险。即在系统不同的位置上同时存放多个控制文件的副本。 初始化参数CONTROL_FILES中列出了当前数据库所有的控制文件名，Oracle根据CONTROL_FILES参数中的信息同时修改所有的控制文件，但只读取其中第一个控制文件的信息。在整个数据库运行期间，如果任何一个控制文件被损坏，实例就不能再继续运行。 实现多路复用包括更改CONTROL_FILES参数和复制控制文件两个步骤： 更改CONTROL_FILES参数：在SPFILE中，使用ALTER SYSTEM更改CONTROL_FILES参数值。 停止Oracle服务，关闭数据库，并将第一个控制文件复制到新增加的目录下并重命名，启动数据库验证。 创建控制文件 如果突发意外，导致数据库的所有控制文件全部丢失或损坏，只能手工创建一个新的控制文件。 CREATE CONTROLFILE REUSE DATABASE db_name LOGFILE GROUP 1 redofiles_list1 GROUP 2 redofiles_list2 GROUP 3 redofiles_list3 ... DATAFILE datafile1 datafile2 datafile3 ... MAXLOGFILES max_value1 -- 永久性参数 MAXLOGMEMBERS max_value2 -- 永久性参数 MAXINSTANCES max_value3 -- 永久性参数 MAXDATAFILES max_value4 -- 永久性参数 NORESETLOGS|RESETLOGS ARCHIVELOG|NOARCHIVELOG; 若需要修改数据库的某个永久性参数，必须重新创建控制文件。 创建控制文件过程 查看数据文件和重做日志文件：若数据库中所有的控制文件和日志文件已经丢失，数据库已无法打开，就无法通过查询数据字典来获得数据文件和日志文件信息，只能查看告警日志文件中的内容。如果数据库可以打开，在v$logfile查看日志文件，在v$datafile查看数据文件，在v$controlfile查看控制文件。 关闭数据库：若数据库处于打开状态，在system模式使用SHUTDOWN IMMEDIATE关闭数据库。 备份文件：在操作系统备份国有的数据文件和重做日志文件，在使用CREATE CONTROLFILE创建新控制文件时，可能损坏数据文件和日志文件。 启动数据库实例：启动但不加载数据库。 创建新的控制文件：使用CREATE CONTROLFILE创建一个新的控制文件。 编辑参数：编辑SPFILE文件中的CONTROL_FILES参数，使其指向新建的控制文件。 打开数据库：alter database open。若创建控制文件使用了RESETLOGS语句，需要以恢复方式打开数据库，alter database open resetlogs。 备份和恢复控制文件 备份控制文件 控制文件有两种备份方式，备份为二进制文件或脚本文件。 备份为二进制文件：ALTER DATABASE BACKUP CONTROLFILE TO file_path;。 备份为脚本文件：ALTER DATABASE BACKUP CONTROLFILE TO TRACE;。脚本文件以文本形式备份，也称为跟踪文件，实际是一个SQL脚本，可以利用它来重新创建新的控制文件，跟踪文件存放位置由USER_DUMP_DEST参数决定。 恢复控制文件 控制文件损坏后，重新指定CONTROL_FILES参数，使它指向备份的控制文件，即可重新启动数据库。 控制文件本身损坏，目录仍可访问：关闭数据库，复制一个多路复用文件覆盖损坏文件，重新启动数据库。 磁盘介质永久性损坏：关闭数据库实例，修改初始化参数指向新的控制文件，重新启动数据库。 删除控制文件 关闭数据库，编辑初始化参数CONTROL_FILES，清除需要删除的控制文件名称，重新启动数据库。 不能将控制文件全部删除，至少保留两个，否则数据库将无法启动。 查询控制文件信息 -- 包含所有控制文件的名称和状态信息 v$controlfile -- 包含控制文件中各个记录文档段的信息 v$control_record_section -- 包含系统所有初始化参数 v$parameter 管理重做日志文件 重做日志文件通常也称为日志文件，是保证数据库安全和数据库备份和恢复的文件，管理员可以根据日志文件和数据库文件，将崩溃的数据库恢复到最近一次记录日志时的状态。 重做日志文件 重做日志文件用于记载事务操作引起的数据变化，当执行DDL或DML操作时，由LGWR进程将缓冲区中与该事务相关的重做记录全部写入重做日志文件。当丢失或损坏数据库中的数据时，Oracle会根据重做日志文件中的记录恢复丢失的数据。 日志文件的内容及数据恢复 重做日志文件由重做记录组成，重做记录又称为重做条目，由一组变更向量组成。每个变更向量都记录了数据库中某个数据块所做的修改。 利用重做记录，不禁能够恢复对数据文件所做的修改操作，还能恢复对回退段所做的修改操作。 重做记录以循环方式在SGA区的重做日志高速缓冲区中进行缓存。当一个事务被提交时，LGWR将该事务相关的所有重做记录全部写入重做日志文件中，同时生成一个系统变更码（SCN）。系统变更码会随着重做记录一起保存到重做日志文件组中，以标识与重做记录相关的事务。只有当某个事务所产生的重做记录全部被写入重做日志文件后，才会认为该事务提交成功。 正在被LGWR进程写入的重做日志文件处于当前状态；正在被实例用于数据库恢复的重做日志文件处于活动状态；其他重做日志文件处于未活动状态。可查询v$logfile获取重做日志文件的状态。 增加日志组及其成员 一个数据库至少需要两个重做日志文件组，每个组可以包含一个或多个重做日志成员。对于重做日志文件的日常维护工作，需要具有ALTER DATABASE系统权限。Oracle会自动为新建的重做日志组设置编号，一般是在当前最大组号之后递增。也可指定编号，但日志组编号必须是连续的，不能跳跃。 添加新的重做日志文件组 -- 通常大小10M-50M，默认为50M ALTER DATABASE ADD LOGFILE [GROUP num] (&amp;#39;filename1&amp;#39;,&amp;#39;filename2&amp;#39;) SIZE 20M; -- 添加一个单一的重做日志文件，并覆盖已存在的同名日志文件 -- 使用reuse时不能使用size，大小由已存在日志文件的大小决定 ALTER DATABASE ADD LOGFILE &amp;#39;filename&amp;#39; REUSE; 创建日志成员文件 -- 为重做日志组添加新成员 -- 可通过指定重做日志文件组中其他成员名称确定重做日志组 ALTER DATABASE ADD LOGFILE MEMBER &amp;#39;filename&amp;#39; TO filename | GROUP num; 删除重做日志文件 -- 删除日志成员，只在数据字典和控制文件中删除，物理文件需手动删除 ALTER DATABASE DROP LOGFILE MEMBER &amp;#39;filename&amp;#39;; -- 删除日志文件组：不再使用或大小不合适时需要删除 -- 无论日志组有多少成员，一个数据库至少需要两个日志组；只能删除处于INACTIVE的日志组；若数据库处于归档模式 -- 删除前必须确定已经被归档，可查询v$log查看重做日志文件组的状态及是否归档 ALTER DATABASE DROP LOGFILE GROUP num; -- 清空重做日志文件，重做日志组处于CURRENT状态可执行 ALTER DATABASE CLEAR LOGFILE GROUP num; -- 若要清空的重做日志文件组未归档，还需使用ALTER DATABASE CLEAR UNARCHIVED LOGFILE 更改重做日志文件的位置或名称 关闭数据库：shutdown。</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_plsqlblock</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_plsqlblock/</link>
+      <pubDate>Thu, 18 Aug 2022 16:27:12 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_plsqlblock/</guid>
+      <description>存储过程 存储过程是一种命名的PL/SQL块，既可以没有参数，也可以有若干个输入、输出参数，或有多个既作为输入又作为输出的参数，通常没有返回值。存储过程被保存在数据库中，不可以被SQL语句直接执行或调用，只能通过EXECUTE命令执行或在PL/SQL块内部被调用。存储过程是已经编译好的代码，调用时执行效率非常高。 -- 创建存储过程 -- parameter是存储过程被调用/执行时用到的参数，而不是存储过程内定义的内部变量，类型不能指定长度 CREATE [OR REPLACE] PROCEDURE pro_name [(parameter1 [IN|OUT] [,parameter2]...)] IS|AS BEGIN plsql_sentences; [EXCEPTION] [dowith_sentences;] -- 异常处理语句 END [pro_name]; -- 调用存储过程 EXEC | EXECUTE pro_name; 存储过程的参数 IN模式：输入类型，由调用方传入，只能被存储过程读取，默认模式。参数类型不能指定长度。位于参数名称之后。
+指定名称传递参数：pro_name(parameter=&amp;gt;value1[,parameter2=&amp;gt;value2]...)，与定义顺序无关，与参数个数有关。 按位置传递：提供的参数值顺序必须与存储过程中定义的参数顺序相同。 混合方式传递：在某个位置使用指定名称传递方式传入参数后，后面也要使用指定名称传递。因为指定名称传递方式有可能已经破环了参数原始的定义顺序。 OUT模式：输出类型参数，表示此参数已在存储过程中被赋值，可以传递到存储过程之外的环境中，位于参数名称之后。
+在PL/SQL块中调用OUT模式，需要在DECLARE部分定义与存储过程中OUT参数兼容的若干变量。 使用EXEC执行OUT模式的存储过程，需要在SQL*PLUS环境中使用VARIABLE声明变量，用于存储OUT参数的返回值。 IN OUT模式：调用存储过程时，从外界向该参数传入值，存储过程执行完毕后，该参数的返回值被传回给外界。
+IN参数的默认值 支持在IN参数声明的同时初始化默认值，传值时若带默认值的参数不传值，建议使用指定名称传递参数。 删除存储过程 DROP PROCEDURE pro_name; 函数 存储在数据库中的命名程序块，函数一般用于计算和返回一个值，函数的调用是表达式的一部分，过程的调用是一条PL/SQL语句。函数必须有一个返回值，过程则没有。 创建函数 函数可以接受零或多个输入参数，并且必须有返回值。由于函数有返回值，在主体部分必须使用RETURN语句返回函数值，并且返回值类型与声明时的类型一致。 CREATE [OR REPLACE] FUNCTION fun_name[(parameter1[,parameter2]...)] RETURE data_type IS [inner_variable] BEGIN plsql_sentence; [EXCEPTION] [dowith_sentences;] END [fun_name]; 调用函数 由于函数有返回值，调用函数时，必须使用一个变量保存函数的返回值。 DECLARE variable_name data_type; BEGIN variable_name:=fun_name(value); END; 删除函数 DROP FUNCTION fun_name; 触发器 触发器可以看作一种特殊的存储过程，定义了一些在数据库相关事件发生时应执行的功能代码块，通常用于管理复杂的完整性约束，或监控对表的修改，或通知其他程序，也可实现对数据的审计功能。 能够引起触发器运行的操作被称为触发事件，如执行DML语句，执行DDL语句，引发数据库系统事件，引发用户事件。 创建触发器 触发器根据触发事件和触发器执行情况，分为5类。 行级触发器：DML语句对每一行数据进行操作时都会触发。在行级触发器中，可以访问当前正在受影响的数据行，可以通过行标识符来实现，列标识符分为原值标识符(:old.</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_plsql</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_plsql/</link>
+      <pubDate>Thu, 18 Aug 2022 16:26:25 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_plsql/</guid>
+      <description>PL/SQL简介 PL/SQL是一种过程化语言，可以控制程序的执行流程、定义变量，实现比较复杂的业务逻辑，是Oracle的专用语言，是对标准SQL语言的扩展，可在内部使用SQL语句。 PL/SQL块结构 PL/SQL程序以块为基本单位，整个PL/SQL块分布3部分：声明、执行、异常处理。 每一条语句都必须以分号结束，每条SQL语句可以写成多行的形式，也必须以分号结束。一行中可以有多条SQL语句，之间必须用分号分隔。 [DECLARE] -- 声明部分，可选。声明块中用到的变量、常量、游标等，只能在当前块中使用 BEGIN -- 执行部分，必需。整个块的主体，包括主要的逻辑控制和运算 [EXCEPTION] -- 异常处理，可选。处理执行部分出现的异常，执行完毕整个块直接结束 END 代码注释和标识符 注释 -- 单行注释 /* 多行注释 */ 标识符 定义变量、常量时，每行只能定义一个变量或常量，以分号结尾。 定义变量、常量时，名称必须以英文字符开头，最大长度为30个字符。若以其他字符开始，用双引号引住。 定义变量、常量时，名称只能使用字母、数字、_、$、#。若使用其他字符，用双引号引住。 定义变量、常量时，不能使用Oracle关键字，若使用，必须用双引号引住。 除了由引号引起来的字符串以外，PL/SQL不区分字母的大小写。标准PL/SQL字符集时ASCII字符集的一部分。 分界符 分界符是对PL/SQL有特殊意义的符号，用来将标识符相互分隔开。 文本 数字文本：整数或浮点数，可使用科学计数法和幂操作符**。 字符文本：用单引号引住的单个字符，可以是PL/SQL支持的所有可打印字符。 布尔文本：TRUE、FALSE、NULL。主要用于条件表达式。 日期时间文本：日期时间值。日期文本必须用单引号引住且与日期格式和日期语言匹配。 字符串文本：两个或两个以上字符组成的多个字符值，必须用单引号引住。 10g之前，若字符串文本包含单引号，必须用两个单引号表示。10g之后，可以使用其他分隔符赋值。 -- 10g之前 string_var:=&amp;#39;I&amp;#39;&amp;#39;m a string.&amp;#39;; -- 10g之后 string_var:=q&amp;#39;[I&amp;#39;m a string.]&amp;#39; 数据类型、变量和常量 数据类型是描述数据存储的内存结构，它决定变量中所存储的数据的类型。变量是一种用名称进行识别的标识符号，可以存储不同类型的值。 基本数据类型 数值类型 NUMBER：存储整数或浮点数。可使用NUMBER(p,s)格式化数字，p表示精度（所有有效数字的个数），s表示刻度范围（小数点右边小数位的个数）。 BINARY_INTEGER：存储整数。 PLS_INTEGER：存储整数。 NUMBER的子类型(等价的类型别名)：DEC|DECIMAL|DOUBLE|INTEGER|INT|NUMERIC|SMALLINT。 字符类型 VARCHAR2(maxlength)：存储长度可变的字符串，maxlength定义时必须给出，没有默认值。 maxlength最大为32767，数据库类型VARCHAR2最大长度为4000，所以大于4000的PL/SQL变量不可以赋值给数据库的变量，只能赋值给LONG类型的数据库变量。 CHAR(maxlength)：指定长度的字符串，默认长度为1，最大32767。如果赋给CHAR的值小于maxlength，后面用空格补全。数据库类型中的CHAR只有2000字节。 LONG：可变字符串，最大长度32767字节，数据库类型的LONG最大可达2GB。 NCHAR|NVARCHAR2：PL/SQL8.0以后加入的类型，长度根据各国字符集确定。 日期类型 DATE：存储日期和时间信息，存储空间7个字节，分别存储世纪、年、月、天、小时、分钟、秒。 布尔类型 BOOLEAN：流程控制和业务逻辑判断，值为TRUE、FALSE、NULL。 特殊数据类型 %TYPE类型 使用%TYPE可以声明一个与指定列相同的数据类型，通常跟在指定列名的后面。 declare var_ename scott.</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_sqlbasical</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_sqlbasical/</link>
+      <pubDate>Thu, 18 Aug 2022 16:26:14 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_sqlbasical/</guid>
+      <description>SQL语言简介 SQL，结构化查询语言，是一种在关系型数据库中定义和操纵数据的标准语言。 SQL语言的特点 SQL是一种非过程化语言，让用户不用考虑诸如数据的存储格式和存储路径等复杂问题就能按照自己的要求在高层数据结构上操作。 综合统一、集合性、统一性、高度非过程化、语言简单，易学易用、以同一种语法结构提供两种使用方式、是所有关系数据库的公共语言。 SQL语言的分类 数据查询语言（DQL） 检索数据库中的数据，主要是SELECT。 数据操纵语言（DML） 改变数据库中的数据，主要包括INSERT、UPDATE、DELETE。CALL、LOCKTABLE、MERGE。 事务控制语言（TCL） 维护数据的统一性，包括COMMIT、ROLLBACK、SAVEPOINT。 数据定义语言（DDL） 建立、修改和删除数据库对象，包括CREATE、ALTER、DROP。TRUNCATE。 数据控制语言（DCL） 执行权限授予和权限收回操作，包括GRANT、REVOKE。 SQL语言的编写规则 SQL关键字不区分大小写，字符值区分大小写。 用户模式 为便于管理用户创建的数据库对象，引入模式概念，某个用户创建的数据库对象属于该用户模式。 模式与模式对象 模式是一个数据库对象的集合，模式名称与数据库用户名称相同。在一个模式内部不可以直接访问其他模式的数据库对象，即使具有访问权限，也需要指定模式名称才可以访问。 模式对象是用户创建的逻辑结构，用以存储或引用数据，包括段以及用户拥有的其他非段的数据库对象。模式拥有模式对象。 一个不为某个用户所拥有的数据库对象不能被称为模式对象，如角色、表空间、目录等数据库对象。 查询用户模式表 在用户模式下，查询user_tables。 在system模式下，查询dba_tables。 检索数据 -- 检索基本语法格式 SELECT {[ DISTINCT | ALL] columns | *} [INTO table_name] FROM {tables | views | other SELECT }[WHERE conditions] [GROUP BY columns] [HAVING conditions] [ORDER BY columns] 简单查询 只包含SELECT子句和FROM子句的查询。 在Oracle数据库中，ROWID是行标识符，是内部使用的隐藏列，长度为18字符，包含该行数据的物理地址。使用DESCRIBE无法显示，但可在SELECT语句中检索。 查询日期列 -- 以简体中文显示日期结果 alter session set nls_date_language = &amp;#39;SIMPLIFIED CHINESE&amp;#39;; -- 以美国英语显示日期结果 alter session set nls_date_language = &amp;#39;AMERICAN&amp;#39;; -- 以特定格式显示日期结果 alter session set nls_date_format = &amp;#39;YYYY&amp;#34;年&amp;#34;MM&amp;#34;月&amp;#34;DD&amp;#34;日&amp;#34;&amp;#39;; 处理NULL值 NULL表示未知值，既不是空，也不是0，插入数据时不提供值且未设置默认值，则结果为NULL。实际应用中，NULL显示结果往往不符合要求，需使用NUL函数，转换为合理的结果。</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_sqlplus</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_sqlplus/</link>
+      <pubDate>Thu, 18 Aug 2022 16:25:52 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_sqlplus/</guid>
+      <description>SQL*PLUS与数据库的交互 SQL*PLUS是一个基于C/S两层结构的客户端操作工具，客户层和服务器层可在不同主机上。 设置SQL*PLUS的运行环境 运行环境是用来输入、执行SQL*PLUS命令和显示返回结果的场所。 SET命令 用户可以使用SET命令设置运行环境。通过SET设置的环境变量是临时的，退出环境后全部丢失。 -- system_variable:变量名 value:变量值 SET system_variable value -- 常用变量设置 -- PAGESIZE:设置从顶部标题至页结束之间的行数，包括分割线和空行，默认value=14 SET PAGESIZE value -- NEWPAGE:设置一页中空行的数量，默认value=1 SET NEWPAGE value -- LINESIZE:设置一行中所显示的最多字符总数，默认value=80 SET LINESIZE value -- PAUSE:设置输出结果是否滚动，value=OFF|ON|text，默认OFF，设置ON再设置text，每次暂停显示text SET PAUSE value -- NUMFORMAT:设置数值的默认显示格式，掩码：9，0，$，S，. SET NUMFORMAT format 常用SQL*PLUS命令 SQL*PLUS命令执行完成后，不保存在SQL缓冲区。 -- 提供被查询命令的标题、功能描述、缩写形式和参数选项，?表示命令的部分字符 HELP|? [topic] -- 查询指定数据对象的组成结构，包括表、视图、过程、函数和程序包等 DESC[RIBE] object_name; -- 将查询结果输出到指定文件，默认CREATE，OFF|OUT表示关闭SPOOL，关闭输出之后，才能在文件中看到内容 SPO[OL] [file_name[.ext] [CRE[ATE] | REP[LACE] | APP[END]] | [OFF | OUT] -- 定义一个用户变量并分配一个CHAR值 DEF[INE] [variable] | [variable = text] -- 显示SQL*PLUS系统变量或环境变量的值 -- option常用选项有ALL/PARAMETERS [parameter_name]/SGA/SPOOL/USER等 SHO[W] option -- 在记事本中编辑SQL缓冲区中的最近一条SQL语句或PL/SQL块，不加参数表示直接编辑最近一条 -- 执行最近一条SQL语句，可以运行`/`来执行 EDIT [file_name[.</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_structure</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_structure/</link>
+      <pubDate>Thu, 18 Aug 2022 16:25:40 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_structure/</guid>
+      <description>Oracle 11g体系结构概述 Oracle数据库是一格逻辑概念，而不是物理概念上安装了Oracle数据库管理系统的服务器。Oracle数据库管理系统有3个重要概念：实例、数据库和数据库服务器。 实例是指一组Oracle后台进程以及在服务器中分配的共享内存区域；数据库是由基于磁盘的数据文件、控制文件、日志文件、参数文件和归档日志文件等组成的物理文件集合；数据库服务器是指管理数据库的各种软件工具（如SQL-Plus、OEM等）和实例及数据库3个部分。从实例与数据库之间的辩证关系来讲，实例用于管理和控制数据库；而数据库为实例提供数据。一个数据库可以被多个实例装载和打开；而一个实例在其生存期内只能装载和打开一个数据库。 数据库的主要功能就是存储数据，数据库存储数据的方式通常称为存储结构，Oracle数据库的存储结构分为逻辑存储结构和物理存储结构。逻辑存储结构用于描述Oracle内部组织和管理数据的方式，物理存储结构用于展示Oracle在操作系统中的物理文件组成情况。 SQL命令从客户端发出后，由Oracle的服务器进程进行响应，然后在内存区域中进行语法分析、编译和执行，接着将修改后的数据写入数据文件，将数据库的修改信息写入日志文件，最后将SQL的执行结果返回给客户端。 逻辑存储结构 Oracle的逻辑存储结构是一种层次结构，主要由表空间、段、数据区和数据块等概念组成。逻辑结构是面向用户的，当用户使用Oracle设计数据库时，其使用的就是逻辑存储结构。 数据块 数据块（Data Block）是Oracle逻辑存储结构中的最小的逻辑单位，也是执行数据库输入／输出操作的最小存储单位。Oracle数据存放在“Oracle数据块”中，而不是“操作系统块”中。通常Oracle数据块是操作系统块的整数倍。Oracle数据块有一定的标准大小，其大小被写入到初始化参数DB_BLOCK_SIZE中。Oracle支持在同一个数据库中使用多种大小的块，与标准块大小不同的块就是非标准块。 数据块中可以存放表数据、索引数据和簇数据等，无论存放哪种类型的数据，其结构都是相同的。数据块由块头、表目录、行目录、空余空间和行数据这5部分组成 块头：存放数据块的基本信息，如块的物理地址、块所属的段的类型。 表目录：存放表的相关信息。如果数据块中存储的数据是表数据，则表目录中存储有关这些表的相关信息。 行目录：如果块中有行数据存在，则这些行的信息将被记录在行目录中。这些信息包括行的地址等。 空余空间：空余空间是一个块中未使用的区域，这片区域用于新行的插入和已经存在的行的更新。 行数据：用于存放表数据和索引数据的地方，这部分空间已被数据行所占用（如表中的若干行数据记录）。 数据区 数据区（Extent也可称作数据扩展区）是由一组连续的Oracle数据块所构成的Oracle存储结构，一个或多个数据块组成一个数据区，一个或多个数据区再组成一个段（Segment）。使用数据区的目的是用来保存特定数据类型的数据，数据区是Oracle存储分配的最小单位，Oracle就以数据区为单位进行存储空间的扩展。当一个段中的所有空间被使用完后，Oracle系统将自动为该段分配一个新的数据区。一个Oracle对象至少包含一个数据区。设置一个表或索引的存储参数包含设置它的数据区大小。 段 段（Segment）是由一个或多个数据区构成，它不是存储空间的分配单位，而是一个独立的逻辑存储结构，是为特定的数据对象（如表、索引、回滚等）分配的一系列数据区。段内包含的数据区可以不连续，并且可以跨越多个文件，使用段的目的是用来保存特定对象，Oracle也把这种占用空间的数据对象统一称为段。一个段只属于一个特定的数据对象，每当创建一个具有独立段的数据对象时，Oracle将为它创建一个段。 数据段：数据段中保存的是表中的数据记录。当创建一个表时，系统自动创建一个以该表的名字命名的数据段。 索引段：索引段中包含了用于提高系统性能的索引。一旦建立索引，系统自动创建一个以该索引的名字命名的索引段。 回滚段：回滚段（也可称作撤销段）中保存了回滚条目，Oracle将修改前的旧值保存在回滚条目中。利用这些信息，可以撤销未提交的操作，以便为数据库提供读入一致性和回滚未提交的事务，即用来回滚事务的数据空间。当一个事务开始处理时，系统为之分配回滚段，回滚段可以动态创建和撤销。Oracle 11g系统有个默认的回滚段，其管理方式既可以是自动的，也可以是手工的。 临时段：当执行创建索引、查询等操作时，Oracle可能会使用一些临时存储空间，用于暂时性地保存解析过的查询语句以及在排序过程中产生的临时数据。Oracle系统将在专门用于存储临时数据的表空间中为操作分配临时段。 在执行CREATE INDEX、SELECT ORDER BY、SELECT DISTINCT和SELECT GROUP BY等几种类型的SQL语句时，Oracle系统就会在临时表空间中为这些语句的操作分配一个临时段。在数据库管理过程中，若经常需要执行上面这类SQL语句，最好调整SORT_AREA_SIZE初始化参数来增大排序区，从而使排序操作尽量能够在内存中完成，以获得更好的执行效率，但同时这对数据库服务器的内存空间提出了更大的要求。 表空间 表空间是数据库的最大逻辑划分区域，通常用来存放数据表、索引、回滚段等数据对象（即Segment），任何数据对象在创建时都必须被指定存储在某个表空间中。表空间（属逻辑存储结构）与数据文件（属物理存储结构）相对应，一个表空间由一个或多个数据文件组成，一个数据文件只属于一个表空间；Oracle数据的存储空间在逻辑上表现为表空间，而在物理上表现为数据文件。 每个数据库至少有一个表空间（即SYSTEM表空间），表空间的大小等于所有从属于它的数据文件大小的总和。由于表空间在物理上（即磁盘上）包含操作系统中的一个或多个数据文件，因此在表空间中创建的数据对象就存在以下两种情况。 若表空间只包含一个数据文件，则该表空间中的所有对象都存储在这个数据文件中。 若表空间包含多个数据文件，则Oracle即可将数据对象存储在该表空间的任意一个数据文件中，也可以将同一个数据对象中的数据分布在表空间的多个数据文件中。 在创建数据库时，Oracle系统会自动创建多个默认的表空间，这些表空间除了用于管理用户数据的表空间之外，还包括用于管理Oracle系统内部数据（如数据字典）的表空间，下面列举了Oracle 11g版本默认创建的主要表空间。 SYSTEM表空间——系统表空间。它用于存放Oracle系统内部表和数据字典的数据，如表名、列名、用户名等。Oracle本身不赞成将用户创建的表、索引等存放在系统表空间中。表空间中的数据文件个数不是固定不变的，可以根据需要向表空间中追加新的数据文件。 SYSAUX表空间。它是Oracle 11g新增加的表空间，是随着数据库的创建而创建的，它充当SYSTEM的辅助表空间，降低了SYSTEM表空间的负荷，主要存储除数据字典以外的其他数据对象。SYSAUX表空间一般不存储用户的数据，由Oracle系统内部自动维护。 UODO表空间——撤销表空间。它用于存储撤销信息的表空间。当用户对数据表进行修改操作（包括插入、更新、删除等操作）时，Oracle系统自动使用撤销表空间来临时存放修改前的旧数据。当所做的修改操作完成并执行提交命令后，Oracle根据系统设置的保留时间长度来决定何时释放掉撤销表空间的部分空间。一般在创建Oracle实例后，Oracle系统自动创建一个名字为UNDOTBS1的撤销表空间，该撤销表空间对应的数据文件是UNDOTBS01.DBF。 USERS表空间——用户表空间。它是Oracle建议用户使用的表空间，可以在这个表空间上创建各种数据对象。例如，创建表、索引、用户等数据对象。Oracle系统的样例用户scott对象就存放在USERS表空间中。 除了Oracle系统默认创建的表空间外，用户可根据应用系统的实际情况及其所要存放的对象类型创建多个自定义的表空间，以区分用户数据与系统数据。此外，不同应用系统的数据应存放在不同的表空间上，而不同表空间的文件应存放在不同的盘上，从而减少I/O冲突，提高应用系统的操作性能。 物理存储结构 Oracle数据库的物理存储结构由多种物理文件组成，主要有数据文件、控制文件、重做日志文件、归档日志文件、参数文件、密码文件和警告日志文件等。 数据文件 用于保存用户应用程序数据和Oracle系统内部数据的文件，创建表空间的同时会创建数据文件。一个数据文件只能属于一个表空间。 在表空间创建对象时，存储的数据文件由Oracle系统选择，一个数据对象的数据可以全部存储在一格数据文件中，也可以分布存储在同一个表空间的多个数据文件中。 读取数据时，先从数据文件读入高速数据缓冲区。若读取的数据不在缓冲区，需要读入并存储在缓冲区。修改和插入数据时，不会立即写入数据文件，而是保存在缓冲区内，由后台进程DBWR决定如何写入数据文件，减少了磁盘I/O操作。 数据文件有3种类型： 系统数据文件：属于系统表空间，存放特殊的用户数据和Oracle系统本身的数据。 撤销数据文件：属于撤销表空间，修改数据使用撤销段(位于撤销表空间)临时存放修改前的旧数据。 用户数据文件：用于存放用户应用系统数据，包括与应用系统有关的所有信息。 Oracle 9i之后，Oracle将临时表空间对应的临时数据文件与一般数据文件分开。 控制文件 控制文件是一个二进制文件，记录数据库的物理结构，主要包括数据库名、数据文件和日志文件的名字和位置、数据库建立日期等信息。系统运行过程中，还存放有系统更改好、检查点信息及归档的当前状态等信息。控制文件一般在Oracle系统安装或创建数据库时自动创建，出于安全考虑，系统会自动创建2个或3个控制文件，记录相同的信息。 Oracle实例启动必须访问控制文件，若控制文件记录了错误信息或找不到可用控制文件，实例无法正常启动。 Oracle实例正常启动时，首先访问初始化参数文件SPFILE，然后Oracle为SGA分配内存。这时Oracle实例处于安装状态，并且控制文件处于打开状态，接下来自动读出控制文件中所有数据文件和日志文件信息，并打开当前数据库中所有的数据文件和日志文件供用户访问。 每个数据库至少有一个控制文件，一个数据库可同时拥有多个控制文件，一个控制文件只能属于一个数据库。数据库物理组成更改时，Oracle自动更新控制文件，数据恢复时，也需要控制文件。 日志文件 记录对数据库所做的修改，对数据库所做的修改几乎都记录在日志文件中。出现问题时，可以通过日志文件得到原始数据。每个Oracle实例都启动一个日志线程记录数据库变化，日志线程由若干日志组构成，每个日志组有一个或多个日志文件。 运行过程中产生的日志信息，首先临时存放在SGA的重做日志缓冲区中，发出COMMIT命令或日志缓冲区信息满1/3时，LGWR将日志信息从缓冲区读取出来，写入日志文件组编号较小的文件里，一个日志组写满后接着写另一个日志组。所有日志文件使用一遍后，再次转向第一个日志组重新覆写。 重做日志文件：记录数据库所有发生过的更改信息及由Oracle内部行为而引起的数据库变化信息，数据库恢复时，可以日志文件读取原始记录。数据库运行期间，执行COMMIT时，数据库首先将原始记录写入日志文件，成功后才将新的记录传递给应用程序。 归档日志文件：日志覆写会导致较早日志信息被覆盖，开启归档模式，会在各个日志文件都被写满而即将覆盖之前，由ARCH将即将被覆盖的日志文件中的日志信息读取写入归档日志文件。LGWR需要等待ARCH结束才能开始覆写文件，延迟系统响应，同时占用大量磁盘空间，默认不启用归档模式。 服务器参数文件 SPFILE是二进制文件，记录Oracle数据库的基本参数信息。在安装数据库系统时由系统自动创建，参数由Oracle系统自动维护，若有修改参数，尽可能避免对文件直接编辑，使用OEM或ALTER SYSTEM。 密码文件 验证sysdba权限的二进制文件，远程用户以sysdba或sysoper连接到数据库时，一般要用密码文件验证。 警告文件 记录Oracle系统的运行信息（实例的启动与关闭、建立表空间、增加数据文件等）和错误信息（空间扩展失败、启动实例失败等）。警告文件会越来越大，应该定期删除。 跟踪文件 后台进程跟踪文件：记录后台进程的警告或错误信息。 用户进程跟踪文件：记录与用户进程相关信息，主要用于跟做SQL语句。 Oracle 11g服务器结构 Oracle服务器主要由实例、数据库、程序全局区和前台进程组成。实例提供管理数据库的功能，数据库用来存储系统数据。实例可划分为SGA和后台进程两部分，SGA使用操作系统的内存资源，后台进程需要使用CPU与内存资源。PGA是一个非共享的内存区域，用于管理用户进程的私有资源。前台进程可以划分为用户进程和服务器进程，需要使用CPU和内存资源。 系统全局区（SGA） SGA是所有用户进程共享的一块内存区域。主要由高速数据缓冲区、重做日志缓冲区、共享池、大型池和Java池等内存结构组成。SGA随数据库实例启动加载到内存中，实例关闭时，SGA区域也消失。 高速数据缓冲区：存放最近访问过的数据块，若访问数据不在缓冲区，先从数据文件读入缓冲区再从缓冲区将数据返回。经常或最近访问的数据块被放置到缓冲区前端，不常访问的放置到后端，缓冲区被填满是，自动挤掉不常访问的数据块。缓冲区分为3个部分。 脏数据区：存放已被修改过的数据，这些数据等待被写入数据文件。 空闲区：不包含任何数据，可以被写入数据。 保留区：包含正在被用户访问的数据块和明确保留以作为将来使用的数据块，被保留在缓冲区。 重做日志缓冲区：存放对数据块进行修改操作时产生的日志信息，写入重做日志文件前，先存放在缓冲区，在检查点发生或缓冲区数据达到一定值时，写入重做日志文件。重做日志缓冲区的大小对数据库性能的影响较小，通常较大的重做日志缓冲区能减少I/O读写次数。 共享池：SGA保留的内存区域，用于缓存SQL语句、PL/SQL语句、数据字典、资源锁、字符集和其他控制结构。包括库高速缓冲区和字典高速缓冲区。 库高速缓冲区：主要包括共享SQL区和私有SQL区。存放最近用过的SQL语句、PL/SQL语句的文本和执行计划，下次执行相同语句时，直接使用执行计划。每条被缓存的语句分为两个部分，分别存储在共享SQL区和私有SQL区。共享SQL区存放语法分析结果和执行计划，私有SQL区存放语句中的绑定变量、环境和会话等信息。 字典高速缓冲区：存放Oracle系统内部管理所需要的数据字典信息，如用户名、数据对象和权限等。 大型池：不是必需内存结构，在特殊情况下，实例使用大型池减轻共享池访问压力。 使用恢复管理器进行备份和恢复操作时，大型池作为I/O缓冲区使用。 使用I/O Slave仿真异步I/O功能时，大型池作为I/O缓冲区使用。 执行具有大量排序操作的SQL语句。 使用并行查询时，大型池作为并行查询进程交换信息的地方。 &amp;ndash;若未设置大型池，实例需要使用时，会在共享池或PGA分配缓存空间，影响共享池和PGA的工作效率。&amp;ndash; Java池：提供内存空间给Java虚拟机使用，支持在数据库中运行Java程序包。 流池：在数据库与数据库之间进行信息共享。 程序全局区（PGA） 也称用户进程全局区，内存区在进程私有区而不是共享区。每个Oracle服务器进程只能访问属于自己的那部分PGA资源，各个服务进程的PGA总和即为实例的PGA大小。PGA通常包括私有SQL区和会话区。 私有SQL区：存储变量以及SQL语句运行时的内存结构信息。把私有SQL区与对应的共享SQL区就可获得一条SQL语句的完整缓存数据。私有SQL区可分为静态区和动态区。静态区的信息在会话过程中保持不变，会话关闭时才释放。动态区信息在整个会话过程中不断变化，SQL语句执行完毕释放。 会话区：存放用户的会话信息。如果数据库处于共享服务器连接模式下，会话区位于SGA而不是PGA。 前台进程 前台进程包括用户进程和服务器进程，不属于实例的一部分。 用户进程：能够产生或执行SQL语句的应用程序。 连接：用户进程与实例直接建立的通信渠道。 会话：用户进程与实例建立连接后形成的用户与实例之间的交互方式，一般是用户发出请求，数据库实例为用户返回响应消息的方式。 服务器进程：处理用户会话过程中想数据库实例发出的SQL语句或SQL-PLUS命令，分为专用服务器模式和共享服务器模式。专用模式下，每个用户进程都有一个专用的服务器进程，服务器进程代表用户执行SQL验收，必要时可回传执行结果给用户进程。共享模式下，每个用户不直接与服务器进程连接，而是连接到分派程序，每个分派程序可以同时连接多个用户进程。 后台进程 后台进程是一组运行在Oracle服务器端的后台程序，是Oracle实例的重要组成部分。其中SMON、PMON、DBWR、LGWR、CKPT这5个后台进程必须正常启动，否则将导致数据库实例崩溃。 数据写入进程（DBWR） 主要任务是负责将内存中的脏数据回写到数据文件中。 高速数据缓冲区没有足够空闲数据块存放新数据。 检查点进程启动后，会强制要求DBWR将某些脏数据块写入数据文件。 脏数据块在高速缓冲区中存放超过3秒钟。 &amp;ndash;DBWR进程的数量不应超过系统处理器的数量，多余的无法发挥作用，还会耗费系统资源。&amp;ndash; 检查点进程（CKPT） 检查点进程可以看作一个事件，当发生日志切换（日志写入操作正要从一个日志组切换到另一组时），就会启动检查点进程。 日志写入进程（LGWR） 将重做日志缓冲区的数据写入重做日志文件。&amp;ndash;发生提交命令，缓冲区满1/3，日志信息存放超过3秒钟。&amp;ndash; 归档进程（ARCH） 可选进程，数据库处于归档模式时，该进程才起作用。系统比较繁忙导致LGWR等待ARCH时，可修改参数启动多个归档进程。 系统监控进程（SMON） 在数据库系统启动时执行恢复工作的强制性进程。 进程监控进程（PMON） 监控其他进程的状态，当有进程启动失败时，PMON会清除失败的用户进程，释放资源。 锁进程（LCKN） 可选进程，并行服务器模式下可出现多个锁定进程以利于数据库通信。 恢复进程（RECO） 可选进程，在分布式数据库模式下用于恢复数据不一致。 调度进程（DNNN） 可选进程，在共享服务器模式下使用，可启动多个调度进程。 快照进程（SNPN） 用于处理数据库快照的自动刷新，并通过DBMS_JOB包运行预定的数据库存储过程。 数据字典 Oracle存放关于数据库内部信息的地方，用来描述数据库的内部运行和管理情况。Oracle数据字典名称由前缀和后缀组成，使用_连接。 dba_：包含数据库实例的所有对象。 v$：当前实例的动态视图，包含系统管理和系统优化等所使用的视图。 user_：记录用户的对象信息。 gv_：分布式环境下所有实例的动态视图，包含系统管理和系统优化等所使用的视图。 all_：记录用户的对象信息及被授权访问的对象信息。 常用数据字典 -- 基本数据字典 dba_tablespaces dba_ts_quotas dab_free_cpace dba_segments dba_extents dba_tables dba_tab_columns dba_views dba_synonyms dba_sequences dba_constraints dba_indexs dba_ind_columns dba_triggers dab_source -- 所有用户的存储过程信息 dba_data_files dba_tab_grants/privs dba_objects dba_users -- 常用动态性能视图 v$database v$datafile v$log v$logfile v$archived_log v$archived_dest v$controlfile v$instance v$system_parameter v$sga v$sgastat v$parameter v$lock v$session v$sql v$sqltext v$bgprocess v$process </description>
+    </item>
+    
+    <item>
+      <title>Virtualization Vmware_network</title>
+      <link>https://supersonnya.github.io/operation/virtualization-vmware_network/</link>
+      <pubDate>Tue, 16 Aug 2022 17:37:36 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/virtualization-vmware_network/</guid>
+      <description>一、虚拟设备概念 VMnet0：用于虚拟桥接网络下的虚拟交换机
+VMnet1：用于虚拟Host-Only网络下的虚拟交换机
+VMnet8：用于虚拟NAT网络下的虚拟交换机
+VMware Network AdepterVMnet1：Host用于与Host-Only虚拟网络进行通信的虚拟网卡
+VMware Network Adepter VMnet8：Host用于与NAT虚拟网络进行通信的虚拟网卡
+二、三种连接模式 1、桥接 在这种模式下，VMware虚拟出来的操作系统就像是局域网中的一台独立的主机，可以访问网内任何一台机器。需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。同时，由于这个虚拟系统是局域网中的一个独立的主机系统，那么就可以手工配置它的TCP/IP配置信息，以实现通过局域网的网关或路由器访问互联网。 2、NAT 使用NAT模式，就是让虚拟系统借助NAT(网络地址转换)功能，通过宿主机器所在的网络来访问公网。也就是说，使用NAT模式可以实现在虚拟系统里访问互联网。NAT模式下的虚拟系统的TCP/IP配置信息是由VMnet8(NAT)虚拟网络的DHCP服务器提供的，无法进行手工修改，因此虚拟系统也就无法和本局域网中的其他真实主机进行通讯。采用NAT模式最大的优势是虚拟系统接入互联网非常简单，不需要进行任何其他的配置，只需要主机器能访问互联网即可。这种情况下，主机可以ping通虚拟机，虚拟机也能ping通主机。 3、HostOnly 在Host-Only模式下，虚拟网络是一个全封闭的网络，它唯一能够访问的就是主机。其实Host-Only网络和NAT网络很相似，不同的地方就是 Host-Only网络没有NAT服务，所以虚拟网络不能连接到Internet。主机和虚拟机之间的通信是通过VMwareNetworkAdepterVMnet1虚拟网卡来实现的。此时如果想要虚拟机上外网则需要主机联网并且网络共享。 三、总结 共享连接方式和NAT方式，都可以实现虚拟机和主机，虚拟机和互联网通信，NAT方式设置简单，且可以实现同时访问多个物理网卡。桥接方式可实现虚拟机和主机，虚拟机和互联网通信，若虚拟机作为服务器，只有这种方式可行。但需独立的IP给虚拟机，且若物理网卡连接断开，虚拟机与主机也不能连接。host-only方式只实现虚拟机主机通信，一般不单独采用。 </description>
+    </item>
+    
+    <item>
+      <title>Vim编辑器</title>
+      <link>https://supersonnya.github.io/operation/linux-vim/</link>
+      <pubDate>Mon, 15 Aug 2022 15:35:38 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-vim/</guid>
+      <description>编辑、保存、退出 ## 编辑一个文件，如果文件不存在，会自动新建 ## 使用不带任何参数的vim命令，在保存的时候需要指定文件名 vim file :e ## 打开另外一个文件，将文件名作为参数 ## 退出 :q :q! # 强制退出，丢弃修改内容 :w filename ## 另存为filename ## 保存并退出 :wq 文本操作 a ## 在当前光标所处位置的右边插入文本 i ## 在当前光标所处位置的左边插入文本 A ## 在当前行的末尾追加文本 I ## 在当前行的开始处插入文本 O ## 在当前行的上面插入一个新行 o ## 在当前行的下面插入一个新行 R ## 覆盖当前光标所在的位置以及后面的若干文本 J ## 将当前光标所在行与下面的一行合并为一行 光标移动 移动光标的时候，可以在命令前加上数字，表示重复多少次移动。
+向下、 j、空格 ## 光标向正下方移动 1 行 向上、 k、backspace ## 光标向正上方移动 1 行 向左、h ## 光标向左移动过 1 个字符 向右、l ## 光标向右移动 1 个字符 回车 ## 光标会移动到下 1 行的行首 - ## 光标会移动到上 1 行的行首 G ## 将光标移动到文件最后 1 行的行首 ^ ## 移动光标到行首 $ ## 移动光标到行尾 Gg ## 移动光标到文件头 W ## 移动光标到下一个单词 B ## 移动光标到前一个单词 Ctrl+f ## 向前（朝向文件尾）翻动一页 Ctrl+b ## 向后（朝向文件头）翻动一页 文本复制、粘贴 yy ## 将当前行复制到缓冲区 nyy ## 将当前行以及下面的n行复制到缓冲区，其中n表示一个整数 yw ## 复制从光标当前位置到当前单词词尾的字符 nyw ## n是一个整数，从光标当前位置开始，复制后面的n个单词 y^ ## 从当前光标所处的位置开始，复制到当前行的行首 y$ ## 从当前光标所处的位置开始，复制到当前行的行尾 p ## 将缓冲区中的字符串插入点当前光标所处位置的后面 P ## 将将缓冲区中的字符串插入到当前光标所处位置的前面 删除文本 x ## 删除光标所在的位置的字符 nx ## 删除从光标所在位置开始，后面的n个字符 dd ## 删除光标所处的整个行 ndd ## 删除包括当前行在内的n行 D ## 删除光标所在位置到行尾之间所有的字符 u ## 撤销刚刚执行的操作 U ## 撤销针对当前行的所有操作 Ctrl+R ## 重做被撤销的操作 跳转搜索替换 ## 跳到行号为n的行 :n ## 向下跳n行 :n+ ## 向上跳n行 :n- ## 向前查找字符串 :/string ## 向后查找字符串 :?</description>
+    </item>
+    
+    <item>
+      <title>远程登录</title>
+      <link>https://supersonnya.github.io/operation/linux-remotelogin/</link>
+      <pubDate>Thu, 11 Aug 2022 17:25:05 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-remotelogin/</guid>
+      <description>登录Linux服务器 SSH 为什么不使用telnet: telnet使用明文口令，用户口令以明文的形式在网络上传输，任何人都有机会通过网络嗅探工具直接获取口令。Linux已不再包含telnet服务器程序，也不推荐用户使用。
+OpenSSH是Linux下最常用的SSH服务器/客户端软件，可通过发行版的安装源安装: apt-get install ssh。 SSH会对用户的身份进行验证，并加密两台主机之间的通信。 ## 登录到远程服务器 ssh -l login_name hostname | IP ## 默认端口为22，-p指定连接的端口 ssh -l login_name -p port hostname | IP ## 要在远程主机上运行X应用程序，应该保证服务器开启X窗口系统 ## 使用带-X参数命令显式启动X转发功能 ssh -X -l login_name hostname | IP VNC VNC用于图形化的远程登录: apt-get install vnc4-common vnc4server。 ## 运行vncserver脚本生成配置文件 vncserver ## 登录远程主机 vncviewer hostname:desktop_id Windows上同样可使用SSH和VNC连接工具连接远程Linux服务器。
+登录Windows服务器 VNC 在Windows上安装VNC Server的软件，在Linux上可以通过VNC登录到Windows服务器。
+RDP Linux可直接通过RDP协议连接到 Windows服务器。
+## 安装命令行登录工具rdesktop ## 连接到Windows服务器 rdesktop -u username ip-address[:port_num] 使用SSH密钥 密钥方案 通过密钥，管理员在多个服务器之间切换时不需要手动输入口令，实现快速切换。</description>
+    </item>
+    
+    <item>
+      <title>文件传输工具</title>
+      <link>https://supersonnya.github.io/operation/linux-transferfiles/</link>
+      <pubDate>Thu, 11 Aug 2022 17:11:10 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-transferfiles/</guid>
+      <description>NFS - Linux主机间共享文件 ## 安装NFS文件系统 ### 需指定远程主机名或IP mount hostname:/pathname pathname/ ### 以可读写方式安装文件系统，若服务器不允许外部可写，会自动选择只读安装 mount -o rw hostname:/pathname pathname/ ### 以可读写、硬安装、可中断、后台重试安装请求的方式安装文件系统 mount -o rw,hard,intr,bg ## 查看服务器端导出的目录 showmount -e [hostname | IP] ## 卸载NFS文件系统，卸载时没有其他进程使用 umount pathname/ ### 强制卸载文件系统 umount -f pathname/ ## 启动时自动安装远程文件系统，写入/etc/fstab 10.171.37.1:/srv/nfs_share /home/lewis/share nfs rw,hard,intr,bg 0 0 ### fstab文件中对NFS的配置立即生效 mount -a -t nfs Samba - Linux与Windows间共享文件 ## 列出当前网络上的共享主机列表 smbtree -S ## 连接共享主机 ### -U指定用户名，-b使用广播的方式搜寻整个网络 smbtree -b -U smbuser ## 查询主机对应的IP nmblookup hostname ## Linux下的Samba客户端: smbclient ### 基本语法，不允许匿名用户登录时应使用-U指定用户名 smbclient //servername/sharename [-U username] ### 修改当前本地目录 lcd /pathname ### 下载文件 get filename ### 退出 quit ## 挂载Windows共享目录 ### 不允许匿名用户登录时应使用-o跟上user指定用户名 mount.</description>
+    </item>
+    
+    <item>
+      <title>硬盘分区管理</title>
+      <link>https://supersonnya.github.io/operation/linux-diskmanager/</link>
+      <pubDate>Mon, 08 Aug 2022 22:37:27 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-diskmanager/</guid>
+      <description>安装硬盘和分区 使用 fdisk 建立分区表 使用 mkfs 建立文件系统 使用 fsck 检查文件系统 测试分区 创建并激活交换分区 配置 fstab 文件 重新启动系统 如果某个文件系统出了问题，系统将不能正常启动，而是引导进入救援模式。 在这种情况下，用户应该依次按照下面这些步骤来手动解决问题。 提供 root 口令，以 root 身份登录系统。 使用 fsck 检查并试图修复受损的文件系统。 如果问题依然存在，运行 mkfs 重新在分区上建立文件系统 不太幸运的话，可能需要使用 fdisk 重新建立分区表。 总是可以通过删除 fstab 文件中对应的配置行（或者给它打上注释符号），来临时解决系统无法正常启动的问题。 高级硬盘管理 独立磁盘冗余阵列：RAID 磁盘阵列，独立磁盘构成的具有冗余能力的阵列，磁盘阵列就是由很多价格较为便宜的磁盘，以硬件或者软件的形式形成一个巨大的磁盘组，利用多个磁盘组、多个磁盘组合在一起，提升整个磁盘系统效能。同时还可以通过减少磁盘容量为代价去增加数据的安全性。 RAID实现方式 硬RAID：使用硬件阵列卡，用专门的RAID控制器将硬盘和电脑连接起来，RAID控制器负责将所有的RAID成员磁盘配置成一个虚拟的RAID磁盘卷。对于操作系统而言，只能识别到由RAID控制器配置后的虚拟磁盘，而无法识别到组成RAID的各个成员盘。这种技术一般由供应商提供，不需要特殊操作。 软RAID：通过操作系统软件去实现，在Linux中可通过mdadm命令实现。 RAID 0 条带式，最早出现的RAID模式。
+工作模式：将资料分成多个部分，再将多个部分同时往两块磁盘里写入数据，跟内存的双通道技术相似。
+最少需要磁盘数：2块。
+支持损坏磁盘数：不支持损坏硬盘。
+优点：大大的提高了磁盘的读写速度。
+缺点：大大提高了数据的风险性，数据是保存在多个磁盘中，一旦有一块磁盘损坏，就失去了所有的数据。
+应用环境：不要求安全，只要求速度。适合大规模并发读取。例如数据库从库，存储从库。
+RAID 1 镜像卷。
+工作模式：在一个磁盘中写入数据，在另一个磁盘中写入镜像数据。
+最少磁盘数：2块。
+支持损坏磁盘数：1块。
+优点：大大提高了数据的安全性，允许损坏一块磁盘。
+缺点：在磁盘利用率低，没有提高读写速度。
+应用环境：只要求安全，对速度不要求。适合系统盘和监控服务器。
+RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中只要知道n-1个磁盘的数据，就可以计算出第n个磁盘的数据。 最少磁盘数：3块。 支持损坏磁盘数：1块。 优点：技术读取速度和Raid 0差不多，多了奇偶校验，写入速度比单个磁盘稍慢。通过运算的方式解决一块硬盘损坏的情况，最多损坏一块硬盘。 应用环境：适合对性能和安全有一定要求但又不太十分高的情况。例如普遍数据库和存储库。 RAID 10 工作模式：RAID0和RAID1技术的结合。将磁盘均分为两部分，对于这两部分使用RAID0。在这两部分内部中，又细分两个部分，对细分的两个部分，使用RAID1。 最少磁盘数：4块。 支持损坏磁盘数：总数的一半。 优点：提高读写速度同时保证数据的安全性。 缺点：损失一半的磁盘空间，磁盘利用率低。 应用环境：对于性能和安全都要求的情况。例如高并发或高访问量数据库主库，存储主库。 # 软RAID10 # 创建磁盘阵列 mdadm -C -v /dev/md10 -l 10 -n 4 /dev/sd{m,n,o,p}。 # 配置文件命令 mdadm -Dsv &amp;gt; /etc/mdadm.</description>
+    </item>
+    
+    <item>
+      <title>压缩存档备份</title>
+      <link>https://supersonnya.github.io/operation/linux-compressedarchives/</link>
+      <pubDate>Mon, 08 Aug 2022 16:54:10 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-compressedarchives/</guid>
+      <description>压缩工具 gzip 压缩后只生成新压缩文件，不保留原文件 # 压缩文件 gzip &amp;lt;filename&amp;gt; # 解压文件，支持的扩展名.gz、.Z、-gz、.z、-z、z gunzip &amp;lt;filename&amp;gt; gzip -d &amp;lt;filename&amp;gt; # 查看压缩效果 gzip -l &amp;lt;filename&amp;gt; # 测试压缩文件的完整性 gzip -tv &amp;lt;filename&amp;gt; bzip2 提供比gzip更高的压缩率，速度比gzip慢 # 压缩文件 bzip2 &amp;lt;filename&amp;gt; # 解压文件，支持的扩展名.bz2、.bz、.tbz2、.tbz、bzip2 bunzip2 &amp;lt;filename&amp;gt; bzip2 -d &amp;lt;filename&amp;gt; # 测试压缩文件的完整性 bzip2 -tv &amp;lt;filename&amp;gt; RAR for linux # 解压文件 rar x xxx.rar 存档工具 tar # 文件打包，不会删除原来的文件，命令选项前的-可省略 ## -c创建归档文件，-v显示命令的执行过程，-f指定归档文件的文件名 ## 最后一个（或者几个）参数指定了需要打包的文件和目录 tar -cvf xxx.tar xxx/ tar -xvf xxx.tar ## -w每次将单个文件加入（或者抽出）归档文件时询问，yn回答 tar -cvwf xxx.tar xxx/ tar -xvwf xxx.</description>
+    </item>
+    
+    <item>
+      <title>Linux 软件包管理</title>
+      <link>https://supersonnya.github.io/operation/linux-packagemanager/</link>
+      <pubDate>Thu, 04 Aug 2022 15:43:20 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-packagemanager/</guid>
+      <description>dpkg 管理.deb软件包 ## 安装软件包 ### 安装软件之前会删除旧版本 dpkg [-i | --install] *.deb ## 查看已安装的软件包 ### 查找当前系统中软件版本信息 dpkg -l ### 安装的软件向系统中复制的文件列表 dpkg -S ## 卸载软件包 dpkg [-r | --remove] APT 高级软件包工具，可以自动检测软件依赖问题，下载和安装所有文件 ## 下载和安装软件包 ### 更新当前apt-get缓存中的软件包信息，以保证获得的软件包是最新的 apt-get update ### 下载并安装软件包 apt-get install ### 下载并安装在本系统上已有的软件包的最新版本 apt-get upgrade ### 卸载特定的软件包 apt-get remove ### 下载特定的软件源代码 apt-get source ### 删除所有已下载的包文件 apt-get clean ## 查询软件包信息 ### 搜索软件包列表中特定的软件包 apt-cache search ### 列出特定软件包的依赖关系 apt-cache depends ## 配置apt-get ### 用于下载软件的地址通常称之为安装源，配置文件目录为/etc/apt/sources.list apt-get rpm 管理RPM软件包 ## 安装软件包 ### -v用于显示当前正在执行的工作 ### -h打印一系列的#提示当前的安装进度 rpm -i ## 升级软件包 rpm -U ## 查看已安装的软件包 ### 加上-a列出当前系统上已经安装的所有软件包 rpm -q ## 卸载软件包 ### --test要求模拟删除软件包的全过程，但并不真的执行删除操作 ### -vv要求输出完整的调试信息 rpm -e yum 一个开源、流行的命令行包管理器，和APT拥有相同的功，管理RPM软件包。 ## yum源配置 vi /etc/yum.</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://supersonnya.github.io/operation/linux-usefulcommands/</link>
+      <pubDate>Thu, 04 Aug 2022 11:00:54 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-usefulcommands/</guid>
+      <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 fsck 检查和修复文件系统，使用fsck检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候 fsck 分区名: 指定需要检查的文件系统 fsck -p: 会读取fstab文件来确定检查哪些文件系统 -f: 强制检查新的文件系统 grep [OPTIONS] PATTERN [FILE&amp;hellip;] 查找文件内容，返回所在行 搜索内容包含空格时必须加单引号 groupadd head | tail 显示文件的开头和结尾 -n: 指定显示的行数 history 查看历史操作，仅在BASH中适用，只能列出当前用户的操作记录 管理员需要查看其他用户的操作记录，可读取该用户主目录下的.</description>
+    </item>
+    
+    <item>
+      <title>Windows使用技巧</title>
+      <link>https://supersonnya.github.io/records/tools-win_tips/</link>
+      <pubDate>Wed, 27 Jul 2022 10:57:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-win_tips/</guid>
+      <description>win+R快捷命令 calc：计算器 mstsc：远程桌面连接 winver：Windows版本查看 nslookup：IP地址检测器 control：控制面板 触摸板使用 选择项目：点击触摸板 滚动：两个手指放在触摸板上，水平或垂直滑动 放大缩小：两个手指放在触摸板上，收缩或拉伸 显示右键菜单：两根手指点击触摸板 查看所有打开窗口：三根手指外扫 显示桌面：三根手指内扫 切换窗口：三根手指左右扫 打开搜索：三根手指点击触摸板 打开操作中心：四根手指点击触摸板 快捷键 F2：重命名 F4：在文件资源管理器中显示地址栏列表 Alt+带下划线字母：执行相关指令 Alt+Enter：显示项目属性 Alt+向左：返回 Alt+向右：前进 ctrl+alt+break：远程桌面切换全屏 </description>
+    </item>
+    
+    <item>
+      <title>Typescript Base</title>
+      <link>https://supersonnya.github.io/frontend/typescript-base/</link>
+      <pubDate>Wed, 27 Jul 2022 10:48:28 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/frontend/typescript-base/</guid>
+      <description>声明文件 1. 声明文件 使用第三方库时，需要引用声明文件才能有对应的代码补全、接口提示等功能 1.1 声明语句 JavaScript中使用第三方库jQuery，使用&amp;lt;script&amp;gt;引入，使用全局变量$或jQuery 在Typescript中，没有$和jQuery，需要使用declare var来定义它的类型 // 定义全局变量jQuery的类型，用于编译时检查，编译结束后会被删除 // declare var就是声明语句 declare var jQuery: (selector: string) =&amp;gt; any; jQuery(&amp;#39;#name&amp;#39;); 1.2 声明文件 存放声明语句的单独文件，必须以.d.ts为后缀 1.3 第三方声明文件 // 使用@types统一管理第三方库的声明文件 npm install @types/jquery --save-dev 2. 书写声明文件 当第三方库没有提供声明文件时，需要自己书写 2.1 全局变量 // 全局变量声明语法 // 一般来说，全局变量都是禁止修改的常量，大部分情况应使用const定义 // 声明语句只能定义类型，不能有具体实现 declare var|let|const jQuery: (selector: string) =&amp;gt; any; // 定义全局函数类型，支持重载 declare function jQuery(selector: string): any; // 定义全局类，不能有具体实现，只定义类型 declare class Animal { name: string; constructor(name: string); sayHi(): string; } // 声明全局枚举类型，被称作外部枚举 // 仅用于定义类型，而不是具体的值 declare enum Colors { Red, Green, Blue} // 声明（含有子属性的）全局对象 // declare namespace内部，直接使用function ajax声明函数，不用declare function ajax // 使用嵌套的namespace来声明深层的属性的类型 declare namespace jQuery { function ajax(url: string, settings?</description>
+    </item>
+    
+    <item>
+      <title>Golang Base</title>
+      <link>https://supersonnya.github.io/programlang/golang-base/</link>
+      <pubDate>Wed, 27 Jul 2022 10:48:16 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/programlang/golang-base/</guid>
+      <description>1. Golang的学习方向 区块链研发 Go服务器端/游戏软件 Golang分布式/云计算软件 2. Golang的应用 区块链 后端服务器 云计算/云平台后台 3. 学习思想 先know how，再know why 先建立框架，再研究细节 做了才会，不是会了才做，动手 琢磨别人怎么做，不是自己认为怎么做 4. 解决问题的思路 发现新的问题 使用现有技术解决问题不够好，使用新技术 学习新技术的基本语法和原理 通过一个快速入门案例了解新技术的基本使用 深入学习新技术的细节，使用规范，解决方案，常见陷阱 应用新技术解决问题 1. Golang的特点 静态语言的安全和性能 动态语言开发维护的高效率 继承C理念，表达式语法，控制结构，基础数据类型，参数传值，保留了指针 引入包的概念，每个文件都要归属于一个包 内存自动回收垃圾 天然并发，语言层面支持并发，可实现大并发处理 管道通信机制 函数返回多个值 创新：切片slice，延时执行defer 2. 配置环境变量 GOROOT PATH GOPATH 3. 运行.go文件 go build name.go: build之后生成name.exe name.exe（.\name.exe）: 直接运行可执行文件 4. 执行流程 go build编译生成.exe，执行.exe，没有go环境也可执行 go run直接执行，编译运行一步完成，必须有go环境 5. 编译运行 go build -o myhello.exe hello.go: 指定编译生成的文件，如果程序有错误，编译时报错 6. 语法要求和注意事项 文件以.go为扩展名 程序入口为main()函数 严格区分大小写 不需要分号（自动在每行后加分号） 一行一条语句 定义的变量或引入的包没有用到，代码不能通过编译 大括号成对出现，缺一不可 7.</description>
+    </item>
+    
+    <item>
+      <title>Regexp基础知识</title>
+      <link>https://supersonnya.github.io/operation/tools-regexp/</link>
+      <pubDate>Tue, 26 Jul 2022 14:39:54 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-regexp/</guid>
+      <description>简介 Regexg是正则表达式Regular Expression的简称，用于匹配、查找和管理文本。正则表达式是表示搜索模式的字符串，常用于查找和替换文本中的字词。 基础使用 基本匹配 直接输入查找的字符或单词，类似搜索 模式匹配 . : 匹配任何字符，包括特殊字符和空格 [abc] : 可选字符匹配 [^abc] ： 否定字符集 [a-z] : 字母范围，包括首尾 [0-9] : 数字范围，包括首尾 * ： 一个字符不出现、出现一次或多次 + ： 一个字符出现一次或多次 ？ ： 一个字符不出现或出现一次 {n} ： 一个字符出现的确切次数 {n, } ： 一个字符至少出现多少次 {m, n} : 至少和至多出现的次数 () : 分组 ()-\1 : 引用组 (?: ) : 非捕获分组 | ： 允许表达式包含多个不同的分支，在表达式层面上运作 \ : 匹配特殊字符 ^ : 加在表达式前，仅查找行首 $ : 匹配字符串的结束 \w : 用于查找字母、数字和下划线 \W : 除字母、数字和下划线之外的字符 \d : 匹配数字 \D : 除数字之外的字符 \s : 空白字符 \S : 除空白符之外的字符 零宽断言 需要匹配的字符出现在另一个词语之前或之后，使用零宽断言 正向先行断言: (?</description>
+    </item>
+    
+    <item>
+      <title>Scoop安装及使用</title>
+      <link>https://supersonnya.github.io/operation/tools-scoop/</link>
+      <pubDate>Tue, 26 Jul 2022 11:15:21 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-scoop/</guid>
+      <description>Scoop安装 Windows包管理器 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) iwr -useb get.scoop.sh | iex Set-ExecutionPolicy RemoteSigned -scope CurrentUser Scoop常用命令 scoop search &amp;lt;app_name&amp;gt; scoop install &amp;lt;app_name&amp;gt; scoop uninstall &amp;lt;app_name&amp;gt; scoop list scoop cache rm &amp;lt;app_name&amp;gt; | scoop cache rm * scoop bucket known scoop bucket add &amp;lt;bucket_url&amp;gt; Scoop使用 scoop install -g aria2 # 修改aria配置 scoop config aria2-enabled true # default: true scoop config aria2-retry-wait 8 # default: 2 scoop config aria2-split 8 # default: 5 scoop config aria2-max-connection-per-server 8 # default: 5 scoop config aria2-min-split-size] 2M # default: 5M 安装常用软件 scoop install -g dingtalk scoop install -g git scoop install -g hugo-extended scoop install -g koodo-reader scoop install -g lx-music scoop install -g mobaxterm scoop install -g mysql-workbench scoop install -g neteasemusic scoop install -g potplayer scoop install -g python@3.</description>
+    </item>
+    
+    <item>
+      <title>Adb命令</title>
+      <link>https://supersonnya.github.io/operation/tools-adbcmds/</link>
+      <pubDate>Tue, 26 Jul 2022 09:31:03 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-adbcmds/</guid>
+      <description>adb连接Android设备 adb connect &amp;lt;device_ip&amp;gt; # 显示连接设备 adb devices fastboot devices 操作指令 查看应用列表 # 查看所有应用 adb shell pm list packages # 查看系统应用 adb shell pm list packages -s # 查看第三方应用 adb shell pm list packages -3 # 查看禁用应用 adb shell pm list packages -d # 查看启用应用 adb shell pm list packages -e # 查询应用详情 adb shell dumpsys package &amp;lt;package_name&amp;gt; # 查看应用安装路径 adb shell pm path &amp;lt;package_name&amp;gt; # 查看应用安装路径 安装应用 # 普通安装 adb install &amp;lt;apk_path&amp;gt; # 安装到SD存储卡 adb install -s &amp;lt;apk_path&amp;gt; # 覆盖安装 adb install -r &amp;lt;apk_path&amp;gt; # 降级覆盖安装 adb install -d &amp;lt;apk_path&amp;gt; # 允许应用所需全部权限 adb install -g &amp;lt;apk_path&amp;gt; 禁用恢复应用 # 禁用 adb shell pm disable-user &amp;lt;package_name&amp;gt; # 恢复 adb shell pm enable &amp;lt;package_name&amp;gt; # 删除 adb shell pm uninstall [-k] --user 0 &amp;lt;package_name&amp;gt; 强制停止应用 adb shell am force-stop &amp;lt;package_name&amp;gt; 重启系统 # 普通重启 adb reboot # 重启到Recovery模式 adb reboot recovery # 重启到Fastboot模式 adb reboot bootloader 其他 # 切换到Shell模式 adb shell # 电脑文件传送到Android adb push &amp;lt;file_name&amp;gt; /sdcard/ # Android文件下载到电脑 adb pull /sdcard/&amp;lt;filename&amp;gt; &amp;lt;local_path&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>If | 如果</title>
+      <link>https://supersonnya.github.io/records/extraction-poem_if/</link>
+      <pubDate>Tue, 26 Jul 2022 09:22:09 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/extraction-poem_if/</guid>
+      <description>Rudyard Kipling | 拉迪亚德·吉卜林 If you can keep your head when all about you, are losing theirs and blaming it on you; 如果周围的人毫无理性地向你发难，你仍能镇定自若保持冷静；
+If you can trust yourself when all men doubt you, but make allowance for their doubting too; 如果众人对你心存猜忌，你仍能自信如常并认为他们的猜忌情有可原；
+If you can wait and not be tired by waiting, 如果你肯耐心等待不急不躁，
+Or, being lied about, don&amp;rsquo;t deal in lies, 或遭人诽谤却不以牙还牙，
+Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶报恶；</description>
+    </item>
+    
+    <item>
+      <title>小米刷机</title>
+      <link>https://supersonnya.github.io/records/operation-miui/</link>
+      <pubDate>Mon, 25 Jul 2022 16:52:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/operation-miui/</guid>
+      <description>解锁 下载小米官方解锁工具 在手机上进入设置 -&amp;gt; 开发者选项 -&amp;gt; 设备解锁状态中绑定账号和设备； 在Windows系统上打开miflash_unlock*.exe，填写小米账号密码，需联网登录，登录时可能需要手机验证码，手机先不要关机。 在手机上退出登录的小米账号，否则刷机后可能会锁定设备； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机，点击 解锁。解锁成功后重启手机即可。 要使用数据线而不是充电线，数据线既能传输数据，也能充电；而充电线只能充电，不能传输数据。 线刷 - MIUI 国际版刷机 下载小米官方刷机工具和对应机型的官方的ROM包； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机； 打开Mifalsh工具，在里面选择解压后ROM包的文件夹，加载设备并选中查找到的设备；若没有识别手机，可尝试点击Driver安装驱动后重试； 国际版MIUI不可选择全部删除并lock，选择全部删除 完成后手机会自动重启进入系统。 卡刷 - MIUI EU版刷机 下载对应机型的TEWPimg包和EU版ROM包 刷入第三方recovery（twrp） fastboot device fastboot flash recovery &amp;lt;imgfile_path&amp;gt; 长按电源键和音量+进入TWRP，清除数据后点击安装选择ROM包安装，安装完成后需要在清除中清除/data，否则重新会一直停在MIUI开机界面无法进入系统。 MIUI欧版本地化 MIUI EU本地化 </description>
+    </item>
+    
+    <item>
+      <title>Git基本使用</title>
+      <link>https://supersonnya.github.io/operation/tools-git/</link>
+      <pubDate>Thu, 21 Jul 2022 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-git/</guid>
+      <description>Git本地使用 初始化一个Git仓库：git init 添加文件到Git仓库 将文件添加到暂存区，可多次使用，添加多个文件：git add &amp;lt;file&amp;gt;； 将添加的文件全部提交到仓库的当前分支：git commit -m &amp;lt;message&amp;gt;。 查看仓库当前状态：git status 查看修改的文件内容：git diff 本地仓库管理 HEAD指向当前版本 查看提交历史版本：git log 回退到指定版本：git reset --hard &amp;lt;commit_id&amp;gt; HEAD^表示上一版本，HEAD^^上两个版本，HEAD~100上100版本 查看命令历史，确定回到未来的版本：git reflog 丢弃工作区修改，用版本库或暂存区的文件替换工作区文件：git checkout -- filename 将文件从暂存区取回，替换工作区文件：git reset HEAD filename 删除文件：git rm filename; git commit 恢复误删文件：git checkout -- filename Git远程仓库 添加远程仓库：git remote add &amp;lt;name default origin&amp;gt; &amp;lt;url&amp;gt; 首次推送全部文件：git push -u origin master 后续提交：git push origin master 查看远程仓库信息：git remote -v 删除远程仓库：git remote rm &amp;lt;name&amp;gt; 克隆远程仓库：git clone &amp;lt;git_path&amp;gt; 免输密码推送远程仓库 https方式 url = https://userName:password@github.</description>
+    </item>
+    
+    <item>
+      <title>Database Oracle_basical</title>
+      <link>https://supersonnya.github.io/operation/database-oracle_basical/</link>
+      <pubDate>Wed, 18 Aug 2021 16:20:08 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-oracle_basical/</guid>
+      <description>Oracle发展 第6版：引入了行级锁特性，不完善的PL/SQL语言，引入联机热备份功能。 第7版：分布式事务处理功能，增强的管理功能，用于应用程序开发的新工具以及安全方法。 第8版：支持面向对象的开发及新的多媒体应用，开始具有同时处理大量用户和海量数据的特性。为支持Internet、网络计算等奠定了基础。 Oracle 8i：i代表Internet，添加了大量为支持Internet而设计的特性，为数据库用户提供了全方位的Java支持，成为第一个完全整合了本地Java运行时环境的数据库，用Java就可以编写Oracle的存储过程。 Oracle 9i：加入许多新特性，最重要的是Real Application Clusters(RAC)——集群技术。 Oracle 10g：g代表grid，最大的特性是加入了网格计算的功能。 Oracle 11g：最常用的版本，实现了信息生命周期管理等多项创新，大幅地提高了系统性能的安全性，全新的Data to Guard最大化了可用性，利用全新的高级数据压缩技术降低了数据存储的支出，明显缩短了应用程序测试环境部署及分析测试结果所花费的时间，增加了RFIDTag、DICOM医学图像、3D空间等重要数据类型的支持，加强了Binary XML的支持和性能优化。 Oracle 12c：c代表cloud，增加云计算功能，当前最新版本。 关系数据库基本理论 数据库管理技术发展阶段：人工管理、文件系统、数据库系统。 数据库系统的数据模型主要有层次模型、网状模型、关系模型和面向对象模型。目前理论成熟、使用普及的是关系模型。 关系型数据库设计范式 关系型数据库由相互联系的一组关系所组成，每个关系包括关系模式和关系值的两个方面。关系模式是对关系的抽象定义，给出关系的具体结构；关系的值是关系的具体内容，反映关系在某一时刻的状态。每个关系都需要进行规范化，使之达到一定的规范化程度，从而提高数据的结构化、共享性、一致性和可操作性。 规范化是把数据库组织成在保持存储数据完整性的同时最小化冗余数据的结构的过程。规范化的数据库必须符合关系模型的范式。范式可以防止在使用数据库时出现不一致的数据，并防止数据丢失。关系模型范式有第一范式（1NF）、第二范式（2NF）、第三范式（3NF）、第四范式、第五范式、第六范式和BCNF范式等多种。通常数据库满足前3个范式就足够用了。 第一范式 第一范式是对关系模式的基本要求，不满足第一范式的数据库就不是关系型数据库。 第一范式是第二和第三范式的基础，是最基本的范式。包括以下指导原则： 数据组的每个属性只可以包含一个值。 关系中的每个数组必须包含相同数量的值。 关系中的每个数组一定不能相同。 如果数据表中的每一个列都是不可再分割的基本数据项，就称此数据表符合第一范式。第一范式具有不可再分解的原子特性。 第二范式 满足第二范式必须先满足第一范式。第二范式要求数据库表中的每个实体（即各个记录行）必须可以被唯一地区分。 第二范式要求实体的属性完全依赖于主关键字，不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一格新的实体，新实体与原实体之间是一对多的关系。 （员工编码，岗位）→（决定）（姓名，年龄，学历，基本工资，绩效工资，奖金）。 第三范式 满足第三范式必须先满足第二范式。第三范式要求关系表不存在非关键字列对任意候选关键字列的传递函数依赖，即第三范式要求一个关系表中不包含已在其他表中包含的非主关键字信息。 传递函数依赖：如果存在关键字段A决定非关键字段B，而非关键字段B决定非关键字段C，则称非关键字段C传递函数依赖于关键字段A。 （员工编码）→（决定）（姓名，年龄，部门编码，部门经理）。 基础 数据库的设计主要是数据库模式的设计 属性之间的关联成为数据依赖：函数依赖、多值依赖、连接依赖 规范化规则并不能帮助建立好的数据模型，只是提供了一直检验建立的数据模型是否正确的测试手段 第一范式-1NF 实体（表）的所有属性都不可分，即不包含多值属性，则满足1NF 两种方法实现非1NF的结构：数组引用和嵌套表 第二范式-2NF 函数依赖不是根据一个值导出另一个值，而是对于一个值来说，另一个值是逻辑上唯一的 不存在依赖于部分主码的属性 students_grade(student_id, course_id, grade, age) 第三范式-3NF 不能存在传递函数依赖关系 存在一个属性，它所函数依赖的属性既不是主码也不是候选码 BC范式-BCNF 消除主属性对码的部分和传递依赖 Oracle 11g新功能 增强信息生命周期管理和存储管理能力 Oracle 11g具有极新的数据划分和压缩功能，可实现更经济的信息生命周期管理和存储管理。实现了很多手工数据划分工作的自动化，扩展了已有的范围、散列和列表划分功能，增加了间隔、索引和虚拟卷划分功能。 全面回忆数据变化 Oracle 11g具有Oracle全面回忆（Oracle Total Recall）组件，可帮助管理员查询在过去某些时刻指定表格中的数据， 最大限度提高信息可用性 Oracle闪回交易（Oracle Flashback Transaction），可以轻松撤销错误交易以及任何相关交易；并行备份和恢复功能，可改善非常大数据库的备份和存储性能；“热修补”功能，不必关闭数据可就可以进行数据库修补，提高系统可用性。 Oracle快速文件 存储大型对象，包括图像、大型文本对象或一些先进的数据类型，如XML、医疗成像数据和三维对象。Oracle快速文件（Oracle Fast Files）组件使得数据库的性能完全比得上文件系统的性能。 更快的XML Oracle 11g增加了对二进制XML数据的支持，客户可以选择适合自己特定应用及性能需求的XML存储选项。 透明的加密 将透明数据加密功能扩展到卷级加密之外，具有表空间加密功能，可用来加密整个表、索引和所存储的其他数据。 嵌入式OLAP行列 OLAP行列在数据库中可以像物化图一样使用，受益于OLAP高性能的同时，开发人员可以用标准SQL实现数据查询。 连接汇合和查询结果高速缓存 增加了查询结果高速缓存等新功能。通过高速缓存和重用经常调用的数据库查询以及数据库和应用层的功能，改善应用的性能和可扩展性。 增强应用开发能力 Oracle 11g提供多种开发工具，提供的简化应用开发流程可以充分利用Oracle 11g的关键功能，这些关键功能包括客户端高速缓存、提供应用速度的二进制XML、XML处理以及文件存储和检索。 Oracle 11g管理工具 SQL*PLUS 连接语法格式：SQLPLUS username[/password][@connect_identifier] [AS SYSOPER|SYSDBA]。 关键字不区分大小写，但参数区分大小写。 Oracle企业管理器(Oracle Enterprise Manager) URL：https://localhost:1158/em。 数据库配置助手(Database Configuration Assistant, DBCA) 创建和配置数据库。 启动和关闭数据库实例 启动数据库实例 Oracle数据库实例启动过程：启动实例、加载数据库、打开数据库。 启动数据库命令格式：STARTUP [NOMOUNT | MOUNT | OPEN | FORCE] [RESCRICT] [PFILE=filename] NOMOUNT：启动实例，不加载数据库。 通常在创建新数据库或重建控制文件时使用。 MOUNT：启动实例，加载数据库，不打开数据库。 通常在进行数据库维护时使用，比如执行数据库完全恢复操作、更改数据库的归档模式等。 OPEN：启动实例，加载数据库，打开数据库，默认选项。 FORCE：终止实例并重新启动数据库，具有一定的强制性。 RESTRICT：指定以受限制的会话方式启动数据库。 PFILE：指定启动实例时使用的文本参数文件，filename为文件名。 实例启动时必须读取一个初始化参数文件以获取有关参数配置信息。 关闭数据库实例 Oracle关闭数据库实例过程：关闭数据库、卸载数据库、关闭实例。 关闭数据库语法格式：SHUTDOWN [NORMAL | TRANSACTIONAL | IMMEDIATE | ABORT]。 NORMAL：以正常方式关闭数据库。 对关闭数据库时间没有限制时，通常使用这种方式关闭。 阻止任何用户建立新连接；等待当前所有正在连接的用户主动断开连接；所有用户断开连接后立即关闭数据库。 TRANSACTIONAL：在当前所有的活动事务被提交完毕之后，关闭数据库。 阻止用户建立新连接和开始新事务；等待所有活动事务提交后，断开用户连接；所有事务提交完毕、所有用户断开连接后，关闭数据库。 IMMEDIATE：在尽可能短的时间内立即关闭数据库。 阻止用户建立新连接和开始新事务；将未提交的活动事务回退；关闭数据库。 ABORT：以终止方式关闭数据库，具有一定的强制性和破坏性，可能丢失数据信息，影响数据库的完整性。 阻止用户建立新连接和开始新事务；取消未提交的活动事务，不是回退；立即终止正在执行的任何SQL语句；立即关闭数据库。 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/2021080401/</link>
+      <pubDate>Wed, 04 Aug 2021 23:57:46 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/2021080401/</guid>
+      <description>耽溺于悔恨是最不可取的情绪，做错了事就应该认错，努力加以补救，勉励自己以后好好干，千万别老是为错误难过。在烂泥里翻滚并不是清洁身体的最好办法。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/2021080301/</link>
+      <pubDate>Tue, 03 Aug 2021 11:57:40 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/2021080301/</guid>
+      <description>SuperSonnya&amp;rsquo;s Github</description>
+    </item>
+    
+    <item>
+      <title>余生，愿你活出自己的精彩</title>
+      <link>https://supersonnya.github.io/wenwen/a-new-year-a-new-website-introducing-apsho-1/</link>
+      <pubDate>Thu, 01 Oct 2020 12:57:56 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/a-new-year-a-new-website-introducing-apsho-1/</guid>
+      <description>曾几何时，为了让自己显得合群，选择去做自己不喜欢的事；为了讨好喜欢的人，一次次地委屈自己；甚至，为了陌生人的一个眼神，就陷入了深深的自我怀疑。 可是，这样小心翼翼的你，一定很累吧。你以为照顾了所有人的想法，就能得到他们的喜欢；你以为逼着自己合群，就能真的合群。直到后来才发现，在日复一日对自己的为难中，你逐渐弄丢了真实的自己。 有一句话说：“世上没有不快乐的人，只有不肯让自己快乐的心。” 如果一段关系让你变得卑微，你可以选择抽身离去；如果一个人总是让你悲伤哭泣，你要学会放手。 始终相信，每个人最初的样子，都是最美好的。真正喜欢你的人，会喜欢你原来的样子；真正爱你的人，从来不需要你的委曲求全。 Working from Home: Healthy Practices to Stay Productive Setting a Healthy Routine Proper Ergonomics Exercise Regularly Find Work-Life Balance When Working from Home Dealing with Family Members and Coworkers 后半生，请把身上的枷锁，全部解除。去做喜欢的事，去聆听自己内心的声音。你会发现，这世上没有什么事情比活出自己更加幸福。 要相信，真实的自己亦是一道风景线。你若盛开，清风自来。愿你此生尽兴，不负韶华。殊不知，人生在世，最不值得的事情，就是在别人的眼光中，迷失自己。其实，正如世界上没有十全十美的人，你也同样无法做到让每个人满意。 </description>
+    </item>
+    
+    <item>
+      <title>Hugo and It&#39;s future</title>
+      <link>https://supersonnya.github.io/wenwen/hugo-and-its-future/</link>
+      <pubDate>Mon, 07 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/hugo-and-its-future/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>Is working from home effective?</title>
+      <link>https://supersonnya.github.io/wenwen/is-working-from-home-effective/</link>
+      <pubDate>Sat, 05 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/is-working-from-home-effective/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>Know when to take break</title>
+      <link>https://supersonnya.github.io/wenwen/know-when-to-take-break/</link>
+      <pubDate>Fri, 04 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/know-when-to-take-break/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>Future of cloud computing</title>
+      <link>https://supersonnya.github.io/wenwen/future-of-cloud-computing/</link>
+      <pubDate>Thu, 03 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/future-of-cloud-computing/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>How solve coding problem</title>
+      <link>https://supersonnya.github.io/wenwen/how-solve-coding-problem/</link>
+      <pubDate>Thu, 03 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/how-solve-coding-problem/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>Freelancing and corona</title>
+      <link>https://supersonnya.github.io/wenwen/freelancing-and-corona/</link>
+      <pubDate>Wed, 02 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/freelancing-and-corona/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>Announcing Our 2016 Roadmap</title>
+      <link>https://supersonnya.github.io/wenwen/announcing-our-2016-roadmap/</link>
+      <pubDate>Tue, 01 Sep 2020 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/wenwen/announcing-our-2016-roadmap/</guid>
+      <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/blog/linux_wordpress/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/blog/linux_wordpress/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/sonnya/example/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/sonnya/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ChartJS介绍及基础使用</title>
+      <link>https://supersonnya.github.io/operation/tools-chartjs/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-chartjs/</guid>
+      <description>介绍 chartjs 是可以画各种图表的一款前端工具 chart.min.js 基于 ctx Chart对象，并传递如下参数进去 type: &amp;#39;line&amp;#39; 表示这个是一个线型图表。 bar表示柱状图。 data: 提供要显示的数据 labels 表示数据下方的文字。 datasets 表示数据集合。 一组数据一条线。 label: 这组数据的名称 data: 具体数据 borderColor: 线条颜色 borderWidth: 线条宽度 fill: false. 不进行填充 options: 其他选项 tooltips 表示鼠标移动到图标的时候的提示信息。 intersect: false. 表示鼠标不放在数据点上时，也会显示提示信息。 model: &amp;#39;index&amp;#39; 显示模式 var ctx = document.getElementById(&amp;#39;myChart&amp;#39;).getContext(&amp;#39;2d&amp;#39;); var myChart = new Chart(ctx, { type: &amp;#39;line&amp;#39;, data: { labels: [&amp;#39;红&amp;#39;, &amp;#39;蓝&amp;#39;, &amp;#39;黄&amp;#39;, &amp;#39;绿&amp;#39;, &amp;#39;紫&amp;#39;, &amp;#39;橙&amp;#39;], datasets: [{ label: &amp;#39;示例&amp;#39;, data: [12, 19, 3, 5, 2, 3], borderColor:&amp;#39;blue&amp;#39;, borderWidth: 1, fill: false, }] }, options: { tooltips: { intersect: false, mode: &amp;#39;index&amp;#39; } } }); 柱状图 &amp;lt;script&amp;gt; var ctx = document.</description>
+    </item>
+    
+    <item>
+      <title>Docker安装及使用</title>
+      <link>https://supersonnya.github.io/operation/container-docker_install_use/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/container-docker_install_use/</guid>
+      <description>安装Docker # install docker yum insatall docker-io # start docker systemctl start docker # check if installed successfully ps -ef|grep docker # restart docker systemctl restart docker # stop docker systemctl stop docker Docker安装Mysql # install mysql in docker ## search mysql docker search mysql ## instal mysql docker pull mysql ## check images docker images ## build directory cd /opt/ mkdir mysql_docker cd mysql_docker/ echo $PWD # start mysql docker run --name mysqlserver -v $PWD/conf:/etc/mysql/conf.</description>
+    </item>
+    
+    <item>
+      <title>MySQL基础</title>
+      <link>https://supersonnya.github.io/operation/database-mysql/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database-mysql/</guid>
+      <description>基本操作 操作表 SHOW CREATE TABLE 表名：查看指定表的创建语句 DESC 表名：查看表结构 ALTER TABLE 表名 MODIFY 列名 列类型：修改列类型 ALTER TABLE 表名 CHANGE 原列名 新列名 列类型：修改列名 ALTER TABLE 原表名 RENAME TO 新表名：修改表名称 删除表 TRUNCATE：先删除表和数据，再按照表结构重建表 DCL 一个项目创建一个用户，一个项目对应的数据库只有一个 用户只对这个数据库有权限 创建用户 CREATE USER 用户名@IP IDENTIFIED BY &amp;lsquo;PASSWORD&amp;rsquo; CREATE USER 用户名@&amp;rsquo;%&amp;rsquo; IDENTIFIED BY &amp;lsquo;PASSWORD&amp;rsquo; 查看权限 SHOW GRANTS FOR 用户名@IP 删除用户 DROP USER 用户名@IP 排序 ORDER BY：后面对多列排序，依次筛选，前面列相同时才进行后面的排序 聚合函数 COUNT() SUM() MAX() MIN() AVG() 分组 分组时查询的列除了主信息，只能是聚合函数，否则导致逻辑错误 WHERE 是分组前的筛选，HAVING 是分组后的筛选 LIMIT 方言 SELECT * FROM tableName LIMIT 4, 3;从第5行开始，查询三行 约束 约束是添加在列之上的，用来约束列 1.</description>
+    </item>
+    
+    <item>
+      <title>标签页图标</title>
+      <link>https://supersonnya.github.io/frontend/html_pageicon/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/frontend/html_pageicon/</guid>
+      <description>三种网页图标 &amp;lt;link rel=&amp;#34;Bookmark&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;shortcut icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; shortcut icon，特指浏览器中地址栏左侧显示的图标，一般大小为16x16，后缀名为.icon； icon，指的是图标，格式可为PNG\GIF\JPEG，尺寸一般为16x16、24x24、36x36等。把这个图标放到网站的根目录下就可以了，页面加载时浏览器会自动检索这个图标然后把它加到标题上（当然也可以放在一个页面可以请求到的目录下）。 Bookmark，当网站收藏到收藏夹中时，显示在前面的图标 </description>
+    </item>
+    
+    <item>
+      <title>Docker基础命令</title>
+      <link>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</link>
+      <pubDate>Sun, 09 Aug 2020 13:15:42 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</guid>
+      <description>Docker 信息 sudo docker version：查看Docker版本信息。 sudo docker info：显示Docker Engine的相关信息。 容器生命周期 start/stop/restart # 启动一个或多个已经被停止的容器 docker start [OPTIONS] CONTAINER [CONTAINER...] # 停止一个运行中的容器 docker stop [OPTIONS] CONTAINER [CONTAINER...] # 重启容器 docker restart [OPTIONS] CONTAINER [CONTAINER...] rm # 删除一个或多个容器 docker rm [OPTIONS] CONTAINER [CONTAINER...] exec # 在运行的容器中执行命令 docker exec [OPTIONS] CONTAINER COMMAND [ARG...] docker exec -it container_id /bin/bash 容器操作 ps # 列出容器 docker ps [OPTIONS] 镜像仓库 login # 登陆Docker镜像仓库，默认为官方仓库 Docker Hub docker login -u username -p pwd # 登出Docker镜像仓库，默认为官方仓库 Docker Hub docker logout pull # 从镜像仓库中拉取或更新指定镜像 docker pull [OPTIONS] NAME[:TAG|@DIGEST] push # 本地镜像上传到镜像仓库 docker push [OPTIONS] NAME[:TAG] search # 从Docker hub查找镜像 docker search [OPTIONS] term 本地镜像管理 image # 列出本地镜像 docker images rmi # 删除本地镜像 docker rmi [OPTIONS] IMAGE [IMAGE.</description>
+    </item>
+    
+    <item>
+      <title>常用应用工具</title>
+      <link>https://supersonnya.github.io/records/tools-perferapps/</link>
+      <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-perferapps/</guid>
+      <description>Windows应用 eDiary FreePDF SQLiteStudio Scoop NVM EV录屏 Notable PotPlayer Wing FTP Server MobaXterm ToDesk 向日葵 Snipaste Quicklook Mouseinc Ultraliso Fiddler Android应用 酷安 阅读 Via IPad应用 Alook </description>
+    </item>
+    
+    <item>
+      <title>收藏的链接</title>
+      <link>https://supersonnya.github.io/records/tools-bookmark/</link>
+      <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/tools-bookmark/</guid>
+      <description>外语学习 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips 技术参考 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 在线工具 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses 图片图标 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify 软件工具 GLaDOS V2cross 小众软件 快吧软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 聚合搜索 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 阅读参考 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 影音工具 CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 资料文献 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
+    </item>
+    
+    <item>
+      <title>终身学习</title>
+      <link>https://supersonnya.github.io/records/thoughtsafter-book_%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 13 Jul 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/thoughtsafter-book_%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/</guid>
+      <description>成长聚焦器 一：将来为上，过往次之 寻找更大可能性 设定目标 找到新的志向 二：学习为上，经历次之 看看什么事行得通，什么事行不通 把过往经历用作“原材料” 三：付出为上，回报次之 学会不为回报做事 付出，因为觉得那样做是对的 四：表现为上，赞誉次之 一心只想发挥出最佳水平 做身心投入的实干者 五：感恩为上，成功次之 看到别人的付出并向其表示感谢 感谢使自己的人生有今天的一切 六：乐趣为上，劳累次之 将任务变成游戏 投入热情和“玩心”去获取成果 七：合作为上，地位次之 通过团队合作将成果做大 抛掉自负之心 真心听取他人意见 八：信心为上，安乐次之 敢于冒风险打造新能力 直面恐惧 戒掉借口 九：目标为上，金钱次之 把价值观放在首位 把钱看作取得更好成果的工具 十：问题为上，答案次之 自问一个能拓宽思路的问题 拥抱未知，将其当作一切成长的汇集之地 实践 1. 将来为上，过往次之 1.1 你如何设计将来，就能拥有多大未来 1. 美好的将来是设想，成长是使设想成真的方法。 2. 无论身处人生的哪个阶段，无论当下境况如何，美好的将来是可以达成的。 3. 美好的将来不必宏伟而华丽，不必是大跨步或飞越。成长更多的时候是小步积累的结果，关键在于脚步不停。 4. 美好的将来不在于还有多少时间，而是在于如何度过这段时间。 1.2 起步 1. 自问一个与未来相关的问题。建立与美好将来的联系。 2. 设定目标。 a. 成就的扩建：在纸上写下5～10个去年以来取得的成就，思考每个成就前景如何。 b. 回想最令自己充满干劲的事情里，最喜欢的是哪个，怎么变的更好？ 3. 眼光长远。目标的时限设置要长一些（比如25年）。 2. 学习为上，经历次之 2.1 将精力转为学习，将人生赋予终身学习 1. 单有经历并不足以保证一生的成长。关键在于把经历转化为思想和行为上的突破。 2. 任何一次经历都包括有益的部分和无益的部分。认清每次经历中的两部分，有意识地设法将有益的部分最大化，绕开或排除无益的部分。 3. 经历可以作为学习的原材料，利用其背后的情感力量，驱动自己去吸取其中的经验教训。 4. 个人的经历中蕴含着大量学习的机会，只要用心就能找到。将经历转化为学识，你就不会感觉厌世，也不会背负过往的包袱（积极的态度对待过往）。 2.</description>
+    </item>
+    
+    <item>
+      <title>英语听力训练</title>
+      <link>https://supersonnya.github.io/foreignlang/english-listening/</link>
+      <pubDate>Sun, 12 Jul 2020 20:43:54 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-listening/</guid>
+      <description>1. 概述 精听方法和训练步骤 Shadowing Practice，“跟读复析法”，即英文跟读+提取信息和复述、分析句意。 注意：词汇量，读音规则，语法规则 2. 训练步骤 训练初期（7 天，每天 2-3h） 听原文第一句 一定要盲听！千万不要看原文！ 1. 原文无障碍 直接跟读出原句，并在语音、语调上尽量模仿录音 立马在脑中分解句子意思，并复述出中文句意 下一句 2. 原文有障碍 在纸上把没听到单词的前面的两个单词写出，在未听出的单词处划线，下次重点 听划线 在脑中把除了这个单词外的其他部分的意思分析、复述出来 听第二遍原文 1. 重复 a，如果还没听出来，就继续听第三遍，如果是不认识的单词，两遍跳过 听完五遍 如果听完第三遍还没有听出来就暂且作罢，开始听第二句，并重复以上步骤。 等听完本篇听力全文后，再翻看原文。 注意： 听不完文章，不看原文； 看原文时查生词 训练中期 （7 天，每天 2-3h） 同初期a，跟读；复述时，不再翻译成中文，在脑中理解句意即可 每个句子最多听三遍 训练后期 （7-10 天，每天 2-3h） 同初期a，跟读，但不再翻译成中文，在脑中理解句意即可 每个句子最多听一遍 点式听写法：听力不暂停，只写名词、形容词 复数听写法：只写名词复数 </description>
+    </item>
+    
+    <item>
+      <title>恶之花</title>
+      <link>https://supersonnya.github.io/records/extraction-poem_%E6%81%B6%E4%B9%8B%E8%8A%B1/</link>
+      <pubDate>Fri, 10 Jul 2020 16:12:09 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/extraction-poem_%E6%81%B6%E4%B9%8B%E8%8A%B1/</guid>
+      <description>[法]波德莱尔 也许你我终将行踪不明，
+但是你该知道我曾因你动情。
+不要把一个阶段幻想得很好，
+而又去幻想等待后的结果。
+那样的生活只会充满依赖，
+我的心思不为谁而停留，
+而心总要为谁而跳动。</description>
+    </item>
+    
+    <item>
+      <title>音素示例及对比</title>
+      <link>https://supersonnya.github.io/foreignlang/english-phone/</link>
+      <pubDate>Sun, 28 Jun 2020 21:38:03 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-phone/</guid>
+      <description>1. 音素表 Short vowels Long vowels Diphthongs(double vowel sounds) Voiceless consonants Voiced consonants Other consonants ɪ iː eɪ p b m ʊ ɜː aɪ t d n ʌ ɔː ɔɪ k ɡ ŋ ɒ uː aʊ f v h ə ɑː əʊ θ ð l e ɪə s z r æ eə ʃ ʒ j ʊə tʃ dʒ w 2. 短元音(Short vowels) 2.1 ɪ kit bid hymn minute VS iː hit - heat lip - leap sick - seek will - wheel 2.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Post Format</title>
+      <link>https://supersonnya.github.io/operation/tools-hugo_postformat/</link>
+      <pubDate>Sun, 21 Jun 2020 09:51:43 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-hugo_postformat/</guid>
+      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 </description>
+    </item>
+    
+    <item>
+      <title>Markdown基础语法</title>
+      <link>https://supersonnya.github.io/operation/tools-markdown_basicalgrammer/</link>
+      <pubDate>Sat, 20 Jun 2020 09:56:18 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/tools-markdown_basicalgrammer/</guid>
+      <description>1. 标题 1.1 使用=和-标记一级和二级标题 一级标题 ======= 二级标题 ------- 1.2 使用#标记 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 2. 段落 使用两个以上空格加上换行来开始下一个段落 直接使用一个空行表示开始一个段落 3. 字体 可以使用*或_ *斜体* **粗体** ***粗斜体*** 4. 线条效果 4.1 分割线 可以使用三个以上*、-或_ *** * * * --- - - - ___ _ _ _ 4.2 删除线 使用两个~ ~~删除线~~ 4.3 下划线 使用&amp;lt;u&amp;gt;&amp;lt;/u&amp;gt; &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt; 4.4 脚注 脚注[^foot] [^foot]: 添加脚注 5. 列表 5.1 无序列表 使用*、+或-加空格 * 第一项 + 第二项 - 第三项 5.</description>
+    </item>
+    
+    <item>
+      <title>英语口语技巧</title>
+      <link>https://supersonnya.github.io/foreignlang/english-spoken_tips/</link>
+      <pubDate>Fri, 19 Jun 2020 17:03:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/english-spoken_tips/</guid>
+      <description>/t/的同化现象 如果一个单词以/t/结尾，下一个单词以/p/开头。这时/t/的发音发生同化，近似于/p/。所以white piece of paper发音就变成了whi(te) piece of paper。例如： It&amp;rsquo;s a whi(te) piece of paper. There are lots of grea(t) parks in London. I love spli(t) pea soup. I ha(te) potatoes. My ma(te) picked us up from the airport. 关联/r/ 在war后面的单词以元音音素开头，在这种情况下，字母r发音。本土发音中使用这种方式使句子发音更流畅。例如： War and Peace. You know, I really like my mother-in-law. Have you been to the Tower of London? You&amp;rsquo;ve got something in your eye. Never again! 辅音延长/s/ 当一个单词以/s/结尾，下一个单词以/s/开头。 这时不拼读两个/s/的音，也不拼读一个/s/的音，而是品读比一个/s/稍长的音。例如： He looks sad.</description>
+    </item>
+    
+    <item>
+      <title>Href的值类型</title>
+      <link>https://supersonnya.github.io/frontend/html_href/</link>
+      <pubDate>Sun, 10 May 2020 01:31:47 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/frontend/html_href/</guid>
+      <description>绝对URL 指向另一个站点：href=&amp;ldquo;http://www.example.com/index.html&amp;quot; 绝对地址可以是路由：href=&amp;ldquo;http://www.example.com/index&amp;quot; 相对URL 指向站点内的某个文件：href=&amp;ldquo;index.html&amp;rdquo; 相对地址可以是路由：href=&amp;quot;/index&amp;quot;或href=&amp;ldquo;index&amp;rdquo; 锚URL 指向页面中的锚：href=&amp;quot;#top&amp;rdquo; </description>
+    </item>
+    
+    <item>
+      <title>教资考试还有：</title>
+      <link>https://supersonnya.github.io/countdown/teacher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://supersonnya.github.io/countdown/teacher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>考研还有：</title>
+      <link>https://supersonnya.github.io/countdown/master/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://supersonnya.github.io/countdown/master/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>英语六级还有：</title>
+      <link>https://supersonnya.github.io/countdown/english/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://supersonnya.github.io/countdown/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软考还有：</title>
+      <link>https://supersonnya.github.io/countdown/softexam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://supersonnya.github.io/countdown/softexam/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>container on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/container/</link>
+    <description>Recent content in container on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 09 Aug 2020 14:10:02 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker安装及使用</title>
+      <link>https://supersonnya.github.io/operation/container-docker_install_use/</link>
+      <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/container-docker_install_use/</guid>
+      <description>安装Docker # install docker yum insatall docker-io # start docker systemctl start docker # check if installed successfully ps -ef|grep docker # restart docker systemctl restart docker # stop docker systemctl stop docker Docker安装Mysql # install mysql in docker ## search mysql docker search mysql ## instal mysql docker pull mysql ## check images docker images ## build directory cd /opt/ mkdir mysql_docker cd mysql_docker/ echo $PWD # start mysql docker run --name mysqlserver -v $PWD/conf:/etc/mysql/conf.</description>
+    </item>
+    
+    <item>
+      <title>Docker基础命令</title>
+      <link>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</link>
+      <pubDate>Sun, 09 Aug 2020 13:15:42 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</guid>
+      <description>Docker 信息 sudo docker version：查看Docker版本信息。 sudo docker info：显示Docker Engine的相关信息。 容器生命周期 start/stop/restart # 启动一个或多个已经被停止的容器 docker start [OPTIONS] CONTAINER [CONTAINER...] # 停止一个运行中的容器 docker stop [OPTIONS] CONTAINER [CONTAINER...] # 重启容器 docker restart [OPTIONS] CONTAINER [CONTAINER...] rm # 删除一个或多个容器 docker rm [OPTIONS] CONTAINER [CONTAINER...] exec # 在运行的容器中执行命令 docker exec [OPTIONS] CONTAINER COMMAND [ARG...] docker exec -it container_id /bin/bash 容器操作 ps # 列出容器 docker ps [OPTIONS] 镜像仓库 login # 登陆Docker镜像仓库，默认为官方仓库 Docker Hub docker login -u username -p pwd # 登出Docker镜像仓库，默认为官方仓库 Docker Hub docker logout pull # 从镜像仓库中拉取或更新指定镜像 docker pull [OPTIONS] NAME[:TAG|@DIGEST] push # 本地镜像上传到镜像仓库 docker push [OPTIONS] NAME[:TAG] search # 从Docker hub查找镜像 docker search [OPTIONS] term 本地镜像管理 image # 列出本地镜像 docker images rmi # 删除本地镜像 docker rmi [OPTIONS] IMAGE [IMAGE.</description>
+    </item>
+    
+  </channel>
+</rss>

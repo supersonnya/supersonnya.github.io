@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="PL/SQL编程">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_plsql</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 24 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="plsql简介">PL/SQL简介</h3>
+<ul>
+<li>PL/SQL是一种过程化语言，可以控制程序的执行流程、定义变量，实现比较复杂的业务逻辑，是Oracle的专用语言，是对标准SQL语言的扩展，可在内部使用SQL语句。</li>
+</ul>
+<h4 id="plsql块结构">PL/SQL块结构</h4>
+<ul>
+<li>PL/SQL程序以块为基本单位，整个PL/SQL块分布3部分：声明、执行、异常处理。</li>
+<li>每一条语句都必须以分号结束，每条SQL语句可以写成多行的形式，也必须以分号结束。一行中可以有多条SQL语句，之间必须用分号分隔。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">[DECLARE]
+	-- 声明部分，可选。声明块中用到的变量、常量、游标等，只能在当前块中使用
+BEGIN
+	-- 执行部分，必需。整个块的主体，包括主要的逻辑控制和运算
+[EXCEPTION]
+	-- 异常处理，可选。处理执行部分出现的异常，执行完毕整个块直接结束
+END
+</code></pre><h4 id="代码注释和标识符">代码注释和标识符</h4>
+<h5 id="注释">注释</h5>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 单行注释
+/* 多行注释 */
+</code></pre><h5 id="标识符">标识符</h5>
+<ul>
+<li>定义变量、常量时，每行只能定义一个变量或常量，以分号结尾。</li>
+<li>定义变量、常量时，名称必须以英文字符开头，最大长度为30个字符。若以其他字符开始，用双引号引住。</li>
+<li>定义变量、常量时，名称只能使用字母、数字、_、$、#。若使用其他字符，用双引号引住。</li>
+<li>定义变量、常量时，不能使用Oracle关键字，若使用，必须用双引号引住。</li>
+<li>除了由引号引起来的字符串以外，PL/SQL不区分字母的大小写。标准PL/SQL字符集时ASCII字符集的一部分。</li>
+</ul>
+<h5 id="分界符">分界符</h5>
+<ul>
+<li>分界符是对PL/SQL有特殊意义的符号，用来将标识符相互分隔开。</li>
+</ul>
+<h4 id="文本">文本</h4>
+<ul>
+<li>数字文本：整数或浮点数，可使用科学计数法和幂操作符<code>**</code>。</li>
+<li>字符文本：用单引号引住的单个字符，可以是PL/SQL支持的所有可打印字符。</li>
+<li>布尔文本：TRUE、FALSE、NULL。主要用于条件表达式。</li>
+<li>日期时间文本：日期时间值。日期文本必须用单引号引住且与日期格式和日期语言匹配。</li>
+<li>字符串文本：两个或两个以上字符组成的多个字符值，必须用单引号引住。
+<ul>
+<li>10g之前，若字符串文本包含单引号，必须用两个单引号表示。10g之后，可以使用其他分隔符赋值。</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 10g之前
+string_var:=&#39;I&#39;&#39;m a string.&#39;;
+-- 10g之后
+string_var:=q&#39;[I&#39;m a string.]&#39;
+</code></pre><h3 id="数据类型变量和常量">数据类型、变量和常量</h3>
+<ul>
+<li>数据类型是描述数据存储的内存结构，它决定变量中所存储的数据的类型。变量是一种用名称进行识别的标识符号，可以存储不同类型的值。</li>
+</ul>
+<h4 id="基本数据类型">基本数据类型</h4>
+<h5 id="数值类型">数值类型</h5>
+<ul>
+<li>NUMBER：存储整数或浮点数。可使用NUMBER(p,s)格式化数字，p表示精度（所有有效数字的个数），s表示刻度范围（小数点右边小数位的个数）。</li>
+<li>BINARY_INTEGER：存储整数。</li>
+<li>PLS_INTEGER：存储整数。</li>
+<li>NUMBER的子类型(等价的类型别名)：DEC|DECIMAL|DOUBLE|INTEGER|INT|NUMERIC|SMALLINT。</li>
+</ul>
+<h5 id="字符类型">字符类型</h5>
+<ul>
+<li>VARCHAR2(maxlength)：存储长度可变的字符串，maxlength定义时必须给出，没有默认值。
+<ul>
+<li>maxlength最大为32767，数据库类型VARCHAR2最大长度为4000，所以大于4000的PL/SQL变量不可以赋值给数据库的变量，只能赋值给LONG类型的数据库变量。</li>
+</ul>
+</li>
+<li>CHAR(maxlength)：指定长度的字符串，默认长度为1，最大32767。如果赋给CHAR的值小于maxlength，后面用空格补全。数据库类型中的CHAR只有2000字节。</li>
+<li>LONG：可变字符串，最大长度32767字节，数据库类型的LONG最大可达2GB。</li>
+<li>NCHAR|NVARCHAR2：PL/SQL8.0以后加入的类型，长度根据各国字符集确定。</li>
+</ul>
+<h5 id="日期类型">日期类型</h5>
+<ul>
+<li>DATE：存储日期和时间信息，存储空间7个字节，分别存储世纪、年、月、天、小时、分钟、秒。</li>
+</ul>
+<h5 id="布尔类型">布尔类型</h5>
+<ul>
+<li>BOOLEAN：流程控制和业务逻辑判断，值为TRUE、FALSE、NULL。</li>
+</ul>
+<h4 id="特殊数据类型">特殊数据类型</h4>
+<h5 id="type类型">%TYPE类型</h5>
+<ul>
+<li>使用%TYPE可以声明一个与指定列相同的数据类型，通常跟在指定列名的后面。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">declare
+    var_ename scott.emp.ename%type;
+    var_job scott.emp.job%type;
+begin
+    select ename,job
+    into var_ename,var_job -- into子句中的变量只能存储一个单独的值，select子句只能返回一行数据
+    from scott.emp
+    where empno=7369;
+    dbms_output.put_line(var_ename||&#39;的职务是&#39;||var_job);
+end;
+</code></pre><h5 id="recore类型">RECORE类型</h5>
+<ul>
+<li>可以存储由多个列值组成的一行数据。声明记录类型之前，首先需要定义记录类型。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">TYPE recordtype_name IS RECORD(
+var_memeber1 data_type [not null] [:=default_value],
+...
+var_memebern data_type [not null] [:=default_value])
+</code></pre><h5 id="rowtype类型">%ROWTYPE类型</h5>
+<ul>
+<li>结合了%TYPE和记录类型的优点，可根据数据表中行的结构定义一种特殊的数据类型，用来存储从数据表中检索到的一行数据。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">rowVar_name table_name%ROWTYPE;
+</code></pre><h4 id="定义变量和常量">定义变量和常量</h4>
+<h5 id="定义变量">定义变量</h5>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- &lt;变量名&gt; &lt;数据类型&gt; [(长度):=&lt;初始值&gt;];
+var_countryname varchar2(50):=&#39;China&#39;;
+</code></pre><h5 id="定义常量">定义常量</h5>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- &lt;常量名&gt; CONSTANT &lt;数据类型&gt;:=&lt;常量值&gt;;
+con_day constant integer:=365;
+</code></pre><h5 id="变量初始化">变量初始化</h5>
+<ul>
+<li>PL/SQL中未初始化的变量值为NULL，意为未定义或未知的取值，NULL可以默认赋值给任何未初始化变量。</li>
+</ul>
+<h4 id="plsql表达式">PL/SQL表达式</h4>
+<ul>
+<li>表达式不能独立构成语句，其结果是一个值。通常表达式作为赋值语句的一部分出现在赋值运算符的右边，或作为函数的参数。操作数是运算符的参数，PL/SQL运算符分为一元和二元运算符。</li>
+</ul>
+<h5 id="字符表达式">字符表达式</h5>
+<ul>
+<li>并置运算符<code>||</code>，连接字符串。</li>
+</ul>
+<h5 id="布尔表达式">布尔表达式</h5>
+<ul>
+<li>判断结果为真还是为假的条件，有AND、OR、NOT三个运算符。TRUE AND NULL的值为NULL，因为不知道第二个操作数是否为TRUE。</li>
+</ul>
+<h3 id="流程控制语句">流程控制语句</h3>
+<h4 id="选择语句">选择语句</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- IF...THEN
+IF &lt;condition_expression&gt; THEN
+	plsql_sentence
+END IF;
+
+-- IF...THEN..ELSE
+IF &lt;condition_expression&gt; THEN
+	plsql_sentence1;
+ELSE
+	plsql_sentence2;
+END IF;
+
+-- IF...THEN..ELSIF
+IF &lt;condition_expression1&gt; THEN
+	plsql_sentence1;
+ELSEIF &lt;condition_expression2&gt;
+	plsql_sentence2;
+...
+ELSE
+	plsql_sentencen;
+END IF;
+
+-- CASE,9i之后加入
+CASE &lt;seletor&gt;
+	WHEN &lt;expression1&gt; THEN plsql_sentence1;
+	WHEN &lt;expression2&gt; THEN plsql_sentence2;
+	...
+	WHEN &lt;expressionn&gt; THEN plsql_sentencen;
+	[ELSE plsql_sentence;]
+END CASE;
+</code></pre><h4 id="循环语句">循环语句</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- LOOP，至少执行1次循环体
+LOOP
+	plsql_sentence;
+	EXIT WHEN end_conditon_exp
+END LOOP;
+
+-- WHILE，至少执行0次循环体
+WHILE condition_expression LOOP
+	plsql_sentence;
+END LOOP;
+
+-- FOR，可预置循环次数，可正向也可反向遍历，超出上限或下限后循环终止
+FOR variable_counter_name in [REVERSE] lower_limit..upper_limit LOOP
+	plsql_sentence;
+END LOOP;
+
+-- GOTO，无条件转向句，立即转向label标签标识的语句
+GOTO label;
+&lt;&lt;goto_mark&gt;&gt;
+IF TURE THEN
+	GOTO goto_mark;
+</code></pre><h3 id="plsql游标">PL/SQL游标</h3>
+<ul>
+<li>游标提供了一种从表中检索数据并进行操作的灵活手段，游标主要用在服务器上，处理由客户端发送给服务器的SQL语句，或是批处理、存储过程、触发器中的数据处理请求。</li>
+<li>Oracle中，主要使用显式游标和隐式游标，还包括具有引用类型特性的REF游标。</li>
+</ul>
+<h4 id="基本原理">基本原理</h4>
+<ul>
+<li>在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其自动分配上下文区，即一个缓冲区，游标是指向该区的一个指针。为应用程序提供了一种对多行数据查询结果集中的每一行数据进行单独处理的方法。每个会话中可同时打开多个游标，数量由初始化参数open_cursors定义。</li>
+</ul>
+<h4 id="显式游标">显式游标</h4>
+<ul>
+<li>显式游标是由用户声明和操作的一种游标，通常用于操作查询结果集。处理数据步骤包括声明游标、打开游标、读取游标和关闭游标。</li>
+</ul>
+<h5 id="声明游标">声明游标</h5>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">CURSOR cur_name[(input_parameter1[,input_parameter2]...)]
+[RETURE ret_type]
+IS select_sentence;
+-- input_parameter指定打开游标后向游标中传递的值
+-- 定义格式，DATATYPE表示参数山晒最新，不可以指定长度
+para_name [IN] DATATYPE [{:=|DEFAULT} para_value]
+</code></pre><h5 id="打开游标">打开游标</h5>
+<ul>
+<li>游标声明之后，必须打开才能使用。</li>
+<li>打开游标就是执行定义的SELECT语句，执行完毕，查询结果装入内存，游标停在查询结果的首行（不是第一行）。打开游标时，会完成以下几件事：
+<ul>
+<li>检查联编变量的取值。</li>
+<li>根据联编变量的取值，确定活动集。</li>
+<li>活动集的指针指向第一行。</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 如果声明游标时定义了输入参数，并初始化，可省略para_value；若指定para_value，则使用指定的值
+OPEN cursor_name[(para_value1[,para_value2]...)];
+</code></pre><h5 id="读取游标">读取游标</h5>
+<ul>
+<li>读取游标就是逐行将结果集中的数据保存到变量中。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">FETCH cur_name INTO {variable};
+</code></pre><h5 id="关闭游标">关闭游标</h5>
+<ul>
+<li>释放与游标相关联的资源，包括用来存储活动集的存储空间，以及用来存储活动集的临时空间。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">CLOSE cur_name;
+</code></pre><h4 id="隐式游标">隐式游标</h4>
+<ul>
+<li>隐式游标是Oracle为所有数据操纵语句自动声明和操作的一种游标。隐式游标也有属性，使用隐式游标属性时，需要在属性前面加上隐式游标的默认名称——SQL。</li>
+<li>在实际PL/SQL编程中，常使用隐式游标来判断更新数据或删除数据的情况。</li>
+</ul>
+<h4 id="游标的属性">游标的属性</h4>
+<ul>
+<li>显式游标和隐式游标的属性只能反映最近的一条SQL语句的处理结果。游标属性只能用在PL/SQL的流程控制语句中，不能用在SQL语句内。显式游标和隐式游标都有四个属性。</li>
+<li>%FOUND：布尔型属性，如果SQL语句至少影响到一行数据，则为TRUE，否则为FALSE。</li>
+<li>%NOTFOUND：布尔型属性，与%FOUND功能相反。</li>
+<li>%ISOPEN：布尔型属性，游标已经打开为TRUE，游标关闭时为FALSE。</li>
+<li>%ROWCOUNT：数字型属性，返回受SQL语句影响的行数。</li>
+</ul>
+<h4 id="游标变量">游标变量</h4>
+<ul>
+<li>游标变量可以在运行时与不同的语句关联，是动态的。使用游标变量前，必须声明，然后在运行时分配存储空间，游标变量是REF类型的变量。</li>
+</ul>
+<h5 id="声明游标变量">声明游标变量</h5>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 声明引用类型，type是已经被定义的类型
+REF type;
+-- 游标变量是一种引用类型。定义游标变量类型
+-- 类型名是新的引用类型的名字，返回类型是一个记录类型
+TYPE &lt;类型名&gt; IS REF CURSOR
+RETURE &lt;返回类型&gt;
+-- 定义了引用类型之后，就可以声明该变量
+</code></pre><h5 id="打开游标变量">打开游标变量</h5>
+<ul>
+<li>将一个游标变量与一个特定地SELECT语句相关联。如果游标变量是受限的，SELECT返回类型必须与游标所限地记录类型匹配，否则返回错误ORA_6504。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">OPEN &lt;游标变量&gt; FOR &lt;SELECT语句&gt;;
+</code></pre><h5 id="关闭游标变量">关闭游标变量</h5>
+<ul>
+<li>游标变量的关闭与静态游标的关闭类似，使用CLOSE语句，释放查询所使用的空间。</li>
+</ul>
+<h4 id="通过for语句循环游标">通过FOR语句循环游标</h4>
+<ul>
+<li>使用显式游标或隐式游标处理出游多行数据的结果集时，可以配合FOR语句完成。</li>
+<li>在FOR语句中遍历隐式游标中的数据时，通常在IN关键字后面提供由SELECT语句检索的结果集，在检索结果集的过程中，Oracle系统会自动提供一个隐式的游标SQL。</li>
+<li>在FOR语句中遍历显式游标中的数据时，通常在关键字IN的后面提供游标的名称。</li>
+<li>在使用游标的FOR循环中，可以声明游标，但不用打开游标、读取游标和关闭游标，由系统自动完成。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">FOR var_auto_record IN cur_name LOOP
+	plsqlsentence;
+END LOOP;
+</code></pre><h3 id="plsql异常处理">PL/SQL异常处理</h3>
+<h4 id="异常处理方法">异常处理方法</h4>
+<h5 id="预定义异常处理方法">预定义异常处理方法</h5>
+<ul>
+<li>每当PL/SQL程序违反了Oracle的规则或超出系统的限制时，系统就自动地产生内部异常。每个Oracle异常都有一个代码，但异常必须按名称处理。PL/SQL对常见异常定义了异常名。</li>
+</ul>
+<h5 id="用户自定义异常处理方法">用户自定义异常处理方法</h5>
+<ul>
+<li>用户定义的异常要在PL/SQL块的声明部分进行声明，并在BEGIN部分使用RAISE显式地抛出。</li>
+<li>在PL/SQL中，必须使用OTHERS处理程序或用伪命令EXCEPTION_INIT来处理未命名地内部异常。EXCEPTION_INIT的作用是告诉编译程序将一个异常名与一个Oracle错误号码联系起来，之后就可以按名称引用任何内部异常。</li>
+<li>异常是一种状态而不是一个对象，异常名不能出现在赋值语句或SQL语句中。</li>
+</ul>
+<h4 id="异常处理语法">异常处理语法</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 声明异常
+exception_name EXCEPTION;
+-- 为内部异常命名，ORA_errornumber为用户定义的Oracle错误号
+PRAGE EXCEPTION_INIT(exception_name, ORA_errornumber);
+-- 异常定义
+DECLARE
+	exception_name EXCEPTION;
+BEGIN
+	IF condition THEN
+		RAISE exception_name;
+	END IF;
+	EXCEPTION
+		WHEN exception_name THEN
+		statement;
+END;
+-- 异常处理
+EXCEPTION
+	WHEN exception_name1 THEN
+		statement1;
+	WHEN exception_name2 THEN
+		statement2;
+	...
+	WHEN OTHERS THEN
+		statementn;
+-- 使用SQLCODE和SQLERRM函数
+DBMS_OUTPUT.PUT_LINE(&#39;ERRORCODE: &#39;||SQLCODE);
+DBMS_OUTPUT.PUT_LINE(&#39;ERRORMSG: &#39;||SQLERRM);
+</code></pre><h4 id="预定义异常">预定义异常</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 直接引用未初始化的对象属性时，触发异常
+ACCESS_INTO_NULL
+-- CASE语句的WHEN子句没有包含必须条件分支或ELSE子句时，触发异常
+CASE_NOT_FOUND
+-- 给嵌套表变量或VARRAY变量赋值之前，没有初始化集合变量，触发异常
+COLLECTION_IS_NULL
+-- 在已打开游标上执行OPEN操作时触发异常
+CURSOR_ALREADY_OPEN
+-- 当视图从未打开游标提取数据，或者关闭未打开游标时，触发异常
+INVAILD_CURSOR
+-- 当内嵌SQL语句不能将字符转变成数字时，触发异常
+INVALID_NUMBER
+-- 连接到数据库时，提供了不正确的用户名或口令，触发异常
+LOGIN_DENIED
+-- 当执行SELECT INTO未返回行，或引用了未初始化的PL/SQL元素时，触发异常
+NO_DATA_FOUND
+-- 若没有连接到数据库，执行内嵌SQL语句时，触发异常
+NOT_LOGGED_ON
+-- 存在PL/SQL内部问题，需要重新安装数据字典视图和PL/SQL包
+PROGRAM_ERROR
+-- 当执行赋值操作时，如果宿主变量和游标变量具有不兼容的返回类型，触发异常
+ROWTYPE_MISMATCH
+-- 当使用对象类型时，如果在NULL实例上调用成员方法，触发异常
+SELF_IS_NULL
+-- 当执行PL/SQL块时，如果超出内存空间或者内存被破坏，触发异常
+STORAGE_ERROR
+-- 当使用嵌套表或VARRAY元素时，如果下标超出嵌套表或VARRAY元素的范围，触发异常
+SUBSCRIPT_BEYOND_COUNT
+-- 当使用嵌套表或VARRAY元素时，若元素下标为负值，触发异常
+SUBSCRIPT_OUTSIED_LIMIT
+-- 当将字符串转变为ROWID时，若使用了无效字符串，触发异常
+SYS_INVAILD_ROWID
+-- 等待资源超时，触发异常
+TIMEOUT_ON_RESOURCE
+-- 执行SELECT INTO时，若返回超过一行，触发异常
+TOO_MANY_ROWS
+-- 当执行赋值操作时，若变量长度不足以容纳实际数据，触发异常
+VALUE_ERROR
+-- 用数字值除以0，触发异常
+ZERO_DIVIDE
+</code></pre><h4 id="自定义异常">自定义异常</h4>
+<h5 id="错误编号异常">错误编号异常</h5>
+<ul>
+<li>在发生错误时，系统显示错误号和相关描述信息的异常。对于这种异常，首先在PL/SQL块的声明部分使用EXCEPTION类型定义一个一尺合变量名，然后使用语句PRAGMA EXCEPTION_INIT为错误编号关联这个异常变量名，之后就可以像处理系统预定义异常处理。</li>
+</ul>
+<h5 id="业务逻辑异常">业务逻辑异常</h5>
+<ul>
+<li>程序开发人员可根据具体的业务逻辑规则自定义异常，当操作违反业务逻辑规则时，就会引发自定义异常，从而中断程序的正常执行并转到自定义的异常处理部分。</li>
+<li>预定义异常和错误编号异常都是由Oracle系统自动判断的错误，业务逻辑异常需要使用RAISE语句引发。首先要在DECLARE部分使用EXCEPTION类型声明一个异常变量，然后在BEGIN部分根据一定的业务逻辑规则执行RAISE语句，最后在EXCEPTION部分编写异常处理语句。</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="语法倒装，修辞倒装">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="foreignlang">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">倒装</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 12 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="语法倒装">语法倒装</h3>
+<h4 id="虚拟条件句中的倒装">虚拟条件句中的倒装</h4>
+<ul>
+<li>若虚拟条件句中谓语部分含有were、had、should，可以把它们放在句首，省去连词if，变成倒装句。</li>
+</ul>
+<h4 id="副词位于句首">副词位于句首</h4>
+<ul>
+<li>当句首为here、there、now、then等副词，谓语动词为be、go、come等时，主谓要求倒装。
+<ul>
+<li>若主语为人称代词，则不用倒装：There he comes。</li>
+<li>There be/appear句型中，若地点状语放在句首，there有时可以省略。
+<ul>
+<li>On the top of the hill (there) are huge bare rocks.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>many a time、often和next等表示时间、次数或顺序的副词（短语）位于句首时的倒装
+<ul>
+<li>Many a time have I seen her taking a walk alone.</li>
+<li>Often did she come to my home in the past.</li>
+</ul>
+</li>
+<li>well、so、gladly等表示方式、程度的副词位于句首时常倒装。</li>
+<li>副词短语位于句首时，常把主语和谓语倒装。若主语为代词，不用倒装。
+<ul>
+<li>On her left sat her husband.</li>
+<li>Behind the counter she stood, beautiful and pale.</li>
+</ul>
+</li>
+</ul>
+<h4 id="副词或介词with其他成分">副词或介词+with+其他成分</h4>
+<ul>
+<li>表示祈使命令的倒装结构，句中省略了动词。
+<ul>
+<li>Down with it! = Take it down!</li>
+</ul>
+</li>
+</ul>
+<h4 id="so-can-weso-he-is">so can we&amp;so he is</h4>
+<ul>
+<li>若前面句子中所说的情况也适合后面的句子，后面句子常用so、nor、either、no more引导倒装句，并用do、does、did代替实义动词。
+<ul>
+<li>若不是表示情况的适合，而是表示对前面句子内容的同意或肯定，则不能用倒装句。</li>
+<li>倒装结构中的nor可换为and nor或but nor；表另一人或物也不时，也可用and neither。</li>
+</ul>
+</li>
+</ul>
+<h4 id="感叹句中的倒装">感叹句中的倒装</h4>
+<ul>
+<li>what与how引起的感叹句，主语较长时，特别是带有后置定语，常要用倒装主谓语。</li>
+<li>表语前置：How happy the children are.</li>
+<li>be动词前置：Now, isn&rsquo;t that a fine blanket.</li>
+<li>宾语前置：What a lovely birthday present the old lady has received!</li>
+</ul>
+<h4 id="the-more-the-more">the more&hellip;, the more</h4>
+<ul>
+<li>状语前置、表语前置：The harder you work, the happier you feel.</li>
+<li>宾语前置：The more you study, the more you know.</li>
+</ul>
+<h4 id="从句中连接代词或连接副词的倒装">从句中连接代词或连接副词的倒装</h4>
+<ul>
+<li>宾语从句中表语前置：He couldn&rsquo;t tell where his home was.</li>
+<li>主语从句中宾语前置：Whatever I have is at your service.</li>
+<li>状语从句中状语前置：However fast he may run, he will never catch up with Jim.</li>
+</ul>
+<h4 id="行为动词的倒装">行为动词的倒装</h4>
+<ul>
+<li>含有情态动词的谓语中，行为动词（有时连同宾语或补语）可以倒装表示强调，如无情态动词，加上do。
+<ul>
+<li>Go ahead I must.</li>
+</ul>
+</li>
+</ul>
+<h4 id="定语状语和宾语补足语的倒装">定语、状语和宾语补足语的倒装</h4>
+<ul>
+<li>从句、不定式或介词短语等作定语修饰主语时，通常紧跟在主语之后，但如果定语成分过长，应放在谓语动词之后，以使主语和谓语靠近：主语+谓语+定语成分。</li>
+<li>在where、whom、which引导的定语从句中，有时可用倒装结构，以求句子结构平衡、顺畅。
+<ul>
+<li>He&rsquo;s a man on whom falls a heavy responsibility.</li>
+</ul>
+</li>
+<li>动词的宾语过长时，需将修饰动词的状语移到宾语之前：动词+状语+宾语。</li>
+<li>宾语补足语一般在宾语之后，但宾语过长时，应移到宾语之前：动词+宾语补足语+宾语。</li>
+<li>有时，中心词和修饰它的介词短语被状语、插入语或从句隔开；有时，中心词和修饰它的从句被状语隔开。</li>
+<li>如果定语、状语或宾语补足语较短，可倒可不倒。</li>
+</ul>
+<h4 id="of短语的倒装">of短语的倒装</h4>
+<ul>
+<li>of短语修饰主语或表语时，如果过长，可把of短语移到句首，语气更强。</li>
+</ul>
+<h4 id="i-ever-shall">I ever shall</h4>
+<ul>
+<li>ever、certainly、never、once、surely、all等词，正常位于be动词、助动词或情态动词之后，但句子如果以be动词、助动词或情态动词结尾，ever等词要前置。
+<ul>
+<li>I certainly can.</li>
+</ul>
+</li>
+</ul>
+<h4 id="习惯表达">习惯表达</h4>
+<ul>
+<li>三三两两：twos and threes.</li>
+<li>远近：near and far.</li>
+<li>southeast, northeast.</li>
+<li>从南到北：from north to south.</li>
+</ul>
+<h3 id="修辞倒装">修辞倒装</h3>
+<h4 id="only状语位于句首">only+状语位于句首</h4>
+<ul>
+<li>only+句首位于句首表示强调时用倒装，若不在句首或在句首但不修饰状语时用正常语序。</li>
+</ul>
+<h4 id="never等">never等</h4>
+<ul>
+<li>never等具有否定意义或否定形式的词或词组位于句首时用倒装，不位于句首时用正常语序。</li>
+<li>never、seldom、rarely、little、scarcely、hardly、not、nowhere、not often、not a bit、not until、still less、on on account、not on any account、hardly..when、no sooner&hellip;than、on no consideration、neither&hellip;(nor)、in no way、not on one&rsquo;s life、at no time、in no case、by no means、in vain、not infrequently、not once or twice、much less、in/under no circumstances、not only/merely/alone/simply/but also/also/likewise。</li>
+<li>如放在句首的否定词修饰句子的主语，构成主语的一部分，则不用倒装。</li>
+</ul>
+<h4 id="asthough等">as、though等</h4>
+<ul>
+<li>有的让步状语从句可用as、though等引起的倒装结构表示：形容词/副词/动词/分词/名词+as/though+主语+谓语，be用于句首也可表示让步。</li>
+<li>that引导原因状语从句位于句首时，从句中的表语要求倒装。</li>
+<li>as、though、that引导的让步状语从句，表语位于句首时，若主语是名词，可倒可不倒。</li>
+</ul>
+<h4 id="sosuchthat">so/such&hellip;that</h4>
+<ul>
+<li>为加强语气，so/such&hellip;that结构中的so或such位于句首时用倒装；to such a degree/an extent，to such lengths等介词短语位于句首时也到用倒装。</li>
+</ul>
+<h4 id="平衡句子衔接强调">平衡句子、衔接、强调</h4>
+<ul>
+<li>主语较长，为使句子平衡或强调，倒装表语；动词的-ed形式或-ing形式置于句首，主语是名词时，常倒装表语。表语+谓语+主语。</li>
+<li>主语较长，为使句子平衡、顺畅或强调，倒装状语。状语+谓语+主语。</li>
+<li>倒装宾语强调。宾语+主语+谓语。宾语补足语也可倒装置于句首表强调。</li>
+<li>状语置于句首，表示特别强调。状语+主语+谓语+宾语。</li>
+<li>为使句子与上下文衔接紧密进行倒装。</li>
+<li>前一句中所讲的内容以替代词的形式出现在后一句的句首，用倒装形式，常以rather、yet、especially等开头，以引起注意，并使前后两句在意义上的关系更加清楚。</li>
+<li>用代词复指句中的某个成分，表示强调。由代词指代的成分常后置，也可前置，形成倒装。</li>
+<li>谓语部分全部倒装，位于句首，表示特别强调。</li>
+<li>表语、反身代词置于句首，表示特别强调。</li>
+<li>较长的宾语置于状语后。</li>
+<li>较长的宾语置于宾语补足语后。</li>
+<li>较长的定语后置。有多个形容词修饰某个名词时，可以用一个作前置定语，将其他的置于名词后。</li>
+</ul>
+<h4 id="生动描写动作">生动描写动作</h4>
+<ul>
+<li>in、out、away、up、down、off等副词或拟声词可以放在句首倒装。若主语为代词，则用正常语序。</li>
+</ul>
+<h4 id="比较状语从句和方式状语从句倒装">比较状语从句和方式状语从句倒装</h4>
+<ul>
+<li>在复合句中，than或as引导的分句，如果谓语动词省略或表语省略，且是两个句子的主句相比较时，要用倒装，助动词放在主语前。</li>
+</ul>
+<h4 id="名词形容词that主语和be">名词、形容词+that+主语和be</h4>
+<ul>
+<li>表示感叹、评论等，有很强的强调意味。</li>
+</ul>
+<h4 id="宾语从句中的倒装">宾语从句中的倒装</h4>
+<ul>
+<li>在宾语从句为直接引语的句子里，若全部或部分直接引语位于主句之前常用倒装，若置于主句之后则正常语序。</li>
+</ul>
+<h4 id="习惯用法中倒装">习惯用法中倒装</h4>
+<ul>
+<li>How goes it with you? = How are you?</li>
+<li>How came it that she knew the secret? = How dit it come that&hellip;</li>
+<li>What mattered it?</li>
+<li>What care I?</li>
+<li>What signifies it?</li>
+</ul>
+<h4 id="not-it">not it</h4>
+<ul>
+<li>在否定回答中，not有时放在主语前面。</li>
+<li>Will it rain? Not it.</li>
+<li>Are you ready? Not I.</li>
+<li>I think you can come tomorrow. Not we/us.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

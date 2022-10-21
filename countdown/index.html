@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="This is meta description.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <link rel="alternate" type="application/rss+xml" href="https://supersonnya.github.io/countdown/index.xml" title="Sonnya" />
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="countdown">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+<style>
+  :root {
+    --title-color: #8064a9;
+    --text-color: #444444;
+    --light-text-color: #666666;
+    --lighter-text-color: #888888;
+    --link-color: #2aa899;
+    --code-color: #745fb5;
+  }
+
+  h4 {
+    padding-left: 0.4em;
+    border-left: 0.4em solid var(--title-color);
+    border-bottom: 1px solid var(--title-color);
+  }
+
+  .uk-countdown-number {
+    font-size: 5.2rem;
+  }
+
+  #countdown {
+    background-image: linear-gradient(to right, #BC95C6, #7DC4CC);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 30px;
+  }
+</style>
+
+<section>
+  <div class="uk-container uk-margin-xlarge-bottom">
+    <div uk-filter="target: .js-filter">
+      <ul class="js-filter uk-child-width-1-1 uk-child-width-1-2@m uk-text-center" uk-grid uk-height-match="target: > li > div > .fixy">
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+              <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-default uk-width-1-1@m" id="content-card">
+                  <div class="uk-card-body">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                      <div class="uk-width-expand">
+                        <h4 class="uk-card-title uk-text-left uk-text-bold uk-margin-small-top uk-margin-bottom">教资考试还有：</h4>
+                        <div id="countdown" class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: 2022-10-29T09:00:00&#43;08:00">
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-days"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">天</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-hours"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">时</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-minutes"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">分</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-seconds"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">秒</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+              <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-default uk-width-1-1@m" id="content-card">
+                  <div class="uk-card-body">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                      <div class="uk-width-expand">
+                        <h4 class="uk-card-title uk-text-left uk-text-bold uk-margin-small-top uk-margin-bottom">考研还有：</h4>
+                        <div id="countdown" class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: 2022-12-24T09:00:00&#43;08:00">
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-days"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">天</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-hours"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">时</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-minutes"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">分</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-seconds"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">秒</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+              <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-default uk-width-1-1@m" id="content-card">
+                  <div class="uk-card-body">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                      <div class="uk-width-expand">
+                        <h4 class="uk-card-title uk-text-left uk-text-bold uk-margin-small-top uk-margin-bottom">英语六级还有：</h4>
+                        <div id="countdown" class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: 2022-12-10T09:00:00&#43;08:00">
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-days"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">天</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-hours"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">时</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-minutes"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">分</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-seconds"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">秒</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="uk-card uk-card-default" style="position: relative;">
+            <div class="fixy" style="min-height:85px !important;">
+              <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-default uk-width-1-1@m" id="content-card">
+                  <div class="uk-card-body">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid style="margin-top: 0px!important;">
+                      <div class="uk-width-expand">
+                        <h4 class="uk-card-title uk-text-left uk-text-bold uk-margin-small-top uk-margin-bottom">软考还有：</h4>
+                        <div id="countdown" class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: 2022-11-05T09:00:00&#43;08:00">
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-days"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">天</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-hours"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">时</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-minutes"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">分</div>
+                          </div>
+                          <div class="uk-countdown-separator">:</div>
+                          <div>
+                            <div class="uk-countdown-number uk-countdown-seconds"></div>
+                            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">秒</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="faq-content">
+          <h2>
+            Jessica&#39;s Goals
+          </h2>
+          <p>
+            合理安排每天的时间，独立确定自己的目标~
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="faq-accordion" id="faqAccordion">
+          
+          <div class="faq-accordion-item">
+            <div class="header">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link
+                  
+                  "
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="false"
+                >
+                  学业方面
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse "
+              data-parent="#faqAccordion"
+            >
+              <div class="body">
+                选择继续学习深造还是选择就业？
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-accordion-item">
+            <div class="header">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link
+                  
+                  
+                  collapsed
+                  "
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                >
+                  个人持续发展及成长方面
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseTwo"
+              class="collapse "
+              data-parent="#faqAccordion"
+            >
+              <div class="body">
+                培养阅读、锻炼等良好的学习生活习惯，在漫长的一生中，真正让自己过得比较幸福圆满、并且能够持续取得学业和事业上比较好成就的，是能够安然地一天天地将时间花费在一些有价值有意义的事情上。
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-accordion-item">
+            <div class="header">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link
+                  
+                  
+                  collapsed
+                  "
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                >
+                  人际关系方面
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseThree"
+              class="collapse "
+              data-parent="#faqAccordion"
+            >
+              <div class="body">
+                培养与人相处的能力和合作精神，尽量培养自己的人际交往能力，结交到一群能相互欣赏、相互支持的朋友和同学。
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonial">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="testimonial-content">
+          <h2>
+            Jessica&#39;s Mottos
+          </h2>
+          <p>
+            追风赶月莫停留，平芜尽处是春山。
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="testimonial-slider">
+          
+          
+            <div class="testimonial-slider-item">
+              <p>太过迁就别人，别人就会变本加厉的为难你；太过忍让别人，别人就会得寸进尺的伤害你。事实上你所遇见的人，多数都是被你的好给惯出来的。</p>
+              <div class="testimonial-slider-person">
+                <div class="thumb">
+                  <img src=../images/client/client-2.png alt="person-thumb" />
+                </div>
+                <div class="content">
+                  <h3> Jessica </h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="testimonial-slider-item">
+              <p>命运如同手中的掌纹，无论多曲折，终掌握在自己手中。</p>
+              <div class="testimonial-slider-person">
+                <div class="thumb">
+                  <img src=../images/client/client-1.png alt="person-thumb" />
+                </div>
+                <div class="content">
+                  <h3> Jessica </h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="testimonial-slider-item">
+              <p>努力了、珍惜了、问心无愧就好，不期待突如其来的好运，只希望所有的努力终有回报。</p>
+              <div class="testimonial-slider-person">
+                <div class="thumb">
+                  <img src=../images/client/client-3.png alt="person-thumb" />
+                </div>
+                <div class="content">
+                  <h3> Jessica </h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="testimonial-slider-item">
+              <p>跟别人比，会使得自己永远都不快乐。跟自己比，看到自己每天都在进步，你会很快乐。</p>
+              <div class="testimonial-slider-person">
+                <div class="thumb">
+                  <img src=../images/client/client-1.png alt="person-thumb" />
+                </div>
+                <div class="content">
+                  <h3> Jessica </h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Critical CSS -->
+
+<link href="https://supersonnya.github.io/scss/critical.min.css" rel="stylesheet" />
+
+
+<link href="https://supersonnya.github.io/scss/non-critical.min.css" rel="stylesheet" />
+
+<script src="https://supersonnya.github.io/js/vendor.min.js"></script>
+
+<script src="https://supersonnya.github.io/js/script.min.js"></script>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

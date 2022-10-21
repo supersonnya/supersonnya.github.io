@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="Oracle 11g体系结构">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_structure</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 36 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="oracle-11g体系结构概述">Oracle 11g体系结构概述</h3>
+<ul>
+<li>Oracle数据库是一格逻辑概念，而不是物理概念上安装了Oracle数据库管理系统的服务器。Oracle数据库管理系统有3个重要概念：实例、数据库和数据库服务器。</li>
+<li>实例是指一组Oracle后台进程以及在服务器中分配的共享内存区域；数据库是由基于磁盘的数据文件、控制文件、日志文件、参数文件和归档日志文件等组成的物理文件集合；数据库服务器是指管理数据库的各种软件工具（如SQL-Plus、OEM等）和实例及数据库3个部分。从实例与数据库之间的辩证关系来讲，实例用于管理和控制数据库；而数据库为实例提供数据。一个数据库可以被多个实例装载和打开；而一个实例在其生存期内只能装载和打开一个数据库。</li>
+<li>数据库的主要功能就是存储数据，数据库存储数据的方式通常称为存储结构，Oracle数据库的存储结构分为逻辑存储结构和物理存储结构。逻辑存储结构用于描述Oracle内部组织和管理数据的方式，物理存储结构用于展示Oracle在操作系统中的物理文件组成情况。</li>
+<li>SQL命令从客户端发出后，由Oracle的服务器进程进行响应，然后在内存区域中进行语法分析、编译和执行，接着将修改后的数据写入数据文件，将数据库的修改信息写入日志文件，最后将SQL的执行结果返回给客户端。</li>
+</ul>
+<h3 id="逻辑存储结构">逻辑存储结构</h3>
+<ul>
+<li>Oracle的逻辑存储结构是一种层次结构，主要由表空间、段、数据区和数据块等概念组成。逻辑结构是面向用户的，当用户使用Oracle设计数据库时，其使用的就是逻辑存储结构。</li>
+</ul>
+<h4 id="数据块">数据块</h4>
+<ul>
+<li>数据块（Data Block）是Oracle逻辑存储结构中的最小的逻辑单位，也是执行数据库输入／输出操作的最小存储单位。Oracle数据存放在“Oracle数据块”中，而不是“操作系统块”中。通常Oracle数据块是操作系统块的整数倍。Oracle数据块有一定的标准大小，其大小被写入到初始化参数DB_BLOCK_SIZE中。Oracle支持在同一个数据库中使用多种大小的块，与标准块大小不同的块就是非标准块。</li>
+<li>数据块中可以存放表数据、索引数据和簇数据等，无论存放哪种类型的数据，其结构都是相同的。数据块由块头、表目录、行目录、空余空间和行数据这5部分组成
+<ul>
+<li>块头：存放数据块的基本信息，如块的物理地址、块所属的段的类型。</li>
+<li>表目录：存放表的相关信息。如果数据块中存储的数据是表数据，则表目录中存储有关这些表的相关信息。</li>
+<li>行目录：如果块中有行数据存在，则这些行的信息将被记录在行目录中。这些信息包括行的地址等。</li>
+<li>空余空间：空余空间是一个块中未使用的区域，这片区域用于新行的插入和已经存在的行的更新。</li>
+<li>行数据：用于存放表数据和索引数据的地方，这部分空间已被数据行所占用（如表中的若干行数据记录）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="数据区">数据区</h4>
+<ul>
+<li>数据区（Extent也可称作数据扩展区）是由一组连续的Oracle数据块所构成的Oracle存储结构，一个或多个数据块组成一个数据区，一个或多个数据区再组成一个段（Segment）。使用数据区的目的是用来保存特定数据类型的数据，数据区是Oracle存储分配的最小单位，Oracle就以数据区为单位进行存储空间的扩展。当一个段中的所有空间被使用完后，Oracle系统将自动为该段分配一个新的数据区。一个Oracle对象至少包含一个数据区。设置一个表或索引的存储参数包含设置它的数据区大小。</li>
+</ul>
+<h4 id="段">段</h4>
+<ul>
+<li>段（Segment）是由一个或多个数据区构成，它不是存储空间的分配单位，而是一个独立的逻辑存储结构，是为特定的数据对象（如表、索引、回滚等）分配的一系列数据区。段内包含的数据区可以不连续，并且可以跨越多个文件，使用段的目的是用来保存特定对象，Oracle也把这种占用空间的数据对象统一称为段。一个段只属于一个特定的数据对象，每当创建一个具有独立段的数据对象时，Oracle将为它创建一个段。
+<ul>
+<li>数据段：数据段中保存的是表中的数据记录。当创建一个表时，系统自动创建一个以该表的名字命名的数据段。</li>
+<li>索引段：索引段中包含了用于提高系统性能的索引。一旦建立索引，系统自动创建一个以该索引的名字命名的索引段。</li>
+<li>回滚段：回滚段（也可称作撤销段）中保存了回滚条目，Oracle将修改前的旧值保存在回滚条目中。利用这些信息，可以撤销未提交的操作，以便为数据库提供读入一致性和回滚未提交的事务，即用来回滚事务的数据空间。当一个事务开始处理时，系统为之分配回滚段，回滚段可以动态创建和撤销。Oracle 11g系统有个默认的回滚段，其管理方式既可以是自动的，也可以是手工的。</li>
+<li>临时段：当执行创建索引、查询等操作时，Oracle可能会使用一些临时存储空间，用于暂时性地保存解析过的查询语句以及在排序过程中产生的临时数据。Oracle系统将在专门用于存储临时数据的表空间中为操作分配临时段。
+<ul>
+<li>在执行CREATE INDEX、SELECT ORDER BY、SELECT DISTINCT和SELECT GROUP BY等几种类型的SQL语句时，Oracle系统就会在临时表空间中为这些语句的操作分配一个临时段。在数据库管理过程中，若经常需要执行上面这类SQL语句，最好调整SORT_AREA_SIZE初始化参数来增大排序区，从而使排序操作尽量能够在内存中完成，以获得更好的执行效率，但同时这对数据库服务器的内存空间提出了更大的要求。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="表空间">表空间</h4>
+<ul>
+<li>表空间是数据库的最大逻辑划分区域，通常用来存放数据表、索引、回滚段等数据对象（即Segment），任何数据对象在创建时都必须被指定存储在某个表空间中。表空间（属逻辑存储结构）与数据文件（属物理存储结构）相对应，一个表空间由一个或多个数据文件组成，一个数据文件只属于一个表空间；Oracle数据的存储空间在逻辑上表现为表空间，而在物理上表现为数据文件。</li>
+<li>每个数据库至少有一个表空间（即SYSTEM表空间），表空间的大小等于所有从属于它的数据文件大小的总和。由于表空间在物理上（即磁盘上）包含操作系统中的一个或多个数据文件，因此在表空间中创建的数据对象就存在以下两种情况。
+<ul>
+<li>若表空间只包含一个数据文件，则该表空间中的所有对象都存储在这个数据文件中。</li>
+<li>若表空间包含多个数据文件，则Oracle即可将数据对象存储在该表空间的任意一个数据文件中，也可以将同一个数据对象中的数据分布在表空间的多个数据文件中。</li>
+</ul>
+</li>
+<li>在创建数据库时，Oracle系统会自动创建多个默认的表空间，这些表空间除了用于管理用户数据的表空间之外，还包括用于管理Oracle系统内部数据（如数据字典）的表空间，下面列举了Oracle 11g版本默认创建的主要表空间。
+<ul>
+<li>SYSTEM表空间——系统表空间。它用于存放Oracle系统内部表和数据字典的数据，如表名、列名、用户名等。Oracle本身不赞成将用户创建的表、索引等存放在系统表空间中。表空间中的数据文件个数不是固定不变的，可以根据需要向表空间中追加新的数据文件。</li>
+<li>SYSAUX表空间。它是Oracle 11g新增加的表空间，是随着数据库的创建而创建的，它充当SYSTEM的辅助表空间，降低了SYSTEM表空间的负荷，主要存储除数据字典以外的其他数据对象。SYSAUX表空间一般不存储用户的数据，由Oracle系统内部自动维护。</li>
+<li>UODO表空间——撤销表空间。它用于存储撤销信息的表空间。当用户对数据表进行修改操作（包括插入、更新、删除等操作）时，Oracle系统自动使用撤销表空间来临时存放修改前的旧数据。当所做的修改操作完成并执行提交命令后，Oracle根据系统设置的保留时间长度来决定何时释放掉撤销表空间的部分空间。一般在创建Oracle实例后，Oracle系统自动创建一个名字为UNDOTBS1的撤销表空间，该撤销表空间对应的数据文件是UNDOTBS01.DBF。</li>
+<li>USERS表空间——用户表空间。它是Oracle建议用户使用的表空间，可以在这个表空间上创建各种数据对象。例如，创建表、索引、用户等数据对象。Oracle系统的样例用户scott对象就存放在USERS表空间中。</li>
+<li>除了Oracle系统默认创建的表空间外，用户可根据应用系统的实际情况及其所要存放的对象类型创建多个自定义的表空间，以区分用户数据与系统数据。此外，不同应用系统的数据应存放在不同的表空间上，而不同表空间的文件应存放在不同的盘上，从而减少I/O冲突，提高应用系统的操作性能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="物理存储结构">物理存储结构</h3>
+<ul>
+<li>Oracle数据库的物理存储结构由多种物理文件组成，主要有数据文件、控制文件、重做日志文件、归档日志文件、参数文件、密码文件和警告日志文件等。</li>
+</ul>
+<h4 id="数据文件">数据文件</h4>
+<ul>
+<li>用于保存用户应用程序数据和Oracle系统内部数据的文件，创建表空间的同时会创建数据文件。一个数据文件只能属于一个表空间。</li>
+<li>在表空间创建对象时，存储的数据文件由Oracle系统选择，一个数据对象的数据可以全部存储在一格数据文件中，也可以分布存储在同一个表空间的多个数据文件中。</li>
+<li>读取数据时，先从数据文件读入高速数据缓冲区。若读取的数据不在缓冲区，需要读入并存储在缓冲区。修改和插入数据时，不会立即写入数据文件，而是保存在缓冲区内，由后台进程DBWR决定如何写入数据文件，减少了磁盘I/O操作。</li>
+<li>数据文件有3种类型：
+<ol>
+<li>系统数据文件：属于系统表空间，存放特殊的用户数据和Oracle系统本身的数据。</li>
+<li>撤销数据文件：属于撤销表空间，修改数据使用撤销段(位于撤销表空间)临时存放修改前的旧数据。</li>
+<li>用户数据文件：用于存放用户应用系统数据，包括与应用系统有关的所有信息。</li>
+<li>Oracle 9i之后，Oracle将临时表空间对应的临时数据文件与一般数据文件分开。</li>
+</ol>
+</li>
+</ul>
+<h4 id="控制文件">控制文件</h4>
+<ol>
+<li>控制文件是一个二进制文件，记录数据库的物理结构，主要包括数据库名、数据文件和日志文件的名字和位置、数据库建立日期等信息。系统运行过程中，还存放有系统更改好、检查点信息及归档的当前状态等信息。控制文件一般在Oracle系统安装或创建数据库时自动创建，出于安全考虑，系统会自动创建2个或3个控制文件，记录相同的信息。</li>
+<li>Oracle实例启动必须访问控制文件，若控制文件记录了错误信息或找不到可用控制文件，实例无法正常启动。
+<ul>
+<li>Oracle实例正常启动时，首先访问初始化参数文件SPFILE，然后Oracle为SGA分配内存。这时Oracle实例处于安装状态，并且控制文件处于打开状态，接下来自动读出控制文件中所有数据文件和日志文件信息，并打开当前数据库中所有的数据文件和日志文件供用户访问。</li>
+</ul>
+</li>
+<li>每个数据库至少有一个控制文件，一个数据库可同时拥有多个控制文件，一个控制文件只能属于一个数据库。数据库物理组成更改时，Oracle自动更新控制文件，数据恢复时，也需要控制文件。</li>
+</ol>
+<h4 id="日志文件">日志文件</h4>
+<ul>
+<li>记录对数据库所做的修改，对数据库所做的修改几乎都记录在日志文件中。出现问题时，可以通过日志文件得到原始数据。每个Oracle实例都启动一个日志线程记录数据库变化，日志线程由若干日志组构成，每个日志组有一个或多个日志文件。</li>
+<li>运行过程中产生的日志信息，首先临时存放在SGA的重做日志缓冲区中，发出COMMIT命令或日志缓冲区信息满1/3时，LGWR将日志信息从缓冲区读取出来，写入日志文件组编号较小的文件里，一个日志组写满后接着写另一个日志组。所有日志文件使用一遍后，再次转向第一个日志组重新覆写。
+<ul>
+<li>重做日志文件：记录数据库所有发生过的更改信息及由Oracle内部行为而引起的数据库变化信息，数据库恢复时，可以日志文件读取原始记录。数据库运行期间，执行COMMIT时，数据库首先将原始记录写入日志文件，成功后才将新的记录传递给应用程序。</li>
+<li>归档日志文件：日志覆写会导致较早日志信息被覆盖，开启归档模式，会在各个日志文件都被写满而即将覆盖之前，由ARCH将即将被覆盖的日志文件中的日志信息读取写入归档日志文件。LGWR需要等待ARCH结束才能开始覆写文件，延迟系统响应，同时占用大量磁盘空间，默认不启用归档模式。</li>
+</ul>
+</li>
+</ul>
+<h4 id="服务器参数文件">服务器参数文件</h4>
+<ul>
+<li>SPFILE是二进制文件，记录Oracle数据库的基本参数信息。在安装数据库系统时由系统自动创建，参数由Oracle系统自动维护，若有修改参数，尽可能避免对文件直接编辑，使用OEM或ALTER SYSTEM。</li>
+</ul>
+<h4 id="密码文件">密码文件</h4>
+<ul>
+<li>验证sysdba权限的二进制文件，远程用户以sysdba或sysoper连接到数据库时，一般要用密码文件验证。</li>
+</ul>
+<h4 id="警告文件">警告文件</h4>
+<ul>
+<li>记录Oracle系统的运行信息（实例的启动与关闭、建立表空间、增加数据文件等）和错误信息（空间扩展失败、启动实例失败等）。警告文件会越来越大，应该定期删除。</li>
+</ul>
+<h4 id="跟踪文件">跟踪文件</h4>
+<ul>
+<li>后台进程跟踪文件：记录后台进程的警告或错误信息。</li>
+<li>用户进程跟踪文件：记录与用户进程相关信息，主要用于跟做SQL语句。</li>
+</ul>
+<h3 id="oracle-11g服务器结构">Oracle 11g服务器结构</h3>
+<ul>
+<li>Oracle服务器主要由实例、数据库、程序全局区和前台进程组成。实例提供管理数据库的功能，数据库用来存储系统数据。实例可划分为SGA和后台进程两部分，SGA使用操作系统的内存资源，后台进程需要使用CPU与内存资源。PGA是一个非共享的内存区域，用于管理用户进程的私有资源。前台进程可以划分为用户进程和服务器进程，需要使用CPU和内存资源。</li>
+</ul>
+<h4 id="系统全局区sga">系统全局区（SGA）</h4>
+<ul>
+<li>SGA是所有用户进程共享的一块内存区域。主要由高速数据缓冲区、重做日志缓冲区、共享池、大型池和Java池等内存结构组成。SGA随数据库实例启动加载到内存中，实例关闭时，SGA区域也消失。</li>
+<li>高速数据缓冲区：存放最近访问过的数据块，若访问数据不在缓冲区，先从数据文件读入缓冲区再从缓冲区将数据返回。经常或最近访问的数据块被放置到缓冲区前端，不常访问的放置到后端，缓冲区被填满是，自动挤掉不常访问的数据块。缓冲区分为3个部分。
+<ul>
+<li>脏数据区：存放已被修改过的数据，这些数据等待被写入数据文件。</li>
+<li>空闲区：不包含任何数据，可以被写入数据。</li>
+<li>保留区：包含正在被用户访问的数据块和明确保留以作为将来使用的数据块，被保留在缓冲区。</li>
+</ul>
+</li>
+<li>重做日志缓冲区：存放对数据块进行修改操作时产生的日志信息，写入重做日志文件前，先存放在缓冲区，在检查点发生或缓冲区数据达到一定值时，写入重做日志文件。重做日志缓冲区的大小对数据库性能的影响较小，通常较大的重做日志缓冲区能减少I/O读写次数。</li>
+<li>共享池：SGA保留的内存区域，用于缓存SQL语句、PL/SQL语句、数据字典、资源锁、字符集和其他控制结构。包括库高速缓冲区和字典高速缓冲区。
+<ul>
+<li>库高速缓冲区：主要包括共享SQL区和私有SQL区。存放最近用过的SQL语句、PL/SQL语句的文本和执行计划，下次执行相同语句时，直接使用执行计划。每条被缓存的语句分为两个部分，分别存储在共享SQL区和私有SQL区。共享SQL区存放语法分析结果和执行计划，私有SQL区存放语句中的绑定变量、环境和会话等信息。</li>
+<li>字典高速缓冲区：存放Oracle系统内部管理所需要的数据字典信息，如用户名、数据对象和权限等。</li>
+</ul>
+</li>
+<li>大型池：不是必需内存结构，在特殊情况下，实例使用大型池减轻共享池访问压力。
+<ul>
+<li>使用恢复管理器进行备份和恢复操作时，大型池作为I/O缓冲区使用。</li>
+<li>使用I/O Slave仿真异步I/O功能时，大型池作为I/O缓冲区使用。</li>
+<li>执行具有大量排序操作的SQL语句。</li>
+<li>使用并行查询时，大型池作为并行查询进程交换信息的地方。</li>
+<li>&ndash;若未设置大型池，实例需要使用时，会在共享池或PGA分配缓存空间，影响共享池和PGA的工作效率。&ndash;</li>
+</ul>
+</li>
+<li>Java池：提供内存空间给Java虚拟机使用，支持在数据库中运行Java程序包。</li>
+<li>流池：在数据库与数据库之间进行信息共享。</li>
+</ul>
+<h4 id="程序全局区pga">程序全局区（PGA）</h4>
+<ul>
+<li>也称用户进程全局区，内存区在进程私有区而不是共享区。每个Oracle服务器进程只能访问属于自己的那部分PGA资源，各个服务进程的PGA总和即为实例的PGA大小。PGA通常包括私有SQL区和会话区。</li>
+<li>私有SQL区：存储变量以及SQL语句运行时的内存结构信息。把私有SQL区与对应的共享SQL区就可获得一条SQL语句的完整缓存数据。私有SQL区可分为静态区和动态区。静态区的信息在会话过程中保持不变，会话关闭时才释放。动态区信息在整个会话过程中不断变化，SQL语句执行完毕释放。</li>
+<li>会话区：存放用户的会话信息。如果数据库处于共享服务器连接模式下，会话区位于SGA而不是PGA。</li>
+</ul>
+<h4 id="前台进程">前台进程</h4>
+<ul>
+<li>前台进程包括用户进程和服务器进程，不属于实例的一部分。</li>
+<li>用户进程：能够产生或执行SQL语句的应用程序。
+<ul>
+<li>连接：用户进程与实例直接建立的通信渠道。</li>
+<li>会话：用户进程与实例建立连接后形成的用户与实例之间的交互方式，一般是用户发出请求，数据库实例为用户返回响应消息的方式。</li>
+</ul>
+</li>
+<li>服务器进程：处理用户会话过程中想数据库实例发出的SQL语句或SQL-PLUS命令，分为专用服务器模式和共享服务器模式。专用模式下，每个用户进程都有一个专用的服务器进程，服务器进程代表用户执行SQL验收，必要时可回传执行结果给用户进程。共享模式下，每个用户不直接与服务器进程连接，而是连接到分派程序，每个分派程序可以同时连接多个用户进程。</li>
+</ul>
+<h4 id="后台进程">后台进程</h4>
+<ul>
+<li>后台进程是一组运行在Oracle服务器端的后台程序，是Oracle实例的重要组成部分。其中SMON、PMON、DBWR、LGWR、CKPT这5个后台进程必须正常启动，否则将导致数据库实例崩溃。</li>
+</ul>
+<h5 id="数据写入进程dbwr">数据写入进程（DBWR）</h5>
+<ul>
+<li>主要任务是负责将内存中的脏数据回写到数据文件中。
+<ul>
+<li>高速数据缓冲区没有足够空闲数据块存放新数据。</li>
+<li>检查点进程启动后，会强制要求DBWR将某些脏数据块写入数据文件。</li>
+<li>脏数据块在高速缓冲区中存放超过3秒钟。</li>
+<li>&ndash;DBWR进程的数量不应超过系统处理器的数量，多余的无法发挥作用，还会耗费系统资源。&ndash;</li>
+</ul>
+</li>
+</ul>
+<h5 id="检查点进程ckpt">检查点进程（CKPT）</h5>
+<ul>
+<li>检查点进程可以看作一个事件，当发生日志切换（日志写入操作正要从一个日志组切换到另一组时），就会启动检查点进程。</li>
+</ul>
+<h5 id="日志写入进程lgwr">日志写入进程（LGWR）</h5>
+<ul>
+<li>将重做日志缓冲区的数据写入重做日志文件。&ndash;发生提交命令，缓冲区满1/3，日志信息存放超过3秒钟。&ndash;</li>
+</ul>
+<h5 id="归档进程arch">归档进程（ARCH）</h5>
+<ul>
+<li>可选进程，数据库处于归档模式时，该进程才起作用。系统比较繁忙导致LGWR等待ARCH时，可修改参数启动多个归档进程。</li>
+</ul>
+<h5 id="系统监控进程smon">系统监控进程（SMON）</h5>
+<ul>
+<li>在数据库系统启动时执行恢复工作的强制性进程。</li>
+</ul>
+<h5 id="进程监控进程pmon">进程监控进程（PMON）</h5>
+<ul>
+<li>监控其他进程的状态，当有进程启动失败时，PMON会清除失败的用户进程，释放资源。</li>
+</ul>
+<h5 id="锁进程lckn">锁进程（LCKN）</h5>
+<ul>
+<li>可选进程，并行服务器模式下可出现多个锁定进程以利于数据库通信。</li>
+</ul>
+<h5 id="恢复进程reco">恢复进程（RECO）</h5>
+<ul>
+<li>可选进程，在分布式数据库模式下用于恢复数据不一致。</li>
+</ul>
+<h5 id="调度进程dnnn">调度进程（DNNN）</h5>
+<ul>
+<li>可选进程，在共享服务器模式下使用，可启动多个调度进程。</li>
+</ul>
+<h5 id="快照进程snpn">快照进程（SNPN）</h5>
+<ul>
+<li>用于处理数据库快照的自动刷新，并通过DBMS_JOB包运行预定的数据库存储过程。</li>
+</ul>
+<h3 id="数据字典">数据字典</h3>
+<ul>
+<li>Oracle存放关于数据库内部信息的地方，用来描述数据库的内部运行和管理情况。Oracle数据字典名称由前缀和后缀组成，使用<code>_</code>连接。
+<ul>
+<li>dba_：包含数据库实例的所有对象。</li>
+<li>v$：当前实例的动态视图，包含系统管理和系统优化等所使用的视图。</li>
+<li>user_：记录用户的对象信息。</li>
+<li>gv_：分布式环境下所有实例的动态视图，包含系统管理和系统优化等所使用的视图。</li>
+<li>all_：记录用户的对象信息及被授权访问的对象信息。</li>
+</ul>
+</li>
+<li>常用数据字典</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#999;font-style:italic">-- 基本数据字典
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>dba_tablespaces<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_ts_quotas<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dab_free_cpace<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_segments<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_extents<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_tables<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_tab_columns<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_views<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_synonyms<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_sequences<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_constraints<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_indexs<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_ind_columns<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_triggers<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dab_source<span style="color:#666"> </span><span style="color:#999;font-style:italic">-- 所有用户的存储过程信息
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>dba_data_files<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_tab_grants/privs<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_objects<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>dba_users<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#999;font-style:italic">-- 常用动态性能视图
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v$database<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$datafile<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$log<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$logfile<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$archived_log<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$archived_dest<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$controlfile<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$instance<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$system_parameter<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$sga<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$sgastat<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$parameter<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$lock<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$session<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$sql<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$sqltext<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$bgprocess<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>v$process<span style="color:#666">
+</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

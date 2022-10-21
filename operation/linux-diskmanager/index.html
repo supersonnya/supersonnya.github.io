@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">硬盘分区管理</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 08, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 7 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="安装硬盘和分区">安装硬盘和分区</h3>
+<ol>
+<li>使用 fdisk 建立分区表</li>
+<li>使用 mkfs 建立文件系统</li>
+<li>使用 fsck 检查文件系统</li>
+<li>测试分区</li>
+<li>创建并激活交换分区</li>
+<li>配置 fstab 文件</li>
+<li>重新启动系统</li>
+<li>如果某个文件系统出了问题，系统将不能正常启动，而是引导进入救援模式。
+<ol>
+<li>在这种情况下，用户应该依次按照下面这些步骤来手动解决问题。</li>
+<li>提供 root 口令，以 root 身份登录系统。</li>
+<li>使用 fsck 检查并试图修复受损的文件系统。</li>
+<li>如果问题依然存在，运行 mkfs 重新在分区上建立文件系统</li>
+<li>不太幸运的话，可能需要使用 fdisk 重新建立分区表。</li>
+<li>总是可以通过删除 fstab 文件中对应的配置行（或者给它打上注释符号），来临时解决系统无法正常启动的问题。</li>
+</ol>
+</li>
+</ol>
+<h3 id="高级硬盘管理">高级硬盘管理</h3>
+<h4 id="独立磁盘冗余阵列raid">独立磁盘冗余阵列：RAID</h4>
+<ul>
+<li>磁盘阵列，独立磁盘构成的具有冗余能力的阵列，磁盘阵列就是由很多价格较为便宜的磁盘，以硬件或者软件的形式形成一个巨大的磁盘组，利用多个磁盘组、多个磁盘组合在一起，提升整个磁盘系统效能。同时还可以通过减少磁盘容量为代价去增加数据的安全性。</li>
+</ul>
+<h5 id="raid实现方式">RAID实现方式</h5>
+<ul>
+<li>硬RAID：使用硬件阵列卡，用专门的RAID控制器将硬盘和电脑连接起来，RAID控制器负责将所有的RAID成员磁盘配置成一个虚拟的RAID磁盘卷。对于操作系统而言，只能识别到由RAID控制器配置后的虚拟磁盘，而无法识别到组成RAID的各个成员盘。这种技术一般由供应商提供，不需要特殊操作。</li>
+<li>软RAID：通过操作系统软件去实现，在Linux中可通过<code>mdadm</code>命令实现。</li>
+</ul>
+<h5 id="raid-0">RAID 0</h5>
+<ul>
+<li>
+<p>条带式，最早出现的RAID模式。</p>
+</li>
+<li>
+<p>工作模式：将资料分成多个部分，再将多个部分同时往两块磁盘里写入数据，跟内存的双通道技术相似。</p>
+</li>
+<li>
+<p>最少需要磁盘数：2块。</p>
+</li>
+<li>
+<p>支持损坏磁盘数：不支持损坏硬盘。</p>
+</li>
+<li>
+<p>优点：大大的提高了磁盘的读写速度。</p>
+</li>
+<li>
+<p>缺点：大大提高了数据的风险性，数据是保存在多个磁盘中，一旦有一块磁盘损坏，就失去了所有的数据。</p>
+</li>
+<li>
+<p>应用环境：不要求安全，只要求速度。适合大规模并发读取。例如数据库从库，存储从库。</p>
+</li>
+</ul>
+<h5 id="raid-1">RAID 1</h5>
+<ul>
+<li>
+<p>镜像卷。</p>
+</li>
+<li>
+<p>工作模式：在一个磁盘中写入数据，在另一个磁盘中写入镜像数据。</p>
+</li>
+<li>
+<p>最少磁盘数：2块。</p>
+</li>
+<li>
+<p>支持损坏磁盘数：1块。</p>
+</li>
+<li>
+<p>优点：大大提高了数据的安全性，允许损坏一块磁盘。</p>
+</li>
+<li>
+<p>缺点：在磁盘利用率低，没有提高读写速度。</p>
+</li>
+<li>
+<p>应用环境：只要求安全，对速度不要求。适合系统盘和监控服务器。</p>
+</li>
+</ul>
+<h5 id="raid-5">RAID 5</h5>
+<ul>
+<li>工作模式：条带化，利用数据的异或运算，在n个磁盘中只要知道n-1个磁盘的数据，就可以计算出第n个磁盘的数据。</li>
+<li>最少磁盘数：3块。</li>
+<li>支持损坏磁盘数：1块。</li>
+<li>优点：技术读取速度和Raid 0差不多，多了奇偶校验，写入速度比单个磁盘稍慢。通过运算的方式解决一块硬盘损坏的情况，最多损坏一块硬盘。</li>
+<li>应用环境：适合对性能和安全有一定要求但又不太十分高的情况。例如普遍数据库和存储库。</li>
+</ul>
+<h5 id="raid-10">RAID 10</h5>
+<ul>
+<li>工作模式：RAID0和RAID1技术的结合。将磁盘均分为两部分，对于这两部分使用RAID0。在这两部分内部中，又细分两个部分，对细分的两个部分，使用RAID1。</li>
+<li>最少磁盘数：4块。</li>
+<li>支持损坏磁盘数：总数的一半。</li>
+<li>优点：提高读写速度同时保证数据的安全性。</li>
+<li>缺点：损失一半的磁盘空间，磁盘利用率低。</li>
+<li>应用环境：对于性能和安全都要求的情况。例如高并发或高访问量数据库主库，存储主库。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 软RAID10</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 创建磁盘阵列</span>
+</span></span><span style="display:flex;"><span> mdadm -C -v /dev/md10 -l <span style="color:#3677a9">10</span> -n <span style="color:#3677a9">4</span> /dev/sd{m,n,o,p}。
+</span></span><span style="display:flex;"><span> <span style="color:#999;font-style:italic"># 配置文件命令</span>
+</span></span><span style="display:flex;"><span> mdadm -Dsv &gt; /etc/mdadm.conf 
+</span></span><span style="display:flex;"><span> <span style="color:#999;font-style:italic"># 格式化硬盘</span>
+</span></span><span style="display:flex;"><span> mkfs.xfs /dev/md10
+</span></span><span style="display:flex;"><span> <span style="color:#999;font-style:italic"># 创建挂载点</span>
+</span></span><span style="display:flex;"><span> mkdir /raid10
+</span></span><span style="display:flex;"><span> <span style="color:#999;font-style:italic"># 挂载</span>
+</span></span><span style="display:flex;"><span> mount /dev/md10 /raid10
+</span></span><span style="display:flex;"><span> <span style="color:#999;font-style:italic"># 查看</span>
+</span></span><span style="display:flex;"><span> df -h
+</span></span></code></pre></div><h4 id="逻辑卷管理器lvm">逻辑卷管理器：LVM</h4>
+<p>在很多情况下，LVM 被设置和 RAID 一起使用。管理员可以按照下面的顺序建立一个
+RAID+LVM 的管理模式。
+（1）把多块硬盘组合成一个 RAID 硬盘。
+（2）建立一个 LVM 卷组。
+（3）将这个 RAID 硬盘加入 LVM 卷组。
+（4）在 LVM 卷组上划分逻辑卷。</p>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

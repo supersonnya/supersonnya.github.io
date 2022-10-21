@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="Oracle 11g概述">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_basical</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2021</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 16 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="oracle发展">Oracle发展</h3>
+<ol>
+<li>第6版：引入了行级锁特性，不完善的PL/SQL语言，引入联机热备份功能。</li>
+<li>第7版：分布式事务处理功能，增强的管理功能，用于应用程序开发的新工具以及安全方法。</li>
+<li>第8版：支持面向对象的开发及新的多媒体应用，开始具有同时处理大量用户和海量数据的特性。为支持Internet、网络计算等奠定了基础。</li>
+<li>Oracle 8i：i代表Internet，添加了大量为支持Internet而设计的特性，为数据库用户提供了全方位的Java支持，成为第一个完全整合了本地Java运行时环境的数据库，用Java就可以编写Oracle的存储过程。</li>
+<li>Oracle 9i：加入许多新特性，最重要的是Real Application Clusters(RAC)——集群技术。</li>
+<li>Oracle 10g：g代表grid，最大的特性是加入了网格计算的功能。</li>
+<li>Oracle 11g：最常用的版本，实现了信息生命周期管理等多项创新，大幅地提高了系统性能的安全性，全新的Data to Guard最大化了可用性，利用全新的高级数据压缩技术降低了数据存储的支出，明显缩短了应用程序测试环境部署及分析测试结果所花费的时间，增加了RFIDTag、DICOM医学图像、3D空间等重要数据类型的支持，加强了Binary XML的支持和性能优化。</li>
+<li>Oracle 12c：c代表cloud，增加云计算功能，当前最新版本。</li>
+</ol>
+<h3 id="关系数据库基本理论">关系数据库基本理论</h3>
+<ul>
+<li>数据库管理技术发展阶段：人工管理、文件系统、数据库系统。</li>
+<li>数据库系统的数据模型主要有层次模型、网状模型、关系模型和面向对象模型。目前理论成熟、使用普及的是关系模型。</li>
+</ul>
+<h4 id="关系型数据库设计范式">关系型数据库设计范式</h4>
+<ul>
+<li>关系型数据库由相互联系的一组关系所组成，每个关系包括关系模式和关系值的两个方面。关系模式是对关系的抽象定义，给出关系的具体结构；关系的值是关系的具体内容，反映关系在某一时刻的状态。每个关系都需要进行规范化，使之达到一定的规范化程度，从而提高数据的结构化、共享性、一致性和可操作性。</li>
+<li>规范化是把数据库组织成在保持存储数据完整性的同时最小化冗余数据的结构的过程。规范化的数据库必须符合关系模型的范式。范式可以防止在使用数据库时出现不一致的数据，并防止数据丢失。关系模型范式有第一范式（1NF）、第二范式（2NF）、第三范式（3NF）、第四范式、第五范式、第六范式和BCNF范式等多种。通常数据库满足前3个范式就足够用了。</li>
+</ul>
+<h5 id="第一范式">第一范式</h5>
+<ul>
+<li>第一范式是对关系模式的基本要求，不满足第一范式的数据库就不是关系型数据库。</li>
+<li>第一范式是第二和第三范式的基础，是最基本的范式。包括以下指导原则：
+<ul>
+<li>数据组的每个属性只可以包含一个值。</li>
+<li>关系中的每个数组必须包含相同数量的值。</li>
+<li>关系中的每个数组一定不能相同。</li>
+</ul>
+</li>
+<li>如果数据表中的每一个列都是不可再分割的基本数据项，就称此数据表符合第一范式。第一范式具有不可再分解的原子特性。</li>
+</ul>
+<h5 id="第二范式">第二范式</h5>
+<ul>
+<li>满足第二范式必须先满足第一范式。第二范式要求数据库表中的每个实体（即各个记录行）必须可以被唯一地区分。</li>
+<li>第二范式要求实体的属性完全依赖于主关键字，不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一格新的实体，新实体与原实体之间是一对多的关系。</li>
+<li>（员工编码，岗位）→（决定）（姓名，年龄，学历，基本工资，绩效工资，奖金）。</li>
+</ul>
+<h5 id="第三范式">第三范式</h5>
+<ul>
+<li>满足第三范式必须先满足第二范式。第三范式要求关系表不存在非关键字列对任意候选关键字列的传递函数依赖，即第三范式要求一个关系表中不包含已在其他表中包含的非主关键字信息。</li>
+<li>传递函数依赖：如果存在关键字段A决定非关键字段B，而非关键字段B决定非关键字段C，则称非关键字段C传递函数依赖于关键字段A。</li>
+<li>（员工编码）→（决定）（姓名，年龄，部门编码，部门经理）。</li>
+</ul>
+<h3 id="基础">基础</h3>
+<ul>
+<li>数据库的设计主要是数据库模式的设计</li>
+<li>属性之间的关联成为数据依赖：函数依赖、多值依赖、连接依赖</li>
+<li>规范化规则并不能帮助建立好的数据模型，只是提供了一直检验建立的数据模型是否正确的测试手段</li>
+</ul>
+<h4 id="第一范式-1nf">第一范式-1NF</h4>
+<ul>
+<li>实体（表）的所有属性都不可分，即不包含多值属性，则满足1NF
+两种方法实现非1NF的结构：数组引用和嵌套表</li>
+</ul>
+<h4 id="第二范式-2nf">第二范式-2NF</h4>
+<ul>
+<li>函数依赖不是根据一个值导出另一个值，而是对于一个值来说，另一个值是逻辑上唯一的</li>
+<li>不存在依赖于部分主码的属性</li>
+<li>students_grade(student_id, course_id, grade, age)</li>
+</ul>
+<h4 id="第三范式-3nf">第三范式-3NF</h4>
+<ul>
+<li>不能存在传递函数依赖关系</li>
+<li>存在一个属性，它所函数依赖的属性既不是主码也不是候选码</li>
+</ul>
+<h4 id="bc范式-bcnf">BC范式-BCNF</h4>
+<ul>
+<li>消除主属性对码的部分和传递依赖</li>
+</ul>
+<h3 id="oracle-11g新功能">Oracle 11g新功能</h3>
+<h4 id="增强信息生命周期管理和存储管理能力">增强信息生命周期管理和存储管理能力</h4>
+<ul>
+<li>Oracle 11g具有极新的数据划分和压缩功能，可实现更经济的信息生命周期管理和存储管理。实现了很多手工数据划分工作的自动化，扩展了已有的范围、散列和列表划分功能，增加了间隔、索引和虚拟卷划分功能。</li>
+</ul>
+<h4 id="全面回忆数据变化">全面回忆数据变化</h4>
+<ul>
+<li>Oracle 11g具有Oracle全面回忆（Oracle Total Recall）组件，可帮助管理员查询在过去某些时刻指定表格中的数据，</li>
+</ul>
+<h4 id="最大限度提高信息可用性">最大限度提高信息可用性</h4>
+<ul>
+<li>Oracle闪回交易（Oracle Flashback Transaction），可以轻松撤销错误交易以及任何相关交易；并行备份和恢复功能，可改善非常大数据库的备份和存储性能；“热修补”功能，不必关闭数据可就可以进行数据库修补，提高系统可用性。</li>
+</ul>
+<h4 id="oracle快速文件">Oracle快速文件</h4>
+<ul>
+<li>存储大型对象，包括图像、大型文本对象或一些先进的数据类型，如XML、医疗成像数据和三维对象。Oracle快速文件（Oracle Fast Files）组件使得数据库的性能完全比得上文件系统的性能。</li>
+</ul>
+<h4 id="更快的xml">更快的XML</h4>
+<ul>
+<li>Oracle 11g增加了对二进制XML数据的支持，客户可以选择适合自己特定应用及性能需求的XML存储选项。</li>
+</ul>
+<h4 id="透明的加密">透明的加密</h4>
+<ul>
+<li>将透明数据加密功能扩展到卷级加密之外，具有表空间加密功能，可用来加密整个表、索引和所存储的其他数据。</li>
+</ul>
+<h4 id="嵌入式olap行列">嵌入式OLAP行列</h4>
+<ul>
+<li>OLAP行列在数据库中可以像物化图一样使用，受益于OLAP高性能的同时，开发人员可以用标准SQL实现数据查询。</li>
+</ul>
+<h4 id="连接汇合和查询结果高速缓存">连接汇合和查询结果高速缓存</h4>
+<ul>
+<li>增加了查询结果高速缓存等新功能。通过高速缓存和重用经常调用的数据库查询以及数据库和应用层的功能，改善应用的性能和可扩展性。</li>
+</ul>
+<h4 id="增强应用开发能力">增强应用开发能力</h4>
+<ul>
+<li>Oracle 11g提供多种开发工具，提供的简化应用开发流程可以充分利用Oracle 11g的关键功能，这些关键功能包括客户端高速缓存、提供应用速度的二进制XML、XML处理以及文件存储和检索。</li>
+</ul>
+<h3 id="oracle-11g管理工具">Oracle 11g管理工具</h3>
+<h4 id="sqlplus"><code>SQL*PLUS</code></h4>
+<ul>
+<li>连接语法格式：<code>SQLPLUS username[/password][@connect_identifier] [AS SYSOPER|SYSDBA]</code>。</li>
+<li>关键字不区分大小写，但参数区分大小写。</li>
+</ul>
+<h4 id="oracle企业管理器oracle-enterprise-manager">Oracle企业管理器(Oracle Enterprise Manager)</h4>
+<ul>
+<li>URL：<code>https://localhost:1158/em</code>。</li>
+</ul>
+<h4 id="数据库配置助手database-configuration-assistant-dbca">数据库配置助手(Database Configuration Assistant, DBCA)</h4>
+<ul>
+<li>创建和配置数据库。</li>
+</ul>
+<h3 id="启动和关闭数据库实例">启动和关闭数据库实例</h3>
+<h4 id="启动数据库实例">启动数据库实例</h4>
+<ul>
+<li>Oracle数据库实例启动过程：启动实例、加载数据库、打开数据库。</li>
+<li>启动数据库命令格式：<code>STARTUP [NOMOUNT | MOUNT | OPEN | FORCE] [RESCRICT] [PFILE=filename]</code>
+<ul>
+<li><code>NOMOUNT</code>：启动实例，不加载数据库。
+<ul>
+<li>通常在创建新数据库或重建控制文件时使用。</li>
+</ul>
+</li>
+<li><code>MOUNT</code>：启动实例，加载数据库，不打开数据库。
+<ul>
+<li>通常在进行数据库维护时使用，比如执行数据库完全恢复操作、更改数据库的归档模式等。</li>
+</ul>
+</li>
+<li><code>OPEN</code>：启动实例，加载数据库，打开数据库，默认选项。</li>
+<li><code>FORCE</code>：终止实例并重新启动数据库，具有一定的强制性。</li>
+<li><code>RESTRICT</code>：指定以受限制的会话方式启动数据库。</li>
+<li><code>PFILE</code>：指定启动实例时使用的文本参数文件，<code>filename</code>为文件名。
+<ul>
+<li>实例启动时必须读取一个初始化参数文件以获取有关参数配置信息。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="关闭数据库实例">关闭数据库实例</h4>
+<ul>
+<li>Oracle关闭数据库实例过程：关闭数据库、卸载数据库、关闭实例。</li>
+<li>关闭数据库语法格式：<code>SHUTDOWN [NORMAL | TRANSACTIONAL | IMMEDIATE | ABORT]</code>。
+<ul>
+<li><code>NORMAL</code>：以正常方式关闭数据库。
+<ul>
+<li>对关闭数据库时间没有限制时，通常使用这种方式关闭。</li>
+<li>阻止任何用户建立新连接；等待当前所有正在连接的用户主动断开连接；所有用户断开连接后立即关闭数据库。</li>
+</ul>
+</li>
+<li><code>TRANSACTIONAL</code>：在当前所有的活动事务被提交完毕之后，关闭数据库。
+<ul>
+<li>阻止用户建立新连接和开始新事务；等待所有活动事务提交后，断开用户连接；所有事务提交完毕、所有用户断开连接后，关闭数据库。</li>
+</ul>
+</li>
+<li><code>IMMEDIATE</code>：在尽可能短的时间内立即关闭数据库。
+<ul>
+<li>阻止用户建立新连接和开始新事务；将未提交的活动事务回退；关闭数据库。</li>
+</ul>
+</li>
+<li><code>ABORT</code>：以终止方式关闭数据库，具有一定的强制性和破坏性，可能丢失数据信息，影响数据库的完整性。
+<ul>
+<li>阻止用户建立新连接和开始新事务；取消未提交的活动事务，不是回退；立即终止正在执行的任何SQL语句；立即关闭数据库。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

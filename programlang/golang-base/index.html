@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="programlang">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Golang Base</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jul 27, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 31 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="1-golang的学习方向">1. Golang的学习方向</h3>
+<ul>
+<li>区块链研发</li>
+<li>Go服务器端/游戏软件</li>
+<li>Golang分布式/云计算软件</li>
+</ul>
+<h3 id="2-golang的应用">2. Golang的应用</h3>
+<ul>
+<li>区块链</li>
+<li>后端服务器</li>
+<li>云计算/云平台后台</li>
+</ul>
+<h3 id="3-学习思想">3. 学习思想</h3>
+<ul>
+<li>先know how，再know why</li>
+<li>先建立框架，再研究细节</li>
+<li>做了才会，不是会了才做，动手</li>
+<li>琢磨别人怎么做，不是自己认为怎么做</li>
+</ul>
+<h3 id="4-解决问题的思路">4. 解决问题的思路</h3>
+<ol>
+<li>发现新的问题</li>
+<li>使用现有技术解决问题不够好，使用新技术</li>
+<li>学习新技术的基本语法和原理</li>
+<li>通过一个快速入门案例了解新技术的基本使用</li>
+<li>深入学习新技术的细节，使用规范，解决方案，常见陷阱</li>
+<li>应用新技术解决问题</li>
+</ol>
+<h3 id="1-golang的特点">1. Golang的特点</h3>
+<ul>
+<li>静态语言的安全和性能</li>
+<li>动态语言开发维护的高效率</li>
+<li>继承C理念，表达式语法，控制结构，基础数据类型，参数传值，保留了指针</li>
+<li>引入包的概念，每个文件都要归属于一个包</li>
+<li>内存自动回收垃圾</li>
+<li>天然并发，语言层面支持并发，可实现大并发处理</li>
+<li>管道通信机制</li>
+<li>函数返回多个值</li>
+<li>创新：切片slice，延时执行defer</li>
+</ul>
+<h3 id="2-配置环境变量">2. 配置环境变量</h3>
+<ul>
+<li>GOROOT</li>
+<li>PATH</li>
+<li>GOPATH</li>
+</ul>
+<h3 id="3-运行go文件">3. 运行.go文件</h3>
+<ul>
+<li>go build name.go: build之后生成name.exe</li>
+<li>name.exe（.\name.exe）: 直接运行可执行文件</li>
+</ul>
+<h3 id="4-执行流程">4. 执行流程</h3>
+<ul>
+<li>go build编译生成.exe，执行.exe，没有go环境也可执行</li>
+<li>go run直接执行，编译运行一步完成，必须有go环境</li>
+</ul>
+<h3 id="5-编译运行">5. 编译运行</h3>
+<ul>
+<li>go build -o myhello.exe hello.go: 指定编译生成的文件，如果程序有错误，编译时报错</li>
+</ul>
+<h3 id="6-语法要求和注意事项">6. 语法要求和注意事项</h3>
+<ul>
+<li>文件以.go为扩展名</li>
+<li>程序入口为main()函数</li>
+<li>严格区分大小写</li>
+<li>不需要分号（自动在每行后加分号）</li>
+<li>一行一条语句</li>
+<li>定义的变量或引入的包没有用到，代码不能通过编译</li>
+<li>大括号成对出现，缺一不可</li>
+</ul>
+<h3 id="7-golang转义字符escape-char">7. Golang转义字符（escape char）</h3>
+<ul>
+<li>\t: 排版</li>
+<li>\n: 换行</li>
+<li>\: \</li>
+<li>&quot;: &quot;</li>
+<li>\r: 回车，当前行的最前端输出，覆盖之前的内容</li>
+</ul>
+<h3 id="8-常见问题">8. 常见问题</h3>
+<ul>
+<li>语法错误</li>
+<li>找不到文件：文件不存在或路径错误</li>
+</ul>
+<h3 id="9-golang注释">9. Golang注释</h3>
+<ul>
+<li>行注释：//</li>
+<li>块注释：/**/</li>
+</ul>
+<h3 id="10-规范代码风格">10. 规范代码风格</h3>
+<ul>
+<li>正确注释和注释风格，推荐行注释</li>
+<li>缩进和空格（tab|shift+tab）(gofmt -w name.go)，运算符两边加空格</li>
+<li>起始大括号不能单独在一行</li>
+<li>每行不超过80字符，超过使用换行</li>
+</ul>
+<h3 id="11-golang官方编程指南">11. Golang官方编程指南</h3>
+<ul>
+<li>手册：https://golang.org/#</li>
+<li>API：https://golang.org/pkg/</li>
+</ul>
+<h3 id="12-dos常用命令">12. Dos常用命令</h3>
+<h4 id="121-目录操作">12.1 目录操作</h4>
+<ul>
+<li>dir：查看当前目录</li>
+<li>cd：切换</li>
+<li>cd ..</li>
+<li>cd \</li>
+<li>md [dir1 | dir2]：新建目录</li>
+<li>rd [dir]: 删除空目录</li>
+<li>rd /q/s dir: 删除非空目录，不询问</li>
+<li>rd /s dir: 删除非空目录，询问</li>
+</ul>
+<h4 id="122-文件操作">12.2 文件操作</h4>
+<ul>
+<li>echo hello &gt; abc.txt: 创建并追加到文件</li>
+<li>copy filedir targetdir: 复制文件</li>
+<li>move filedir targetdir: 移动文件</li>
+<li>del filename|*.txt: 删除文件</li>
+</ul>
+<h3 id="123-其他操作">12.3 其他操作</h3>
+<ul>
+<li>cls：清屏</li>
+<li>exit</li>
+</ul>
+<h3 id="基础">基础</h3>
+<h4 id="一包变量和函数">一、包、变量和函数</h4>
+<h5 id="1包">1.包</h5>
+<blockquote>
+<ul>
+<li>Go程序由包组成</li>
+<li>程序运行的入口是包<code>main</code></li>
+<li>包名与导入路径的最后一个目录一致</li>
+</ul>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#ed9d13">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Hello Go~&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="2import">2.import</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// type one
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#ed9d13">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#ed9d13">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// type two
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">import</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ed9d13">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ed9d13">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h5 id="3导出名">3.导出名</h5>
+<blockquote>
+<ul>
+<li>通过导出名调用包，被调用的变量首字母必须大写</li>
+<li>被调用的包可以是系统内置的包，也可以是自定义包</li>
+</ul>
+</blockquote>
+<pre tabindex="0"><code>math.Pi
+</code></pre><h5 id="4函数">4.函数</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 0个参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">add</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 多个参数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 类型在变量名后
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">add</span>(x <span style="color:#6ab825;font-weight:bold">int</span>, y <span style="color:#6ab825;font-weight:bold">int</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">return</span> x + y
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 连续相同类型可以省略
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">add</span>(x, y <span style="color:#6ab825;font-weight:bold">int</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">return</span> x + y
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="5多值返回">5.多值返回</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">swap</span>(x, y <span style="color:#6ab825;font-weight:bold">string</span>) (<span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#6ab825;font-weight:bold">string</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">return</span> y, x
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="6命名返回值">6.命名返回值</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 返回值命名为x和y
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">split</span>(sum <span style="color:#6ab825;font-weight:bold">int</span>) (x, y <span style="color:#6ab825;font-weight:bold">int</span>)  {
+</span></span><span style="display:flex;"><span>  x = sum * <span style="color:#3677a9">4</span> / <span style="color:#3677a9">9</span>
+</span></span><span style="display:flex;"><span>  y = sum - x
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 直接return返回当前的x和y的值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">return</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="7变量">7.变量</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 类型在变量名后，可省略
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 不指定类型时根据值进行类型推导
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> i <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 声明一组变量
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> (
+</span></span><span style="display:flex;"><span>  i <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span>  str <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 变量从初始值获得类型
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> i, j <span style="color:#6ab825;font-weight:bold">int</span> = <span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 短声明，只能在函数内使用
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>k := <span style="color:#3677a9">2</span>
+</span></span></code></pre></div><h5 id="8常量">8.常量</h5>
+<blockquote>
+<ul>
+<li>使用<code>const</code>关键字</li>
+<li>不能使用<code>:=</code>定义</li>
+<li><code>数值常量是高精度的值</code></li>
+<li>常量类型未指定由值进行类型推断</li>
+</ul>
+</blockquote>
+<h5 id="9基本类型">9.基本类型</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#24909d">bool</span>(零值false)
+</span></span><span style="display:flex;"><span><span style="color:#24909d">string</span>(<span style="color:#ed9d13">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">int</span> <span style="color:#6ab825;font-weight:bold">int8</span> <span style="color:#6ab825;font-weight:bold">int16</span> <span style="color:#6ab825;font-weight:bold">int32</span> <span style="color:#24909d">int64</span>(<span style="color:#3677a9">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">uint</span> <span style="color:#6ab825;font-weight:bold">uint8</span> <span style="color:#6ab825;font-weight:bold">uint16</span> <span style="color:#6ab825;font-weight:bold">uint32</span> <span style="color:#6ab825;font-weight:bold">uint64</span> <span style="color:#6ab825;font-weight:bold">uintptr</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">byte</span> <span style="color:#999;font-style:italic">// uint8的别名
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">rune</span> <span style="color:#999;font-style:italic">// int32的别名
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">float32</span> <span style="color:#6ab825;font-weight:bold">float64</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">complex64</span> <span style="color:#6ab825;font-weight:bold">complex128</span>
+</span></span></code></pre></div><h5 id="10类型转换">10.类型转换</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 不同类型的值转换时均需要显式转换
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">var</span> i <span style="color:#6ab825;font-weight:bold">int</span> = <span style="color:#3677a9">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> f <span style="color:#6ab825;font-weight:bold">float64</span> = <span style="color:#24909d">float64</span>(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>i := <span style="color:#3677a9">43</span>
+</span></span><span style="display:flex;"><span>f := <span style="color:#24909d">float64</span>(i)
+</span></span></code></pre></div><h4 id="流程控制语句">流程控制语句</h4>
+<h5 id="for">for</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  sum := <span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// Go里面循环只有for，不使用()
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">for</span> i := <span style="color:#3677a9">0</span>; i &lt; <span style="color:#3677a9">10</span>; i++ {
+</span></span><span style="display:flex;"><span>    sum += i
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 前置和后置语句可以为空，当作C里面的while使用
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">for</span> sum &lt; <span style="color:#3677a9">1000</span> {
+</span></span><span style="display:flex;"><span>    sum += sum
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 死循环
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">for</span> {
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="if">if</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 不使用()
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">if</span> x &lt; <span style="color:#3677a9">0</span> {
+</span></span><span style="display:flex;"><span>    x += <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 可执行简单语句，与for相同
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">if</span> v := math.<span style="color:#447fcf">Pow</span>(x, n); v &lt; lim {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(lim)
+</span></span><span style="display:flex;"><span>  } <span style="color:#6ab825;font-weight:bold">else</span> {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(v)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="switch">switch</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">switch</span> os := runtime.GOOS; os {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#34;darwin&#34;</span>:
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;OS X.&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#34;linux&#34;</span>:
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;linux&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">default</span>:
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;default&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="defer">defer</h5>
+<ul>
+<li>延迟函数的执行直到上层函数返回，参数立即生成，但上层函数返回前函数不会被调用</li>
+<li>用栈存储，后进先出</li>
+</ul>
+<h4 id="复杂类型">复杂类型</h4>
+<h5 id="struct">struct</h5>
+<h5 id="slice">slice</h5>
+<h5 id="map">map</h5>
+<h3 id="方法和接口">方法和接口</h3>
+<h3 id="并发">并发</h3>
+<p>Printf:格式化输出</p>
+<p>%.nf:默认6位小数，可指定</p>
+<p>多重交换</p>
+<h3 id="1-strings">1. strings</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>strings.<span style="color:#447fcf">HasPrefix</span>(s, prefix <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">bool</span>
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">HasSuffix</span>(s, suffix <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">bool</span>
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">Contains</span>(s, substr <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">bool</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// -1为没找到
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">Index</span>(s, str <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">LastIndex</span>(s, str <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 非ASCII码
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">IndexRune</span>(s <span style="color:#6ab825;font-weight:bold">string</span>, r <span style="color:#6ab825;font-weight:bold">rune</span>) <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// n=-1为替换所有
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">Replace</span>(str, old, new, n) <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 统计非重叠次数
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">Count</span>(s, str <span style="color:#6ab825;font-weight:bold">string</span>) <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 重复count次字符串
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">Repeat</span>(s, count <span style="color:#6ab825;font-weight:bold">int</span>) <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">ToLower</span>(s) <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">ToUpper</span>(s) <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 修剪
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">TrimSpace</span>(s)
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">Trim</span>(s, <span style="color:#ed9d13">&#34;&#34;</span>)<span style="color:#999;font-style:italic">// 剔除开头和结尾的指定字符
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">TrimLeft</span>(), strings.<span style="color:#447fcf">TrimRight</span>()
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 分割字符串，利用一个或多个空白符号进行分割，返回slice
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 习惯配合for-range进行循环输出
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>strings.<span style="color:#447fcf">Fields</span>(s)
+</span></span><span style="display:flex;"><span>strings.<span style="color:#447fcf">Split</span>(s, sep)
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 从字符串中读取内容
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// strings.NewReader(str) 用于生成一个 Reader 并读取字符串中的内容，然后返回指向该 Reader 的指针，从其它类型读取内容的函数还有：
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">//    Read() 从 []byte 中读取内容
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">//    ReadByte() 和 ReadRune() 从字符串中读取下一个 byte 或者 rune
+</span></span></span></code></pre></div><h3 id="2-strconv">2. strconv</h3>
+<ul>
+<li>
+<p><code>strconv.Itoa(i int) string</code> 返回数字 i 所表示的字符串类型的十进制数。</p>
+</li>
+<li>
+<p><code>strconv.FormatFloat(f float64, fmt byte, prec int, bitSize int) string</code> 将 64 位浮点型的数字转换为字符串，其中 <code>fmt</code> 表示格式（其值可以是 <code>'b'</code>、<code>'e'</code>、<code>'f'</code> 或 <code>'g'</code>），<code>prec</code> 表示精度，<code>bitSize</code> 则使用 32 表示 float32，用 64 表示 float64</p>
+</li>
+<li>
+<p><code>strconv.Atoi(s string) (i int, err error)</code> 将字符串转换为 int 型。</p>
+</li>
+<li>
+<p><code>strconv.ParseFloat(s string, bitSize int) (f float64, err error)</code> 将字符串转换为 float64 型</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>val, err = strconv.<span style="color:#447fcf">Atoi</span>(s)
+</span></span></code></pre></div><h3 id="1-变量">1. 变量</h3>
+<ul>
+<li>使用步骤：声明，赋值，使用</li>
+</ul>
+<h4 id="11-注意事项">1.1 注意事项</h4>
+<ol>
+<li>变量是内存中的一个存储区域，有名称呵数据类型</li>
+<li>三种使用方式
+<ol>
+<li>指定变量类型，不赋值，使用默认值</li>
+<li>不指定类型，类型推导，不省略var</li>
+<li>name := &ldquo;abc&rdquo;，省略var</li>
+</ol>
+</li>
+<li>多变量声明</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> n1 <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> n2 <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">①</span><span style="color:#6ab825;font-weight:bold">var</span> n1, n2 <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">②</span><span style="color:#6ab825;font-weight:bold">var</span> n1, name = <span style="color:#3677a9">100</span>, <span style="color:#ed9d13">&#34;abc&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">③</span>n1, name := <span style="color:#3677a9">100</span>, <span style="color:#ed9d13">&#34;abc&#34;</span>
+</span></span></code></pre></div><ol start="4">
+<li>函数外部声明的变量就是全局变量</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> n1
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> n2
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> (
+</span></span><span style="display:flex;"><span>  n1 = <span style="color:#3677a9">100</span>
+</span></span><span style="display:flex;"><span>  name = <span style="color:#ed9d13">&#34;abc&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><ol start="5">
+<li>数据值可以在同一类型范围内变化</li>
+<li>同一作用域不能重名</li>
+<li>Golang变量没有初值，系统赋默认值</li>
+</ol>
+<h3 id="2-数据类型">2. 数据类型</h3>
+<h4 id="21-基本数据类型">2.1 基本数据类型</h4>
+<ol>
+<li>数值型</li>
+</ol>
+<ul>
+<li>整数类型：<code>int, int8, int16, int32, int64; uint, uint8, uint16, uint64, byte(=uint8)</code>
+<ul>
+<li>int, uint的长度与操作系统有关（4或8）</li>
+<li>整型默认声明为<code>int</code>，默认值为<code>0</code></li>
+</ul>
+</li>
+<li>浮点类型：<code>float32, float64</code>
+<ul>
+<li>浮点数都有符号，浮点数=符号位+指数位+尾数位，存储时分三部分，精度可能丢失</li>
+<li>尾数部分可能丢失，造成精度损失</li>
+<li>浮点型默认为<code>float64</code>，默认值为<code>0</code></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>字符型（使用byte保存单个字母字符）
+<ol>
+<li>输出时直接输出的字符对应的码值，字符本质是一个数字</li>
+<li>超过ASCII码值的字符用更大的数据类型存储</li>
+<li>Golang没有专门的字符类型，用byte保存</li>
+<li>字符常量用单引号括起来</li>
+<li>Golang使用UTF-8编码，字符<code>1</code>个字节，汉字<code>3</code>个字节</li>
+<li>字符可以进行运算，相当于对应的Unicode码值运算</li>
+</ol>
+</li>
+<li>布尔型（<code>bool</code>）
+<ol>
+<li>占一个字节，用于逻辑运算，只能取<code>true</code>或<code>false</code></li>
+<li>默认值为<code>false</code></li>
+</ol>
+</li>
+<li>字符串（string）
+<ol>
+<li>Golang的字符串由字节拼成</li>
+<li>Golang中字符串不可变，字符串本身不能修改，指针可以修改</li>
+<li>支持双引号和反引号</li>
+<li>双引号：识别转义字符</li>
+<li>反引号：不识别转义字符，输出原代码</li>
+<li>使用<code>+</code>连接，换行时<code>+</code>要保留在上一行</li>
+<li>默认值为<code>&quot;&quot;</code></li>
+</ol>
+</li>
+<li>rune(=int32，表示一个Unicode码)</li>
+<li>complex64，complex128</li>
+<li>格式化输出
+<ol>
+<li>%T：输出变量的数据类型</li>
+<li>%d：以数字输出</li>
+<li>%c：以字符输出</li>
+<li>%f：以浮点数输出</li>
+<li>%t：布尔输出</li>
+<li>unsafe.Sizeof()：查看变量的占用字节</li>
+</ol>
+</li>
+<li>保证程序正确运行下，尽量使用占用空间小的数据类型</li>
+<li>基本数据类型转换
+<ol>
+<li>Golang数据类型不能自动转换，都需要显式转换</li>
+<li>语法：Type(value)</li>
+<li>被转换的变量的值，变量本身数据类型不发生变化</li>
+<li>赋值时会检测赋值表达式的数值内容是否超过范围</li>
+</ol>
+</li>
+<li>基本数据类型转string
+<ol>
+<li>fmt.Sprintf(&quot;%参数&quot;, 表达式)</li>
+<li>strconv.FormatInt(变量, 进制)</li>
+<li>strconv.FormatFloat(变量, 格式, 精度, 长度)</li>
+<li>strconv.FormatBool(变量)</li>
+<li>strconv.Itoa(int类型变量)</li>
+</ol>
+</li>
+<li>string转基本数据类型
+<ol>
+<li>b, _ = strconv.ParseBool(str): 返回两个值，使用<code>_</code>忽略第二个返回值</li>
+<li>strconv.ParseInt(str, 进制, 长度)</li>
+<li>strconv.ParseFloat(str, bitSize)</li>
+<li>要确保string类型能够转成有效的数据，没有转成功，变量会赋默认值</li>
+</ol>
+</li>
+</ol>
+<h4 id="22-复杂数据类型">2.2 复杂数据类型</h4>
+<ol>
+<li>指针（pointer）
+<ol>
+<li>指针变量存的是一个地址，地址指向的空间存值</li>
+<li><code>*变量</code>取值</li>
+<li>所有值类型都有对应的指针类型、</li>
+<li>Golang没有指针运算</li>
+<li>指针类型的零值是<code>nil</code></li>
+</ol>
+</li>
+<li>数组（array）</li>
+<li>结构体（struct）</li>
+<li>管道（channel）</li>
+<li>函数（func）</li>
+<li>切片（slice）</li>
+<li>接口（interface）</li>
+<li>map</li>
+</ol>
+<h3 id="3-值类型和引用类型">3. 值类型和引用类型</h3>
+<ul>
+<li>值类型：int系列，float类型，bool，string，数组和结构体
+<ul>
+<li>变量直接存储值，内存在栈中分配</li>
+</ul>
+</li>
+<li>引用类型：指针，slice切片，map，管道chan，interface
+<ul>
+<li>变量存储地址，地址指向数据，内存在堆中分配，地址没有变量引用时垃圾自动回收对应数据空间</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-标识符的命名">4. 标识符的命名</h3>
+<ol>
+<li>命名规范
+<ol>
+<li>英文字母，0-9，_组成</li>
+<li>不能数字开头</li>
+<li>严格区分大小写</li>
+<li>不能包含空格</li>
+<li><code>_</code>时空标识符，可以代表任何其它的标识符，它对应的值会被忽略。仅能作为占位符，不能作为标识符</li>
+<li>不能时系统保留关键字</li>
+</ol>
+</li>
+<li>命名特点
+<ol>
+<li>包名和目录保持一致，简短有意义</li>
+<li>变量名、函数名、常量名采用驼峰法</li>
+<li>变量名、函数名、常量名首字母大写是共有的，首字母小写是私有的</li>
+</ol>
+</li>
+<li>保留关键字和预定义标识符
+<ol>
+<li>保留关键字<code>25</code>个</li>
+<li>预定义标识符<code>36</code>个，包括基础数据类型和系统内嵌函数</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-并发">1. 并发</h3>
+<h4 id="11-goroutine">1.1 goroutine</h4>
+<ul>
+<li><code>goroutine</code>是由Go运行时环境管理的轻量级线程</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">go</span> <span style="color:#447fcf">f</span>(x, y, z)
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 开启一个新的goroutine执行
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// f, x, y, z在当前goroutine中定义，在新的goroutine中运行f
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#447fcf">f</span>(x, y, z)
+</span></span></code></pre></div><ul>
+<li><code>goroutine</code>在相同的地址空间中运行，因此访问共享内存必须进行同步</li>
+</ul>
+<h4 id="12-channel">1.2 channel</h4>
+<ul>
+<li><code>channel</code>是有类型的管道，可以用<code>channel</code>操作符<code>&lt;-</code>对其发送或者接收值</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 箭头是数据流的方向
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>ch &lt;- v <span style="color:#999;font-style:italic">// 将v送入channel ch中
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v := &lt;- ch <span style="color:#999;font-style:italic">//从ch接收，并且赋值给v
+</span></span></span></code></pre></div><ul>
+<li><code>channel</code>使用之前必须创建</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>ch := <span style="color:#447fcf">make</span> (<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">int</span>)
+</span></span></code></pre></div><ul>
+<li>默认情况下，在另一端准备好之前，发送和接受都会阻塞，使得goroutine可以在没有明确的锁或静态变量的情况下进行同步</li>
+</ul>
+<h4 id="13-缓冲channel">1.3 缓冲channel</h4>
+<ul>
+<li>为<code>make</code>提供第二个参数作为缓冲长度来初始化一个缓冲<code>channel</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>ch := <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">int</span>, <span style="color:#3677a9">100</span>)
+</span></span></code></pre></div><ul>
+<li>向缓冲channel发送数据的时候，只有在缓冲区满的时候才会阻塞，当缓冲区清空的时候接受阻塞</li>
+</ul>
+<h4 id="14-range和close">1.4 range和close</h4>
+<ul>
+<li>发送者可以<code>close</code>一个<code>channel</code>来表示再没有值会被发送了</li>
+<li>接收者可以通过赋值语句的第二参数来测试<code>channel</code>是否被关闭</li>
+<li>注意
+<ol>
+<li>只有发送者才能关闭<code>channel</code></li>
+<li>向一个以及关闭的<code>channel</code>发送数据会引起<code>panic</code></li>
+<li><code>channel</code>通常情况下无需关闭</li>
+<li>只要需要告诉接收者没有更多数据时才有必要关闭</li>
+</ol>
+</li>
+</ul>
+<h4 id="15-select">1.5 select</h4>
+<ul>
+<li><code>select</code>使得一个<code>goroutine</code>在多个通讯操作上等待</li>
+<li><code>select</code>会阻塞，指导条件分支中的某个可以继续执行；当多个都准备好的时候，会随机选择一个执行</li>
+<li>当<code>select</code>中的其他分支条件都没有准备好的时候，<code>default</code>分支会被执行</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">select</span> {
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">case</span> i := &lt;-c:
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 使用 i
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">default</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// 从 c 读取会阻塞
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>}
+</span></span></code></pre></div><ul>
+<li>为了非阻塞的发送或者接受，可使用<code>default</code>分支</li>
+</ul>
+<h3 id="1-方法">1. 方法</h3>
+<h4 id="11-定义在结构体上的方法">1.1 定义在结构体上的方法</h4>
+<ul>
+<li>Go没有类，可以在结构体类型上定义方法</li>
+<li>方法接收者出现在func关键字和方法名之间的参数中</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Num <span style="color:#6ab825;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>	X, Y <span style="color:#6ab825;font-weight:bold">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 将方法abs()绑定到结构指针类型上
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> (v *Num) <span style="color:#447fcf">Abs</span>() <span style="color:#6ab825;font-weight:bold">float64</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">return</span> math.<span style="color:#447fcf">Sqrt</span>(v.X*v.X + v.Y*v.Y)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  v := &amp;Num{<span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 直接调用方法
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>	fmt.<span style="color:#447fcf">Println</span>(v.<span style="color:#447fcf">Abs</span>())
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="12-定义在其他类型上的方法">1.2 定义在其他类型上的方法</h4>
+<ul>
+<li>可以对包中的任意类型定义任意方法</li>
+<li>不能对来自其他包的类型或基础类型定义方法</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> myFloat <span style="color:#6ab825;font-weight:bold">float32</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> (f myFloat) <span style="color:#447fcf">Abs</span>() <span style="color:#6ab825;font-weight:bold">float32</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">if</span> f &lt; <span style="color:#3677a9">0</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">float32</span>(-f)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">float32</span>(f)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  f := <span style="color:#447fcf">myFloat</span>(-math.Sqrt2)
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#447fcf">Println</span>(f.<span style="color:#447fcf">Abs</span>())
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="13-接收者为指针的方法">1.3 接收者为指针的方法</h4>
+<ul>
+<li>方法可以与命名类型或命名类型的指针关联</li>
+<li>使用指针接收者的原因：
+<ol>
+<li>避免在每个方法调用拷贝值</li>
+<li>方法可以修改接收者指向的值</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-接口">2. 接口</h3>
+<h4 id="21-接口的基本使用">2.1 接口的基本使用</h4>
+<ul>
+<li>接口类型是由遗嘱方法定义的集合</li>
+<li>接口类型的值可以存放实现这些方法的任何值</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">var</span> a Abser
+</span></span><span style="display:flex;"><span>	f := <span style="color:#447fcf">MyFloat</span>(-math.Sqrt2)
+</span></span><span style="display:flex;"><span>	v := Vertex{<span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	a = f  <span style="color:#999;font-style:italic">// a MyFloat 实现了 Abser
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>	a = &amp;v <span style="color:#999;font-style:italic">// a *Vertex 实现了 Abser
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#999;font-style:italic">// v 是一个 Vertex，没有实现 Abser
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>	a = v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#447fcf">Println</span>(a.<span style="color:#447fcf">Abs</span>())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> MyFloat <span style="color:#6ab825;font-weight:bold">float64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> (f MyFloat) <span style="color:#447fcf">Abs</span>() <span style="color:#6ab825;font-weight:bold">float64</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">if</span> f &lt; <span style="color:#3677a9">0</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">float64</span>(-f)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#24909d">float64</span>(f)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Vertex <span style="color:#6ab825;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>	X, Y <span style="color:#6ab825;font-weight:bold">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 使用(v Vertex)定义时编译不会报错
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 不能重复定义，Vertex和*Vertex
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> (v *Vertex) <span style="color:#447fcf">Abs</span>() <span style="color:#6ab825;font-weight:bold">float64</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">return</span> math.<span style="color:#447fcf">Sqrt</span>(v.X*v.X + v.Y*v.Y)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="22-隐式接口">2.2 隐式接口</h4>
+<ul>
+<li>类型通过实现方法来实现接口，没有显式声明的必要</li>
+<li>隐式接口解耦了实现接口的包和定义接口的包：互不依赖</li>
+<li>无需再每一个实现上增加新的接口名称</li>
+</ul>
+<h4 id="23-stringer">2.3 Stringer</h4>
+<ul>
+<li>一个普遍存在的接口：<code>fmt</code>中定义的<code>Stringer</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Stringer <span style="color:#6ab825;font-weight:bold">interface</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#447fcf">String</span>() <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Stringer是一个可以用字符串描述自己的类型</li>
+</ul>
+<h4 id="24-错误">2.4 错误</h4>
+<ul>
+<li>Go使用<code>error</code>表示错误状态</li>
+<li><code>error</code>是一个内建接口</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> <span style="color:#6ab825;font-weight:bold">error</span> <span style="color:#6ab825;font-weight:bold">interface</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#447fcf">Error</span>() <span style="color:#6ab825;font-weight:bold">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>通常函数会返回一个<code>error</code>值，判断错误是否等于<code>nil</code>进行错误处理</li>
+<li><code>在Error方法内调用fmt.Sprint(e)将会使程序陷入死循环</code></li>
+</ul>
+<h4 id="25-reader">2.5 Reader</h4>
+<ul>
+<li><code>io</code>包指定了<code>io.Reader</code>接口，表示从数据流结尾读取</li>
+</ul>
+<h4 id="26-web服务器">2.6 Web服务器</h4>
+<ul>
+<li><code>http</code>通过任何实现了<code>http.Handler</code>的值来响应HTTP请求</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Handler <span style="color:#6ab825;font-weight:bold">interface</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#447fcf">ServeHTTP</span>(w ResponseWriter, r *Request)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="27-image">2.7 Image</h4>
+<ul>
+<li><code>image</code>包定义了<code>Image</code>接口</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Image <span style="color:#6ab825;font-weight:bold">interface</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// color.Model是接口，由image/color包定义
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#447fcf">ColorModel</span>() color.Model
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 返回值是一个image.Rectangle，定义在image包中
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#447fcf">Bounds</span>() Rectangle
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// color.Color是接口
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#447fcf">At</span>(x, y <span style="color:#6ab825;font-weight:bold">int</span>) color.Color
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="1-结构体">1. 结构体</h3>
+<h4 id="11-使用示例">1.1 使用示例</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">type</span> Name <span style="color:#6ab825;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>  x <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span>  y <span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  name := Name{<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>}
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#447fcf">Println</span>(name)})
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 字段使用.访问
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  fmt.<span style="color:#447fcf">Println</span>(name.x)
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 可以通过指针访问，指针的间接访问是透明的
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  p := &amp;name
+</span></span><span style="display:flex;"><span>  p.x = <span style="color:#3677a9">1e9</span>
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#447fcf">Println</span>(name)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="12-结构体文法">1.2 结构体文法</h4>
+<ul>
+<li>通过结构体字段的值作为列表来新分配一个结构体</li>
+<li>使用<code>Name:</code>语法可以只列出结构体的部分字段</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>v1 = Name{<span style="color:#3677a9">1</span>, <span style="color:#3677a9">2</span>}
+</span></span><span style="display:flex;"><span>v2 = Name{x: <span style="color:#3677a9">1</span>} <span style="color:#999;font-style:italic">// y=0
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>v3 = Name{} <span style="color:#999;font-style:italic">// x=0, y=0
+</span></span></span></code></pre></div><h3 id="2-数组">2. 数组</h3>
+<h4 id="21-语法">2.1 语法</h4>
+<ul>
+<li>var name [n]T</li>
+<li>数组定义后长度不能改变，即<code>n</code>不能变化</li>
+</ul>
+<h3 id="3-slice">3. slice</h3>
+<h4 id="31-语法">3.1 语法</h4>
+<ul>
+<li>一个slice会指向一个序列的值，并包含长度信息</li>
+<li>[]T是一个元素类型为T的slice</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>p := []<span style="color:#6ab825;font-weight:bold">int</span>{<span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">5</span>, <span style="color:#3677a9">7</span>, <span style="color:#3677a9">9</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> i := <span style="color:#3677a9">0</span>; i &lt; <span style="color:#24909d">len</span>(p); i++ {
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;p[%d] == %d\n&#34;</span>, i, p[i])
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="32-对slice切片">3.2 对slice切片</h4>
+<ul>
+<li>slice可以重新切片</li>
+<li><code>s[low:high]</code>表示low到high-1的slice元素，包含两端</li>
+</ul>
+<pre tabindex="0"><code>s = p[1:4] // [3, 5, 7]
+</code></pre><h4 id="33-构造slice">3.3 构造slice</h4>
+<ul>
+<li>使用<code>make</code>创建slice</li>
+<li>make([]T, len, cap)</li>
+<li>slice的零值是<code>nil</code></li>
+</ul>
+<h4 id="34-向slice添加元素">3.4 向slice添加元素</h4>
+<ul>
+<li>如果底层数组太小不能容纳所有值，会分配一个更大的数组，返回的slice会指向这个新数组</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> a []<span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span>a = <span style="color:#24909d">append</span>(a, <span style="color:#3677a9">0</span>)
+</span></span><span style="display:flex;"><span>a = <span style="color:#24909d">append</span>(a, <span style="color:#3677a9">2</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">4</span>)
+</span></span></code></pre></div><h3 id="4-map">4. map</h3>
+<h4 id="41-map基本使用">4.1 map基本使用</h4>
+<ul>
+<li><code>map</code>使用之前必须使用<code>make</code>创建</li>
+<li>值为<code>nil</code>的<code>map</code>是空的，并且不能赋值</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> m <span style="color:#6ab825;font-weight:bold">map</span>[<span style="color:#6ab825;font-weight:bold">string</span>]<span style="color:#6ab825;font-weight:bold">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  m = <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">map</span>[<span style="color:#6ab825;font-weight:bold">string</span>]<span style="color:#6ab825;font-weight:bold">int</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  m = <span style="color:#6ab825;font-weight:bold">map</span>[<span style="color:#6ab825;font-weight:bold">string</span>]<span style="color:#6ab825;font-weight:bold">int</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ed9d13">&#34;age&#34;</span>: <span style="color:#3677a9">30</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ed9d13">&#34;count&#34;</span>: <span style="color:#3677a9">6</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="42-修改map">4.2 修改map</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 插入或修改元素
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>m[key] = element
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 获得元素
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>element = m[key]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 删除元素
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#24909d">delete</span>(m, key)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 通过双赋值检测某个键存在
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// 若key在m中，ok为true；否则ok为false，element为零值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>element, ok = m[key]
+</span></span></code></pre></div><h3 id="5-函数值">5. 函数值</h3>
+<ul>
+<li>函数也是值</li>
+</ul>
+<h4 id="51-函数的闭包">5.1 函数的闭包</h4>
+<ul>
+<li>Go函数可以是闭包的。闭包是一个函数值，来自函数体的外部的变量引用。函数可以对这个引用值进行访问和赋值。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">adder</span>() <span style="color:#6ab825;font-weight:bold">func</span>(<span style="color:#6ab825;font-weight:bold">int</span>) <span style="color:#6ab825;font-weight:bold">int</span> {
+</span></span><span style="display:flex;"><span>	sum := <span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">func</span>(x <span style="color:#6ab825;font-weight:bold">int</span>) <span style="color:#6ab825;font-weight:bold">int</span> {
+</span></span><span style="display:flex;"><span>		sum += x
+</span></span><span style="display:flex;"><span>		<span style="color:#6ab825;font-weight:bold">return</span> sum
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 函数adder返回闭包，每个闭包被绑定到各自的sum变量上
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>	pos, neg := <span style="color:#447fcf">adder</span>(), <span style="color:#447fcf">adder</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">for</span> i := <span style="color:#3677a9">0</span>; i &lt; <span style="color:#3677a9">10</span>; i++ {
+</span></span><span style="display:flex;"><span>		fmt.<span style="color:#447fcf">Println</span>(
+</span></span><span style="display:flex;"><span>			<span style="color:#447fcf">pos</span>(i),
+</span></span><span style="display:flex;"><span>			<span style="color:#447fcf">neg</span>(-<span style="color:#3677a9">2</span>*i),
+</span></span><span style="display:flex;"><span>		)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="6-range">6. range</h3>
+<ul>
+<li><code>for</code>循环的<code>range</code>可以对<code>slice</code>或<code>map</code>进行迭代循环</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> p = []<span style="color:#6ab825;font-weight:bold">int</span>{<span style="color:#3677a9">1</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">5</span>, <span style="color:#3677a9">7</span>, <span style="color:#3677a9">9</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">for</span> i, v := <span style="color:#6ab825;font-weight:bold">range</span> p {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(i, v)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>可以通过赋值给<code>_</code>来忽略序号和值</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">var</span> p = []<span style="color:#6ab825;font-weight:bold">int</span>{<span style="color:#3677a9">1</span>, <span style="color:#3677a9">3</span>, <span style="color:#3677a9">5</span>, <span style="color:#3677a9">7</span>, <span style="color:#3677a9">9</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 只获取索引值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">for</span> i := <span style="color:#6ab825;font-weight:bold">range</span> p {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(i)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#999;font-style:italic">// 只获取值
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">for</span> _, v := <span style="color:#6ab825;font-weight:bold">range</span> p {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#447fcf">Println</span>(v)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="1-基本结构和基本数据类型">1. 基本结构和基本数据类型</h3>
+<h3 id="2-控制结构">2. 控制结构</h3>
+<h3 id="3-function">3. Function</h3>
+<h3 id="4-arrayslice">4. Array&amp;Slice</h3>
+<h3 id="5-map">5. Map</h3>
+<h3 id="6-package">6. Package</h3>
+<h3 id="7-structmethod">7. Struct&amp;Method</h3>
+<h3 id="8-interfacereflection">8. Interface&amp;Reflection</h3>
+<ul>
+<li>接口定义一组（<code>0-3</code>）没有实现代码的方法，接口不能包含变量</li>
+<li>Golang中接口可以有值</li>
+<li>类型不需要显式声明它实现了某个接口：接口被隐式地实现。多个类型可以实现同一个接口。实现某个接口的类型（除了实现接口方法外）可以有其他的方法。一个类型可以实现多个接口。接口类型可以包含一个实例的引用， 该实例的类型实现了此接口（接口是动态类型）。</li>
+<li>接口可以嵌套</li>
+<li>类型断言判断当前接口变量的类型</li>
+</ul>
+<h3 id="9-go-中的面向对象">9. Go 中的面向对象</h3>
+<ul>
+<li>
+<p>Go 没有类，而是松耦合的类型、方法对接口的实现。</p>
+</li>
+<li>
+<p>封装，继承和多态，在 Go 中的表现</p>
+</li>
+<li>
+<p>封装（数据隐藏）：和别的 OO 语言有 4 个或更多的访问层次相比，Go 把它简化为了 2 层:</p>
+<p>1）包范围内的：通过标识符首字母小写，<code>对象</code> 只在它所在的包内可见</p>
+<p>2）可导出的：通过标识符首字母大写，<code>对象</code> 对所在包以外也可见</p>
+</li>
+</ul>
+<p>类型只拥有自己所在包中定义的方法。</p>
+<ul>
+<li>继承：用组合实现：内嵌一个（或多个）包含想要的行为（字段和方法）的类型；多重继承可以通过内嵌多个类型实现</li>
+<li>多态：用接口实现：某个类型的实例可以赋给它所实现的任意接口类型的变量。类型和接口是松耦合的，并且多重继承可以通过实现多个接口实现。Go 接口不是 Java 和 C# 接口的变体，而且接口间是不相关的，并且是大规模编程和可适应的演进型设计的关键。</li>
+</ul>
+<h3 id="golang最主要的特性">Golang最主要的特性</h3>
+<ul>
+<li>自动垃圾回收</li>
+<li>更丰富的内置类型</li>
+<li>函数多返回值</li>
+<li>错误处理</li>
+<li>匿名函数和闭包</li>
+<li>类型和接口</li>
+<li>并发编程</li>
+<li>反射</li>
+<li>语言交互性</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

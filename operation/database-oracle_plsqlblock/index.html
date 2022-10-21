@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="PL/SQL块：过程、函数、触发器、包">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Oracle_plsqlblock</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 9 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="存储过程">存储过程</h3>
+<ul>
+<li>存储过程是一种命名的PL/SQL块，既可以没有参数，也可以有若干个输入、输出参数，或有多个既作为输入又作为输出的参数，通常没有返回值。存储过程被保存在数据库中，不可以被SQL语句直接执行或调用，只能通过EXECUTE命令执行或在PL/SQL块内部被调用。存储过程是已经编译好的代码，调用时执行效率非常高。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- 创建存储过程
+-- parameter是存储过程被调用/执行时用到的参数，而不是存储过程内定义的内部变量，类型不能指定长度
+CREATE [OR REPLACE] PROCEDURE pro_name [(parameter1 [IN|OUT] [,parameter2]...)] IS|AS
+BEGIN
+	plsql_sentences;
+[EXCEPTION]
+	[dowith_sentences;] -- 异常处理语句
+END [pro_name];
+-- 调用存储过程
+EXEC | EXECUTE pro_name;
+</code></pre><h4 id="存储过程的参数">存储过程的参数</h4>
+<ul>
+<li>
+<p>IN模式：输入类型，由调用方传入，只能被存储过程读取，默认模式。参数类型不能指定长度。位于参数名称之后。</p>
+<ul>
+<li>指定名称传递参数：<code>pro_name(parameter=&gt;value1[,parameter2=&gt;value2]...)</code>，与定义顺序无关，与参数个数有关。</li>
+<li>按位置传递：提供的参数值顺序必须与存储过程中定义的参数顺序相同。</li>
+<li>混合方式传递：在某个位置使用指定名称传递方式传入参数后，后面也要使用指定名称传递。因为指定名称传递方式有可能已经破环了参数原始的定义顺序。</li>
+</ul>
+</li>
+<li>
+<p>OUT模式：输出类型参数，表示此参数已在存储过程中被赋值，可以传递到存储过程之外的环境中，位于参数名称之后。</p>
+<ul>
+<li>在PL/SQL块中调用OUT模式，需要在DECLARE部分定义与存储过程中OUT参数兼容的若干变量。</li>
+<li>使用EXEC执行OUT模式的存储过程，需要在<code>SQL*PLUS</code>环境中使用VARIABLE声明变量，用于存储OUT参数的返回值。</li>
+</ul>
+</li>
+<li>
+<p>IN OUT模式：调用存储过程时，从外界向该参数传入值，存储过程执行完毕后，该参数的返回值被传回给外界。</p>
+</li>
+</ul>
+<h4 id="in参数的默认值">IN参数的默认值</h4>
+<ul>
+<li>支持在IN参数声明的同时初始化默认值，传值时若带默认值的参数不传值，建议使用指定名称传递参数。</li>
+</ul>
+<h4 id="删除存储过程">删除存储过程</h4>
+<pre tabindex="0"><code class="language-PLSQL" data-lang="PLSQL">DROP PROCEDURE pro_name;
+</code></pre><h3 id="函数">函数</h3>
+<ul>
+<li>存储在数据库中的命名程序块，函数一般用于计算和返回一个值，函数的调用是表达式的一部分，过程的调用是一条PL/SQL语句。函数必须有一个返回值，过程则没有。</li>
+</ul>
+<h4 id="创建函数">创建函数</h4>
+<ul>
+<li>函数可以接受零或多个输入参数，并且必须有返回值。由于函数有返回值，在主体部分必须使用RETURN语句返回函数值，并且返回值类型与声明时的类型一致。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">CREATE [OR REPLACE] FUNCTION fun_name[(parameter1[,parameter2]...)] RETURE data_type IS [inner_variable]
+BEGIN
+	plsql_sentence;
+[EXCEPTION]
+	[dowith_sentences;]
+END [fun_name];
+</code></pre><h4 id="调用函数">调用函数</h4>
+<ul>
+<li>由于函数有返回值，调用函数时，必须使用一个变量保存函数的返回值。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">DECLARE
+ variable_name data_type;
+BEGIN
+	variable_name:=fun_name(value);
+END;
+</code></pre><h4 id="删除函数">删除函数</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">DROP FUNCTION fun_name;
+</code></pre><h3 id="触发器">触发器</h3>
+<ul>
+<li>触发器可以看作一种特殊的存储过程，定义了一些在数据库相关事件发生时应执行的功能代码块，通常用于管理复杂的完整性约束，或监控对表的修改，或通知其他程序，也可实现对数据的审计功能。</li>
+<li>能够引起触发器运行的操作被称为触发事件，如执行DML语句，执行DDL语句，引发数据库系统事件，引发用户事件。</li>
+</ul>
+<h4 id="创建触发器">创建触发器</h4>
+<ul>
+<li>触发器根据触发事件和触发器执行情况，分为5类。
+<ul>
+<li>行级触发器：DML语句对每一行数据进行操作时都会触发。在行级触发器中，可以访问当前正在受影响的数据行，可以通过行标识符来实现，列标识符分为原值标识符(:old.col_name)和新值标识符(:new.col_name)</li>
+<li>语句级触发器：无论DML语句影响多少行，只触发一次。</li>
+<li>替代触发器：定义在视图上，用来替换所实际使用的语句触发器。在没有为视图创建替换触发器之前，插入数据会触发错误提示。</li>
+<li>用户事件触发器：与DDL操作或用户登录、退出数据库等事件相关的触发器。CREATE|ALTER|DROP|ANALYZE|COMMENT|GRANT|REVOKE|RENAME|TRUNCATE|SUSPEND|LOGON|LOGOFF。使用事件属性。</li>
+<li>系统事件触发器：在Oracle数据库系统的事件中进行触发的触发器。</li>
+</ul>
+</li>
+<li>触发器中可使用谓词，INSERTING、UPDATING、DELETING，条件谓词可以判断指定列（UPDATING(col_name)）。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">-- INSTEAD OF表示触发器为替代触发器
+-- user_name表示用户模式
+-- for each row指定触发器为行级触发器，每行数据操作都会运行一次
+CREATE [OR REPLACE] TRIGGER tri_name
+	[BEFORE|AFTER|INSTEAD OF] tri_event
+	ON table_name | view_name | user_name | db_name
+	[FOR EACH ROW [WHEN tri_condifiton]]
+BEGIN
+	plsql_sentence;
+END;
+</code></pre><h4 id="删除触发器">删除触发器</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">DROP TRIGGER tri_name;
+</code></pre><h3 id="程序包">程序包</h3>
+<ul>
+<li>程序包由PL/SQL程序元素、匿名PL/SQL块、命名PL/SQL块组成。</li>
+</ul>
+<h4 id="程序包的规范">程序包的规范</h4>
+<ul>
+<li>程序包的规范用于规定在程序包中可以使用哪些变量、类型、游标和子程序，程序包一定要在包主体之前被创建。只定义了规范的程序包还不可以使用，如果驶入使用会报错。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">CREATE [OR REPLACE] PACKAGE pack_name IS
+	[declare_variable];
+	[declare_type];
+	[declare_cursor];
+	[declare_function]; -- 仅定义参数和返回值类型，不包括函数体
+	[declare_porcedure]; -- 仅定义参数，不包括存储过程主体
+END [pack_name];
+-- 
+CREATE OR REPLACE PACKAGE pack_emp IS
+	FUNCTION fun_avg_sal(num_deptno number) RETURN number;
+	PROCEDURE pro_regulate_sal(var_job varchar2, num_proportion number);
+END pack_emp;
+</code></pre><h4 id="程序包的主体">程序包的主体</h4>
+<ul>
+<li>程序包的主题包含了在规范中声明的游标、过程和函数的实现代码，也可以在主体中声明一些内部变量。程序包主体的名称必须与规范的名称相同。在实现函数或存储过程主体时，可以将每一个函数或存储过程作为一个独立的PL/SQL块来处理。</li>
+</ul>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">CREATE [OR REPLACE] PACKAGE BODY pack_name IS
+	[inner_variable]
+	[cursor_body]
+	[function_title] -- 从规范中引入的函数头部声明
+	{
+		BEGIN
+			fun_plsql;
+		[EXCEPTION]
+			[dowith_sentences;]
+		END [fun_name];
+	}
+	[procedure_title] -- 从规范中引入的存储过程头部声明
+	{
+		BEGIN
+			pro_plsql;
+		[EXCEPTION]
+			[dowith_sentences;]
+		END [pro_name];
+	}
+...
+END [pack_name];
+</code></pre><h4 id="删除包">删除包</h4>
+<pre tabindex="0"><code class="language-plsql" data-lang="plsql">DROP PACKAGE pack_name;
+</code></pre>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

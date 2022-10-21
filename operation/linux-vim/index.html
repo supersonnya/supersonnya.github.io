@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="Vim编辑器的使用及常用命令">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Vim编辑器</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 15, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 6 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="编辑保存退出">编辑、保存、退出</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 编辑一个文件，如果文件不存在，会自动新建</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 使用不带任何参数的vim命令，在保存的时候需要指定文件名</span>
+</span></span><span style="display:flex;"><span>vim file
+</span></span><span style="display:flex;"><span>:e  <span style="color:#999;font-style:italic">## 打开另外一个文件，将文件名作为参数</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 退出</span>
+</span></span><span style="display:flex;"><span>:q
+</span></span><span style="display:flex;"><span>:q! <span style="color:#999;font-style:italic"># 强制退出，丢弃修改内容</span>
+</span></span><span style="display:flex;"><span>:w filename  <span style="color:#999;font-style:italic">## 另存为filename</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 保存并退出</span>
+</span></span><span style="display:flex;"><span>:wq
+</span></span></code></pre></div><h3 id="文本操作">文本操作</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>a <span style="color:#999;font-style:italic">## 在当前光标所处位置的右边插入文本  </span>
+</span></span><span style="display:flex;"><span>i <span style="color:#999;font-style:italic">## 在当前光标所处位置的左边插入文本  </span>
+</span></span><span style="display:flex;"><span>A <span style="color:#999;font-style:italic">## 在当前行的末尾追加文本  </span>
+</span></span><span style="display:flex;"><span>I <span style="color:#999;font-style:italic">## 在当前行的开始处插入文本  </span>
+</span></span><span style="display:flex;"><span>O <span style="color:#999;font-style:italic">## 在当前行的上面插入一个新行</span>
+</span></span><span style="display:flex;"><span>o <span style="color:#999;font-style:italic">## 在当前行的下面插入一个新行</span>
+</span></span><span style="display:flex;"><span>R <span style="color:#999;font-style:italic">## 覆盖当前光标所在的位置以及后面的若干文本  </span>
+</span></span><span style="display:flex;"><span>J <span style="color:#999;font-style:italic">## 将当前光标所在行与下面的一行合并为一行  </span>
+</span></span></code></pre></div><h3 id="光标移动">光标移动</h3>
+<blockquote>
+<p>移动光标的时候，可以在命令前加上数字，表示重复多少次移动。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>向下、 j、空格   <span style="color:#999;font-style:italic">## 光标向正下方移动 1 行  </span>
+</span></span><span style="display:flex;"><span>向上、 k、backspace   <span style="color:#999;font-style:italic">## 光标向正上方移动 1 行  </span>
+</span></span><span style="display:flex;"><span>向左、h   <span style="color:#999;font-style:italic">## 光标向左移动过 1 个字符  </span>
+</span></span><span style="display:flex;"><span>向右、l   <span style="color:#999;font-style:italic">## 光标向右移动 1 个字符  </span>
+</span></span><span style="display:flex;"><span>回车   <span style="color:#999;font-style:italic">## 光标会移动到下 1 行的行首  </span>
+</span></span><span style="display:flex;"><span>-   <span style="color:#999;font-style:italic">## 光标会移动到上 1 行的行首  </span>
+</span></span><span style="display:flex;"><span>G   <span style="color:#999;font-style:italic">## 将光标移动到文件最后 1 行的行首  </span>
+</span></span><span style="display:flex;"><span>^  <span style="color:#999;font-style:italic">## 移动光标到行首</span>
+</span></span><span style="display:flex;"><span>$  <span style="color:#999;font-style:italic">## 移动光标到行尾</span>
+</span></span><span style="display:flex;"><span>Gg <span style="color:#999;font-style:italic">## 移动光标到文件头</span>
+</span></span><span style="display:flex;"><span>W  <span style="color:#999;font-style:italic">## 移动光标到下一个单词</span>
+</span></span><span style="display:flex;"><span>B  <span style="color:#999;font-style:italic">## 移动光标到前一个单词</span>
+</span></span><span style="display:flex;"><span>Ctrl+f  <span style="color:#999;font-style:italic">## 向前（朝向文件尾）翻动一页</span>
+</span></span><span style="display:flex;"><span>Ctrl+b  <span style="color:#999;font-style:italic">## 向后（朝向文件头）翻动一页</span>
+</span></span></code></pre></div><h3 id="文本复制粘贴">文本复制、粘贴</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yy  <span style="color:#999;font-style:italic">## 将当前行复制到缓冲区</span>
+</span></span><span style="display:flex;"><span>nyy  <span style="color:#999;font-style:italic">## 将当前行以及下面的n行复制到缓冲区，其中n表示一个整数</span>
+</span></span><span style="display:flex;"><span>yw  <span style="color:#999;font-style:italic">## 复制从光标当前位置到当前单词词尾的字符  </span>
+</span></span><span style="display:flex;"><span>nyw  <span style="color:#999;font-style:italic">## n是一个整数，从光标当前位置开始，复制后面的n个单词  </span>
+</span></span><span style="display:flex;"><span>y^  <span style="color:#999;font-style:italic">## 从当前光标所处的位置开始，复制到当前行的行首  </span>
+</span></span><span style="display:flex;"><span>y$  <span style="color:#999;font-style:italic">## 从当前光标所处的位置开始，复制到当前行的行尾    </span>
+</span></span><span style="display:flex;"><span>p <span style="color:#999;font-style:italic">## 将缓冲区中的字符串插入点当前光标所处位置的后面</span>
+</span></span><span style="display:flex;"><span>P <span style="color:#999;font-style:italic">## 将将缓冲区中的字符串插入到当前光标所处位置的前面</span>
+</span></span></code></pre></div><h3 id="删除文本">删除文本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>x  <span style="color:#999;font-style:italic">## 删除光标所在的位置的字符  </span>
+</span></span><span style="display:flex;"><span>nx  <span style="color:#999;font-style:italic">## 删除从光标所在位置开始，后面的n个字符  </span>
+</span></span><span style="display:flex;"><span>dd  <span style="color:#999;font-style:italic">## 删除光标所处的整个行  </span>
+</span></span><span style="display:flex;"><span>ndd  <span style="color:#999;font-style:italic">## 删除包括当前行在内的n行</span>
+</span></span><span style="display:flex;"><span>D  <span style="color:#999;font-style:italic">## 删除光标所在位置到行尾之间所有的字符</span>
+</span></span><span style="display:flex;"><span>u  <span style="color:#999;font-style:italic">## 撤销刚刚执行的操作</span>
+</span></span><span style="display:flex;"><span>U  <span style="color:#999;font-style:italic">## 撤销针对当前行的所有操作</span>
+</span></span><span style="display:flex;"><span>Ctrl+R  <span style="color:#999;font-style:italic">## 重做被撤销的操作</span>
+</span></span></code></pre></div><h3 id="跳转搜索替换">跳转搜索替换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 跳到行号为n的行</span>
+</span></span><span style="display:flex;"><span>:n
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 向下跳n行</span>
+</span></span><span style="display:flex;"><span>:n+
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 向上跳n行</span>
+</span></span><span style="display:flex;"><span>:n-
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 向前查找字符串</span>
+</span></span><span style="display:flex;"><span>:/string
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 向后查找字符串</span>
+</span></span><span style="display:flex;"><span>:?string
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将pattern代表的字符串替换为string</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## range指定替换作用的范围，“1,4”表示从1到4行，“1,$”或“%”表示全文</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### c  每次替换前询问 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### e  不显示错误信息  </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### i  不区分大小写 </span>
+</span></span><span style="display:flex;"><span>:[range]s/pattern/string/[c,e,g,i]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用字符串new替换当前行中首次出现的字符串old</span>
+</span></span><span style="display:flex;"><span>:s/old/new 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用字符串new替换当前行中所有的字符串old</span>
+</span></span><span style="display:flex;"><span>:s/old/new/g
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用字符串new替换从n到m行所有的字符串old</span>
+</span></span><span style="display:flex;"><span>:n,m s/old/new/g
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用字符串new替换当前文件中所有的字符串old </span>
+</span></span><span style="display:flex;"><span>:%s/old/new/g 
+</span></span></code></pre></div><h3 id="其他配置">其他配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示行号</span>
+</span></span><span style="display:flex;"><span>:set nu
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 隐藏行号</span>
+</span></span><span style="display:flex;"><span>:set nonu
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 打开语法高亮功能</span>
+</span></span><span style="display:flex;"><span>:syntax on
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 自动缩进</span>
+</span></span><span style="display:flex;"><span>:set autoindent
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## Tab键缩进空格数，默认是8</span>
+</span></span><span style="display:flex;"><span>:set <span style="color:#40ffff">shiftwidth</span>=<span style="color:#3677a9">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 忽略大小写</span>
+</span></span><span style="display:flex;"><span>:set ignorecase
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 开启大小写敏感</span>
+</span></span><span style="display:flex;"><span>:set noignorecase
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">##  将文件修改为unix格式，fileformat可取unix或dos等值</span>
+</span></span><span style="display:flex;"><span>:set <span style="color:#40ffff">fileformat</span>=unix
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改配置文件/etc/vim/vimrc，对所有用户生效</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 单个用户可以在自己的主目录下新建一个名为.vimrc的文件，把配置信息写在里面</span>
+</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>extraction on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/extraction/</link>
+    <description>Recent content in extraction on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Jul 2022 09:22:09 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/extraction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If | 如果</title>
+      <link>https://supersonnya.github.io/records/extraction-poem_if/</link>
+      <pubDate>Tue, 26 Jul 2022 09:22:09 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/extraction-poem_if/</guid>
+      <description>Rudyard Kipling | 拉迪亚德·吉卜林 If you can keep your head when all about you, are losing theirs and blaming it on you; 如果周围的人毫无理性地向你发难，你仍能镇定自若保持冷静；
+If you can trust yourself when all men doubt you, but make allowance for their doubting too; 如果众人对你心存猜忌，你仍能自信如常并认为他们的猜忌情有可原；
+If you can wait and not be tired by waiting, 如果你肯耐心等待不急不躁，
+Or, being lied about, don&amp;rsquo;t deal in lies, 或遭人诽谤却不以牙还牙，
+Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶报恶；</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/blog/linux_wordpress/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/blog/linux_wordpress/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/sonnya/example/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/sonnya/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>恶之花</title>
+      <link>https://supersonnya.github.io/records/extraction-poem_%E6%81%B6%E4%B9%8B%E8%8A%B1/</link>
+      <pubDate>Fri, 10 Jul 2020 16:12:09 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/extraction-poem_%E6%81%B6%E4%B9%8B%E8%8A%B1/</guid>
+      <description>[法]波德莱尔 也许你我终将行踪不明，
+但是你该知道我曾因你动情。
+不要把一个阶段幻想得很好，
+而又去幻想等待后的结果。
+那样的生活只会充满依赖，
+我的心思不为谁而停留，
+而心总要为谁而跳动。</description>
+    </item>
+    
+  </channel>
+</rss>

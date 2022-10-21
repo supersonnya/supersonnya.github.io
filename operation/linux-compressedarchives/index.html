@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">压缩存档备份</h1>
+    
+    <p class="uk-text-center uk-text-muted">Aug 08, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 5 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="压缩工具">压缩工具</h3>
+<h4 id="gzip">gzip</h4>
+<ul>
+<li>压缩后只生成新压缩文件，不保留原文件</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 压缩文件</span>
+</span></span><span style="display:flex;"><span>gzip &lt;filename&gt;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 解压文件，支持的扩展名.gz、.Z、-gz、.z、-z、z</span>
+</span></span><span style="display:flex;"><span>gunzip &lt;filename&gt;
+</span></span><span style="display:flex;"><span>gzip -d &lt;filename&gt;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 查看压缩效果</span>
+</span></span><span style="display:flex;"><span>gzip -l &lt;filename&gt;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 测试压缩文件的完整性</span>
+</span></span><span style="display:flex;"><span>gzip -tv &lt;filename&gt;
+</span></span></code></pre></div><h4 id="bzip2">bzip2</h4>
+<ul>
+<li>提供比<code>gzip</code>更高的压缩率，速度比<code>gzip</code>慢</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 压缩文件</span>
+</span></span><span style="display:flex;"><span>bzip2 &lt;filename&gt;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 解压文件，支持的扩展名.bz2、.bz、.tbz2、.tbz、bzip2</span>
+</span></span><span style="display:flex;"><span>bunzip2 &lt;filename&gt;
+</span></span><span style="display:flex;"><span>bzip2 -d &lt;filename&gt;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 测试压缩文件的完整性</span>
+</span></span><span style="display:flex;"><span>bzip2 -tv &lt;filename&gt;
+</span></span></code></pre></div><h4 id="rar--for--linuxwwwrarlabcomdownloadhtm"><a href="www.rarlab.com/download.htm">RAR  for  linux</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 解压文件</span>
+</span></span><span style="display:flex;"><span> rar x xxx.rar
+</span></span></code></pre></div><h3 id="存档工具">存档工具</h3>
+<h4 id="tar">tar</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 文件打包，不会删除原来的文件，命令选项前的-可省略</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -c创建归档文件，-v显示命令的执行过程，-f指定归档文件的文件名</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 最后一个（或者几个）参数指定了需要打包的文件和目录</span>
+</span></span><span style="display:flex;"><span>tar -cvf xxx.tar xxx/
+</span></span><span style="display:flex;"><span>tar -xvf xxx.tar
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -w每次将单个文件加入（或者抽出）归档文件时询问，yn回答</span>
+</span></span><span style="display:flex;"><span>tar -cvwf xxx.tar xxx/
+</span></span><span style="display:flex;"><span>tar -xvwf xxx.tar
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -z调用gzip程序</span>
+</span></span><span style="display:flex;"><span>tar -czvf xxx.tar.gz xxx/
+</span></span><span style="display:flex;"><span>tar -xzf xxx.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -j调用bzip2程序</span>
+</span></span><span style="display:flex;"><span>tar -xjf xxx.tar.bz2
+</span></span></code></pre></div><h4 id="dd">dd</h4>
+<ul>
+<li>复制文件系统</li>
+<li><code>dd if=/dev/cdrom of=CD.iso</code></li>
+</ul>
+<h3 id="系统备份">系统备份</h3>
+<ul>
+<li>绝大多数的增量备份工具不会注意到磁盘上已经删除的文件，当恢复数据的时候，一些已经被删除的文件会再次出现在系统上。要找到并再次清除这些垃圾会很繁琐。如果存储容量允许，可首先考虑完整备份。</li>
+</ul>
+<h4 id="dump">dump</h4>
+<ul>
+<li>使用dump进行增量备份时，只能在像磁带这样的字符设备（顺序访问设备）上进行。如果使用硬盘做备份，只能进行0级备份。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 执行从/web 到/dev/nst0 的备份</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -0执行级别为0的备份，备份级别总共有0～9，0表示完整备份</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -u 指定更新/etc/dumpdates文件，这个文件中记录了历次备份</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 的时间、备份级别和实施备份的文件系统，dump在实施增量</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 备份的时候需要依据这个文件决定哪些文件应该备份</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -u要求备份的必须是一个完整的文件系统</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -f指定用于存放备份的设备</span>
+</span></span><span style="display:flex;"><span>dump -0u -f /dev/nst0 /xxx
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 将备份转储到远程主机上，需要指定远程主机的主机名或IP</span>
+</span></span><span style="display:flex;"><span>rdump -0u -f hostname:/dev/nst0 /xxx
+</span></span></code></pre></div><h4 id="restore">restore</h4>
+<ul>
+<li>dump的配套工具，用于从备份设备中提取数据，在使用 restore 恢复数据之前，首先需要建立一个临时目录，这个目录用于存放备份设备中的目录层次，用 restore 恢复的文件也会存放在这个目录下。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir /var/restore
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -i用于交互式地恢复单个文件和目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -f指定存放备份的设备</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 执行后进入交互式的命令行界面，用ls和cd命令在备份的文件系统中浏览，</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 需要恢复的文件，用add标记，最后使用extract提取所有做过标记的文件和目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 提取完成后，使用quit退出restore</span>
+</span></span><span style="display:flex;"><span>restore -i -f /dev/sdb3
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 恢复整个文件系统</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 进入需要要恢复的目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> /xxx
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -r 恢复整个文件系统</span>
+</span></span><span style="display:flex;"><span>restore -r -f /dev/sdb3
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 以交互的方式从远程主机提取备份信息</span>
+</span></span><span style="display:flex;"><span>rrestore -i -f hostname:/dev/nst0
+</span></span></code></pre></div><h4 id="cron">cron</h4>
+<ul>
+<li>让备份定时自动完成，定时执行命令的软件，完成需要定期重复的工作</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

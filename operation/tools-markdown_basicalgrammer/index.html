@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Markdown基础语法</h1>
+    
+    <p class="uk-text-center uk-text-muted">Jun 20, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="1-标题">1. 标题</h3>
+<h4 id="11-使用和-标记一级和二级标题">1.1 使用<code>=</code>和<code>-</code>标记一级和二级标题</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>一级标题
+</span></span><span style="display:flex;"><span>=======
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>二级标题
+</span></span><span style="display:flex;"><span>-------
+</span></span></code></pre></div><h4 id="12-使用标记">1.2 使用<code>#</code>标记</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold"># 一级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold"></span><span style="color:#fff;text-decoration:underline">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#fff;text-decoration:underline">### 三级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#fff;text-decoration:underline">#### 四级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#fff;text-decoration:underline">##### 五级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#fff;text-decoration:underline">###### 六级标题
+</span></span></span></code></pre></div><h3 id="2-段落">2. 段落</h3>
+<ol>
+<li>使用两个以上空格加上换行来开始下一个段落</li>
+<li>直接使用一个空行表示开始一个段落</li>
+</ol>
+<h3 id="3-字体">3. 字体</h3>
+<ul>
+<li>可以使用<code>*</code>或<code>_</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>*斜体*
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**粗体**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*粗斜体***
+</span></span></code></pre></div><h3 id="4-线条效果">4. 线条效果</h3>
+<h4 id="41-分割线">4.1 分割线</h4>
+<ul>
+<li>可以使用三个以上<code>*</code>、<code>-</code>或<code>_</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>***
+</span></span><span style="display:flex;"><span><span style="font-style:italic">* *</span> *
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">-</span> - -
+</span></span><span style="display:flex;"><span>___
+</span></span><span style="display:flex;"><span><span style="font-style:italic">_ _</span> _
+</span></span></code></pre></div><h4 id="42-删除线">4.2 删除线</h4>
+<ul>
+<li>使用两个<code>~</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~删除线~~
+</span></span></code></pre></div><h4 id="43-下划线">4.3 下划线</h4>
+<ul>
+<li>使用<code>&lt;u&gt;&lt;/u&gt;</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#6ab825;font-weight:bold">u</span>&gt;下划线&lt;/<span style="color:#6ab825;font-weight:bold">u</span>&gt;
+</span></span></code></pre></div><h4 id="44-脚注">4.4 脚注</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>脚注[^foot]
+</span></span><span style="display:flex;"><span>[^foot]: 添加脚注
+</span></span></code></pre></div><h3 id="5-列表">5. 列表</h3>
+<h4 id="51-无序列表">5.1 无序列表</h4>
+<ul>
+<li>使用<code>*</code>、<code>+</code>或<code>-</code>加空格</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">*</span> 第一项
+</span></span><span style="display:flex;"><span>+ 第二项
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">-</span> 第三项
+</span></span></code></pre></div><h4 id="52-有序列表">5.2 有序列表</h4>
+<ul>
+<li>使用<code>数字</code>加上<code>.</code>和空格表示</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">1.</span> 第一项
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">2.</span> 第二项
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">3.</span> 第三项
+</span></span></code></pre></div><h4 id="53-列表嵌套">5.3 列表嵌套</h4>
+<ul>
+<li>在子列表的选项前添加四个空格</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">1.</span> 第一项
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">-</span> 子项
+</span></span></code></pre></div><h3 id="6-区块">6. 区块</h3>
+<ul>
+<li>使用<code>&gt;</code>加空格</li>
+<li>区块可以嵌套，一个<code>&gt;</code>是最外层，两个<code>&gt;</code>是内层，可以多层嵌套</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">区块
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">&gt; 二层区块
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">&gt; &gt; 三层区块
+</span></span></span></code></pre></div><p><code>区块中可以使用列表</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">1. 第一项
+</span></span></span></code></pre></div><p><code>列表中可以使用区块</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">1.</span> 第一项
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">    &gt; </span><span style="font-style:italic">区块
+</span></span></span></code></pre></div><h3 id="7-代码">7. 代码</h3>
+<h4 id="71-短代码">7.1 短代码</h4>
+<ul>
+<li>使用反引号(`)包起来</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ed9d13">`短代码`</span>
+</span></span></code></pre></div><h5 id="72-区块代码">7.2 区块代码</h5>
+<ul>
+<li>使用四个空格或者(```)包裹</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>&lt;php<span style="color:#cd2828;font-weight:bold">?&gt;</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">  echo
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">&lt;php?&gt;
+</span></span></span></code></pre></div><h3 id="8-链接">8. 链接</h3>
+<h4 id="81-简单链接">8.1 简单链接</h4>
+<ul>
+<li><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a>或&lt;链接地址&gt;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这是一个[链接](https://www.baidu.com)
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#6ab825;font-weight:bold">https:</span><span style="color:#a61717;background-color:#e3d2d2">//</span><span style="color:#bbb">www</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#bbb">baidu</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#bbb">com</span>&gt;
+</span></span></code></pre></div><h4 id="82-高级链接">8.2 高级链接</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[高级链接][link]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[link]: https://www.baidu.com/
+</span></span></code></pre></div><h3 id="9-图片">9. 图片</h3>
+<ul>
+<li><img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="属性文本" title="可选标题"></li>
+<li>使用<code>&lt;img&gt;</code>标签指定图片大小</li>
+</ul>
+<h3 id="10-表格">10. 表格</h3>
+<ul>
+<li><code>|</code>分割单元格，<code>-</code>分割表头和其他行</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| 表头 | 表头 |
+</span></span><span style="display:flex;"><span>| -- | -- |
+</span></span><span style="display:flex;"><span>| 单元格 | 单元格 |
+</span></span></code></pre></div><ul>
+<li>设置对齐方式</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>-: 右对齐
+</span></span><span style="display:flex;"><span>:- 左对齐
+</span></span><span style="display:flex;"><span>:-: 居中
+</span></span></code></pre></div><h3 id="11-支持的其他格式">11. 支持的其他格式</h3>
+<ul>
+<li>HTML元素</li>
+<li>转移字符</li>
+<li>甘特图和流程图</li>
+<li>数学公式</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

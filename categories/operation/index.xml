@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>operation on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/operation/</link>
+    <description>Recent content in operation on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Aug 2022 16:49:48 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/operation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Middleware Whatismiddleware</title>
+      <link>https://supersonnya.github.io/operation/middleware-whatismiddleware/</link>
+      <pubDate>Thu, 18 Aug 2022 16:49:48 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/middleware-whatismiddleware/</guid>
+      <description>1. 中间件是什么 中间件是一种独立的系统软件或服务程序，分布式应用软件借助这种软件在不同的技术之间共享资源。中间件位于客户机/ 服务器的操作系统之上，管理计算机资源和网络通讯，是连接两个独立应用程序或独立系统的软件。相连接的系统，即使它们具有不同的接口，但通过中间件相互之间仍能交换信息。通过中间件，应用程序可以工作于多平台或 OS 环境。 中间件是介于操作系统和应用软件之间，为应用软件提供服务功能的软件，有消息中间件，交易中间件，应用服务器等。由于介于两种软件之间，所以，称为中间件。 中间件屏蔽了底层操作系统的复杂性，使程序开发人员面对一个简单而统一的开发环境，减少程序设计的复杂性，将注意力集中在自己的业务上，不必再为程序在不同系统软件上的移植而重复工作，从而大大减少了技术上的负担。中间件带给应用系统的，不只是开发的简便、开发周期的缩短，也减少了系统的维护、运行和管理的工作量，还减少了计算机总体费用的投入。 2. 主要中间件的分类 2.1 Hadoop Hadoop就是一个分布式计算平台，用Java语言开发，包含 Common、MapReduce 和HDFS三个核心部件（HDFS 和 MapReduce 是最核心的两个部件）。其中： Common 为 Hadoop 的其他项目提供了一些常用工具，主要包括系统配置工具 Configuration、远程过程调用 RPC、序列化机制和 Hadoop 抽象文件系统等。 MapReduce 是处理海量数据的计算模型。 而 HDFS 用于存储海量数据，它具备高度容错性，能在低成本的通用硬件机器上稳定运行。 Hadoop 实现了分布式计算中的基础算法（如一致算法、选举算法、故障检测、快照等），同时为用户提供了编程和命令接口。程序员调用这些函数能轻松写出分布式应用程序。 基于 Hadoop 平台衍生出来的开源项目主要有 Yarn、HBase、Hive、ZooKeeper、Avro、Sqoop、Mahout、Crossbow 等。 用 Hadoop 构建的应用实例对于计算资源的消耗具备两个明显的特征：资源需求量大；资源需求具备季节性。 2.2 LVS(Linux Virtual Server) 把许多台物理Linux计算机逻辑上整合成一台超级计算机，对用户来说感觉只有一台计算能力很强的服务器。LVS 就是一个由软件实现的负载均衡器，工作在网络OSI的第四层（应用层）。负载均衡器的作用就是把任务分配给最合适的服务器。 两个较为流行的第七层负载均衡器是 Nginx 和 HAProxy，针对应用做均衡，所以能适应的负载种类没有 LVS 多。 2.3 Linux-HA 如果负载均衡器出现故障，那么整个系统（如网店）将会瘫痪。所以人们开发了各种集群软件，如 Linux-HA 和 Keepalive 等。集成故障转移集群软件的核心思想是，实时检测故障机器并及时让好的机器接管工作，对外提供高可用性。 Linux-HA组件： Heartbeat：负责维护集群中各节点的信息及它们之间的心跳通信。 Pacemaker：集群资源管理器，是核心组件，客户端通过 Pacemaker 来配置、管理并监控整个集群。 Resource Agent：为用于控制服务启停、监控服务状态的脚本集合，本地资源管理器（LRM）调用这些脚本来启动、停止、监控各种集群资源。 Cluster Glue：包含一套函数库和工具，在集群栈中，除集群消息传输（由 Heartbeat 承担）、集群资源管理（由 Pacemaker 承担）和资源代理（由 Resource Agent 承担）功能外，其他功能都由 Cluster Glue 来完成。它包含的两个主要部分是 LRM 和 Stonith，前者是本地资源管理器，后者的任务是隔离故障机器。 2.</description>
+    </item>
+    
+    <item>
+      <title>小米刷机</title>
+      <link>https://supersonnya.github.io/records/operation-miui/</link>
+      <pubDate>Mon, 25 Jul 2022 16:52:39 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/operation-miui/</guid>
+      <description>解锁 下载小米官方解锁工具 在手机上进入设置 -&amp;gt; 开发者选项 -&amp;gt; 设备解锁状态中绑定账号和设备； 在Windows系统上打开miflash_unlock*.exe，填写小米账号密码，需联网登录，登录时可能需要手机验证码，手机先不要关机。 在手机上退出登录的小米账号，否则刷机后可能会锁定设备； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机，点击 解锁。解锁成功后重启手机即可。 要使用数据线而不是充电线，数据线既能传输数据，也能充电；而充电线只能充电，不能传输数据。 线刷 - MIUI 国际版刷机 下载小米官方刷机工具和对应机型的官方的ROM包； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机； 打开Mifalsh工具，在里面选择解压后ROM包的文件夹，加载设备并选中查找到的设备；若没有识别手机，可尝试点击Driver安装驱动后重试； 国际版MIUI不可选择全部删除并lock，选择全部删除 完成后手机会自动重启进入系统。 卡刷 - MIUI EU版刷机 下载对应机型的TEWPimg包和EU版ROM包 刷入第三方recovery（twrp） fastboot device fastboot flash recovery &amp;lt;imgfile_path&amp;gt; 长按电源键和音量+进入TWRP，清除数据后点击安装选择ROM包安装，安装完成后需要在清除中清除/data，否则重新会一直停在MIUI开机界面无法进入系统。 MIUI欧版本地化 MIUI EU本地化 </description>
+    </item>
+    
+  </channel>
+</rss>
