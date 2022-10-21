@@ -153,17 +153,17 @@
                 
                 
                 
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
                 
                 
                 
@@ -183,7 +183,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Notestemps</a></li>
                 
                 
             </ul>
@@ -280,17 +280,17 @@
             
             
             
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <li><a style="font-size: 18px" href="/moments">Moments</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
             
             
             
@@ -310,7 +310,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
+            <li><a style="font-size: 18px" href="/sonnya">Notestemps</a></li>
             
             
         </ul>
@@ -556,7 +556,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Storage Netapp</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 30, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 1 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
     
 <hr class="full-width">
 
@@ -571,6 +571,49 @@ div .highlight {
 </span></span><span style="display:flex;"><span>disk unfail -s diskname <span style="color:#999;font-style:italic">## 将磁盘转换为热备盘</span>
 </span></span><span style="display:flex;"><span>disk zero spares <span style="color:#999;font-style:italic">## 格式化热备盘</span>
 </span></span><span style="display:flex;"><span>rdfile /etc/messages <span style="color:#999;font-style:italic">## 出现reconstruction completed可以更换硬盘</span>
+</span></span></code></pre></div><h3 id="常用巡检命令">常用巡检命令</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>environment status <span style="color:#999;font-style:italic">## 查看环境信息</span>
+</span></span><span style="display:flex;"><span>version <span style="color:#999;font-style:italic">## 查看OS版本</span>
+</span></span><span style="display:flex;"><span>sysconfig -v <span style="color:#999;font-style:italic">## 查看系统信息(设备序列号 系统软、硬件信息等)</span>
+</span></span><span style="display:flex;"><span>sysconfig -a <span style="color:#999;font-style:italic">## 查看系统信息详情</span>
+</span></span><span style="display:flex;"><span>sysconfig –v <span style="color:#999;font-style:italic">## 查看基本配置</span>
+</span></span><span style="display:flex;"><span>sysconfig -av
+</span></span><span style="display:flex;"><span>sysconfig -r <span style="color:#999;font-style:italic">## 查看RAID信息(spare盘及故障硬盘会在这里显示)</span>
+</span></span><span style="display:flex;"><span>license <span style="color:#999;font-style:italic">## 查看许可信息</span>
+</span></span><span style="display:flex;"><span>cf status <span style="color:#999;font-style:italic">## 查看HA状态</span>
+</span></span><span style="display:flex;"><span>qtree status <span style="color:#999;font-style:italic">## 显示qtree状态</span>
+</span></span><span style="display:flex;"><span>vif status <span style="color:#999;font-style:italic">## VIF所有端口是否正常</span>
+</span></span><span style="display:flex;"><span>ifconfig -a <span style="color:#999;font-style:italic">## 查看网络配置</span>
+</span></span><span style="display:flex;"><span>disk show <span style="color:#999;font-style:italic">## 查看磁盘分配信息</span>
+</span></span><span style="display:flex;"><span>disk show -v <span style="color:#999;font-style:italic">## 查看磁盘owner信息</span>
+</span></span><span style="display:flex;"><span>aggr status <span style="color:#999;font-style:italic">## 查看raid组信息</span>
+</span></span><span style="display:flex;"><span>aggr status -r <span style="color:#999;font-style:italic">## 查看raid组详情</span>
+</span></span><span style="display:flex;"><span>vol status <span style="color:#999;font-style:italic">## 查看卷状态</span>
+</span></span><span style="display:flex;"><span>vol status -r <span style="color:#999;font-style:italic">## 查看卷详情</span>
+</span></span><span style="display:flex;"><span>lun show
+</span></span><span style="display:flex;"><span>lun show -v <span style="color:#999;font-style:italic">## 查看LUN信息</span>
+</span></span><span style="display:flex;"><span>igroup show <span style="color:#999;font-style:italic">## 查看igroup信息</span>
+</span></span><span style="display:flex;"><span>df -Vh <span style="color:#999;font-style:italic">## 查看卷空间</span>
+</span></span><span style="display:flex;"><span>df -Ah <span style="color:#999;font-style:italic">## 查看aggr空间</span>
+</span></span><span style="display:flex;"><span>df –i <span style="color:#999;font-style:italic">## 查看卷的inode使用情况</span>
+</span></span><span style="display:flex;"><span>snap list <span style="color:#999;font-style:italic">## 查看快照情况</span>
+</span></span><span style="display:flex;"><span>fcp status <span style="color:#999;font-style:italic">## 查看FCP服务是否开启</span>
+</span></span><span style="display:flex;"><span>fcp show initiator <span style="color:#999;font-style:italic">## 查看FCP连接</span>
+</span></span><span style="display:flex;"><span>fcp show adapter <span style="color:#999;font-style:italic">## 查看FC端口</span>
+</span></span><span style="display:flex;"><span>igroup show <span style="color:#999;font-style:italic">## 查看map情况</span>
+</span></span><span style="display:flex;"><span>igroup show -v <span style="color:#999;font-style:italic">## 查看map详情</span>
+</span></span><span style="display:flex;"><span>lun show -m <span style="color:#999;font-style:italic">## 查看lun的map情况</span>
+</span></span><span style="display:flex;"><span>sysstat -x <span style="color:#3677a9">2</span> <span style="color:#999;font-style:italic">## 查看系统当前性能信息</span>
+</span></span><span style="display:flex;"><span>rdfile /etc/messages <span style="color:#999;font-style:italic">## 查看系统日志信息</span>
+</span></span></code></pre></div><h3 id="cluster-failover">Cluster Failover</h3>
+<ul>
+<li>双机双活配置，当一台机器发生故障，另一台可完全接管坏机的工作。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cf status <span style="color:#999;font-style:italic">## 检查cluster状态</span>
+</span></span><span style="display:flex;"><span>cf <span style="color:#24909d">enable</span> | cf disable <span style="color:#999;font-style:italic">## 开启|关闭cluster</span>
+</span></span><span style="display:flex;"><span>cf takeover <span style="color:#999;font-style:italic">## 强制接管</span>
+</span></span><span style="display:flex;"><span>partner <span style="color:#999;font-style:italic">## 在接管模式下切换到partner管理界面</span>
+</span></span><span style="display:flex;"><span>cf giveback <span style="color:#999;font-style:italic">## 在接管模式下,将接管的功能服务返回给原节点</span>
 </span></span></code></pre></div>
 </div>
 </div>

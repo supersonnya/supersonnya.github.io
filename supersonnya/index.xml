@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Sonnya</title>
+    <link>https://supersonnya.github.io/supersonnya/</link>
+    <description>Recent content in Blog on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://supersonnya.github.io/supersonnya/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress1/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress1/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress2/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress2/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress3/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress3/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress4/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress4/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress5/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress5/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+    <item>
+      <title>在Linux上部署WordPress环境</title>
+      <link>https://supersonnya.github.io/supersonnya/linux_wordpress6/</link>
+      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress6/</guid>
+      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
+    </item>
+    
+  </channel>
+</rss>
