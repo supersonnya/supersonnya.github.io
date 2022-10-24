@@ -108,10 +108,10 @@
     
     <item>
       <title>博科光交</title>
-      <link>https://supersonnya.github.io/operation/switch-brocade_zone/</link>
+      <link>https://supersonnya.github.io/operation/network-switch_brocade_zone/</link>
       <pubDate>Thu, 18 Aug 2022 17:09:01 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/switch-brocade_zone/</guid>
+      <guid>https://supersonnya.github.io/operation/network-switch_brocade_zone/</guid>
       <description>常用命令 uptime ## 显示交换机工作时间 ipaddrshow ## 显示交换机IP地址信息 licenseshow ## 显示光前交换机所添加的license信息 switchshow ## 检查交换机信息及端口状态 switchstatusshow ## 显示交换机的运行状态 firmwareshow ## 显示微码版本 fanshow ## 显示风扇运行状态 tempshow ## 显示交换机当前温度信息 psshow ## 显示电源运行状态 slotshow ## 显示板卡运行状态 hashow ## 显示CP版卡HA状态, errdump ## 显示错误日志 fabricshow ## 显示fabric信息 cfgshow ## 显示交换机配置信息 porterrshow ## 显示交换机端口的错误统计 ## Frame(tx/rx)：tx代表端口发送的数据帧，rx代表端口收到的数据帧 chassisshow ## 显示外壳信息及序列号 version ## 查看版本 userconfig --show -a ## 查看登录帐号 domainsshow ## 查看交换机的domain信息 aliashow ## 查看别名 博科光交划Zone 规划好主机和存储模块在交换机上对应的端口。
 确认交换机IP信息、域信息以及当前活跃cfg配置信息。
 创建zone
@@ -195,10 +195,10 @@ IN参数的默认值 支持在IN参数声明的同时初始化默认值，传值
     
     <item>
       <title>Virtualization Vmware_network</title>
-      <link>https://supersonnya.github.io/operation/virtualization-vmware_network/</link>
+      <link>https://supersonnya.github.io/operation/vt-vmware_network/</link>
       <pubDate>Tue, 16 Aug 2022 17:37:36 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/virtualization-vmware_network/</guid>
+      <guid>https://supersonnya.github.io/operation/vt-vmware_network/</guid>
       <description>一、虚拟设备概念 VMnet0：用于虚拟桥接网络下的虚拟交换机
 VMnet1：用于虚拟Host-Only网络下的虚拟交换机
 VMnet8：用于虚拟NAT网络下的虚拟交换机
@@ -345,10 +345,10 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
     
     <item>
       <title>Docker安装及使用</title>
-      <link>https://supersonnya.github.io/operation/container-docker_install_use/</link>
+      <link>https://supersonnya.github.io/operation/vt-container_docker_install_use/</link>
       <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/container-docker_install_use/</guid>
+      <guid>https://supersonnya.github.io/operation/vt-container_docker_install_use/</guid>
       <description>安装Docker # install docker yum insatall docker-io # start docker systemctl start docker # check if installed successfully ps -ef|grep docker # restart docker systemctl restart docker # stop docker systemctl stop docker Docker安装Mysql # install mysql in docker ## search mysql docker search mysql ## instal mysql docker pull mysql ## check images docker images ## build directory cd /opt/ mkdir mysql_docker cd mysql_docker/ echo $PWD # start mysql docker run --name mysqlserver -v $PWD/conf:/etc/mysql/conf.</description>
     </item>
     
@@ -363,10 +363,10 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
     
     <item>
       <title>Docker基础命令</title>
-      <link>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</link>
+      <link>https://supersonnya.github.io/operation/vt-container_dokcer_basicalcmds/</link>
       <pubDate>Sun, 09 Aug 2020 13:15:42 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/container-dokcer_basicalcmds/</guid>
+      <guid>https://supersonnya.github.io/operation/vt-container_dokcer_basicalcmds/</guid>
       <description>Docker 信息 sudo docker version：查看Docker版本信息。 sudo docker info：显示Docker Engine的相关信息。 容器生命周期 start/stop/restart # 启动一个或多个已经被停止的容器 docker start [OPTIONS] CONTAINER [CONTAINER...] # 停止一个运行中的容器 docker stop [OPTIONS] CONTAINER [CONTAINER...] # 重启容器 docker restart [OPTIONS] CONTAINER [CONTAINER...] rm # 删除一个或多个容器 docker rm [OPTIONS] CONTAINER [CONTAINER...] exec # 在运行的容器中执行命令 docker exec [OPTIONS] CONTAINER COMMAND [ARG...] docker exec -it container_id /bin/bash 容器操作 ps # 列出容器 docker ps [OPTIONS] 镜像仓库 login # 登陆Docker镜像仓库，默认为官方仓库 Docker Hub docker login -u username -p pwd # 登出Docker镜像仓库，默认为官方仓库 Docker Hub docker logout pull # 从镜像仓库中拉取或更新指定镜像 docker pull [OPTIONS] NAME[:TAG|@DIGEST] push # 本地镜像上传到镜像仓库 docker push [OPTIONS] NAME[:TAG] search # 从Docker hub查找镜像 docker search [OPTIONS] term 本地镜像管理 image # 列出本地镜像 docker images rmi # 删除本地镜像 docker rmi [OPTIONS] IMAGE [IMAGE.</description>
     </item>
     

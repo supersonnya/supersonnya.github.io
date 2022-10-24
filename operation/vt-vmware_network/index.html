@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="description" property="og:description" content="VMWare三种网络连接方式">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -53,7 +53,7 @@
   <meta name="theme-color" content="#ffffff">
   
   
-  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.44cde0f7e6ca223e9b2db9323d09ac2b9480492879f69f89b5549d278ba0b2d3.css">
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
   
@@ -63,7 +63,7 @@
   
    
 </head>
-<body class="moments">
+<body class="operation">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -101,7 +101,9 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
                 
                 
                 
@@ -141,7 +143,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
                 
                 
                 
@@ -151,9 +153,17 @@
                 
                 
                 
-                <li class="uk-active">
-                    <a style="font-size: 18px; text-transform:none"
-                        href="/moments">Moments</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
                 
                 
                 
@@ -164,16 +174,6 @@
                 
                 
                 <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
                 
                 
             </ul>
@@ -220,7 +220,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
             
             
             
@@ -260,7 +260,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
             
             
             
@@ -270,7 +270,17 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/moments">Moments</a></li>
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
             
             
             
@@ -281,16 +291,6 @@
             
             
             <li><a style="font-size: 18px" href="/about">About</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
             
             
         </ul>
@@ -533,15 +533,49 @@ div .highlight {
 
 <section>
   <div class="uk-container uk-margin-medium-bottom">
-    <h1 class="uk-text-center uk-heading-small"></h1>
+    <h1 class="uk-text-center uk-heading-small">Virtualization Vmware_network</h1>
     
-    <p class="uk-text-center uk-text-muted">Aug 29, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 0 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Aug 16, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 4 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <p>教资还有：</p>
+  <h3 id="一虚拟设备概念">一、虚拟设备概念</h3>
+<ul>
+<li>
+<p>VMnet0：用于虚拟桥接网络下的虚拟交换机</p>
+</li>
+<li>
+<p>VMnet1：用于虚拟Host-Only网络下的虚拟交换机</p>
+</li>
+<li>
+<p>VMnet8：用于虚拟NAT网络下的虚拟交换机</p>
+</li>
+<li>
+<p>VMware Network AdepterVMnet1：Host用于与Host-Only虚拟网络进行通信的虚拟网卡</p>
+</li>
+<li>
+<p>VMware Network Adepter VMnet8：Host用于与NAT虚拟网络进行通信的虚拟网卡</p>
+</li>
+</ul>
+<h3 id="二三种连接模式">二、三种连接模式</h3>
+<h4 id="1桥接">1、桥接</h4>
+<ul>
+<li>在这种模式下，VMware虚拟出来的操作系统就像是局域网中的一台独立的主机，可以访问网内任何一台机器。需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。同时，由于这个虚拟系统是局域网中的一个独立的主机系统，那么就可以手工配置它的TCP/IP配置信息，以实现通过局域网的网关或路由器访问互联网。</li>
+</ul>
+<h4 id="2nat">2、NAT</h4>
+<ul>
+<li>使用NAT模式，就是让虚拟系统借助NAT(网络地址转换)功能，通过宿主机器所在的网络来访问公网。也就是说，使用NAT模式可以实现在虚拟系统里访问互联网。NAT模式下的虚拟系统的TCP/IP配置信息是由VMnet8(NAT)虚拟网络的DHCP服务器提供的，无法进行手工修改，因此虚拟系统也就无法和本局域网中的其他真实主机进行通讯。采用NAT模式最大的优势是虚拟系统接入互联网非常简单，不需要进行任何其他的配置，只需要主机器能访问互联网即可。这种情况下，主机可以ping通虚拟机，虚拟机也能ping通主机。</li>
+</ul>
+<h4 id="3hostonly">3、HostOnly</h4>
+<ul>
+<li>在Host-Only模式下，虚拟网络是一个全封闭的网络，它唯一能够访问的就是主机。其实Host-Only网络和NAT网络很相似，不同的地方就是 Host-Only网络没有NAT服务，所以虚拟网络不能连接到Internet。主机和虚拟机之间的通信是通过VMwareNetworkAdepterVMnet1虚拟网卡来实现的。此时如果想要虚拟机上外网则需要主机联网并且网络共享。</li>
+</ul>
+<h3 id="三总结">三、总结</h3>
+<ul>
+<li>共享连接方式和NAT方式，都可以实现虚拟机和主机，虚拟机和互联网通信，NAT方式设置简单，且可以实现同时访问多个物理网卡。桥接方式可实现虚拟机和主机，虚拟机和互联网通信，若虚拟机作为服务器，只有这种方式可行。但需独立的IP给虚拟机，且若物理网卡连接断开，虚拟机与主机也不能连接。host-only方式只实现虚拟机主机通信，一般不单独采用。</li>
+</ul>
 
 </div>
 </div>

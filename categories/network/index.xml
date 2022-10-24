@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>switch on Sonnya</title>
-    <link>https://supersonnya.github.io/categories/switch/</link>
-    <description>Recent content in switch on Sonnya</description>
+    <title>network on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/network/</link>
+    <description>Recent content in network on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Aug 2022 17:09:01 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/switch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Aug 2022 17:09:01 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博科光交</title>
-      <link>https://supersonnya.github.io/operation/switch-brocade_zone/</link>
+      <link>https://supersonnya.github.io/operation/network-switch_brocade_zone/</link>
       <pubDate>Thu, 18 Aug 2022 17:09:01 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/switch-brocade_zone/</guid>
+      <guid>https://supersonnya.github.io/operation/network-switch_brocade_zone/</guid>
       <description>常用命令 uptime ## 显示交换机工作时间 ipaddrshow ## 显示交换机IP地址信息 licenseshow ## 显示光前交换机所添加的license信息 switchshow ## 检查交换机信息及端口状态 switchstatusshow ## 显示交换机的运行状态 firmwareshow ## 显示微码版本 fanshow ## 显示风扇运行状态 tempshow ## 显示交换机当前温度信息 psshow ## 显示电源运行状态 slotshow ## 显示板卡运行状态 hashow ## 显示CP版卡HA状态, errdump ## 显示错误日志 fabricshow ## 显示fabric信息 cfgshow ## 显示交换机配置信息 porterrshow ## 显示交换机端口的错误统计 ## Frame(tx/rx)：tx代表端口发送的数据帧，rx代表端口收到的数据帧 chassisshow ## 显示外壳信息及序列号 version ## 查看版本 userconfig --show -a ## 查看登录帐号 domainsshow ## 查看交换机的domain信息 aliashow ## 查看别名 博科光交划Zone 规划好主机和存储模块在交换机上对应的端口。
 确认交换机IP信息、域信息以及当前活跃cfg配置信息。
 创建zone

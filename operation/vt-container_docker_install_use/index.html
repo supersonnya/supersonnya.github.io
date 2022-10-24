@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="The website of Sonnya, a noob in the new world.">
+  <meta name="description" property="og:description" content="The notes website of Sonnya.">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -53,7 +53,7 @@
   <meta name="theme-color" content="#ffffff">
   
   
-  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.44cde0f7e6ca223e9b2db9323d09ac2b9480492879f69f89b5549d278ba0b2d3.css">
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
   
@@ -63,7 +63,7 @@
   
    
 </head>
-<body class="moments">
+<body class="operation">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -101,7 +101,9 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
                 
                 
                 
@@ -141,7 +143,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/wenwen">Jessica</a></li>
                 
                 
                 
@@ -151,9 +153,17 @@
                 
                 
                 
-                <li class="uk-active">
-                    <a style="font-size: 18px; text-transform:none"
-                        href="/moments">Moments</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
                 
                 
                 
@@ -164,16 +174,6 @@
                 
                 
                 <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/sonnya">Sonnya</a></li>
                 
                 
             </ul>
@@ -220,7 +220,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
             
             
             
@@ -260,7 +260,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            <li><a style="font-size: 18px" href="/wenwen">Jessica</a></li>
             
             
             
@@ -270,7 +270,17 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/moments">Moments</a></li>
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
             
             
             
@@ -281,16 +291,6 @@
             
             
             <li><a style="font-size: 18px" href="/about">About</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/sonnya">Sonnya</a></li>
             
             
         </ul>
@@ -533,16 +533,102 @@ div .highlight {
 
 <section>
   <div class="uk-container uk-margin-medium-bottom">
-    <h1 class="uk-text-center uk-heading-small"></h1>
+    <h1 class="uk-text-center uk-heading-small">Docker安装及使用</h1>
     
-    <p class="uk-text-center uk-text-muted">Aug 26, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 0 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Aug 09, 2020</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <p>教资还有：</p>
-
+  <h4 id="安装docker">安装Docker</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># install docker</span>
+</span></span><span style="display:flex;"><span>yum insatall docker-io
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># start docker</span>
+</span></span><span style="display:flex;"><span>systemctl start docker
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># check if installed successfully</span>
+</span></span><span style="display:flex;"><span>ps -ef|grep docker
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># restart docker</span>
+</span></span><span style="display:flex;"><span>systemctl restart docker
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># stop docker</span>
+</span></span><span style="display:flex;"><span>systemctl stop docker
+</span></span></code></pre></div><h4 id="docker安装mysql">Docker安装Mysql</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># install mysql in docker</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## search mysql</span>
+</span></span><span style="display:flex;"><span>docker search mysql
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## instal mysql</span>
+</span></span><span style="display:flex;"><span>docker pull mysql
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## check images</span>
+</span></span><span style="display:flex;"><span>docker images
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## build directory</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> /opt/
+</span></span><span style="display:flex;"><span>mkdir mysql_docker
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> mysql_docker/
+</span></span><span style="display:flex;"><span><span style="color:#24909d">echo</span> <span style="color:#40ffff">$PWD</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># start mysql</span>
+</span></span><span style="display:flex;"><span>docker run --name mysqlserver -v <span style="color:#40ffff">$PWD</span>/conf:/etc/mysql/conf.d -v <span style="color:#40ffff">$PWD</span>/logs:/logs -v <span style="color:#40ffff">$PWD</span>/data:/var/lib/mysql -e <span style="color:#40ffff">MYSQL_ROOT_PASSWORD</span>=<span style="color:#3677a9">123456</span> -d -i -p 3306:3306 mysql:latest
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># check start</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> /var/lib/docker/containers/
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># watch mysql service</span>
+</span></span><span style="display:flex;"><span>docker ps -a
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># login mysql</span>
+</span></span><span style="display:flex;"><span>docker <span style="color:#24909d">exec</span> -it mysqlserver bash
+</span></span><span style="display:flex;"><span>mysql -uroot -p
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># config mysql, change password model</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 0.0.0.0 connect</span>
+</span></span><span style="display:flex;"><span>use mysql;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">select</span> host, user from user;
+</span></span><span style="display:flex;"><span>ALTER USER <span style="color:#ed9d13">&#39;root&#39;</span>@<span style="color:#ed9d13">&#39;%&#39;</span> IDENTIFIED WITH mysql_native_password BY <span style="color:#ed9d13">&#39;123456&#39;</span>;
+</span></span><span style="display:flex;"><span>flush privileges;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># watch docker logs</span>
+</span></span><span style="display:flex;"><span>docker logs -f --tail <span style="color:#3677a9">10</span> container_id
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># stop mysql</span>
+</span></span><span style="display:flex;"><span>docker stop mysqlserver
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># restart mysql</span>
+</span></span><span style="display:flex;"><span>docker restart container_id
+</span></span></code></pre></div><h4 id="docker安装oracle">Docker安装Oracle</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># search images</span>
+</span></span><span style="display:flex;"><span>docker search oracle
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># chose image</span>
+</span></span><span style="display:flex;"><span>docker pull jaspeen/oracle-11g
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># view image</span>
+</span></span><span style="display:flex;"><span>dokcer images
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># download intall files</span>
+</span></span><span style="display:flex;"><span>linux.x64_11gR2_database_1of2.zip &amp; linux.x64_11gR2_database_2of2.zip
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># decompression files, chose a directory will be used later</span>
+</span></span><span style="display:flex;"><span>/home/user/data/database
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># install oracle</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># privileged 给容器特权</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># name 命名 p 映射端口 v 安装文件挂载目录</span>
+</span></span><span style="display:flex;"><span>docker run --privileged --name oracle11g -p 1521:1521 -v /home/user/data:/install jaspeen/oracle-11g
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># view run status</span>
+</span></span><span style="display:flex;"><span>docker ps -a
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># config</span>
+</span></span><span style="display:flex;"><span>docker <span style="color:#24909d">exec</span> -it oracle11g /bin/bash
+</span></span><span style="display:flex;"><span>su - oracle
+</span></span><span style="display:flex;"><span>sqlplus / as sysdba
+</span></span><span style="display:flex;"><span>alter user scott accout unlock;
+</span></span><span style="display:flex;"><span>commit;
+</span></span><span style="display:flex;"><span>conn scott/tiger
+</span></span><span style="display:flex;"><span>host: localhost
+</span></span><span style="display:flex;"><span>post: <span style="color:#3677a9">1521</span>
+</span></span><span style="display:flex;"><span>sid: orcl
+</span></span><span style="display:flex;"><span>user: scott/tiger
+</span></span><span style="display:flex;"><span>password: 
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># import dmp fils</span>
+</span></span><span style="display:flex;"><span>create user &lt;用户名&gt; identified by sys default tablespace &lt;表空间名&gt;;
+</span></span><span style="display:flex;"><span>grant DBA to &lt;用户名&gt; with admin option;
+</span></span><span style="display:flex;"><span>create or replace directory dump_dir as <span style="color:#ed9d13">&#39;/usr/oracle/dump/dir&#39;</span>;
+</span></span><span style="display:flex;"><span>grant read,write on directory dump_dir to user ;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># container run</span>
+</span></span><span style="display:flex;"><span>mkdir /opt/oracle/dpdump
+</span></span><span style="display:flex;"><span>chown -R oracle:oinstall /opt/oracle/dpdump
+</span></span><span style="display:flex;"><span>su - oracle
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># host run</span>
+</span></span><span style="display:flex;"><span>docker cp demo.dmp oracle11g: /opt/oracle/dpdump/dir
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># container run</span>
+</span></span><span style="display:flex;"><span>imp|impdp oracle/oracle@127.0.0.1:1521/orcl <span style="color:#40ffff">file</span>=demo.dmp <span style="color:#40ffff">full</span>= y ;
+</span></span></code></pre></div>
 </div>
 </div>
 </div>
