@@ -8,6 +8,24 @@
     <language>zh-cn</language>
     <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://supersonnya.github.io/operation/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Windows Ftpserver</title>
+      <link>https://supersonnya.github.io/operation/windows-ftpserver/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:07 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/windows-ftpserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Huawei_ensp</title>
+      <link>https://supersonnya.github.io/operation/network-huawei_ensp/</link>
+      <pubDate>Mon, 24 Oct 2022 17:40:21 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/network-huawei_ensp/</guid>
+      <description>一、安装 先安装步骤1.依赖组件中的在三个组件，其中VBOX不要安装在中文目录； 安装步骤2.的eNSP主程序； 导入设备包（可选）。 二、使用 参考eNSP基础操作视频； 防火墙默认用户名、密码：admin/Admin@123。 三、排障 AR设备40，按提示排障失败的，可以尝试右击开始菜单，PowerShell(管理员身份)，运行bcdedit /set hypervisorlaunchtype off重启电脑再尝试； AR设备无限#号后超时，检查本机防火墙，关闭防火墙或放行eNSP开头的所有程序； 防火墙启动超时，检查CPU虚拟化是否启用；如果仍未解决，可以尝试加载设备包中的1.2版本防火墙设备包。 </description>
+    </item>
+    
+    <item>
       <title>Linux Grep</title>
       <link>https://supersonnya.github.io/operation/linux-grep/</link>
       <pubDate>Fri, 14 Oct 2022 16:30:38 +0800</pubDate>
@@ -376,7 +394,7 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
       <pubDate>Sun, 21 Jun 2020 09:51:43 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/tools-hugo_postformat/</guid>
-      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 </description>
+      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 4. 新建指定类型文件 hugo new --kind post path\name.md。 </description>
     </item>
     
     <item>

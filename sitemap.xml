@@ -2,8 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://supersonnya.github.io/moments/2022102601/</loc>
+    <lastmod>2022-10-26T10:53:08+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/</loc>
+    <lastmod>2022-10-26T10:53:08+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/%E5%BF%83%E8%AF%AD/</loc>
+    <lastmod>2022-10-26T10:53:08+08:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-10-14T16:30:38+08:00</lastmod>
+    <lastmod>2022-10-26T10:50:07+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/windows/</loc>
+    <lastmod>2022-10-26T10:50:07+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/windows-ftpserver/</loc>
+    <lastmod>2022-10-26T10:50:07+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/network/</loc>
+    <lastmod>2022-10-24T17:40:21+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/network-huawei_ensp/</loc>
+    <lastmod>2022-10-24T17:40:21+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/linux/</loc>
     <lastmod>2022-10-14T16:30:38+08:00</lastmod>
@@ -24,9 +45,6 @@
     <lastmod>2022-10-12T09:05:24+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022082001/</loc>
-    <lastmod>2022-09-20T15:57:46+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/tags/</loc>
     <lastmod>2022-09-20T15:57:46+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/tags/%E5%8A%9D%E5%AD%A6/</loc>
@@ -76,9 +94,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/programlang/clang-basicalgram/</loc>
     <lastmod>2022-08-18T17:16:49+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/network/</loc>
-    <lastmod>2022-08-18T17:09:01+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/network-switch_brocade_zone/</loc>
     <lastmod>2022-08-18T17:09:01+08:00</lastmod>

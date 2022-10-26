@@ -8,6 +8,33 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/2022102601/</link>
+      <pubDate>Wed, 26 Oct 2022 10:53:08 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/2022102601/</guid>
+      <description>人之所以会心累， 就是常常徘徊在坚持和放弃之间， 举棋不定。</description>
+    </item>
+    
+    <item>
+      <title>Windows Ftpserver</title>
+      <link>https://supersonnya.github.io/operation/windows-ftpserver/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:07 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/windows-ftpserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Huawei_ensp</title>
+      <link>https://supersonnya.github.io/operation/network-huawei_ensp/</link>
+      <pubDate>Mon, 24 Oct 2022 17:40:21 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/network-huawei_ensp/</guid>
+      <description>一、安装 先安装步骤1.依赖组件中的在三个组件，其中VBOX不要安装在中文目录； 安装步骤2.的eNSP主程序； 导入设备包（可选）。 二、使用 参考eNSP基础操作视频； 防火墙默认用户名、密码：admin/Admin@123。 三、排障 AR设备40，按提示排障失败的，可以尝试右击开始菜单，PowerShell(管理员身份)，运行bcdedit /set hypervisorlaunchtype off重启电脑再尝试； AR设备无限#号后超时，检查本机防火墙，关闭防火墙或放行eNSP开头的所有程序； 防火墙启动超时，检查CPU虚拟化是否启用；如果仍未解决，可以尝试加载设备包中的1.2版本防火墙设备包。 </description>
+    </item>
+    
+    <item>
       <title>Linux Grep</title>
       <link>https://supersonnya.github.io/operation/linux-grep/</link>
       <pubDate>Fri, 14 Oct 2022 16:30:38 +0800</pubDate>
@@ -680,7 +707,7 @@ $(document).read(function(){ alert(&amp;#39;Markdown&amp;#39;); }); 这是一个
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools-bookmark/</guid>
-      <description>外语学习 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips 技术参考 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 在线工具 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 图片图标 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify 软件工具 GLaDOS V2cross 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 聚合搜索 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 阅读参考 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 影音工具 CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 资料库 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
+      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS V2cross 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
     </item>
     
     <item>
@@ -731,7 +758,7 @@ $(document).read(function(){ alert(&amp;#39;Markdown&amp;#39;); }); 这是一个
       <pubDate>Sun, 21 Jun 2020 09:51:43 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/tools-hugo_postformat/</guid>
-      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 </description>
+      <description>1. title属性 series - keywords 2. 标题 从三级标题展开，每个三级标题块换行 标题使用阿拉伯数字，标题序号后空格隔开，子标题加上序号 3. 代码 代码段标注代码语言 4. 新建指定类型文件 hugo new --kind post path\name.md。 </description>
     </item>
     
     <item>

@@ -6,7 +6,16 @@
     <description>Recent content in network on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Aug 2022 17:09:01 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 17:40:21 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Huawei_ensp</title>
+      <link>https://supersonnya.github.io/operation/network-huawei_ensp/</link>
+      <pubDate>Mon, 24 Oct 2022 17:40:21 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/network-huawei_ensp/</guid>
+      <description>一、安装 先安装步骤1.依赖组件中的在三个组件，其中VBOX不要安装在中文目录； 安装步骤2.的eNSP主程序； 导入设备包（可选）。 二、使用 参考eNSP基础操作视频； 防火墙默认用户名、密码：admin/Admin@123。 三、排障 AR设备40，按提示排障失败的，可以尝试右击开始菜单，PowerShell(管理员身份)，运行bcdedit /set hypervisorlaunchtype off重启电脑再尝试； AR设备无限#号后超时，检查本机防火墙，关闭防火墙或放行eNSP开头的所有程序； 防火墙启动超时，检查CPU虚拟化是否启用；如果仍未解决，可以尝试加载设备包中的1.2版本防火墙设备包。 </description>
+    </item>
+    
     <item>
       <title>博科光交</title>
       <link>https://supersonnya.github.io/operation/network-switch_brocade_zone/</link>

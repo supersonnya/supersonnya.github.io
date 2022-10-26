@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/windows/</link>
+    <description>Recent content in windows on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:07 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Ftpserver</title>
+      <link>https://supersonnya.github.io/operation/windows-ftpserver/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:07 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/windows-ftpserver/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
