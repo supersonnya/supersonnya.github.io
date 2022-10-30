@@ -13,7 +13,7 @@
       <pubDate>Wed, 26 Oct 2022 10:50:07 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/windows-ftpserver/</guid>
-      <description></description>
+      <description>搭建步骤 开启FTP功能 Win+R，输入optionalfeatures，选择Internet Information Services下面的FTP服务器、Web管理工具、万维网服务。 允许FTP通过防火墙 搜索允许应用或功能通过Windows Defender防火墙，打开在运行列表中勾选FTP服务器。 点击允许其他应用，添加C:\Windows\System32\svchost.exe到允许列表。 创建FTP服务器 搜索并打开IIS管理，在网站右键新建FTP站点，填写网站名称、路径、IP等信息，选择无SSL。 设置账号权限：身份验证为匿名+基本，授权给指定用户，权限为D+W。 连接到创建的服务器 点击右侧的基本设置，点击连接为，选择特定用户，输入管理员的用户名和密码。 点击FTP身份验证，基本身份验证和匿名身份验证均为已启用。 添加匿名用户权限 点击FTP授权规则，点击右键添加允许规则，选择所有匿名用户并分配D权限。 Q&amp;amp;A 密钥集不存在 错误代码：0x80090016 添加Windows功能时默认勾选IIS服务没有万维网服务，勾选万维网服务菜单下的安全性下的内容。 匿名用户登陆后切换登录用户 文件资源管理器页面，鼠标右键点击登录，输入其他用户名口令登录。 Windows访问FTP的方法 FTP工具 打开cmd，输入ftp ftpserver_ip进行连接。 Windows资源管理器 打开文件资源管理器，地址栏输入ftp://ftpserver_ip。 浏览器 打开浏览器，地址栏输入ftp://ftpserver_ip。 </description>
     </item>
     
   </channel>

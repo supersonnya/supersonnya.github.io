@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://supersonnya.github.io/categories/</loc>
+    <lastmod>2022-10-28T10:01:22+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/linux/</loc>
+    <lastmod>2022-10-28T10:01:22+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/linux-learnplans/</loc>
+    <lastmod>2022-10-28T10:01:22+08:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/moments/2022102601/</loc>
     <lastmod>2022-10-26T10:53:08+08:00</lastmod>
   </url><url>
@@ -10,9 +19,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/tags/%E5%BF%83%E8%AF%AD/</loc>
     <lastmod>2022-10-26T10:53:08+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-10-26T10:50:07+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/windows/</loc>
     <lastmod>2022-10-26T10:50:07+08:00</lastmod>
@@ -25,9 +31,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/operation/network-huawei_ensp/</loc>
     <lastmod>2022-10-24T17:40:21+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/linux/</loc>
-    <lastmod>2022-10-14T16:30:38+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/linux-grep/</loc>
     <lastmod>2022-10-14T16:30:38+08:00</lastmod>
@@ -358,8 +361,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/countdown/teacher/</loc>
   </url><url>
     <loc>https://supersonnya.github.io/countdown/master/</loc>
   </url><url>

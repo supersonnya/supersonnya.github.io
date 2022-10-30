@@ -6,7 +6,29 @@
     <description>Recent content in linux on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 14 Oct 2022 16:30:38 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Oct 2022 10:01:22 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Learnplans</title>
+      <link>https://supersonnya.github.io/operation/linux-learnplans/</link>
+      <pubDate>Fri, 28 Oct 2022 10:01:22 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/linux-learnplans/</guid>
+      <description>组态管理工具 (Puppet, SaltStack, Chef, Ansible) 部署：saltstack, puppet, ansible
+监控：cati, zabbix, nigos
+熟悉Linux等操作系统的安装、配置、更新、维护操作，掌握系统命令，调试方法,熟练使用grep/sed/awk;
+熟悉Jenkins，gitlab，svn，nginx，tomcat, zookeeper等软件;
+熟悉Mysgl，mongodb，redis等不同类型数据库，精通 SQL 语句;
+精通shell或者python语言，对自动化运维有经验者优先;
+熟悉docker\kubernetes等微服务项目发布相关技术;
+熟悉Hyper-V，VMWare等虚拟化软件的使用，能按不同的需求搭建不同的虚拟化环境;
+熟悉mysgl，postgres，es，k8s等集群搭建，了解服务治理、云原生等概念;
+MQ类,Keeplived,fastdfs
+熟悉阿里云或者腾讯云的产品，孰悉云服务管理及维护;
+主流网络安全产品，如WAF、防火墙、日志审计、IPS等安全产品;
+服务器、网络设备的运行特点，能够对常见故障进行排查;
+计算机网络设备及各类网络协议的概念和作用，了解常用公有云计算、存储、网络、安全类产品构成;</description>
+    </item>
+    
     <item>
       <title>Linux Grep</title>
       <link>https://supersonnya.github.io/operation/linux-grep/</link>

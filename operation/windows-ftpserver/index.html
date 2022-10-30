@@ -536,12 +536,58 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Windows Ftpserver</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 26, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 0 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  
+  <h3 id="搭建步骤">搭建步骤</h3>
+<h4 id="开启ftp功能">开启FTP功能</h4>
+<ul>
+<li><code>Win+R</code>，输入<code>optionalfeatures</code>，选择<code>Internet Information Services</code>下面的<code>FTP服务器</code>、<code>Web管理工具</code>、<code>万维网服务</code>。</li>
+</ul>
+<h4 id="允许ftp通过防火墙">允许FTP通过防火墙</h4>
+<ul>
+<li>搜索<code>允许应用或功能通过Windows Defender防火墙</code>，打开在运行列表中勾选<code>FTP服务器</code>。</li>
+<li>点击允许其他应用，添加<code>C:\Windows\System32\svchost.exe</code>到允许列表。</li>
+</ul>
+<h4 id="创建ftp服务器">创建FTP服务器</h4>
+<ul>
+<li>搜索并打开<code>IIS管理</code>，在<code>网站</code>右键新建<code>FTP站点</code>，填写网站名称、路径、IP等信息，选择<code>无SSL</code>。</li>
+<li>设置账号权限：身份验证为<code>匿名+基本</code>，授权给<code>指定用户</code>，权限为<code>D+W</code>。</li>
+</ul>
+<h4 id="连接到创建的服务器">连接到创建的服务器</h4>
+<ul>
+<li>点击右侧的基本设置，点击<code>连接为</code>，选择<code>特定用户</code>，输入管理员的用户名和密码。</li>
+<li>点击<code>FTP身份验证</code>，<code>基本身份验证</code>和<code>匿名身份验证</code>均为<code>已启用</code>。</li>
+</ul>
+<h4 id="添加匿名用户权限">添加匿名用户权限</h4>
+<ul>
+<li>点击<code>FTP授权规则</code>，点击右键<code>添加允许规则</code>，选择<code>所有匿名用户</code>并分配<code>D</code>权限。</li>
+</ul>
+<h3 id="qa">Q&amp;A</h3>
+<h4 id="密钥集不存在-错误代码0x80090016">密钥集不存在 错误代码：0x80090016</h4>
+<ul>
+<li> 添加<code>Windows</code>功能时默认勾选<code>IIS服务</code>没有万维网服务，勾选<code>万维网服务</code>菜单下的<code>安全性</code>下的内容。</li>
+</ul>
+<h4 id="匿名用户登陆后切换登录用户">匿名用户登陆后切换登录用户</h4>
+<ul>
+<li>文件资源管理器页面，鼠标右键点击登录，输入其他用户名口令登录。</li>
+</ul>
+<h3 id="windows访问ftp的方法">Windows访问FTP的方法</h3>
+<h4 id="ftp工具">FTP工具</h4>
+<ul>
+<li>打开<code>cmd</code>，输入<code>ftp ftpserver_ip</code>进行连接。</li>
+</ul>
+<h4 id="windows资源管理器">Windows资源管理器</h4>
+<ul>
+<li>打开文件资源管理器，地址栏输入<code>ftp://ftpserver_ip</code>。</li>
+</ul>
+<h4 id="浏览器">浏览器</h4>
+<ul>
+<li>打开浏览器，地址栏输入<code>ftp://ftpserver_ip</code>。</li>
+</ul>
+
 </div>
 </div>
 </div>
