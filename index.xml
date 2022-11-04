@@ -8,6 +8,17 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Network Software_technology_networkengineer</title>
+      <link>https://supersonnya.github.io/operation/network-software_technology_networkengineer/</link>
+      <pubDate>Wed, 02 Nov 2022 10:00:10 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/network-software_technology_networkengineer/</guid>
+      <description>dhcp select rely：广播转单播 option 43: 给AP分配地址的同时，告诉AP AC的地址是多少
+基础配置：system-view、sysname、vlan batch、interface vlanif、写IP地址、SVI 高频配置：VLAN、DHCP、ACL/基于时间的ACL、策略路由、NAT、路由（静态/默认/RIP/OSPF） 偏门配置：IPv6、4G、WLAN、IPSec
+路由策略和策略路由： 路由策略作用于控制层面，用于路由控制和过滤。策略路由作用于数据层面，用于流量控制。 都可以实现访问控制，都会依赖ACL这类匹配工具。 为避免回路，交换机上需配置STP协议进行破环。 生成BGP路由的方式： 手动聚合：优先级最高。 自动聚合： network：逐条将IP路由表中已存在的路由引入BGP路由表，内部路由，优先级高。 import：根据运行的路由协议将路由引入到BGP路由表，可以引入直连和静态路由，优先级最低。 IPSec VPN应用场景： Site-to-Site：又称网关到网关，多个异地机构利用运营商忘了建立IPSec隧道，将各自内部网络联系起来。 End-to-End：又称远程访问，即两个PC之间的通信由IPSec完成，通常以远程访问的方式建立临时的连接进行，如PPTP VPN、SSL-VPN等建立临时连接。 End-to-Site：两个PC之间的通信由网关和异地PC之间的IPSec会话完成。 洪水攻击属于DOS或DDOS，拒绝服务类。 私接路由并开启DNCH功能，会获取不正常的IP。启用DHCP Snooping功能，避免非法DHCP服务器。 MTBF的单位是小时。 关键链路冗余：接口备份、接口监控组、VRRP、双机热备技术。 AC为无线控制器，部署方式： 直连部署：业务流经过AC。可能存在需要AC转发大量的业务流量，对AC的吞吐量和数据处理能力要求较高，AC容易成为整个无线网络带宽的瓶颈。 旁路部署：业务流不经过AC。 NAT通常部署在路由器上，实现隐藏内部网络。 无线网络认证方式： Portal：也称Web，以网页形式为用户提供身份认证和个性化服务。 PPPOE 802.1x：通过认证可以访问局域网中的资源，否则无法访问，相当于物理断开。 通常建议的无线网络优化策略：降低AP发射功率、调整/优化使用的信道。 AP的供电方式有：POE供电和DC电源适配器供电。POE供电可同时提供电功率和传输数据，两种供电方式，使用空闲脚供电和使用数据脚供电，使用空闲脚供电时，双绞线的4、5为正极，7、8为负极为PD设备供电。 防火墙工作模式： 透明模式：相当于一台交换机，接口不配置IP地址。 路由模式：相当于一台路由器，接口配置IP地址。 混合模式 常见的网关冗余技术：VRRP、堆叠/集群，堆叠技术可以统一控制层面，简化网络管理。 交换机连接方式有级联和堆叠，堆叠方式可以共享使用交换机背板带宽，级联方式可以使用双绞线将交换机连接在一起。 光功率计：测量光衰。 光时域反射计：测量光衰衰减、接头损耗、光纤故障点定位。 为实现链路冗余，需要在防火墙和核心交换机上配置链路聚合。 两台出口防火墙之间的线缆是心跳线，防火墙配置的功能有NAT、IPSec、安全过滤。 APT攻击，主要从技术和管理上进行防范： 技术上：部署沙箱、态势感知等系统，联动防火墙、入侵检测、交换机等设备进行综合分析。 管理上： 制定网络安全管理制度； 明确网络安全主体责任； 细化网络安全工作职责，责任到人； 合理分配人员权限、最小权限和加强审计； 加强网络安全意识和技能培训； 强化网络安全执行监督。 攻击者隐藏自己身份和攻击痕迹的方式：使用代理/跳板/肉鸡，清除攻击日志、使用隐藏信息。 字典/暴力破解/猜密码，限制登录次数，设置强密码，定期修改密码。 不影响业务网络和业务服务器，建议采用的备份架构是Sever-Free。 数据备份网络架构： LAN-BASED拓扑：数据流经备份服务器和介质服务器备份至数据备份存储介质。 LAN-FREE拓扑：数据备份在SAN存储。 Server-Free：备份数据流直接通过介质服务器经由独立的SAN网络进行传输。 优点：对业务主机几乎无影响；对现有业务网络几乎无影响；备份性能好，依赖SAN网络。 缺点：对网络的投资较大；对设备要求高。 为最大程度节省存储空间，建议采用增量备份策略。 交换机和主机速率不一致：网线故障、网卡驱动不兼容、主机使用低速率网卡。 AAA分别指：认证、授权、计费。PPPOE认证依赖BRAS设备，通常应用于校园网/运营商家庭宽带场景。CHAP认证采用三次握手，底层依赖HASH算法。 VRRP实现容错和增强的路由选择功能，交换机之间的连线为心跳线，用于传递VRRP报文。 核心交换机和防火墙互通的默认路由，目标地址应为0.</description>
+    </item>
+    
+    <item>
       <title>Linux Learnplans</title>
       <link>https://supersonnya.github.io/operation/linux-learnplans/</link>
       <pubDate>Fri, 28 Oct 2022 10:01:22 +0800</pubDate>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 28 Oct 2022 10:01:22 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Nov 2022 10:00:10 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>network</title>
+      <link>https://supersonnya.github.io/categories/network/</link>
+      <pubDate>Wed, 02 Nov 2022 10:00:10 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/categories/network/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://supersonnya.github.io/categories/linux/</link>
@@ -22,15 +31,6 @@
       <pubDate>Wed, 26 Oct 2022 10:50:07 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/categories/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>network</title>
-      <link>https://supersonnya.github.io/categories/network/</link>
-      <pubDate>Mon, 24 Oct 2022 17:40:21 +0800</pubDate>
-      
-      <guid>https://supersonnya.github.io/categories/network/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="软考网络工程师复习">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/dandan">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/dandan">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Network Software_technology_networkengineer</h1>
+    
+    <p class="uk-text-center uk-text-muted">Nov 02, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 16 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <p>dhcp select rely：广播转单播
+option 43: 给AP分配地址的同时，告诉AP AC的地址是多少</p>
+<p>基础配置：system-view、sysname、vlan batch、interface vlanif、写IP地址、SVI
+高频配置：VLAN、DHCP、ACL/基于时间的ACL、策略路由、NAT、路由（静态/默认/RIP/OSPF）
+偏门配置：IPv6、4G、WLAN、IPSec</p>
+<ul>
+<li>路由策略和策略路由：
+<ul>
+<li>路由策略作用于控制层面，用于路由控制和过滤。策略路由作用于数据层面，用于流量控制。</li>
+<li>都可以实现访问控制，都会依赖ACL这类匹配工具。</li>
+</ul>
+</li>
+<li>为避免回路，交换机上需配置STP协议进行破环。</li>
+<li>生成BGP路由的方式：
+<ul>
+<li>手动聚合：优先级最高。</li>
+<li>自动聚合：</li>
+<li>network：逐条将IP路由表中已存在的路由引入BGP路由表，内部路由，优先级高。</li>
+<li>import：根据运行的路由协议将路由引入到BGP路由表，可以引入直连和静态路由，优先级最低。</li>
+</ul>
+</li>
+<li>IPSec VPN应用场景：
+<ul>
+<li>Site-to-Site：又称网关到网关，多个异地机构利用运营商忘了建立IPSec隧道，将各自内部网络联系起来。</li>
+<li>End-to-End：又称远程访问，即两个PC之间的通信由IPSec完成，通常以远程访问的方式建立临时的连接进行，如PPTP VPN、SSL-VPN等建立临时连接。</li>
+<li>End-to-Site：两个PC之间的通信由网关和异地PC之间的IPSec会话完成。</li>
+</ul>
+</li>
+<li>洪水攻击属于DOS或DDOS，拒绝服务类。</li>
+<li>私接路由并开启DNCH功能，会获取不正常的IP。启用DHCP Snooping功能，避免非法DHCP服务器。</li>
+<li>MTBF的单位是小时。</li>
+<li>关键链路冗余：接口备份、接口监控组、VRRP、双机热备技术。</li>
+<li>AC为无线控制器，部署方式：
+<ul>
+<li>直连部署：业务流经过AC。可能存在需要AC转发大量的业务流量，对AC的吞吐量和数据处理能力要求较高，AC容易成为整个无线网络带宽的瓶颈。</li>
+<li>旁路部署：业务流不经过AC。</li>
+</ul>
+</li>
+<li>NAT通常部署在路由器上，实现隐藏内部网络。</li>
+<li>无线网络认证方式：
+<ul>
+<li>Portal：也称Web，以网页形式为用户提供身份认证和个性化服务。</li>
+<li>PPPOE</li>
+<li>802.1x：通过认证可以访问局域网中的资源，否则无法访问，相当于物理断开。</li>
+</ul>
+</li>
+<li>通常建议的无线网络优化策略：降低AP发射功率、调整/优化使用的信道。</li>
+<li>AP的供电方式有：POE供电和DC电源适配器供电。POE供电可同时提供电功率和传输数据，两种供电方式，使用空闲脚供电和使用数据脚供电，使用空闲脚供电时，双绞线的4、5为正极，7、8为负极为PD设备供电。</li>
+<li>防火墙工作模式：
+<ul>
+<li>透明模式：相当于一台交换机，接口不配置IP地址。</li>
+<li>路由模式：相当于一台路由器，接口配置IP地址。</li>
+<li>混合模式</li>
+</ul>
+</li>
+<li>常见的网关冗余技术：VRRP、堆叠/集群，堆叠技术可以统一控制层面，简化网络管理。</li>
+<li>交换机连接方式有级联和堆叠，堆叠方式可以共享使用交换机背板带宽，级联方式可以使用双绞线将交换机连接在一起。</li>
+<li>光功率计：测量光衰。</li>
+<li>光时域反射计：测量光衰衰减、接头损耗、光纤故障点定位。</li>
+<li>为实现链路冗余，需要在防火墙和核心交换机上配置链路聚合。</li>
+<li>两台出口防火墙之间的线缆是心跳线，防火墙配置的功能有NAT、IPSec、安全过滤。</li>
+<li>APT攻击，主要从技术和管理上进行防范：
+<ul>
+<li>技术上：部署沙箱、态势感知等系统，联动防火墙、入侵检测、交换机等设备进行综合分析。</li>
+<li>管理上：
+<ul>
+<li>制定网络安全管理制度；</li>
+<li>明确网络安全主体责任；</li>
+<li>细化网络安全工作职责，责任到人；</li>
+<li>合理分配人员权限、最小权限和加强审计；</li>
+<li>加强网络安全意识和技能培训；</li>
+<li>强化网络安全执行监督。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>攻击者隐藏自己身份和攻击痕迹的方式：使用代理/跳板/肉鸡，清除攻击日志、使用隐藏信息。</li>
+<li>字典/暴力破解/猜密码，限制登录次数，设置强密码，定期修改密码。</li>
+<li>不影响业务网络和业务服务器，建议采用的备份架构是Sever-Free。</li>
+<li>数据备份网络架构：
+<ul>
+<li>LAN-BASED拓扑：数据流经备份服务器和介质服务器备份至数据备份存储介质。</li>
+<li>LAN-FREE拓扑：数据备份在SAN存储。</li>
+<li>Server-Free：备份数据流直接通过介质服务器经由独立的SAN网络进行传输。
+<ul>
+<li>优点：对业务主机几乎无影响；对现有业务网络几乎无影响；备份性能好，依赖SAN网络。</li>
+<li>缺点：对网络的投资较大；对设备要求高。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>为最大程度节省存储空间，建议采用增量备份策略。</li>
+<li>交换机和主机速率不一致：网线故障、网卡驱动不兼容、主机使用低速率网卡。</li>
+<li>AAA分别指：认证、授权、计费。PPPOE认证依赖BRAS设备，通常应用于校园网/运营商家庭宽带场景。CHAP认证采用三次握手，底层依赖HASH算法。</li>
+<li>VRRP实现容错和增强的路由选择功能，交换机之间的连线为心跳线，用于传递VRRP报文。</li>
+<li>核心交换机和防火墙互通的默认路由，目标地址应为0.0.0.0。</li>
+<li>组播报文对无线网络空口的影响主要是：低速转发，消耗空口资源，容易拥塞。随着业务数据转发的方式不同，组播报文的抑制分别在直连AP的交换机端口和AC流量模板下配置。AP部署在每间宿舍的原因是：作为远程单元入室部署，实现信号覆盖零死角。</li>
+<li>部署无线遥控机，实现各会议室的无线网络统一管理，无缝漫游；部署无线认证系统，实现内部用户使用用户名和密码认证登录；部署高密吸顶式AP，实现高密度人群的无线访问；在小型会议室借助86线盒部署面板式AP，实现无线访问。</li>
+</ul>
+<h3 id="配置视图">配置视图</h3>
+<ul>
+<li><code>&lt;Huawei&gt;</code>：查看简单运行状态和统计信息。</li>
+<li><code>[Huawei]</code>：配置全局参数，进入其他视图。用户视图下键入<code>system-view</code>进入。</li>
+<li><code>user-interface vty 0 4</code>：用户接口视图<code>[Huawei]-ui-vty0-4</code>。</li>
+<li><code>interface gigabitethernet0/0/0</code>：接口视图<code>[Huawei-GigabitEthernet0/0/0]</code>。</li>
+<li><code>acl 2000</code>：ACL视图<code>[Huawei-acl-basic-2000]</code>。</li>
+<li><code>vlan 10</code>：VLAN视图<code>[Huawei-vlan-10]</code>。</li>
+<li><code>ospf 1</code>：路由协议视图<code>[Huawei-ospf-1]</code>。</li>
+<li><code>quit</code>：退出当前视图，返回上级视图。<code>Ctrl+Z</code>直接返回用户视图。</li>
+</ul>
+<p>undo info-center enable：禁用提示信息</p>
+<h4 id="华为设备登录配置">华为设备登录配置</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;Huawei&gt;system-view
+</span></span><span style="display:flex;"><span>[Huawei]sysname HW
+</span></span><span style="display:flex;"><span>[HW]telnet server <span style="color:#24909d">enable</span>
+</span></span><span style="display:flex;"><span>[HW]user-interface vty <span style="color:#3677a9">0</span> <span style="color:#3677a9">4</span>
+</span></span><span style="display:flex;"><span>[HW-ui-vty0-4]protocol inbound telnet
+</span></span><span style="display:flex;"><span>[HW-ui-vty0-4]authentication-mode aaa
+</span></span><span style="display:flex;"><span>[HW-aaa]local-user admin123 password cipher admin123
+</span></span><span style="display:flex;"><span>[HW-aaa]local-user admin123 service-type telnet
+</span></span><span style="display:flex;"><span>[HW-aaa]local-user admin privilege level <span style="color:#3677a9">15</span>
+</span></span><span style="display:flex;"><span>[HW-aaa]quit
+</span></span></code></pre></div><h4 id="vlan和vlanif地址配置"><code>VLAN</code>和<code>VLANIF</code>地址配置</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 单一端口指定vlan</span>
+</span></span><span style="display:flex;"><span>&lt;Switch&gt;system-view
+</span></span><span style="display:flex;"><span>[Switch]vlan <span style="color:#3677a9">100</span>  <span style="color:#999;font-style:italic">## 批量创建vlan：vlan batch 10 20</span>
+</span></span><span style="display:flex;"><span>[Switch-vlan100]name huawei <span style="color:#999;font-style:italic">## 配置vlan10的名称</span>
+</span></span><span style="display:flex;"><span>[Switch-vlan100]quit
+</span></span><span style="display:flex;"><span>[Switch]interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>[Switch-GigabitEthernet0/0/1]port link-type access
+</span></span><span style="display:flex;"><span>[Switch-GigabitEthernet0/0/1]port default vlan <span style="color:#3677a9">100</span>
+</span></span><span style="display:flex;"><span>[Switch-GigabitEthernet0/0/1]quit
+</span></span><span style="display:flex;"><span>[Switch]interface vlanif <span style="color:#3677a9">100</span>
+</span></span><span style="display:flex;"><span>[Switch-Vlanif100]ip address 172.16.1.1 <span style="color:#3677a9">24</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## trunk</span>
+</span></span><span style="display:flex;"><span>port link-type trunk
+</span></span><span style="display:flex;"><span>port trunk pvid vlan <span style="color:#3677a9">10</span>
+</span></span><span style="display:flex;"><span>port trunk allow-pass valn { all | vlan id }
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## hybrid</span>
+</span></span><span style="display:flex;"><span>port link-type hybrid
+</span></span><span style="display:flex;"><span>port hybrid pvid vlan <span style="color:#3677a9">10</span>
+</span></span><span style="display:flex;"><span>port hybrid tagged vlan <span style="color:#3677a9">20</span>
+</span></span><span style="display:flex;"><span>port hybrid tagged valn { all | vlan id }
+</span></span><span style="display:flex;"><span>port hybrid untagged vlan { all | vlan id }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 成批端口指定vlan</span>
+</span></span><span style="display:flex;"><span>vlan <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span>port gigabitethernet 0/0/1 to 0/0/10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>port-group <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>group-member gigabitethernet 0/0/1 to gigabitethernet 0/0/10
+</span></span><span style="display:flex;"><span>port link-type access
+</span></span><span style="display:flex;"><span>port default vlan <span style="color:#3677a9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>display vlan
+</span></span></code></pre></div><h4 id="vcmp">vcmp</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>system-view
+</span></span><span style="display:flex;"><span>vcmp role server
+</span></span><span style="display:flex;"><span>vcmp domain sss
+</span></span><span style="display:flex;"><span>vcmp device-id server
+</span></span><span style="display:flex;"><span>vcmp authentication sha2-256 password sss
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>vcmp disable
+</span></span></code></pre></div><h4 id="vrrp">VRRp</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>interface gigabitethernet 0/0/0
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> virtual-ip 192.168.1.1
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> priority <span style="color:#3677a9">120</span>
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> preempt-mode timer delay delay-value
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> preempt-mode disable
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> track interface interface-type interface-number [increased value|reduced value]
+</span></span><span style="display:flex;"><span>vrrp vrid <span style="color:#3677a9">1</span> track bfd-session {bfd-sid | session-name bfd-name}[increased value|reduced value]
+</span></span><span style="display:flex;"><span>ospf <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>area 0.0.0.0
+</span></span><span style="display:flex;"><span>network 
+</span></span></code></pre></div><h4 id="dhcp配置命令"><code>DHCP</code>配置命令</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 基于全局</span>
+</span></span><span style="display:flex;"><span>&lt;Switch&gt;system-view
+</span></span><span style="display:flex;"><span>[Switch]dhcp <span style="color:#24909d">enable</span>
+</span></span><span style="display:flex;"><span>[Switch]ip pool <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]network 10.1.1.0 mask 255.255.255.128
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]dns-list 10.1.1.1
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]gateway-list 10.1.1.1
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]excluded-ip-address 10.1.1.2
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]excluded-ip-address 10.1.1.4
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]lease <span style="color:#3677a9">10</span>
+</span></span><span style="display:flex;"><span>[Switch-ip-pool-1]quit
+</span></span><span style="display:flex;"><span>[Switch]interface vlanif <span style="color:#3677a9">100</span>
+</span></span><span style="display:flex;"><span>[Switch-Vlanif100]ip address 10.1.1.254 255.255.255.128
+</span></span><span style="display:flex;"><span>[Switch-Vlanif100]dhcp <span style="color:#6ab825;font-weight:bold">select</span> global/interface
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 基于接口</span>
+</span></span><span style="display:flex;"><span>dhcp <span style="color:#24909d">enable</span>
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/0
+</span></span><span style="display:flex;"><span>dhcp <span style="color:#6ab825;font-weight:bold">select</span> interface
+</span></span><span style="display:flex;"><span>dhcp server dns-list ip-address
+</span></span><span style="display:flex;"><span>dhcp server excluded-ip-address start-ip-address [end-ip-address]
+</span></span><span style="display:flex;"><span>dhcp server lease {day day [hour hour [minute minute]] | unlimited}
+</span></span></code></pre></div><h4 id="acl访问控制列表配置"><code>ACL</code>访问控制列表配置</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;Switch&gt;system-view
+</span></span><span style="display:flex;"><span>[Switch]time-range workday 8:30 to 18:00 working-day
+</span></span><span style="display:flex;"><span>[Switch]acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>[Switch-acl-basic-2000]rule permit <span style="color:#24909d">source</span> 192.168.1.10 <span style="color:#3677a9">0</span> time-range workday
+</span></span><span style="display:flex;"><span>[Switch-acl-basic-2000]rule deny  // 最后隐含，可以不写
+</span></span><span style="display:flex;"><span>[Switch-acl-basic-2000]quit
+</span></span><span style="display:flex;"><span>[Switch]user-interface vty <span style="color:#3677a9">0</span> <span style="color:#3677a9">4</span>
+</span></span><span style="display:flex;"><span>[Switch-ui-vty0-4]acl <span style="color:#3677a9">2000</span> inbound
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 基本acl</span>
+</span></span><span style="display:flex;"><span>acl [number] acl-number [match-order config]
+</span></span><span style="display:flex;"><span>acl name acl-name {basic | acl-number } [match-order config]
+</span></span><span style="display:flex;"><span>rule [rule-id] {deny | permit}[<span style="color:#24909d">source</span> {source-address source-wildcard | any} | time-range time-name]
+</span></span><span style="display:flex;"><span>traffic-filter inbound acl 3000s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>rule deny <span style="color:#24909d">source</span> 192.168.1.0 0.0.0.255
+</span></span><span style="display:flex;"><span>rule permit <span style="color:#24909d">source</span> any
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>traffic-filter inbound acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 高级acl</span>
+</span></span><span style="display:flex;"><span>acl [number] acl-number [match-order config]
+</span></span><span style="display:flex;"><span>acl name acl-name {advance | acl-number}[match-order config]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## protocol为IP时</span>
+</span></span><span style="display:flex;"><span>rule [rule-id] {deny|permit} ip [destination {dst-ads dst-wdcd|any}|<span style="color:#24909d">source</span> {suc-ads suc-wdcd|any}|time-range time-name|[dscp dscp|[tos tos|precedence precedence]]]
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## protocol为tcp</span>
+</span></span><span style="display:flex;"><span>rule [rule-id]{deny|permit}{protocol-num | tcp}[destination {dst-ads dst-wdcd|any}|destination-port {eq port|gt port|lt port|range port-start port-end}|<span style="color:#24909d">source</span> {suc-ads suc-wdcd|any}source-port {eq port|gt port|lt port|range port-start port-end}|tcp-flag {ack|fine|syn}*|time-range time-name]*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>acl <span style="color:#3677a9">3001</span>
+</span></span><span style="display:flex;"><span>rule deny ip <span style="color:#24909d">source</span> 10.1.1.0 0.0.0.255 destination 10.1.2.0 0.0.0.255
+</span></span><span style="display:flex;"><span>acl <span style="color:#3677a9">3002</span>
+</span></span><span style="display:flex;"><span>rule deny ip <span style="color:#24909d">source</span> 10.1.2.0 0.0.0.255 destination 10.1.1.0 0.0.0.255
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>traffic-filter inbound acl <span style="color:#3677a9">3001</span>
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/2
+</span></span><span style="display:flex;"><span>traffic-filter inbound acl <span style="color:#3677a9">3002</span>
+</span></span></code></pre></div><h4 id="nat地址转换配置"><code>NAT</code>地址转换配置</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>[Router]nat address-group <span style="color:#3677a9">1</span> 2.2.2.100 2.2.2.200
+</span></span><span style="display:flex;"><span>[Router]nat address-group <span style="color:#3677a9">2</span> 2.2.2.80 2.2.2.83
+</span></span><span style="display:flex;"><span>[Router]acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>[Router-acl-basic-2000]rule <span style="color:#3677a9">5</span> permit <span style="color:#24909d">source</span> 192.168.20.0 0.0.0.255
+</span></span><span style="display:flex;"><span>[Router-acl-basic-2000]quit
+</span></span><span style="display:flex;"><span>[Router]acl <span style="color:#3677a9">2001</span>
+</span></span><span style="display:flex;"><span>[Router-acl-basic-2001]rule <span style="color:#3677a9">5</span> permit <span style="color:#24909d">source</span> 10.0.0.0 0.0.0.255
+</span></span><span style="display:flex;"><span>[Router-acl-basic-2001]quit
+</span></span><span style="display:flex;"><span>[Router]interface gigabitethernet 0/0/0
+</span></span><span style="display:flex;"><span>[Router-GigabitEthernet0/0/0]nat outbound <span style="color:#3677a9">2000</span> address-group <span style="color:#3677a9">1</span> no-pat
+</span></span><span style="display:flex;"><span>[Router-GigabitEthernet0/0/0]nat outbound <span style="color:#3677a9">2001</span> address-group <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 静态nat</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 接口视图</span>
+</span></span><span style="display:flex;"><span>nat static global {global-address} inside {host-address}
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 系统视图</span>
+</span></span><span style="display:flex;"><span>nat static global {global-address} inside {host-address}
+</span></span><span style="display:flex;"><span>nat static <span style="color:#24909d">enable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nat static global 122.1.2.1 inside 192.168.1.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 动态nat</span>
+</span></span><span style="display:flex;"><span>nat address-group groud-index start-address end-address
+</span></span><span style="display:flex;"><span>acl number
+</span></span><span style="display:flex;"><span>rule permit <span style="color:#24909d">source</span> source-address source-wildcard
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>nat outbound acl-number address-group group-index [no-pat]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nat address-group <span style="color:#3677a9">1</span> 122.1.2.1 122.1.2.3
+</span></span><span style="display:flex;"><span>acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>rule <span style="color:#3677a9">5</span> permit <span style="color:#24909d">source</span> 192.168.1.0 0.0.0.255
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>nat outbound <span style="color:#3677a9">2000</span> address-group <span style="color:#3677a9">1</span> no-pat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## easy ip,适用不具备固定公网IP，如DHCP、PPPOE拨号获取地址的私有网络出口</span>
+</span></span><span style="display:flex;"><span>undo port switch
+</span></span><span style="display:flex;"><span>acl <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>rule <span style="color:#3677a9">5</span> permit <span style="color:#24909d">source</span> 192.167.1.0 0.0.0.255
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>nat outbound <span style="color:#3677a9">2000</span>
+</span></span><span style="display:flex;"><span>ip route-static 0.0.0.0 0.0.0.0 200.100.1.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## nat server：外网主机主动访问[公有地址:端口]实现对内网服务器的访问</span>
+</span></span><span style="display:flex;"><span>interface gigabitethernet 0/0/1
+</span></span><span style="display:flex;"><span>ip address 122.1.2.1 <span style="color:#3677a9">24</span>
+</span></span><span style="display:flex;"><span>nat server protocol tcp global 122.1.2.1 www inside 192.168.1.10 <span style="color:#3677a9">80</span>
+</span></span></code></pre></div><h4 id="router配置基础">Router配置基础</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>display ip routing table [ verbose ]
+</span></span><span style="display:flex;"><span>display version
+</span></span><span style="display:flex;"><span>display current-configuration
+</span></span><span style="display:flex;"><span>display saved-config
+</span></span><span style="display:flex;"><span>display interface <span style="color:#24909d">type</span> port/number
+</span></span><span style="display:flex;"><span>display history-command
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>interface ethernet 0/0/1
+</span></span><span style="display:flex;"><span>ip address 192.168.1.1 255.255.255.0
+</span></span><span style="display:flex;"><span>undo shutdown
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ip route-static ip-address subnet-mask gateway
+</span></span></code></pre></div><h4 id="rip路由">RIP路由</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rip <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>version <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span>network 192.168.1.0
+</span></span><span style="display:flex;"><span>network 10.0.0.0
+</span></span></code></pre></div><h4 id="ospf路由">OSPF路由</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ospf <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span>area 0.0.0.0
+</span></span><span style="display:flex;"><span>network address wildcard-mask
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>interface interface-type interface-number
+</span></span><span style="display:flex;"><span>ospf <span style="color:#24909d">enable</span> <span style="color:#3677a9">1</span> area 0.0.0.0
+</span></span></code></pre></div><h4 id="防火墙">防火墙</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>firewall zone trust
+</span></span><span style="display:flex;"><span>add interface gigabitethernet 0/0/0
+</span></span><span style="display:flex;"><span>firewall zone untrust
+</span></span><span style="display:flex;"><span>firewall zone dmz
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>security-policy
+</span></span><span style="display:flex;"><span>rule name policy <span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">source</span> zone trust
+</span></span><span style="display:flex;"><span>destination zone untrust
+</span></span><span style="display:flex;"><span>source-address 10.1.3.0 mask <span style="color:#3677a9">24</span>
+</span></span><span style="display:flex;"><span>destination-address 10.1.1.0 mask <span style="color:#3677a9">24</span>
+</span></span><span style="display:flex;"><span>action permit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>firewall interzone dmz untrust
+</span></span><span style="display:flex;"><span>detect ftp
+</span></span><span style="display:flex;"><span>nat server policyweb protocol tcp global 10.1.1.100 <span style="color:#3677a9">80</span> inside 10.1.1.2 <span style="color:#3677a9">80</span> no-reverse
+</span></span><span style="display:flex;"><span>nat server policyweb protocol tcp global 10.1.1.100 <span style="color:#3677a9">21</span> inside 10.1.1.2 <span style="color:#3677a9">21</span> no-reverse
+</span></span><span style="display:flex;"><span>ip route-static 0.0.0.0 0.0.0.0 10.1.1.2
+</span></span></code></pre></div><p>display vrrp 网关冗余，不同厂商设备</p>
+<p>冗余技术：</p>
+<ul>
+<li>网关冗余：VRRP、堆叠/集群</li>
+<li>设备冗余</li>
+<li>链路冗余</li>
+<li>主备接口</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>
