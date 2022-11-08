@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_secondweek/</loc>
+    <lastmod>2022-11-07T20:18:07+06:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/moments/2022110301/</loc>
+    <lastmod>2022-11-03T10:53:08+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/</loc>
+    <lastmod>2022-11-03T10:53:08+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/%E5%BF%83%E8%AF%AD/</loc>
+    <lastmod>2022-11-03T10:53:08+08:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/categories/</loc>
     <lastmod>2022-11-02T10:00:10+08:00</lastmod>
   </url><url>
@@ -11,6 +23,9 @@
     <loc>https://supersonnya.github.io/operation/network-software_technology_networkengineer/</loc>
     <lastmod>2022-11-02T10:00:10+08:00</lastmod>
   </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_firstweek/</loc>
+    <lastmod>2022-10-31T12:57:56+06:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/categories/linux/</loc>
     <lastmod>2022-10-28T10:01:22+08:00</lastmod>
   </url><url>
@@ -18,12 +33,6 @@
     <lastmod>2022-10-28T10:01:22+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022102601/</loc>
-    <lastmod>2022-10-26T10:53:08+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/tags/</loc>
-    <lastmod>2022-10-26T10:53:08+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/tags/%E5%BF%83%E8%AF%AD/</loc>
     <lastmod>2022-10-26T10:53:08+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/windows/</loc>
@@ -236,9 +245,6 @@
     <loc>https://supersonnya.github.io/dandan/</loc>
     <lastmod>2020-10-20T00:00:00+06:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/dandan/english-cet6_firstweek/</loc>
-    <lastmod>2020-10-01T12:57:56+06:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/dandan/hugo-and-its-future/</loc>
     <lastmod>2020-09-07T20:18:07+06:00</lastmod>
   </url><url>
@@ -256,9 +262,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/dandan/freelancing-and-corona/</loc>
     <lastmod>2020-09-02T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/english-cet6_secondweek/</loc>
-    <lastmod>2020-09-01T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/sonnya/example/</loc>
     <lastmod>2020-08-26T12:14:34+06:00</lastmod>

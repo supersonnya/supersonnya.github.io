@@ -8,7 +8,25 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Network Software_technology_networkengineer</title>
+      <title>CET6 - 复习第二周</title>
+      <link>https://supersonnya.github.io/dandan/english-cet6_secondweek/</link>
+      <pubDate>Mon, 07 Nov 2022 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/dandan/english-cet6_secondweek/</guid>
+      <description>本周复习计划 语法书3-5章内容学习及笔记整理； 真题2022年06月第二套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第二周总结 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/2022110301/</link>
+      <pubDate>Thu, 03 Nov 2022 10:53:08 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/2022110301/</guid>
+      <description>不是每个人都能成为成功人士，但要努力让自己成为充实，快乐，轻松，自由的人。</description>
+    </item>
+    
+    <item>
+      <title>软考网工</title>
       <link>https://supersonnya.github.io/operation/network-software_technology_networkengineer/</link>
       <pubDate>Wed, 02 Nov 2022 10:00:10 +0800</pubDate>
       
@@ -16,6 +34,15 @@
       <description>dhcp select rely：广播转单播 option 43: 给AP分配地址的同时，告诉AP AC的地址是多少
 基础配置：system-view、sysname、vlan batch、interface vlanif、写IP地址、SVI 高频配置：VLAN、DHCP、ACL/基于时间的ACL、策略路由、NAT、路由（静态/默认/RIP/OSPF） 偏门配置：IPv6、4G、WLAN、IPSec
 路由策略和策略路由： 路由策略作用于控制层面，用于路由控制和过滤。策略路由作用于数据层面，用于流量控制。 都可以实现访问控制，都会依赖ACL这类匹配工具。 为避免回路，交换机上需配置STP协议进行破环。 生成BGP路由的方式： 手动聚合：优先级最高。 自动聚合： network：逐条将IP路由表中已存在的路由引入BGP路由表，内部路由，优先级高。 import：根据运行的路由协议将路由引入到BGP路由表，可以引入直连和静态路由，优先级最低。 IPSec VPN应用场景： Site-to-Site：又称网关到网关，多个异地机构利用运营商忘了建立IPSec隧道，将各自内部网络联系起来。 End-to-End：又称远程访问，即两个PC之间的通信由IPSec完成，通常以远程访问的方式建立临时的连接进行，如PPTP VPN、SSL-VPN等建立临时连接。 End-to-Site：两个PC之间的通信由网关和异地PC之间的IPSec会话完成。 洪水攻击属于DOS或DDOS，拒绝服务类。 私接路由并开启DNCH功能，会获取不正常的IP。启用DHCP Snooping功能，避免非法DHCP服务器。 MTBF的单位是小时。 关键链路冗余：接口备份、接口监控组、VRRP、双机热备技术。 AC为无线控制器，部署方式： 直连部署：业务流经过AC。可能存在需要AC转发大量的业务流量，对AC的吞吐量和数据处理能力要求较高，AC容易成为整个无线网络带宽的瓶颈。 旁路部署：业务流不经过AC。 NAT通常部署在路由器上，实现隐藏内部网络。 无线网络认证方式： Portal：也称Web，以网页形式为用户提供身份认证和个性化服务。 PPPOE 802.1x：通过认证可以访问局域网中的资源，否则无法访问，相当于物理断开。 通常建议的无线网络优化策略：降低AP发射功率、调整/优化使用的信道。 AP的供电方式有：POE供电和DC电源适配器供电。POE供电可同时提供电功率和传输数据，两种供电方式，使用空闲脚供电和使用数据脚供电，使用空闲脚供电时，双绞线的4、5为正极，7、8为负极为PD设备供电。 防火墙工作模式： 透明模式：相当于一台交换机，接口不配置IP地址。 路由模式：相当于一台路由器，接口配置IP地址。 混合模式 常见的网关冗余技术：VRRP、堆叠/集群，堆叠技术可以统一控制层面，简化网络管理。 交换机连接方式有级联和堆叠，堆叠方式可以共享使用交换机背板带宽，级联方式可以使用双绞线将交换机连接在一起。 光功率计：测量光衰。 光时域反射计：测量光衰衰减、接头损耗、光纤故障点定位。 为实现链路冗余，需要在防火墙和核心交换机上配置链路聚合。 两台出口防火墙之间的线缆是心跳线，防火墙配置的功能有NAT、IPSec、安全过滤。 APT攻击，主要从技术和管理上进行防范： 技术上：部署沙箱、态势感知等系统，联动防火墙、入侵检测、交换机等设备进行综合分析。 管理上： 制定网络安全管理制度； 明确网络安全主体责任； 细化网络安全工作职责，责任到人； 合理分配人员权限、最小权限和加强审计； 加强网络安全意识和技能培训； 强化网络安全执行监督。 攻击者隐藏自己身份和攻击痕迹的方式：使用代理/跳板/肉鸡，清除攻击日志、使用隐藏信息。 字典/暴力破解/猜密码，限制登录次数，设置强密码，定期修改密码。 不影响业务网络和业务服务器，建议采用的备份架构是Sever-Free。 数据备份网络架构： LAN-BASED拓扑：数据流经备份服务器和介质服务器备份至数据备份存储介质。 LAN-FREE拓扑：数据备份在SAN存储。 Server-Free：备份数据流直接通过介质服务器经由独立的SAN网络进行传输。 优点：对业务主机几乎无影响；对现有业务网络几乎无影响；备份性能好，依赖SAN网络。 缺点：对网络的投资较大；对设备要求高。 为最大程度节省存储空间，建议采用增量备份策略。 交换机和主机速率不一致：网线故障、网卡驱动不兼容、主机使用低速率网卡。 AAA分别指：认证、授权、计费。PPPOE认证依赖BRAS设备，通常应用于校园网/运营商家庭宽带场景。CHAP认证采用三次握手，底层依赖HASH算法。 VRRP实现容错和增强的路由选择功能，交换机之间的连线为心跳线，用于传递VRRP报文。 核心交换机和防火墙互通的默认路由，目标地址应为0.</description>
+    </item>
+    
+    <item>
+      <title>CET6 - 复习第一周</title>
+      <link>https://supersonnya.github.io/dandan/english-cet6_firstweek/</link>
+      <pubDate>Mon, 31 Oct 2022 12:57:56 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/dandan/english-cet6_firstweek/</guid>
+      <description>本周复习计划 语法书1-7章内容学习及笔记整理； 真题2022年06月第一套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 语法书：完成第一章、第二章，并整理了思维导图； 2022年06月第一套真题，整理了试卷中的生词； 每天背诵记忆真题中的生词。 复习第一周总结 本周二，第一次去图书馆学习，在里面学习时间真的过得很快，而且自己也不会受外界因素的影响，自己想休息的时候，已经过了一个小时甚至是一个半小时了，那天早上学习了3h。周三，第一次知道7点的图书馆是需要排队进的，整个图书馆座无虚席，图书馆像电视剧里的那样安静，大家都在努力着，原来图书馆每天都有那么多人在努力着，而我却是在宿舍浪费了2个月多的时间。原来真的有人从早到晚都在努力着，可以连午休都在图书馆，所以学习的氛围真的很重要。每当我想休息时，头抬起看着满是低头努力着的人，会觉得休息原来也是很奢侈的一件事。在图书馆里，只觉得自己不够努力，做的不如别人好，都没有了想玩手机的感觉，不敢放松，生怕落后。果然舒适使人懒情，压力使人进步。今天应该是我从小到大最努力的一天，7:30进入图书馆，7:50开始学习，12:00去吃饭，1:00回到图书馆，趴了两分钟开始学习一直到16:20，7个小时没有开小差。做了单词整理，背list2以及做微观经济学的笔记整理，这也是第一次自己一个人在食堂堂食，其实也没什么大不了的~我觉得很充实，很开心。其余几天，计划写得很多，但并没有认真完成，语法也没有坚持每天去看，这都是不好的。我觉得自己的计划可以再划分小一点，写的笼统就不好计划了。宿舍里的关系也不用过于费心去维持，生活&amp;amp;未来是自己的，她们最多陪伴我500多天，只是我人生中的一小部分，只要不找事儿就行，就当他们走练习微笑的工具人吧！从现在开始自律起来，我一定能考研上岸！＾-＾</description>
     </item>
     
     <item>
@@ -518,15 +545,6 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
     </item>
     
     <item>
-      <title>余生，愿你活出自己的精彩</title>
-      <link>https://supersonnya.github.io/dandan/english-cet6_firstweek/</link>
-      <pubDate>Thu, 01 Oct 2020 12:57:56 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/dandan/english-cet6_firstweek/</guid>
-      <description>曾几何时，为了让自己显得合群，选择去做自己不喜欢的事；为了讨好喜欢的人，一次次地委屈自己；甚至，为了陌生人的一个眼神，就陷入了深深的自我怀疑。 可是，这样小心翼翼的你，一定很累吧。你以为照顾了所有人的想法，就能得到他们的喜欢；你以为逼着自己合群，就能真的合群。直到后来才发现，在日复一日对自己的为难中，你逐渐弄丢了真实的自己。 有一句话说：“世上没有不快乐的人，只有不肯让自己快乐的心。” 如果一段关系让你变得卑微，你可以选择抽身离去；如果一个人总是让你悲伤哭泣，你要学会放手。 始终相信，每个人最初的样子，都是最美好的。真正喜欢你的人，会喜欢你原来的样子；真正爱你的人，从来不需要你的委曲求全。 Working from Home: Healthy Practices to Stay Productive Setting a Healthy Routine Proper Ergonomics Exercise Regularly Find Work-Life Balance When Working from Home Dealing with Family Members and Coworkers 后半生，请把身上的枷锁，全部解除。去做喜欢的事，去聆听自己内心的声音。你会发现，这世上没有什么事情比活出自己更加幸福。 要相信，真实的自己亦是一道风景线。你若盛开，清风自来。愿你此生尽兴，不负韶华。殊不知，人生在世，最不值得的事情，就是在别人的眼光中，迷失自己。其实，正如世界上没有十全十美的人，你也同样无法做到让每个人满意。 </description>
-    </item>
-    
-    <item>
       <title>Hugo and It&#39;s future</title>
       <link>https://supersonnya.github.io/dandan/hugo-and-its-future/</link>
       <pubDate>Mon, 07 Sep 2020 20:18:07 +0600</pubDate>
@@ -578,25 +596,6 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
       
       <guid>https://supersonnya.github.io/dandan/freelancing-and-corona/</guid>
       <description>A lot has changed about how we work, and most people have no choice but to transition to working from home. But even before the pandemic, an increasing number of people bid goodbye to their onerous commute to become freelancers and telecommuters. Thanks to ever-evolving technologies such as Skype, Zoom, Facetime, Google Hangouts, Slack, and cloud computing, it’s no longer necessary to be in an office to be productive. In fact, most tasks can be done just as effectively from home.</description>
-    </item>
-    
-    <item>
-      <title>常用MarkDown语法</title>
-      <link>https://supersonnya.github.io/dandan/english-cet6_secondweek/</link>
-      <pubDate>Tue, 01 Sep 2020 20:18:07 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/dandan/english-cet6_secondweek/</guid>
-      <description>一级标题 二级标题 三级标题 四级标题 五级标题 斜体文字
-斜体文字
-粗体文字
-粗体文字
-粗斜体文字
-粗斜体文字
-Working from Home: Healthy Practices to Stay Productive 第一项 第二项 第三项 Setting a Healthy Routine Proper Ergonomics Exercise Regularly Find Work-Life Balance When Working from Home Dealing with Family Members and Coworkers 第一项：
-第一项嵌套的第一个元素
-第一项嵌套的第二个元素
-区块引用Markdown教程学的不仅是技术更是梦想
-$(document).read(function(){ alert(&amp;#39;Markdown&amp;#39;); }); 这是一个链接 新浪新闻 表头1 表头2 单元格11 单元格12 单元格21 单元格22 </description>
     </item>
     
     <item>
@@ -731,7 +730,7 @@ $(document).read(function(){ alert(&amp;#39;Markdown&amp;#39;); }); 这是一个
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools-bookmark/</guid>
-      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS V2cross 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
+      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS V2cross 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
     </item>
     
     <item>
