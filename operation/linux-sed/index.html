@@ -536,35 +536,94 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Sed</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 14, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 5 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <h3 id="语法">语法</h3>
+  <h2 id="语法">语法</h2>
 <ul>
 <li><code>sed</code>命令是利用脚本来处理文本文件，可依照脚本的指令来处理、编辑文本文件。主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。</li>
+<li>流编辑器，文本编辑工具，使用单引号。</li>
 <li><code>sed [-hnV][-e&lt;script&gt;][-f&lt;script&gt;] [filename]</code>。</li>
 </ul>
-<h4 id="参数说明">参数说明</h4>
+<h3 id="参数说明">参数说明</h3>
 <ul>
 <li><code>-e&lt;script&gt;</code>或<code>--expression=&lt;script&gt;</code>：以指定的<code>script</code>来处理输入的文本文件。</li>
 <li><code>-f&lt;script_file&gt;</code>或<code>--file=&lt;script_file&gt;</code>：以指定的<code>script</code>文件来处理输入的文本文件。</li>
 <li><code>-h</code>或<code>--help</code>：显示帮助。</li>
-<li><code>-n</code>或<code>--quiet</code>或<code>--silent</code>：仅显示<code>script</code>处理后的结果。</li>
+<li><code>-i</code>: 直接将修改结果写入文件，不适用该参数时修改的是内存数据。</li>
+<li><code>-n</code>或<code>--quiet</code>或<code>--silent</code>：仅显示<code>script</code>处理后的行。</li>
+<li><code>-r</code>: 支持扩展正则表达式。</li>
 <li><code>-V</code>或<code>--version</code>：显示版本信息。</li>
 </ul>
-<h4 id="动作说明">动作说明</h4>
+<h3 id="内置命令字符">内置命令字符</h3>
 <ul>
 <li><code>a</code>：新增，后面可以接字串，字符串插入在当前行后的新行。</li>
 <li><code>c</code>：取代，后面可以接字串，字串可以取代<code>n1,n2</code>之间的行。</li>
 <li><code>d</code>：删除，后面通常没有内容。</li>
 <li><code>i</code>：插入，后面可以接字串，字符串插入在当前行前的新行。</li>
 <li><code>p</code>：打印，将某个选择的数据印出，通常与参数<code>sed -n</code>一起运行。</li>
-<li><code>s</code>：取代，通常搭配正则表达式使用。</li>
+<li><code>s/正则/替换内容/g</code>：取代，通常搭配正则表达式使用。</li>
 </ul>
-<h3 id="实例">实例</h3>
-
+<h3 id="匹配范围">匹配范围</h3>
+<ul>
+<li>空地址：全文处理；</li>
+<li>单地址：指定文件某一行；</li>
+<li><code>pattern</code>：被模式匹配到的每一行；</li>
+<li>范围区间：<code>10,20</code>表示十到二十行，<code>10,+5</code>表示从第十行开始向下五行；</li>
+<li>步长：<code>1~2</code>表示从一开始步长为2。</li>
+</ul>
+<h2 id="实例">实例</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 输出第2，3行的数据</span>
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;2,3p&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 过滤含有linux的行</span>
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;/linux/p&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除包含game的行</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;/game/d&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除第5行之后的行</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;5,$d&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 所有的My替换为I</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;s/My/I/g&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 多提替换，My替换为I，同时替换数字</span>
+</span></span><span style="display:flex;"><span>sed -e <span style="color:#ed9d13">&#39;s/My/I/g&#39;</span> -e <span style="color:#ed9d13">&#39;s/888/666/g&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 第二行后插入内容，添加多行信息使用\n换行</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#ed9d13">&#39;2a I am good.&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 第四行前插入内容</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#ed9d13">&#39;2i I am good.&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 每一行后插入内容</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#ed9d13">&#39;a --------&#39;</span> filename.txt
+</span></span></code></pre></div><h3 id="取出ip地址">取出IP地址</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 去头去尾</span>
+</span></span><span style="display:flex;"><span>ifconfig eth0 | sed <span style="color:#ed9d13">&#39;2p&#39;</span> -n | sed <span style="color:#ed9d13">&#39;s/^.*inet//&#39;</span> | sed <span style="color:#ed9d13">&#39;s/net.$*//&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -e多次编辑</span>
+</span></span><span style="display:flex;"><span>ifconfig eth0 | sed -e <span style="color:#ed9d13">&#39;2s/^.*inet//&#39;</span> -e <span style="color:#ed9d13">&#39;2s/net.$*//p&#39;</span> -n
+</span></span></code></pre></div><h2 id="练习">练习</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 替换文件中所有root，替换一次与替换所有</span>
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;s/root/abc/p&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;s/root/abc/gp&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 前10行b开头的用户替换为c</span>
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;1,10s/^b/c/p&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 前10行b开头的用户替换为c，m开头的行替换为M</span>
+</span></span><span style="display:flex;"><span>sed -n -e <span style="color:#ed9d13">&#39;1,10s/^b/c/&#39;</span> -e <span style="color:#ed9d13">&#39;s/^m/M/p&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除第4行后的内容</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;5,$d&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除root开始，到ftp之间的行</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;/^root/,/^ftp/d&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 空白字符开头的行，添加注释符</span>
+</span></span><span style="display:flex;"><span>sed -e <span style="color:#ed9d13">&#39;s/^[[:space:]]/#/g&#39;</span> -e <span style="color:#ed9d13">&#39;s/^$/#/g&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除空白和注释行</span>
+</span></span><span style="display:flex;"><span>sed -e <span style="color:#ed9d13">&#39;/^#/d&#39;</span> -e <span style="color:#ed9d13">&#39;/^$/d&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;/^#/d;/^$/d&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 前三行添加@</span>
+</span></span><span style="display:flex;"><span>sed -r <span style="color:#ed9d13">&#39;1,3s/(^.)/@\1/g&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 取出IP地址</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#ed9d13">&#39;2p&#39;</span> -n | sed <span style="color:#ed9d13">&#39;s/^.*inet//&#39;</span> | sed <span style="color:#ed9d13">&#39;s/netmask.*//&#39;</span>
+</span></span><span style="display:flex;"><span>sed -n <span style="color:#ed9d13">&#39;2s/^.*inet//;s/netmask.*//p&#39;</span>
+</span></span><span style="display:flex;"><span>sed -n -e <span style="color:#ed9d13">&#39;2s/^.*inet//&#39;</span> -e <span style="color:#ed9d13">&#39;s/netmask.*//p&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 版本信息</span>
+</span></span><span style="display:flex;"><span>sed -n -r <span style="color:#ed9d13">&#39;^.*release[[:space:]]*([^.]+).*/\1/p&#39;</span> /etc/centos-realease
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

@@ -2,20 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_thirdweek/</loc>
+    <lastmod>2022-11-18T20:18:07+06:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/</loc>
+    <lastmod>2022-11-11T14:48:11+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/devops/</loc>
+    <lastmod>2022-11-11T14:48:11+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/devops-jumpserver/</loc>
+    <lastmod>2022-11-11T14:48:11+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/storage-emc_cx/</loc>
+    <lastmod>2022-11-09T16:54:02+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/storage/</loc>
+    <lastmod>2022-11-09T16:54:02+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/moments/20221109/</loc>
+    <lastmod>2022-11-09T09:24:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/</loc>
+    <lastmod>2022-11-09T09:24:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/tags/%E5%93%B2%E6%80%9D/</loc>
+    <lastmod>2022-11-09T09:24:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/devops-zabbix/</loc>
+    <lastmod>2022-11-08T23:28:41+08:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/dandan/english-cet6_secondweek/</loc>
     <lastmod>2022-11-07T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022110301/</loc>
     <lastmod>2022-11-03T10:53:08+08:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/tags/</loc>
-    <lastmod>2022-11-03T10:53:08+08:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/tags/%E5%BF%83%E8%AF%AD/</loc>
     <lastmod>2022-11-03T10:53:08+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-11-02T10:00:10+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/network/</loc>
     <lastmod>2022-11-02T10:00:10+08:00</lastmod>
@@ -56,9 +80,6 @@
     <loc>https://supersonnya.github.io/operation/devops-ansible/</loc>
     <lastmod>2022-10-12T09:05:24+08:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/categories/devops/</loc>
-    <lastmod>2022-10-12T09:05:24+08:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/moments/2022082001/</loc>
     <lastmod>2022-09-20T15:57:46+08:00</lastmod>
   </url><url>
@@ -73,9 +94,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/operation/linux-shell_programbasical_two/</loc>
     <lastmod>2022-09-01T09:18:38+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/storage/</loc>
-    <lastmod>2022-08-30T09:25:24+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/storage-netapp/</loc>
     <lastmod>2022-08-30T09:25:24+08:00</lastmod>

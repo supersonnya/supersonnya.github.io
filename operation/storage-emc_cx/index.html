@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="The notes website of Sonnya.">
+  <meta name="description" property="og:description" content="EMC CX系列存储">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -533,86 +533,20 @@ div .highlight {
 
 <section>
   <div class="uk-container uk-margin-medium-bottom">
-    <h1 class="uk-text-center uk-heading-small">Regexp基础知识</h1>
+    <h1 class="uk-text-center uk-heading-small">EMC CX存储</h1>
     
-    <p class="uk-text-center uk-text-muted">Jul 26, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 5 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Nov 09, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 1 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <h3 id="简介">简介</h3>
-<ul>
-<li><code>Regexg</code>是正则表达式<code>Regular Expression</code>的简称，用于匹配、查找和管理文本。正则表达式是表示搜索模式的字符串，常用于查找和替换文本中的字词。</li>
-</ul>
-<h3 id="基础使用">基础使用</h3>
-<h4 id="基本匹配">基本匹配</h4>
-<ul>
-<li>直接输入查找的字符或单词，类似搜索</li>
-</ul>
-<h4 id="模式匹配">模式匹配</h4>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>## BRE
-</span></span><span style="display:flex;"><span>\ : 匹配特殊字符
-</span></span><span style="display:flex;"><span>^ : 加在表达式前，仅查找行首
-</span></span><span style="display:flex;"><span>$ : 匹配字符串的结束
-</span></span><span style="display:flex;"><span>^$ : 匹配空行
-</span></span><span style="display:flex;"><span>. : 匹配任何字符，包括特殊字符和空格
-</span></span><span style="display:flex;"><span>[abc] : 可选字符匹配
-</span></span><span style="display:flex;"><span>[^abc] ： 否定字符集
-</span></span><span style="display:flex;"><span>[a-z] : 字母范围，包括首尾
-</span></span><span style="display:flex;"><span>[0-9] : 数字范围，包括首尾
-</span></span><span style="display:flex;"><span>* ： 一个字符不出现、出现一次或多次
-</span></span><span style="display:flex;"><span>.* : 匹配所有内容
-</span></span><span style="display:flex;"><span>^.* : 匹配任意多个字符开头的内容
-</span></span><span style="display:flex;"><span>$.* : 匹配任意多个字符结尾的内容
-</span></span><span style="display:flex;"><span>## ERE，使用grep -E才能生效
-</span></span><span style="display:flex;"><span>+ ： 一个字符出现一次或多次
-</span></span><span style="display:flex;"><span>[:/]+ : 匹配括号内的字符一次或多次
-</span></span><span style="display:flex;"><span>？ ： 一个字符不出现或出现一次
-</span></span><span style="display:flex;"><span>{n} ： 一个字符出现的确切次数
-</span></span><span style="display:flex;"><span>{n, } ： 一个字符至少出现多少次
-</span></span><span style="display:flex;"><span>{, m} ： 一个字符最多出现多少次
-</span></span><span style="display:flex;"><span>{n, m} : 至少和至多出现的次数
-</span></span><span style="display:flex;"><span>() : 分组
-</span></span><span style="display:flex;"><span>()-\1 : 引用组
-</span></span><span style="display:flex;"><span>(?: ) : 非捕获分组
-</span></span><span style="display:flex;"><span>| ： 允许表达式包含多个不同的分支，在表达式层面上运作
-</span></span><span style="display:flex;"><span>\w : 用于查找字母、数字和下划线
-</span></span><span style="display:flex;"><span>\W : 除字母、数字和下划线之外的字符
-</span></span><span style="display:flex;"><span>\d : 匹配数字
-</span></span><span style="display:flex;"><span>\D : 除数字之外的字符
-</span></span><span style="display:flex;"><span>\s : 空白字符
-</span></span><span style="display:flex;"><span>\S : 除空白符之外的字符
-</span></span></code></pre></div><h4 id="零宽断言">零宽断言</h4>
-<ul>
-<li>需要匹配的字符出现在另一个词语之前或之后，使用<code>零宽断言</code></li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>正向先行断言: (?=)
-</span></span><span style="display:flex;"><span>例如，我们要匹配文本中的小时值。为了只匹配后面有 PM 的数值，我们需要在表达式后面使用正向先行断言 (?=)，并在括号内的 = 后面添加 PM。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>负向先行断言: (?!)
-</span></span><span style="display:flex;"><span>例如，我们要在文本中匹配除小时值以外的数字。我们需要在表达式后面使用负向先行断言 (?!)，并在括号内的 ! 后面添加 PM，从而只匹配没有 PM 的数值。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>正向后行断言: (?&lt;=)
-</span></span><span style="display:flex;"><span>例如，我们要匹配文本中的金额数。为了只匹配前面带有 $ 的数字。我们要在表达式前面使用正向后行断言 (?&lt;=)，并在括号内的 = 后面添加 \$。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>负向后行断言: (?&lt;!)
-</span></span><span style="display:flex;"><span>例如，我们要在文本中匹配除价格外的数字。为了只匹配前面没有 $ 的数字，我们要在表达式前用负向后行断言 (?&lt;!)，并在括号内的 ! 后面添加 \$。
-</span></span></code></pre></div><h4 id="标志">标志</h4>
-<ul>
-<li>标志改变表达式的输出</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>全局标志: 使表达式选中所有匹配项，如果不启用全局标志，表达式只会匹配第一个匹配项，`/regexg/g`
-</span></span><span style="display:flex;"><span>多行标志: 正则表达式将所有文本视作一行，如果使用了多行标志，它就会单独处理每一行，`/regexg/gm`
-</span></span><span style="display:flex;"><span>忽略大小写标志: 为了使表达式不再大小写敏感，需要启用不区分大小写标志，`/regexg/gmi`
-</span></span></code></pre></div><h4 id="贪婪匹配">贪婪匹配</h4>
-<ul>
-<li>正则表达式默认执行贪婪匹配，匹配内容会尽可能长，<code>/.*r/</code></li>
-</ul>
-<h4 id="懒惰匹配">懒惰匹配</h4>
-<ul>
-<li>懒惰匹配在第一次匹配时停止，<code>/.*?r/</code></li>
-</ul>
+  <h2 id="注册hba卡">注册HBA卡</h2>
+<ol>
+<li>在<code>Hosts</code>标签页中打开右侧<code>Storage System Connectivity Status</code>，选中需要注册的<code>HBA</code>卡，点击<code>Edit</code>，选择归属主机，<code>Initiator Information</code>选择<code>CLARiiON Open</code>，<code>Failover Mode</code>选择<code>Active-Active mode(ALUA)-failovermode4</code>，点击确定。</li>
+<li>删除不需要的<code>HBA</code>配置项。</li>
+<li>分配存储组：选择<code>Storage</code>下的<code>Storage Groups</code>，选中需要分配的主机组，点击<code>Connect Hosts</code>，选中需要加入的主机，点击应用。</li>
+</ol>
 
 </div>
 </div>

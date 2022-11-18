@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="Zabbix入门基础">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/dandan">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/dandan">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Zabbix</h1>
+    
+    <p class="uk-text-center uk-text-muted">Nov 08, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 15 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h2 id="监控分类">监控分类</h2>
+<h3 id="硬件监控">硬件监控</h3>
+<ul>
+<li>通过远程控制卡：<code>Dell</code>的<code>IDRAC</code>，<code>HP</code>的<code>ILO</code>和<code>IBM</code>的<code>IMM</code>等；</li>
+<li>使用<code>IPMI</code>完成物理设备的监控工作，通常必须监控温度、硬盘故障等；</li>
+<li>路由器、交换机（端口、光衰、日志）、打印机、系统等。</li>
+</ul>
+<h3 id="系统监控">系统监控</h3>
+<ul>
+<li><code>CPU</code>，内存、硬盘使用率，硬盘<code>IO</code>，系统负载，进程数。</li>
+</ul>
+<h3 id="服务监控">服务监控</h3>
+<ul>
+<li><code>apache</code>、<code>nginx</code>、<code>php-fpm</code>、<code>mysql</code>、<code>memcache</code>、<code>redis</code>、<code>tomcat</code>、<code>JVM</code>、<code>TCP</code>连接数等。</li>
+</ul>
+<h3 id="性能监控">性能监控</h3>
+<ul>
+<li>网站性能、服务器性能、数据库性能、存储性能。</li>
+</ul>
+<h3 id="日志监控">日志监控</h3>
+<ul>
+<li>系统日志、应用访问日志、错误日志、服务影讯日志，可使用<code>ELK</code>进行日志监控。</li>
+</ul>
+<h3 id="安全监控">安全监控</h3>
+<ul>
+<li>图形化展示不同攻击类型统计；</li>
+<li>监控登录用户数，<code>passwd</code>文件，本地文件的改动。</li>
+</ul>
+<h3 id="网络监控">网络监控</h3>
+<ul>
+<li>端口、<code>WEB|URL</code>、<code>DB</code>、<code>ping</code>包、<code>IDC</code>带宽网络流量、网络流入流出速率、网络入出流量、网络使用率、<code>SMTP</code>、<code>POP3</code>。</li>
+</ul>
+<h2 id="完善的监控系统的特点">完善的监控系统的特点</h2>
+<h3 id="基本要求">基本要求</h3>
+<ul>
+<li>监控系统能够自定义监控的内容，自己通过脚本采集所需的数据；</li>
+<li>数据需要存入数据库，以便之后对数据进行分析计算；</li>
+<li>监控系统可以简易、快速地部署到服务器；</li>
+<li>数据可视化直观清晰。</li>
+</ul>
+<h2 id="监控工具">监控工具</h2>
+<ul>
+<li><code>Cobbler</code>、<code>SALTSTACK</code>、<code>Kubernetes</code>、<code>Zabbix</code>、<code>elastic</code>、<code>Jenkins</code>。</li>
+</ul>
+<h3 id="异常告警通知">异常告警通知</h3>
+<ul>
+<li>可以定义复杂度告警逻辑，做到监控项之间的关联告警，例如程序之间的依赖检测，而不是只单独检测某一个指标；</li>
+<li>告警可以确认响应，让运维组内的人知道已经有人在处理告警；</li>
+<li>告警方式可以自定义，如短信、邮件；</li>
+<li>告警内容可以自定义，能够写入一些简单的分析，便于运维人员直观了解数据；</li>
+<li>告警后可以预处理一些任务，例如自我修复、重启、采集数据等。</li>
+</ul>
+<h3 id="协同工作">协同工作</h3>
+<ul>
+<li>监控系统有强大的API，提供给外部调用；</li>
+<li>监控数据有开放性和主流的数据结构，便于解析；</li>
+<li>监控可视化可使用简易的插件，而非复杂的<code>JS</code>文件。</li>
+</ul>
+<h2 id="zabbix简介">Zabbix简介</h2>
+<h3 id="zabbix介绍">Zabbix介绍</h3>
+<ul>
+<li><code>Zabbix</code>是一种网络监视、管理系统，基于<code>CS</code>架构，可用于监视各种网络服务、服务器和网络机器等的状态。</li>
+<li><code>Zabbix</code>使用各种数据库存储数据，如<code>MySQL</code>、<code>PostgreSQL</code>、<code>SQLite</code>、<code>Oracle</code>、<code>DB2</code>等。<code>Server</code>端基于<code>C</code>，<code>Web</code>管理端基于<code>PHP</code>。</li>
+<li><code>Zabbix</code>可使用多种监控方式：只使用<code>Simple Check</code>不安装客户端；也可基于<code>SMTP</code>或<code>HTTP</code>等协议定制监控。</li>
+<li><code>Zabbix</code>自带的<code>Item</code>满足普通监控需求，也可自定义<code>Item</code>，自动生成报表，同时提供外部API。</li>
+</ul>
+<h3 id="zabbix优势">Zabbix优势</h3>
+<ul>
+<li>支持自定义监控脚本，提供需要输出的值即可；</li>
+<li>存储的数据库表结构逻辑清晰；</li>
+<li>通过模板可以便捷部署一组监控项；</li>
+<li>每个监控项都可看到历史记录，且界面友好；</li>
+<li>强大的触发器定义规则，可定义复杂的告警逻辑；</li>
+<li>支持短信、邮件、微信等告警方式，提供告警确认机制；</li>
+<li>触发告警后，可远程执行系统命令；</li>
+<li>有原生的<code>PHP</code>绘图模块。</li>
+</ul>
+<h3 id="zabbix术语">Zabbix术语</h3>
+<ul>
+<li><code>zabbix server</code>：服务端，收集数据，写入数据。</li>
+<li><code>zabbix agent</code>：部署在被监控机器上，是一个进程，与<code>zabbix server</code>进行交互，负责执行命令。</li>
+<li><code>host</code>：监控的实体主机对象。</li>
+<li><code>hosts</code>：实体主机组。</li>
+<li><code>applications</code>：应用。</li>
+<li><code>events</code>：事件。</li>
+<li><code>media</code>：发送通知的通道。</li>
+<li><code>remote command</code>：远程命令。</li>
+<li><code>template</code>：模板。</li>
+<li><code>item</code>：监控项。</li>
+<li><code>trigger</code>：触发器，定义告警逻辑，有正常、异常、未知三个状态。</li>
+<li><code>action</code>：触发器事件出发后，指定的动作。</li>
+</ul>
+<h3 id="zabbix程序组件">Zabbix程序组件</h3>
+<ul>
+<li><code>zabbix_server</code>：服务器守护进程。</li>
+<li><code>zabbix_agentd</code>：<code>agent</code>守护进程。</li>
+<li><code>zabbix_proxy</code>：代理服务器。</li>
+<li><code>zabbix_database</code>：数据库系统。</li>
+<li><code>zabbix_web</code>：可视化界面。</li>
+<li><code>zabbix_get</code>：命令行工具，测试向<code>agent</code>发起数据采集请求。</li>
+<li><code>zabbix_sender</code>：命令行工具，测试向<code>server</code>发送数据。</li>
+<li><code>zabbix_java_gateway</code>：<code>Java</code>网关。</li>
+</ul>
+<h2 id="zabbix-server安装">Zabbix Server安装</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看IP</span>
+</span></span><span style="display:flex;"><span>ifconfig eth0 | awk <span style="color:#ed9d13">&#39;NR==2{print $2}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 关闭防火墙</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#ed9d13">&#39;s/SELINUX=enforcing/SELINUX=disabled/&#39;</span> /etc/selinux/config
+</span></span><span style="display:flex;"><span>systemctl disable --now firewalld
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 获取zabbix下载源</span>
+</span></span><span style="display:flex;"><span>rpm -Uvh http://mirrors.aliyun.com/zabbix/zabbix/6.0/rhel/8/x86_64/zabbix-release-6.0-4.el8.noarch.rpm
+</span></span><span style="display:flex;"><span>dnf clean all
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 更换zabbix.repo源</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#ed9d13">&#39;s#https://repo.zabbix.com#https://mirrors.aliyun.com/zabbix#&#39;</span> /etc/yum.repos.d/zabbix.repo
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 清空缓存，安装zabbix server, frontend, agent</span>
+</span></span><span style="display:flex;"><span>dnf clean all
+</span></span><span style="display:flex;"><span>dnf makecache
+</span></span><span style="display:flex;"><span>dnf install zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf zabbix-sql-scripts zabbix-selinux-policy zabbix-agent
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装mysql</span>
+</span></span><span style="display:flex;"><span>dnf install mysql-server
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#24909d">enable</span> --now mysqld
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 初始化数据库</span>
+</span></span><span style="display:flex;"><span>mysql_secure_installation
+</span></span><span style="display:flex;"><span>mysql -uroot -p
+</span></span><span style="display:flex;"><span>create database zabbix character <span style="color:#24909d">set</span> utf8mb4 collate utf8mb4_bin;
+</span></span><span style="display:flex;"><span>create user zabbix@localhost identified by <span style="color:#ed9d13">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>grant all privileges on zabbix.* to zabbix@localhost;
+</span></span><span style="display:flex;"><span>flush privileges;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 导入数据库信息</span>
+</span></span><span style="display:flex;"><span>zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql -uzabbix -p zabbix
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改数据库密码</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^DBPa&#39;</span> /etc/zabbix/zabbix_server.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改php配置文件</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;timezone&#39;</span> /etc/opt/rh/rh-phh72/php-fpm.d/zabbix.conf
+</span></span><span style="display:flex;"><span>php_value[date.timezone] = Asia/Shangha
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 启动zabbix服务</span>
+</span></span><span style="display:flex;"><span>systemctl restart zabbix-server zabbix-agent httpd php-fpm
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#24909d">enable</span> zabbix-server zabbix-agent httpd php-fpm
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 访问入口，Admin/zabbix</span>
+</span></span><span style="display:flex;"><span>ip/zabbix
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 不关闭防火墙，可能无法进入页面</span>
+</span></span><span style="display:flex;"><span>systemctl stop firewalld
+</span></span></code></pre></div><h2 id="zabbix-agent2安装">Zabbix Agent2安装</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 校准时间</span>
+</span></span><span style="display:flex;"><span>yum install ntpdate -y
+</span></span><span style="display:flex;"><span>ntpdate -u ntp.aliyun.com
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 统一时区</span>
+</span></span><span style="display:flex;"><span>mv /etc/localtime(,.bak)
+</span></span><span style="display:flex;"><span>ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装agent</span>
+</span></span><span style="display:flex;"><span>yum install zabbix-agent2
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看配置文件</span>
+</span></span><span style="display:flex;"><span>/etc/zabbix/zabbix_agent2.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 启动命令</span>
+</span></span><span style="display:flex;"><span>/usr/bin/zabbix_agent2
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#24909d">enable</span> --now zabbix_agent2
+</span></span><span style="display:flex;"><span>netstat -tnlp | grep zabbix
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改agent2配置文件</span>
+</span></span><span style="display:flex;"><span>/etc/zabbix/zabbix_agent2.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 重启agent</span>
+</span></span><span style="display:flex;"><span>systemctl restart zabbix-agent2
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 服务器测试</span>
+</span></span><span style="display:flex;"><span>yum install zabbix-get -y
+</span></span><span style="display:flex;"><span>zabbix_get -s <span style="color:#ed9d13">&#39;ip&#39;</span> -p <span style="color:#3677a9">10050</span> -k <span style="color:#ed9d13">&#39;system.hostname&#39;</span>
+</span></span></code></pre></div><h2 id="图形界面操作">图形界面操作</h2>
+<h3 id="添加主机">添加主机</h3>
+<ul>
+<li><code>配置</code>菜单中<code>主机</code>，点击<code>添加主机</code>，填写<code>主机名称</code>，<code>Linux</code>机器模板选择<code>Linux by Zabbix agent</code>，群组选择<code>Linux servers</code>，添加监控方式。</li>
+</ul>
+<h3 id="自定义监控内容">自定义监控内容</h3>
+<h4 id="自定义服务器登陆人数">自定义服务器登陆人数</h4>
+<h5 id="命令行定义">命令行定义</h5>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 明确需执行的命令</span>
+</span></span><span style="display:flex;"><span>who | wc -l
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 创建配置文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> /etc/zabbix/zabbix_agent2.d
+</span></span><span style="display:flex;"><span>vi userparameter_login.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># UserParameter=login.user,who|wc -l</span>
+</span></span></code></pre></div><h5 id="页面添加模板监控项">页面添加模板监控项</h5>
+<ul>
+<li>创建模板、创建监控项、创建触发器、创建图形、链接主机和模板。</li>
+</ul>
+<h4 id="添加邮件告警">添加邮件告警</h4>
+<ul>
+<li><code>管理</code>菜单中的<code>报警媒介类型</code>，添加告警方式，同时可定义告警信息模板；</li>
+<li><code>User settings</code>菜单下<code>Profile</code>中的<code>报警媒介</code>中添加告警接收人。</li>
+<li>需启用<code>动作</code>菜单中<code>Report problems to Zabbix administrators</code>才可成功发送短信。</li>
+</ul>
+<h4 id="自动添加主机监控">自动添加主机监控</h4>
+<ul>
+<li>克隆监控模板</li>
+<li>自动注册和自动发现</li>
+<li>使用zabbix的api接口，利用curl语言，或开发编程脚本</li>
+</ul>
+<h4 id="监控实施方案">监控实施方案</h4>
+<ul>
+<li>硬件监控</li>
+<li>应用服务监控</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>rsync服务监控
+</span></span><span style="display:flex;"><span>	监控服务器的873端口是否存活
+</span></span><span style="display:flex;"><span>	监控端口，使用zabbix自带的key net.tcp.port[,873]
+</span></span><span style="display:flex;"><span>监控NFS服务是否正常
+</span></span><span style="display:flex;"><span>	通过key检测111端口 net.tcp.port[,111]
+</span></span><span style="display:flex;"><span>	showmount -e ip | wc -l
+</span></span><span style="display:flex;"><span>监控mysql数据库是否正常
+</span></span><span style="display:flex;"><span>	通过key检测端口3306 net.tcp.port[,3306]
+</span></span><span style="display:flex;"><span>	zabbix提供对mysql的监控模板
+</span></span><span style="display:flex;"><span>web服务器监控
+</span></span><span style="display:flex;"><span>	net.tcp.port[,80]
+</span></span><span style="display:flex;"><span>	zabbix提供对web服务器的监控模板
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>端口检测的命令
+</span></span><span style="display:flex;"><span>netstat
+</span></span><span style="display:flex;"><span>ss
+</span></span><span style="display:flex;"><span>lsof 结合gerp查看存活情况
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>查询进程信息：ps
+</span></span><span style="display:flex;"><span>通过客户端连接：web服务器使用curl查询，mysql使用sql语句连接验证，缓存数据库服务使用数据读写验证
+</span></span></code></pre></div><h4 id="自动发现自动注册">自动发现，自动注册</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 验证客户端是否激活</span>
+</span></span><span style="display:flex;"><span>systemctl is-active zabbix-agent2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## server主动发现所有的客户端，并将所有客户端信息登记在服务端的机器上</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 缺点：server压力较大，客户端多的时候耗时较久</span>
+</span></span><span style="display:flex;"><span>配置hosts解析/etc/hosts
+</span></span><span style="display:flex;"><span>在配置菜单，启用自动发现规则，并在动作中启用discovery actions
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 自动注册：agent主动上报自己的信息，发送给server</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 缺点：agent可能找不到server</span>
+</span></span><span style="display:flex;"><span>修改配置文件，添加HostnameItem=system.hostname
+</span></span><span style="display:flex;"><span>动作，autoregisterion actions
+</span></span></code></pre></div><h4 id="分布式监控">分布式监控</h4>
+<ul>
+<li>常规监控：适合局域网，不适合服务端和客户端分离。</li>
+<li>分布式监控：负载均衡，使用代理服务器，解决网络延时问题，适合不同数据中心部署。</li>
+<li>首先关闭自动发现和自动注册，配置添加proxy，部署数据库存储数据，agent连接proxy</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装proxy</span>
+</span></span><span style="display:flex;"><span>yum install zabbix-proxy-mysql zabbix-get
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 初始化数据库</span>
+</span></span><span style="display:flex;"><span>mysql_secure_installation
+</span></span><span style="display:flex;"><span>mysql -uroot -p
+</span></span><span style="display:flex;"><span>create database zabbix character <span style="color:#24909d">set</span> utf8mb4 collate utf8mb4_bin;
+</span></span><span style="display:flex;"><span>create user zabbix@localhost identified by <span style="color:#ed9d13">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>grant all privileges on zabbix.* to zabbix@localhost;
+</span></span><span style="display:flex;"><span>flush privileges;
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 导入表结构</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改配置文件，hostname为本机</span>
+</span></span><span style="display:flex;"><span>/etc/zabbix/zabbix_proxy.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 检查代理服务</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 启动代理服务</span>
+</span></span><span style="display:flex;"><span>systemctl restart zabbix-proxy
+</span></span></code></pre></div><ul>
+<li>页面配置：管理，agent代理程序，创建代理，添加后启用</li>
+<li>agent连接proxy：配置文件server为proxy地址，页面添加agent选择代理程序。</li>
+</ul>
+<h4 id="snmp监控">snmp监控</h4>
+<ul>
+<li>适用于无法安装客户端的设备。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 服务端安装snmp监控软件</span>
+</span></span><span style="display:flex;"><span>net-snmp net-snmp-utils
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 开启snmp配置</span>
+</span></span><span style="display:flex;"><span>sed -i.ori <span style="color:#ed9d13">&#39;57a view systemview included .1&#39;</span> /etc/snmp/snmpd.conf
+</span></span><span style="display:flex;"><span>systemctl start snmpd.service
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 使用snmp命令</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -v指定版本 -c 指定暗号 sysname snmp的key</span>
+</span></span><span style="display:flex;"><span>snmpwalk -v 2c -c public 127.0.0.1 sysname
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 页面更改接口类型，snmp 161，监控服务端模板改为Linux SNMP</span>
+</span></span></code></pre></div><h2 id="qa">Q&amp;A</h2>
+<h3 id="图形化页面显示乱码问题">图形化页面显示乱码问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装字体</span>
+</span></span><span style="display:flex;"><span>yum install wqy-microhei-fonts
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\c</span>p /usr/share/fonts/wqy-microhei/wqy-microhei.ttc /usr/share/fonts/dejavu/DejaVuSans.ttf
+</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

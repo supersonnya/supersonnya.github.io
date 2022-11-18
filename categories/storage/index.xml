@@ -6,9 +6,18 @@
     <description>Recent content in storage on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 30 Aug 2022 09:25:24 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/storage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 16:54:02 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Storage Netapp</title>
+      <title>EMC CX存储</title>
+      <link>https://supersonnya.github.io/operation/storage-emc_cx/</link>
+      <pubDate>Wed, 09 Nov 2022 16:54:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/storage-emc_cx/</guid>
+      <description>注册HBA卡 在Hosts标签页中打开右侧Storage System Connectivity Status，选中需要注册的HBA卡，点击Edit，选择归属主机，Initiator Information选择CLARiiON Open，Failover Mode选择Active-Active mode(ALUA)-failovermode4，点击确定。 删除不需要的HBA配置项。 分配存储组：选择Storage下的Storage Groups，选中需要分配的主机组，点击Connect Hosts，选中需要加入的主机，点击应用。 </description>
+    </item>
+    
+    <item>
+      <title>Netapp存储</title>
       <link>https://supersonnya.github.io/operation/storage-netapp/</link>
       <pubDate>Tue, 30 Aug 2022 09:25:24 +0800</pubDate>
       

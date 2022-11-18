@@ -536,17 +536,38 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Awk</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 14, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 10 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <h3 id="语法">语法</h3>
+  <h2 id="语法">语法</h2>
 <ul>
 <li><code>awk</code>是一种处理文本文件的语言，是一个强大的文本分析工具。</li>
+<li>Linux文本报告生成器——格式化文本，Linux上是gawk。</li>
 <li><code>awk [选项参数] 'script' var=value file(s)</code>或<code>awk [选项参数] -f scriptfile var=value file(s)</code>。</li>
+<li>默认以空格为分隔符，多个空格也识别为一个空格作为分隔符，$0代表整行，<code>$1</code>代表第一列，<code>$NF</code>表示当前分割后的最后一列，<code>$(NF-1)</code>为倒数第二列，FS指定分隔符，NR代表当前记录数。</li>
+<li>awk按行处理文件，一行处理完毕再处理下一行，根据用户指定的分隔符工作，未指定则默认空格。</li>
+<li>外层必须单引号，内层双引号，内置变量不得添加双引号，否则识别为文本。</li>
 </ul>
-<h4 id="选项参数说明">选项参数说明</h4>
+<p>参数
+-F
+<code>-v</code>: 定义或修改内部变量
+<code>-f</code>: 从脚本文件读取命令</p>
+<p>内置变量</p>
+<ul>
+<li><code>FS</code>: 输入字段分隔符，默认空白字符。</li>
+<li><code>OFS</code>: 输出字段分隔符，默认空白字符。</li>
+<li><code>RS</code>: 指定输入时的换行符。</li>
+<li><code>ORS</code>: 指定输出时的换行符。</li>
+<li><code>NF</code>: 当前行的字段个数。</li>
+<li><code>NR</code>: 当前处理的文本的行号。</li>
+<li><code>FNR</code>: 各文件分别计数的行号。</li>
+<li><code>FILENAME</code>: 当前文件名。</li>
+<li><code>ARGC</code>: 命令行参数个数。</li>
+<li><code>ARGV</code>: 数组，保存命令行传递的所有参数。</li>
+</ul>
+<h3 id="选项参数说明">选项参数说明</h3>
 <ul>
 <li><code>-F fs</code>or<code>--field-separator fs</code>：指定输入文件折分隔符，<code>fs</code>是一个字符串或者是一个正则表达式。</li>
 <li><code>-v var=value</code>or<code>--asign var=value</code>：赋值一个用户定义变量。</li>
@@ -562,8 +583,117 @@ div .highlight {
 <li><code>-W source program-text or --source program-text</code>：使用program-text作为源代码，可与-f命令混用。</li>
 <li><code>-W version or --version</code>：打印bug报告信息的版本。</li>
 </ul>
-<h3 id="实例">实例</h3>
-
+<h2 id="实例">实例</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 一次输出多列，逗号输出默认分隔符</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print $1,$2}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 自定义输出</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print &#34;第一列：&#34;$1,&#34;第二列：&#34;$2}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 输出整行信息</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print $0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示文件第5行</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;NR==5{print $0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;NR==5,NR==6{print $0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;NR==3,NR==6&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示每行行号</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print NR,$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示3-5行，并显示行号</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;NR==3,NR==5{print NR,$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示第一列，倒数第二列和最后一列</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print $1,$(NF-1),$NF}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 使用awk取出IP地址</span>
+</span></span><span style="display:flex;"><span>ifconfig eth0 | awk <span style="color:#ed9d13">&#39;NR==2{print $2}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 指定输入分隔符为#</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;#&#39;</span> <span style="color:#ed9d13">&#39;{print $1}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span>awk -v <span style="color:#40ffff">FS</span>=<span style="color:#ed9d13">&#39;#&#39;</span> <span style="color:#ed9d13">&#39;{print $1}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 指定输出分隔符为==或\t</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;#&#39;</span> -v <span style="color:#40ffff">OFS</span>=<span style="color:#ed9d13">&#39;==&#39;</span> <span style="color:#ed9d13">&#39;{print $1,$NF}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 多个文件分别显示行号</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print FNR,$0}&#39;</span> file1.txt file2.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 指定空格为输入换行符</span>
+</span></span><span style="display:flex;"><span>awk -v <span style="color:#40ffff">RS</span>=<span style="color:#ed9d13">&#39; &#39;</span> <span style="color:#ed9d13">&#39;{print NR,$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 指定空格为输出换行符</span>
+</span></span><span style="display:flex;"><span>awk -v <span style="color:#40ffff">ORS</span>=<span style="color:#ed9d13">&#39; &#39;</span> <span style="color:#ed9d13">&#39;{print NR,$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 输出文件名</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print FILENAME,$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 添加表头</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;BEGIN{print &#34;Start&#34;} {print $0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## ARGV, 0是awk，1是文件名</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;BEGIN{print &#34;Start&#34;} {print ARGV[0],$0}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 自定义变量，也可间接引用shell变量</span>
+</span></span><span style="display:flex;"><span>awk -v <span style="color:#40ffff">myname</span>=<span style="color:#ed9d13">&#34;sonnya&#34;</span> <span style="color:#ed9d13">&#39;BEGIN{print &#34;my name is:&#34;,myname}&#39;</span>
+</span></span></code></pre></div><h3 id="格式化输出">格式化输出</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## printf需要指定format</span>
+</span></span><span style="display:flex;"><span>format用于指定后面每个item的输出格式
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## printf默认不会自动打印换行符</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 格式指示符</span>
+</span></span><span style="display:flex;"><span>%c: 显示字符的ASCII码
+</span></span><span style="display:flex;"><span>%d, %i: 十进制整数
+</span></span><span style="display:flex;"><span>%e, %E: 科学计数法显示数值
+</span></span><span style="display:flex;"><span>%f: 显示浮点数
+</span></span><span style="display:flex;"><span>%g, %G: 以科学计数法或浮点数格式显示数值
+</span></span><span style="display:flex;"><span>%s: 显示字符串
+</span></span><span style="display:flex;"><span>%u: 无符号整数
+</span></span><span style="display:flex;"><span>%%: 显示%
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修饰符</span>
+</span></span><span style="display:flex;"><span>-: 左对齐，默认右对齐
+</span></span><span style="display:flex;"><span>+: 显示数值符号
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 使用printf输出字符串</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{printf &#34;%s\n&#34;,$1}&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 多个变量格式化</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### linux printf</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">printf</span> <span style="color:#ed9d13">&#34;%s\n&#34;</span> a b c
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### awk printf</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### %-25s：25个字符长度，左对齐</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;BEGIN{printf &#34;%d\n%d\n%d\n&#34;,1,2,3}&#39;</span>
+</span></span></code></pre></div><h3 id="awk模式pattern">awk模式pattern</h3>
+<p><code>awk [option] 'pattern[action]' file...</code>
+<code>BEGIN</code>模式：处理文本前需要执行的操作
+<code>END</code>模式：处理文本后需要执行的操作
+<code>awk 'BEGIN{print &quot;Start&quot;}{print $0}END{print &quot;Over&quot;}' filename.txt</code>
+<code>awk</code>不指定模式时默认按行处理文本，指定模式时只有符合模式的行才会被处理</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;
+</span></span><span style="display:flex;"><span>&lt;= 
+</span></span><span style="display:flex;"><span>==
+</span></span><span style="display:flex;"><span>!=
+</span></span><span style="display:flex;"><span>&gt;=
+</span></span><span style="display:flex;"><span>&gt;
+</span></span><span style="display:flex;"><span>~ <span style="color:#999;font-style:italic">## 匹配正则</span>
+</span></span><span style="display:flex;"><span>!~ <span style="color:#999;font-style:italic">## 不匹配正则</span>
+</span></span></code></pre></div><ul>
+<li>空模式：匹配文本中每一行，每行都执行相应动作。</li>
+<li>关系运算符模式：执行打印输出动作，<code>awk 'NR==2,NR=5' filename.txt</code>。</li>
+<li><code>BEGIN</code>/<code>END</code>模式：设置开头和结尾</li>
+<li>使用正则：<code>awk '/正则/动作' filename.txt</code>，格式化文本，正则表达式中出现<code>/</code>需要转义。</li>
+<li>行范围：<code>awk '/正则1/,/正则2/动作' filename.txt</code></li>
+</ul>
+<h3 id="实战nginx日志">实战Nginx日志</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># access.log</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 统计日志的访客IP数量，从大到小排列，去重</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print $1}&#39;</span> access.log | sort -n | uniq | wc -l
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 访问最频繁的10个IP，uniq -c统计去重次数</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;{print $1}&#39;</span> access.log | sort -n | uniq -c | sort -nr | head -10
+</span></span></code></pre></div><h2 id="练习">练习</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 输出用户名和用户家目录</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;:&#39;</span> <span style="color:#ed9d13">&#39;$3&gt;999{print $1,$(NF-1)}&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 前5行添加#</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;NR&lt;6{print &#34;#&#34;$0}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 同时以空格和冒号作为分隔符，排除空行去点电话号码</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;[ :]&#39;</span> <span style="color:#ed9d13">&#39;!/^$/{print $4}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示具体Tom的电话</span>
+</span></span><span style="display:flex;"><span>awk -F  <span style="color:#ed9d13">&#39;[ :]&#39;</span> <span style="color:#ed9d13">&#39;/^Tom/{print $4}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配正则</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;[ :]&#39;</span> <span style="color:#ed9d13">&#39;$2~/^D/{print $2}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 区号是916的姓名</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;[ :]&#39;</span> <span style="color:#ed9d13">&#39;$3~/\[916\]/{print $1}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示捐款信息，每一个之前加上$</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;[ :]&#39;</span> <span style="color:#ed9d13">&#39;/^Tom/{print &#34;$&#34;$(NF-2),&#34;$&#34;$(NF-1),&#34;$&#34;$NF}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 所有人的姓，名</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#ed9d13">&#39;[ :]&#39;</span> -v <span style="color:#40ffff">OFS</span>=<span style="color:#ed9d13">&#39;,&#39;</span> <span style="color:#ed9d13">&#39;!/^$/{print $2,$1}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 删除文件的空白行</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;!/^$/{print $0}&#39;</span> exam.txt
+</span></span><span style="display:flex;"><span>awk <span style="color:#ed9d13">&#39;!/^$/&#39;</span> eaxm.txt
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

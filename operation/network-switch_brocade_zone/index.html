@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="博科光交常用命令、划Zone">
+  <meta name="description" property="og:description" content="博科光交常用命令">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">博科光交</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 18, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 20 minutes.</p>
     
 <hr class="full-width">
 
@@ -590,7 +590,520 @@ cfgenable &#34;CFG_NAME&#34;
 cfgsave
 </code></pre></li>
 </ol>
-
+<h2 id="备份配置">备份配置</h2>
+<ul>
+<li>命令行或页面上传。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>configupload
+</span></span><span style="display:flex;"><span>ftp
+</span></span><span style="display:flex;"><span>host
+</span></span></code></pre></div><h2 id="brocade-san交换机常用命令">Brocade SAN交换机常用命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>switchstatusshow <span style="color:#999;font-style:italic">## 查看交换机的总体健康状态</span>
+</span></span><span style="display:flex;"><span>switchshow <span style="color:#999;font-style:italic">## 查看交换机基本配置信息</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看端口状态</span>
+</span></span><span style="display:flex;"><span>portshow
+</span></span><span style="display:flex;"><span>portshow <span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>fanshow <span style="color:#999;font-style:italic">## 查看交换机散热风扇的状态</span>
+</span></span><span style="display:flex;"><span>psshow <span style="color:#999;font-style:italic">## 查看交换机的电源状态</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 如果安装FR4-18i、FC4-16IP、FC10-6、FC8-48板，需要满配4个电源</span>
+</span></span><span style="display:flex;"><span>tempshow <span style="color:#999;font-style:italic">## 查看交换机的环境温度</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看交换机的内部消息日志</span>
+</span></span><span style="display:flex;"><span>errdump、errshow、errclear
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示诊断信息和状态信息</span>
+</span></span><span style="display:flex;"><span>supportshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将数据打包、上传至指定的FTP服务器</span>
+</span></span><span style="display:flex;"><span>supportSave
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示panic dump文件的内容，帮助诊断系统panic的原因</span>
+</span></span><span style="display:flex;"><span>pdshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 检查连接到交换机的设备</span>
+</span></span><span style="display:flex;"><span>nsshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示连接到交换机的所有设备</span>
+</span></span><span style="display:flex;"><span>nsallshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示连接到Fabric的所有设备</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 显示Fabric中的所有交换机</span>
+</span></span><span style="display:flex;"><span>fabricshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 检查license文件和交换机的WWN号</span>
+</span></span><span style="display:flex;"><span>licenseshow、wwn
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 检查Fabric OS的版本</span>
+</span></span><span style="display:flex;"><span>version
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看Control Blade的状态</span>
+</span></span><span style="display:flex;"><span>hashow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看各个Blade的状态</span>
+</span></span><span style="display:flex;"><span>slotshow
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改端口的速率</span>
+</span></span><span style="display:flex;"><span>portcfgspeed
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## Reset端口</span>
+</span></span><span style="display:flex;"><span>portenable或portcfgpersistentenable
+</span></span></code></pre></div><ol start="16">
+<li>检查WWN卡状态</li>
+</ol>
+<p>www，chassisShow：显示交换机的WWN号</p>
+<p>chassisShow：显示chassis和WWN卡的状态</p>
+<p>ipAddrShow，ipAddrSet：显示CP Blades的IP地址</p>
+<p>historyShow、historyLastShow：显示历史日志信息</p>
+<p>switchName：显示交换机的名字</p>
+<h3 id="修改domain-id">修改Domain ID</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. 查看当前的Domain ID
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入命令fabricShow，输出结果中的Switch ID即包括交换机的Domain ID。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 先关闭交换机
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入命令swichDisable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 配置DomainID
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入命令configure
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter y after the Fabric Parameters prompt:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Fabric parameters (yes, y, no, n): [no] y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter a unique domain ID at the Domain prompt. Use a domain ID value from <span style="color:#3677a9">1</span> through <span style="color:#3677a9">239</span> <span style="color:#6ab825;font-weight:bold">for</span> normal operating mode (FCSW compatible):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Domain: (1..239) [1] <span style="color:#3677a9">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Respond to the remaining prompts, or press Ctrl-d to accept the other settings and exit.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 重新启用交换机
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入命令swichEnable
+</span></span></code></pre></div><h3 id="升级firmware">升级Firmware</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FC10-6 Blade需要Firmware Version 5.3以上
+</span></span><span style="display:flex;"><span>FC4-16IP Blade、FC4-48 Port Blade需要Firmware Version 5.2以上
+</span></span><span style="display:flex;"><span>FR4-18i router blade需要Firmware Version 5.1以上
+</span></span><span style="display:flex;"><span>如果M48有主备Control Processor，且主备CP处于synchronized状态，则升级过程可在线进行，不干扰数据流量。
+</span></span><span style="display:flex;"><span>如果M48只有一个CP，则升级微码过程中需要reboot交换机来激活新的Firmware，数据访问会中断。
+</span></span><span style="display:flex;"><span>升级M48 Firmware约需15分钟
+</span></span><span style="display:flex;"><span>1. 保存交换机的配置信息
+</span></span><span style="display:flex;"><span>configupload
+</span></span><span style="display:flex;"><span>2. 保存主备Control Processor Blade的supportsave
+</span></span><span style="display:flex;"><span>使用命令ipAddrShow，查看主备CP的IP地址
+</span></span><span style="display:flex;"><span>使用telent分别登录主备CP，使用命令supportSave分别收集主备CP的supportsave文件。
+</span></span><span style="display:flex;"><span>3. 查看supportsave中的XXX_SUPPORTSHOW文件，查找如下字段：
+</span></span><span style="display:flex;"><span>/bin/df:
+</span></span><span style="display:flex;"><span>Filesystem 1k-blocks Used Available Use% Mounted on
+</span></span><span style="display:flex;"><span>/dev/root <span style="color:#3677a9">120112</span> <span style="color:#3677a9">61128</span> <span style="color:#3677a9">58984</span> 51% /
+</span></span><span style="display:flex;"><span>/dev/hda2 <span style="color:#3677a9">120128</span> <span style="color:#3677a9">72356</span> <span style="color:#3677a9">47772</span> 60% /mnt
+</span></span><span style="display:flex;"><span>确认Flash存储器的使用率不超过90%。否则需联系二线Support。
+</span></span><span style="display:flex;"><span>4. 清除交换机中当前保存的error report信息
+</span></span><span style="display:flex;"><span>errClear
+</span></span><span style="display:flex;"><span>5. 检查当前各个CP Blades的Firmware版本
+</span></span><span style="display:flex;"><span>firmwareShow
+</span></span><span style="display:flex;"><span>6. 检查主备CP状态，是否处于同步状态
+</span></span><span style="display:flex;"><span>haShow：查看主备CP是否处于Synchronized状态
+</span></span><span style="display:flex;"><span>如果主备CP不处于同步状态，则使用命令haSyncStart同步主备CP。
+</span></span><span style="display:flex;"><span>switch:admin&gt; hashow
+</span></span><span style="display:flex;"><span>Local CP (Slot 5, CP0): Active, Warm Recovered
+</span></span><span style="display:flex;"><span>Remote CP (Slot 6, CP1): Standby, Healthy
+</span></span><span style="display:flex;"><span>HA enabled, Heartbeat Up, HA State synchronized
+</span></span><span style="display:flex;"><span>7. 升级Firmware
+</span></span><span style="display:flex;"><span>如果SAN交换机支持HA，则使用命令firmwareDownload，同时升级主备Control Blade。
+</span></span><span style="display:flex;"><span>如果SAN交换机不支持HA，则使用命令firmwareDownload-s，分别升级每个Control Blade。
+</span></span><span style="display:flex;"><span>8. 检查Firmware升级是否完成
+</span></span><span style="display:flex;"><span>firmwareDownloadStatus
+</span></span><span style="display:flex;"><span>9. 再次检查当前各个CP Blades的Firmware版本
+</span></span><span style="display:flex;"><span>firmwareShow
+</span></span></code></pre></div><h3 id="激活软件license">激活软件License</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. 查看当前已经激活的License
+</span></span><span style="display:flex;"><span>licenseShow
+</span></span><span style="display:flex;"><span>2. 获取和激活License时需要提供64位的ChasisID，查看Chasis ID：
+</span></span><span style="display:flex;"><span>licenseIdShow
+</span></span><span style="display:flex;"><span>3. 激活新的License
+</span></span><span style="display:flex;"><span>licenseAdd “key”
+</span></span><span style="display:flex;"><span>4. 删除旧的License
+</span></span><span style="display:flex;"><span>licenseRemove “key”
+</span></span><span style="display:flex;"><span>删除License后需要reboot交换机，或者switchDisable/switchEnable重启交换机，以使需要删除的License失效。
+</span></span></code></pre></div><h3 id="备份交换机的配置信息">备份交换机的配置信息</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. 使用configUpload命令，将配置文件保存在自己的电脑上
+</span></span><span style="display:flex;"><span>注：configUpload无法保存用户的密码信息。
+</span></span><span style="display:flex;"><span>2. 使用Telnet命令查看配置信息，并做Session Log
+</span></span><span style="display:flex;"><span>configShow
+</span></span><span style="display:flex;"><span>ipaddrShow
+</span></span><span style="display:flex;"><span>licenseShow
+</span></span><span style="display:flex;"><span>switchShow
+</span></span><span style="display:flex;"><span>3. 保存SupportSave文件
+</span></span><span style="display:flex;"><span>supportSave
+</span></span></code></pre></div><h3 id="安装更换port-blade">安装/更换Port Blade</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. 查看当前Port Blade的状态
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switchShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 查看需要更换的Port Blade的备件号
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chassisShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>包含有Port Blade的备件号、序列号和状态。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 确认需要更换的Port Blade上已经没有数据流量
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>查看Port Blade状态LED，确保所有的Port Speed和Port Status状态灯处于OFF状态。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 安装/更换完毕后检查
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nsShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nsAllShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fabricShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>更换M48 CP(Control Processor) Blade
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>估计用时30分钟
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>注意事项：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. 在拿到新CP Blade备件，可以开始物理更换前，不要将故障CP Blade取出，以免影响散热。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. Acitve状态的CP Blade将自动把配置信息镜像到Standby状态的CP Blade上。必须在线更换CP Blade，才能实现配置信息的自动同步。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 新换上的CP Blade将继承旧CP Blade的IP地址和主机名。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 确保两个CP Blade处于同一FOS版本。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>更换前的检查：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. 查看CPBlade上的Status LED是否为黄色，PowerLED是否点亮。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 使用slotShow命令查看CP Blade是否处于Enabled状态。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 使用hsShow命令是否报错。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 使用errShow命令查看错误日志。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>备份配置信息：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. 切换健康的CP Blade为当前Active状态的CPBlade。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>使用命令haFailover，实现CP Blade间的手动切换。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>使用命令haShow，确认当前Active状态的CPBlade为健康的CP Blade。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>等待CP Blade上的Status LED熄灭，表明HA Failover已经完成。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 使用firmwareShow命令检查Firmware版本
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 使用haDisable命令，暂时取消Failover功能。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 使用configUpload命令保存配置信息。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>swDir:admin&gt; configUpload
+</span></span></code></pre></div><h3 id="更换cp-blade">更换CP Blade</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. 将CPBlade上的电源开关拨至Down位置，切断CP Blade的电源。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 拔下CPBlade。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 插入新的CP Blade。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 将CPBlade上的电源开关拨至Up位置，给CP Blade供电。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>更换后的验证：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. 等待两个CP Blade上的Status LED都熄灭。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 使用命令haEnable启用HA Failover功能。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 使用命令haShow检查HA状态，确认“HAEnabled Heartbeat Up” and “HA-statein sync”。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 使用命令slotShow检查所有的CP Blade都处于Enabled状态。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>swDir:admin&gt; slotShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Slot Blade Type ID Status ---------------------------------
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">1</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">2</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">3</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">4</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">5</span> CP BLADE <span style="color:#3677a9">16</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">6</span> CP BLADE <span style="color:#3677a9">16</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">7</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">8</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">9</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">10</span> SW BLADE <span style="color:#3677a9">17</span> ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>swDir:admin&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>5. 使用命令firmwareShow命令，检查FW版本是否一致
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>swDir:admin&gt; firmwareShow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Local CP (Slot 6, CP1): Active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Primary partition: v5.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Secondary Partition: v5.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Remote CP (Slot 5, CP0): Standby
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Primary partition: v5.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Secondary Partition: v5.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Note: If Local CP and Remote CP have different versions of firmware, please retry firmwaredownload command.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>swDir:admin&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>6. 使用firmwareDownload-s命令，只升级单独某个CP Blade的微码。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>7. 使用firmwareDownloadStatus命令，验证微码安装是否成功。
+</span></span><span style="display:flex;"><span>8. <span style="color:#ed9d13">```</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### ZONE配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">```</span>bash
+</span></span><span style="display:flex;"><span>1. 概念
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone configuration：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>为一组zone的集合。一个zone可以同时属于不同的zone configuration之中。当一个zone configuration生效时，属于该zone configuration的所有zone都生效。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>创建zone配置基本步骤：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>创建alias -&gt; 创建zone -&gt; 创建zone configuration -&gt; cfgSave -&gt; cfgEnable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. 常用命令
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>configUpload：备份zone configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>configDownload：恢复zone configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. 创建别名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（1）aliCreate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（2）cfgSave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; alicreate <span style="color:#ed9d13">&#34;array1&#34;</span>, <span style="color:#ed9d13">&#34;2,32; 2,33; 2,34; 4,4&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; alicreate <span style="color:#ed9d13">&#34;array2&#34;</span>, <span style="color:#ed9d13">&#34;21:00:00:20:37:0c:66:23; 4,3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; alicreate <span style="color:#ed9d13">&#34;loop1&#34;</span>, <span style="color:#ed9d13">&#34;4,6&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You are about to save the Defined zoning configuration. This
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>action will only save the changes on the Defined configuration.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Any changes made on the Effective configuration will not
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>take effect <span style="color:#6ab825;font-weight:bold">until</span> it is re-enabled.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do you want to save Defined zoning configuration only? (yes, y, no, n): [no] y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>4. 向别名中增加成员
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（1）aliAdd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（2）cfgSave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliadd <span style="color:#ed9d13">&#34;array1&#34;</span>, <span style="color:#ed9d13">&#34;1,2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliadd <span style="color:#ed9d13">&#34;array2&#34;</span>, <span style="color:#ed9d13">&#34;21:00:00:20:37:0c:72:51&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliadd <span style="color:#ed9d13">&#34;loop1&#34;</span>, <span style="color:#ed9d13">&#34;5,6&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You are about to save the Defined zoning configuration. This
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>action will only save the changes on the Defined configuration.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Any changes made on the Effective configuration will not
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>take effect <span style="color:#6ab825;font-weight:bold">until</span> it is re-enabled.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do you want to save Defined zoning configuration only? (yes, y, no, n): [no] y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>5. 删除别名中的成员
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（1）aliRemove
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>（2）cfgSave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliremove <span style="color:#ed9d13">&#34;array1&#34;</span>, <span style="color:#ed9d13">&#34;1,2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliremove <span style="color:#ed9d13">&#34;array2&#34;</span>, <span style="color:#ed9d13">&#34;21:00:00:20:37:0c:72:51&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; aliremove <span style="color:#ed9d13">&#34;loop1&#34;</span>, <span style="color:#ed9d13">&#34;4,6&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You are about to save the Defined zoning configuration. This
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>action will only save the changes on the Defined configuration.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Any changes made on the Effective configuration will not
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>take effect <span style="color:#6ab825;font-weight:bold">until</span> it is re-enabled.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do you want to save Defined zoning configuration only? (yes, y, no, n): [no] y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>6. 删除别名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; alidelete <span style="color:#ed9d13">&#34;array1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>7. 查看定义配置中的别名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; alishow <span style="color:#ed9d13">&#34;arr*&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias: array1 21:00:00:20:37:0c:76:8c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias: array2 21:00:00:20:37:0c:66:23
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>8. 创建zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zonecreate <span style="color:#ed9d13">&#34;greenzone&#34;</span>,<span style="color:#ed9d13">&#34;2,32; 2,33; 2,34; 4,4&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zonecreate <span style="color:#ed9d13">&#34;redzone&#34;</span>,<span style="color:#ed9d13">&#34;21:00:00:20:37:0c:66:23; 4,3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zonecreate <span style="color:#ed9d13">&#34;broadcast&#34;</span>,<span style="color:#ed9d13">&#34;1,2; 2,33; 2,34&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>9. 向zone中增加设备
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneadd <span style="color:#ed9d13">&#34;greenzone&#34;</span>,<span style="color:#ed9d13">&#34;1,2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneadd <span style="color:#ed9d13">&#34;redzone&#34;</span>,<span style="color:#ed9d13">&#34;21:00:00:20:37:0c:72:51&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneadd <span style="color:#ed9d13">&#34;broadcast&#34;</span>,<span style="color:#ed9d13">&#34;1,3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>10. 从zone中删除设备
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneremove <span style="color:#ed9d13">&#34;greenzone&#34;</span>,<span style="color:#ed9d13">&#34;1,2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneremove <span style="color:#ed9d13">&#34;redzone&#34;</span>,<span style="color:#ed9d13">&#34;21:00:00:20:37:0c:72:51&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneremove <span style="color:#ed9d13">&#34;broadcast&#34;</span>,<span style="color:#ed9d13">&#34;2,34&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>11. 删除一个zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zonedelete <span style="color:#ed9d13">&#34;redzone&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>12. 查看当前定义配置中的zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>以下命令查看所有以字母A、B、C开头的zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; zoneshow <span style="color:#ed9d13">&#34;[A-C]*&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Blue_zone 1,1; array1; 1,2; array2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Bobs_zone 4,5; 4,6; 4,7; 4,8; 4,9
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>13. 创建zone配置
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgcreate <span style="color:#ed9d13">&#34;NEW_cfg&#34;</span>,<span style="color:#ed9d13">&#34;redzone; bluezone; greenzone&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>14. 向zone配置成员中加入zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgadd <span style="color:#ed9d13">&#34;newcfg&#34;</span>,<span style="color:#ed9d13">&#34;bluezone&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>15. 从zone配置成员中删除zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgremove <span style="color:#ed9d13">&#34;NEW_cfg&#34;</span>, <span style="color:#ed9d13">&#34;redzone&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>16. 删除zone配置
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgdelete <span style="color:#ed9d13">&#34;testcfg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgsave
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>17. 撤销对zone配置的修改
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>命令cfgTransAbort将撤销所有未保存的修改，及恢复到上次执行cfgSave时的状态。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>18. 查看zone配置信息
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cfgShow不带任何参数：显示处于defined和effective状态的所有zone配置信息
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgshow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Defined configuration:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cfg: USA1 Blue_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cfg: USA_cfg Red_zone; Blue_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Blue_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1,1; array1; 1,2; array2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Red_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1,0; loop1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias: array1 21:00:00:20:37:0c:76:8c;21:00:00:20:37:0c:71:02
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias: array2 21:00:00:20:37:0c:76:22; 21:00:00:20:37:0c:76:28
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias: loop1 21:00:00:20:37:0c:76:85;21:00:00:20:37:0c:71:df
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Effective configuration:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cfg: USA_cfg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Blue_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1,1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:76:8c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:71:02
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1,2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:76:22
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:76:28
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone: Red_zone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1,0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:76:85
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>21:00:00:20:37:0c:71:df
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>19. 保存zone配置
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch:admin&gt; cfgenable <span style="color:#ed9d13">&#34;USA_cfg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You are about to <span style="color:#24909d">enable</span> a new zoning configuration.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This action will replace the old zoning configurationwith the
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>current configuration selected.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do you want to <span style="color:#24909d">enable</span> <span style="color:#ed9d13">&#39;USA_cfg&#39;</span> configuration (yes, y,no, n): [no] y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>zone config <span style="color:#ed9d13">&#34;USA_cfg&#34;</span> is in effect
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Updating flash ...
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

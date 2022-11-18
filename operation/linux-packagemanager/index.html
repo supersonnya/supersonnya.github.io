@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux 软件包管理</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 04, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 4 minutes.</p>
     
 <hr class="full-width">
 
@@ -618,6 +618,17 @@ div .highlight {
 </span></span><span style="display:flex;"><span>yum clean all
 </span></span><span style="display:flex;"><span>yum makecache
 </span></span><span style="display:flex;"><span>yum list
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## dnf下一代包管理工具，替换yum</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 更换阿里源</span>
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> /etc/yum.repos.d/
+</span></span><span style="display:flex;"><span>mv /etc/yum.repos.d/CentOS-AppStream.repo /etc/yum.repos.d/CentOS-AppStream.repo.bak
+</span></span><span style="display:flex;"><span>mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+</span></span><span style="display:flex;"><span>mv /etc/yum.repos.d/CentOS-centosplus.repo /etc/yum.repos.d/CentOS-centosplus.repo.bak
+</span></span><span style="display:flex;"><span>mv /etc/yum.repos.d/CentOS-Extras.repo /etc/yum.repos.d/CentOS-Extras.repo.bak
+</span></span><span style="display:flex;"><span>mv /etc/yum.repos.d/CentOS-PowerTools.repo /etc/yum.repos.d/CentOS-PowerTools.repo.bak
+</span></span><span style="display:flex;"><span>curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+</span></span><span style="display:flex;"><span>wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+</span></span><span style="display:flex;"><span>cat /etc/yum.repos.d/CentOS-Base.repo
 </span></span></code></pre></div><h3 id="源代码编译安装软件">源代码编译安装软件</h3>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 1.下载解压软件源代码</span>
 </span></span><span style="display:flex;"><span>tar zxvf *.tar.gz  

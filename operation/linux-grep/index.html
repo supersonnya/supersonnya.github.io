@@ -536,23 +536,27 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Grep</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 14, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 6 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 9 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <h3 id="语法">语法</h3>
+  <h2 id="语法">语法</h2>
 <ul>
 <li><code>grep</code>用于查找文件里符合条件的字符串。grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。</li>
+<li>文本搜索工具，根据用户指定的模式对目标文本逐行进行匹配检查，打印匹配到的行。</li>
+<li>模式：由正则表达式的元字符及文本字符所编写出的过滤条件。</li>
 <li><code>grep [-abcEFGhHilLnqrsvVwxy][-A&lt;显示行数&gt;][-B&lt;显示列数&gt;][-C&lt;显示列数&gt;][-d&lt;进行动作&gt;][-e&lt;范本样式&gt;][-f&lt;范本文件&gt;][--help][范本样式][文件或目录...]</code>。</li>
+<li>grep需要使用参数- E支持正则表达式，egrep不推荐使用，使用grep -E代替。</li>
+<li>grep不加参数，需要在特殊字符前加<code>\</code>，识别为正则表达式。</li>
 </ul>
-<h4 id="参数说明">参数说明</h4>
+<h3 id="参数说明">参数说明</h3>
 <ul>
 <li>`-a 或 &ndash;text** : 不要忽略二进制的数据。</li>
 <li>`-A&lt;显示行数&gt; 或 &ndash;after-context=&lt;显示行数&gt;** : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。</li>
 <li>`-b 或 &ndash;byte-offset** : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。</li>
 <li>`-B&lt;显示行数&gt; 或 &ndash;before-context=&lt;显示行数&gt;** : 除了显示符合样式的那一行之外，并显示该行之前的内容。</li>
-<li>`-c 或 &ndash;count** : 计算符合样式的列数。</li>
+<li>`-c 或 &ndash;count** : 计算符合样式的行数。</li>
 <li><code>-C&lt;显示行数&gt; 或 --context=&lt;显示行数&gt;或-&lt;显示行数&gt;</code>：除了显示符合样式的那一行之外，并显。该行之前后的内容。</li>
 <li><code>-d &lt;动作&gt; 或 --directories=&lt;动作&gt;</code>：当指定要查找的是目录而非文件时，必须使用这项参数。否则grep指令将回报信息并停止动作。</li>
 <li><code>-e&lt;范本样式&gt; 或 --regexp=&lt;范本样式&gt;</code>：指定字符串做为查找文件内容的样式。</li>
@@ -576,8 +580,60 @@ div .highlight {
 <li><code>-x --line-regexp</code>：只显示全列符合的列。</li>
 <li><code>-y</code>：此参数的效果和指定&quot;-i&quot;参数相同。</li>
 </ul>
-<h3 id="实例">实例</h3>
-
+<h2 id="实例">实例</h2>
+<ul>
+<li>在<code>Linux</code>平台，所有的文件结尾都有一个<code>$</code>符号，使用<code>cat -En filename.txt</code>或<code>cat -A</code>查看文件。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 过滤注释行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^#&#39;</span> filename.txt -v
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 过滤空行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^$&#39;</span> filename.txt -v
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 过滤注释行和空行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^#&#39;</span> filename.txt -v | grep <span style="color:#ed9d13">&#39;^$&#39;</span> -v
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 以m开头的行</span>
+</span></span><span style="display:flex;"><span>grep -i <span style="color:#ed9d13">&#39;^m&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 以.结尾的行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;\.$&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## . 匹配所有，不包含空行</span>
+</span></span><span style="display:flex;"><span>grep -i -n <span style="color:#ed9d13">&#39;.&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## .* 匹配所有内容，包含空行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;.*&#39;</span> filename.txt
+</span></span></code></pre></div><h2 id="练习">练习</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## roo相关的行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;root&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 以root开头的行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^root&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 以root或abc开头的行，精确匹配</span>
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;^(root|abc)\&gt;&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## bin开头的行，并显示行号</span>
+</span></span><span style="display:flex;"><span>grep -n <span style="color:#ed9d13">&#39;^bin&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 除了root开头的行</span>
+</span></span><span style="display:flex;"><span>grep -v -n <span style="color:#ed9d13">&#39;^root&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配abc的次数</span>
+</span></span><span style="display:flex;"><span>grep -c <span style="color:#ed9d13">&#39;^abc&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 匹配abc，最多3次</span>
+</span></span><span style="display:flex;"><span>grep -m <span style="color:#3677a9">3</span> <span style="color:#ed9d13">&#39;^abc&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 在多个文件匹配abc，列出匹配到的文件名</span>
+</span></span><span style="display:flex;"><span>grep -l <span style="color:#ed9d13">&#39;^abc &#39;</span>/etc/passwd /filename
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 不以/bin/bash结尾的行</span>
+</span></span><span style="display:flex;"><span>grep -v <span style="color:#ed9d13">&#39;/bin/bash$&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 包含2或3个数字的行，左右均精确匹配</span>
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;\&lt;[0-9]{2,3}\&gt;&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 至少一个空白字符开头，后面不是空白字符的行</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^[[:space:]].*&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;^[[:space:]]+[^[:space:]]&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 所有以大小写I开头的行</span>
+</span></span><span style="display:flex;"><span>grep -i <span style="color:#ed9d13">&#39;^i&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;^(I|i)&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;^[Ii]&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## root，bin，nobody三个用户信息，精确匹配</span>
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;^(root|bin|nobody)\&gt;&#39;</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 找出所有函数名</span>
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;[a-zA-Z]+\(\)&#39;</span> /etc/passwd -o
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;[a-zA-Z]+\(\)&#39;</span> /etc/passwd -o
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 用户名和shell相同的行</span>
+</span></span><span style="display:flex;"><span>grep -E <span style="color:#ed9d13">&#39;^([^:]+\&gt;).*\1$&#39;</span> /etc/passwd
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

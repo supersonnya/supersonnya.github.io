@@ -8,12 +8,60 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CET6 - 复习第三周</title>
+      <link>https://supersonnya.github.io/dandan/english-cet6_thirdweek/</link>
+      <pubDate>Fri, 18 Nov 2022 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/dandan/english-cet6_thirdweek/</guid>
+      <description>本周复习计划 真题2022年06月第三套练习，整理生词、短语； 复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第二周总结 </description>
+    </item>
+    
+    <item>
+      <title>JumpServer</title>
+      <link>https://supersonnya.github.io/operation/devops-jumpserver/</link>
+      <pubDate>Fri, 11 Nov 2022 14:48:11 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/devops-jumpserver/</guid>
+      <description>堡垒机 通过堡垒机控制IT系统运维风险。 统一入口、批量管理、自动运维、安全运营。 身份鉴别、账号管理、权限控制、安全审计。 审计只是事后行为，无法防止问题发生。 事先严格监控，从源头解决服务器误操作问题。 堡垒机能够创建系统账号，但账号只是区分角色功能，无法确认账号的执行人。 跳板机的缺陷，企业需要更新、更好、更安全的技术理念管理服务器的运维操作，需要一种能够满足角色管理、角色授权、信息资源访问控制、操作记录和审计、系统变更维护控制等需求，生成服务器资产统计报表功能。 核心作用 系统运维和安全审计管理；过滤和拦截非法请求访问、恶意攻击，拒绝不合法命令，进行审计监控、报警和责任追踪；报警、记录、分析、处理。 解决运维权限混乱、操作无审计的问题。 核心功能 单点登录；账号管理；身份认证；资源授权；访问控制；操作审计。 应用场景 多用户使用同一个账号； 一个用户使用多个账号； 缺少统一的权限管理平台，无法实现高粒度的命令权限控制； 对于传统的网络设备无法对运维人员的远程连接命令进行加密、审计。 企业角度 通过更加细致的粒度对企业IT资产设备进行管理，保证企业的IT设备资产安全、可靠运行，降低人为操作的风险，避免风险性，保证企业的资源资金安全。 管理角度 一次登录即可快捷访问多台设备，提升工作效率，对服务器最大化的安全性操作。 跳板机 跳板机：一台服务器，必须先连接跳板机才能去操控内网中的服务器。
+仅实现了服务器安全登录，没有实现对运维人员的行为操控和审计，使用过程中可能出现误操作，无法定位实施人。 集中式对服务器进行管理。 </description>
+    </item>
+    
+    <item>
+      <title>EMC CX存储</title>
+      <link>https://supersonnya.github.io/operation/storage-emc_cx/</link>
+      <pubDate>Wed, 09 Nov 2022 16:54:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/storage-emc_cx/</guid>
+      <description>注册HBA卡 在Hosts标签页中打开右侧Storage System Connectivity Status，选中需要注册的HBA卡，点击Edit，选择归属主机，Initiator Information选择CLARiiON Open，Failover Mode选择Active-Active mode(ALUA)-failovermode4，点击确定。 删除不需要的HBA配置项。 分配存储组：选择Storage下的Storage Groups，选中需要分配的主机组，点击Connect Hosts，选中需要加入的主机，点击应用。 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://supersonnya.github.io/moments/20221109/</link>
+      <pubDate>Wed, 09 Nov 2022 09:24:38 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/moments/20221109/</guid>
+      <description>人生而自由，却无往不在枷锁中。
+自以为是其他一切的主人，
+反而比其他一切更是奴隶。</description>
+    </item>
+    
+    <item>
+      <title>Zabbix</title>
+      <link>https://supersonnya.github.io/operation/devops-zabbix/</link>
+      <pubDate>Tue, 08 Nov 2022 23:28:41 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/devops-zabbix/</guid>
+      <description>监控分类 硬件监控 通过远程控制卡：Dell的IDRAC，HP的ILO和IBM的IMM等； 使用IPMI完成物理设备的监控工作，通常必须监控温度、硬盘故障等； 路由器、交换机（端口、光衰、日志）、打印机、系统等。 系统监控 CPU，内存、硬盘使用率，硬盘IO，系统负载，进程数。 服务监控 apache、nginx、php-fpm、mysql、memcache、redis、tomcat、JVM、TCP连接数等。 性能监控 网站性能、服务器性能、数据库性能、存储性能。 日志监控 系统日志、应用访问日志、错误日志、服务影讯日志，可使用ELK进行日志监控。 安全监控 图形化展示不同攻击类型统计； 监控登录用户数，passwd文件，本地文件的改动。 网络监控 端口、WEB|URL、DB、ping包、IDC带宽网络流量、网络流入流出速率、网络入出流量、网络使用率、SMTP、POP3。 完善的监控系统的特点 基本要求 监控系统能够自定义监控的内容，自己通过脚本采集所需的数据； 数据需要存入数据库，以便之后对数据进行分析计算； 监控系统可以简易、快速地部署到服务器； 数据可视化直观清晰。 监控工具 Cobbler、SALTSTACK、Kubernetes、Zabbix、elastic、Jenkins。 异常告警通知 可以定义复杂度告警逻辑，做到监控项之间的关联告警，例如程序之间的依赖检测，而不是只单独检测某一个指标； 告警可以确认响应，让运维组内的人知道已经有人在处理告警； 告警方式可以自定义，如短信、邮件； 告警内容可以自定义，能够写入一些简单的分析，便于运维人员直观了解数据； 告警后可以预处理一些任务，例如自我修复、重启、采集数据等。 协同工作 监控系统有强大的API，提供给外部调用； 监控数据有开放性和主流的数据结构，便于解析； 监控可视化可使用简易的插件，而非复杂的JS文件。 Zabbix简介 Zabbix介绍 Zabbix是一种网络监视、管理系统，基于CS架构，可用于监视各种网络服务、服务器和网络机器等的状态。 Zabbix使用各种数据库存储数据，如MySQL、PostgreSQL、SQLite、Oracle、DB2等。Server端基于C，Web管理端基于PHP。 Zabbix可使用多种监控方式：只使用Simple Check不安装客户端；也可基于SMTP或HTTP等协议定制监控。 Zabbix自带的Item满足普通监控需求，也可自定义Item，自动生成报表，同时提供外部API。 Zabbix优势 支持自定义监控脚本，提供需要输出的值即可； 存储的数据库表结构逻辑清晰； 通过模板可以便捷部署一组监控项； 每个监控项都可看到历史记录，且界面友好； 强大的触发器定义规则，可定义复杂的告警逻辑； 支持短信、邮件、微信等告警方式，提供告警确认机制； 触发告警后，可远程执行系统命令； 有原生的PHP绘图模块。 Zabbix术语 zabbix server：服务端，收集数据，写入数据。 zabbix agent：部署在被监控机器上，是一个进程，与zabbix server进行交互，负责执行命令。 host：监控的实体主机对象。 hosts：实体主机组。 applications：应用。 events：事件。 media：发送通知的通道。 remote command：远程命令。 template：模板。 item：监控项。 trigger：触发器，定义告警逻辑，有正常、异常、未知三个状态。 action：触发器事件出发后，指定的动作。 Zabbix程序组件 zabbix_server：服务器守护进程。 zabbix_agentd：agent守护进程。 zabbix_proxy：代理服务器。 zabbix_database：数据库系统。 zabbix_web：可视化界面。 zabbix_get：命令行工具，测试向agent发起数据采集请求。 zabbix_sender：命令行工具，测试向server发送数据。 zabbix_java_gateway：Java网关。 Zabbix Server安装 ## 查看IP ifconfig eth0 | awk &amp;#39;NR==2{print $2}&amp;#39; ## 关闭防火墙 sed -i &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/&amp;#39; /etc/selinux/config systemctl disable --now firewalld ## 获取zabbix下载源 rpm -Uvh http://mirrors.</description>
+    </item>
+    
+    <item>
       <title>CET6 - 复习第二周</title>
       <link>https://supersonnya.github.io/dandan/english-cet6_secondweek/</link>
       <pubDate>Mon, 07 Nov 2022 20:18:07 +0600</pubDate>
       
       <guid>https://supersonnya.github.io/dandan/english-cet6_secondweek/</guid>
-      <description>本周复习计划 语法书3-5章内容学习及笔记整理； 真题2022年06月第二套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第二周总结 </description>
+      <description>本周复习计划 语法书3-5章内容学习及笔记整理； 真题2022年06月第二套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 语法内容基本没有完成； 真题2022年06月第二套真题完成大部分，整理了生词； 之前的生词没有及时复习。 复习第二周总结 本周是虚度光阴的一周，只有周一去了图书馆认真学习，周二放飞自我了然后周三晚上回来封宿舍之后越来越放飞。周六直接睡到十一点，一周都没有好好学习，周日去图书馆早上效率还可以，中午就学不进去。要赶快调整状态，坚持还有一个月不到的时间就考试了，到时候又怪自己不好好努力，抓紧时间，期末也快到了，学习学习！越往后任务越多，要赶快完成所有东西，明年安心准备考研。</description>
     </item>
     
     <item>
@@ -42,7 +90,7 @@
       <pubDate>Mon, 31 Oct 2022 12:57:56 +0600</pubDate>
       
       <guid>https://supersonnya.github.io/dandan/english-cet6_firstweek/</guid>
-      <description>本周复习计划 语法书1-7章内容学习及笔记整理； 真题2022年06月第一套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 语法书：完成第一章、第二章，并整理了思维导图； 2022年06月第一套真题，整理了试卷中的生词； 每天背诵记忆真题中的生词。 复习第一周总结 本周二，第一次去图书馆学习，在里面学习时间真的过得很快，而且自己也不会受外界因素的影响，自己想休息的时候，已经过了一个小时甚至是一个半小时了，那天早上学习了3h。周三，第一次知道7点的图书馆是需要排队进的，整个图书馆座无虚席，图书馆像电视剧里的那样安静，大家都在努力着，原来图书馆每天都有那么多人在努力着，而我却是在宿舍浪费了2个月多的时间。原来真的有人从早到晚都在努力着，可以连午休都在图书馆，所以学习的氛围真的很重要。每当我想休息时，头抬起看着满是低头努力着的人，会觉得休息原来也是很奢侈的一件事。在图书馆里，只觉得自己不够努力，做的不如别人好，都没有了想玩手机的感觉，不敢放松，生怕落后。果然舒适使人懒情，压力使人进步。今天应该是我从小到大最努力的一天，7:30进入图书馆，7:50开始学习，12:00去吃饭，1:00回到图书馆，趴了两分钟开始学习一直到16:20，7个小时没有开小差。做了单词整理，背list2以及做微观经济学的笔记整理，这也是第一次自己一个人在食堂堂食，其实也没什么大不了的~我觉得很充实，很开心。其余几天，计划写得很多，但并没有认真完成，语法也没有坚持每天去看，这都是不好的。我觉得自己的计划可以再划分小一点，写的笼统就不好计划了。宿舍里的关系也不用过于费心去维持，生活&amp;amp;未来是自己的，她们最多陪伴我500多天，只是我人生中的一小部分，只要不找事儿就行，就当他们走练习微笑的工具人吧！从现在开始自律起来，我一定能考研上岸！＾-＾</description>
+      <description>本周复习计划 语法书1-7章内容学习及笔记整理； 真题2022年06月第一套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 语法书：完成第一章、第二章，并整理了思维导图； 2022年06月第一套真题，整理了试卷中的生词； 每天背诵记忆真题中的生词。 复习第一周总结 本周二，第一次去图书馆学习，在里面学习时间真的过得很快，而且自己也不会受外界因素的影响，自己想休息的时候，已经过了一个小时甚至是一个半小时了，那天早上学习了3h。周三，第一次知道7点的图书馆是需要排队进的，整个图书馆座无虚席，图书馆像电视剧里的那样安静，大家都在努力着，原来图书馆每天都有那么多人在努力着，而我却是在宿舍浪费了2个月多的时间。原来真的有人从早到晚都在努力着，可以连午休都在图书馆，所以学习的氛围真的很重要。每当我想休息时，头抬起看着满是低头努力着的人，会觉得休息原来也是很奢侈的一件事。在图书馆里，只觉得自己不够努力，做的不如别人好，都没有了想玩手机的感觉，不敢放松，生怕落后。果然舒适使人懒惰，压力使人进步。今天应该是我从小到大最努力的一天，7:30进入图书馆，7:50开始学习，12:00去吃饭，1:00回到图书馆，趴了两分钟开始学习一直到16:20，7个小时没有开小差。做了单词整理，背list2以及做微观经济学的笔记整理，这也是第一次自己一个人在食堂堂食，其实也没什么大不了的~我觉得很充实，很开心。其余几天，计划写得很多，但并没有认真完成，语法也没有坚持每天去看，这都是不好的。我觉得自己的计划可以再划分小一点，写的笼统就不好计划了。宿舍里的关系也不用过于费心去维持，生活&amp;amp;未来是自己的，她们最多陪伴我500多天，只是我人生中的一小部分，只要不找事就行，就当他们是练习微笑的工具人吧！从现在开始自律起来，我一定能考研上岸！＾-＾</description>
     </item>
     
     <item>
@@ -100,7 +148,7 @@ MQ类,Keeplived,fastdfs
       <pubDate>Fri, 14 Oct 2022 16:30:38 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux-grep/</guid>
-      <description>语法 grep用于查找文件里符合条件的字符串。grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。 grep [-abcEFGhHilLnqrsvVwxy][-A&amp;lt;显示行数&amp;gt;][-B&amp;lt;显示列数&amp;gt;][-C&amp;lt;显示列数&amp;gt;][-d&amp;lt;进行动作&amp;gt;][-e&amp;lt;范本样式&amp;gt;][-f&amp;lt;范本文件&amp;gt;][--help][范本样式][文件或目录...]。 参数说明 `-a 或 &amp;ndash;text** : 不要忽略二进制的数据。 `-A&amp;lt;显示行数&amp;gt; 或 &amp;ndash;after-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。 `-b 或 &amp;ndash;byte-offset** : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。 `-B&amp;lt;显示行数&amp;gt; 或 &amp;ndash;before-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合样式的那一行之外，并显示该行之前的内容。 `-c 或 &amp;ndash;count** : 计算符合样式的列数。 -C&amp;lt;显示行数&amp;gt; 或 --context=&amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt;：除了显示符合样式的那一行之外，并显。该行之前后的内容。 -d &amp;lt;动作&amp;gt; 或 --directories=&amp;lt;动作&amp;gt;：当指定要查找的是目录而非文件时，必须使用这项参数。否则grep指令将回报信息并停止动作。 -e&amp;lt;范本样式&amp;gt; 或 --regexp=&amp;lt;范本样式&amp;gt;：指定字符串做为查找文件内容的样式。 -E 或 --extended-regexp：将样式为延伸的正则表达式来使用。 -f&amp;lt;规则文件&amp;gt; 或 --file=&amp;lt;规则文件&amp;gt;：指定规则文件，其内容含有一个或多个规则样式，让gre。查找符合规则条件的文件内容，格式为每行一个规则样式。 -F 或 --fixed-regexp：将样式视为固定字符串的列表。 -G 或 --basic-regexp：将样式视为普通的表示法来使用。 -h 或 --no-filename：在显示符合样式的那一行之前，不标示该行所属的文件名称。 -H 或 --with-filename：在显示符合样式的那一行之前，表示该行所属的文件名称。 -i 或 --ignore-case：忽略字符大小写的差别。 -l 或 --file-with-matches：列出文件内容符合指定的样式的文件名称。 -L 或 --files-without-match：列出文件内容不符合指定的样式的文件名称。 -n 或 --line-number：在显示符合样式的那一行之前，标示出该行的列数编号。 -o 或 --only-matching：只显示匹配PATTERN 部分。 -q 或 --quiet或--silent：不显示任何信息。 -r 或 --recursive：此参数的效果和指定&amp;quot;-d recurse&amp;quot;参数相同。 -s 或 --no-messages：不显示错误信息。 -v 或 --invert-match：显示不包含匹配文本的所有行。 -V 或 --version：显示版本信息。 -w 或 --word-regexp：只显示全字符合的列。 -x --line-regexp：只显示全列符合的列。 -y：此参数的效果和指定&amp;quot;-i&amp;quot;参数相同。 实例 </description>
+      <description>语法 grep用于查找文件里符合条件的字符串。grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。 文本搜索工具，根据用户指定的模式对目标文本逐行进行匹配检查，打印匹配到的行。 模式：由正则表达式的元字符及文本字符所编写出的过滤条件。 grep [-abcEFGhHilLnqrsvVwxy][-A&amp;lt;显示行数&amp;gt;][-B&amp;lt;显示列数&amp;gt;][-C&amp;lt;显示列数&amp;gt;][-d&amp;lt;进行动作&amp;gt;][-e&amp;lt;范本样式&amp;gt;][-f&amp;lt;范本文件&amp;gt;][--help][范本样式][文件或目录...]。 grep需要使用参数- E支持正则表达式，egrep不推荐使用，使用grep -E代替。 grep不加参数，需要在特殊字符前加\，识别为正则表达式。 参数说明 `-a 或 &amp;ndash;text** : 不要忽略二进制的数据。 `-A&amp;lt;显示行数&amp;gt; 或 &amp;ndash;after-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。 `-b 或 &amp;ndash;byte-offset** : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。 `-B&amp;lt;显示行数&amp;gt; 或 &amp;ndash;before-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合样式的那一行之外，并显示该行之前的内容。 `-c 或 &amp;ndash;count** : 计算符合样式的行数。 -C&amp;lt;显示行数&amp;gt; 或 --context=&amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt;：除了显示符合样式的那一行之外，并显。该行之前后的内容。 -d &amp;lt;动作&amp;gt; 或 --directories=&amp;lt;动作&amp;gt;：当指定要查找的是目录而非文件时，必须使用这项参数。否则grep指令将回报信息并停止动作。 -e&amp;lt;范本样式&amp;gt; 或 --regexp=&amp;lt;范本样式&amp;gt;：指定字符串做为查找文件内容的样式。 -E 或 --extended-regexp：将样式为延伸的正则表达式来使用。 -f&amp;lt;规则文件&amp;gt; 或 --file=&amp;lt;规则文件&amp;gt;：指定规则文件，其内容含有一个或多个规则样式，让gre。查找符合规则条件的文件内容，格式为每行一个规则样式。 -F 或 --fixed-regexp：将样式视为固定字符串的列表。 -G 或 --basic-regexp：将样式视为普通的表示法来使用。 -h 或 --no-filename：在显示符合样式的那一行之前，不标示该行所属的文件名称。 -H 或 --with-filename：在显示符合样式的那一行之前，表示该行所属的文件名称。 -i 或 --ignore-case：忽略字符大小写的差别。 -l 或 --file-with-matches：列出文件内容符合指定的样式的文件名称。 -L 或 --files-without-match：列出文件内容不符合指定的样式的文件名称。 -n 或 --line-number：在显示符合样式的那一行之前，标示出该行的列数编号。 -o 或 --only-matching：只显示匹配PATTERN 部分。 -q 或 --quiet或--silent：不显示任何信息。 -r 或 --recursive：此参数的效果和指定&amp;quot;-d recurse&amp;quot;参数相同。 -s 或 --no-messages：不显示错误信息。 -v 或 --invert-match：显示不包含匹配文本的所有行。 -V 或 --version：显示版本信息。 -w 或 --word-regexp：只显示全字符合的列。 -x --line-regexp：只显示全列符合的列。 -y：此参数的效果和指定&amp;quot;-i&amp;quot;参数相同。 实例 在Linux平台，所有的文件结尾都有一个$符号，使用cat -En filename.</description>
     </item>
     
     <item>
@@ -109,7 +157,9 @@ MQ类,Keeplived,fastdfs
       <pubDate>Fri, 14 Oct 2022 16:29:26 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux-awk/</guid>
-      <description>语法 awk是一种处理文本文件的语言，是一个强大的文本分析工具。 awk [选项参数] &#39;script&#39; var=value file(s)或awk [选项参数] -f scriptfile var=value file(s)。 选项参数说明 -F fsor--field-separator fs：指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式。 -v var=valueor--asign var=value：赋值一个用户定义变量。 -f scripfileor--file scriptfile：从脚本文件中读取awk命令。 -mf nnn and -mr nnn：对nnn值设置内在限制，-mf选项限制分配给nnn的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。 -W compact or --compat, -W traditional or --traditional：在兼容模式下运行awk。所以gawk的行为和标准的awk完全一样，所有的awk扩展都被忽略。 -W copyleft or --copyleft, -W copyright or --copyright：打印简短的版权信息。 -W help or --help, -W usage or --usage：打印全部awk选项和每个选项的简短说明。 -W lint or --lint：打印不能向传统unix平台移植的结构的警告。 -W lint-old or --lint-old：打印关于不能向传统unix平台移植的结构的警告。 -W posix：打开兼容模式。但有以下限制，不识别：/x、函数关键字、func、换码序列以及当fs是一个空格时，将新行作为一个域分隔符；操作符和=不能代替^和^=；fflush无效。 -W re-interval or --re-inerval：允许间隔正则表达式的使用，参考(grep中的Posix字符类)，如括号表达式[[:alpha:]]。 -W source program-text or --source program-text：使用program-text作为源代码，可与-f命令混用。 -W version or --version：打印bug报告信息的版本。 实例 </description>
+      <description>语法 awk是一种处理文本文件的语言，是一个强大的文本分析工具。 Linux文本报告生成器——格式化文本，Linux上是gawk。 awk [选项参数] &#39;script&#39; var=value file(s)或awk [选项参数] -f scriptfile var=value file(s)。 默认以空格为分隔符，多个空格也识别为一个空格作为分隔符，$0代表整行，$1代表第一列，$NF表示当前分割后的最后一列，$(NF-1)为倒数第二列，FS指定分隔符，NR代表当前记录数。 awk按行处理文件，一行处理完毕再处理下一行，根据用户指定的分隔符工作，未指定则默认空格。 外层必须单引号，内层双引号，内置变量不得添加双引号，否则识别为文本。 参数 -F -v: 定义或修改内部变量 -f: 从脚本文件读取命令
+内置变量
+FS: 输入字段分隔符，默认空白字符。 OFS: 输出字段分隔符，默认空白字符。 RS: 指定输入时的换行符。 ORS: 指定输出时的换行符。 NF: 当前行的字段个数。 NR: 当前处理的文本的行号。 FNR: 各文件分别计数的行号。 FILENAME: 当前文件名。 ARGC: 命令行参数个数。 ARGV: 数组，保存命令行传递的所有参数。 选项参数说明 -F fsor--field-separator fs：指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式。 -v var=valueor--asign var=value：赋值一个用户定义变量。 -f scripfileor--file scriptfile：从脚本文件中读取awk命令。 -mf nnn and -mr nnn：对nnn值设置内在限制，-mf选项限制分配给nnn的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。 -W compact or --compat, -W traditional or --traditional：在兼容模式下运行awk。所以gawk的行为和标准的awk完全一样，所有的awk扩展都被忽略。 -W copyleft or --copyleft, -W copyright or --copyright：打印简短的版权信息。 -W help or --help, -W usage or --usage：打印全部awk选项和每个选项的简短说明。 -W lint or --lint：打印不能向传统unix平台移植的结构的警告。 -W lint-old or --lint-old：打印关于不能向传统unix平台移植的结构的警告。 -W posix：打开兼容模式。但有以下限制，不识别：/x、函数关键字、func、换码序列以及当fs是一个空格时，将新行作为一个域分隔符；操作符和=不能代替^和^=；fflush无效。 -W re-interval or --re-inerval：允许间隔正则表达式的使用，参考(grep中的Posix字符类)，如括号表达式[[:alpha:]]。 -W source program-text or --source program-text：使用program-text作为源代码，可与-f命令混用。 -W version or --version：打印bug报告信息的版本。 实例 ## 一次输出多列，逗号输出默认分隔符 awk &amp;#39;{print $1,$2}&amp;#39; filename.</description>
     </item>
     
     <item>
@@ -118,7 +168,7 @@ MQ类,Keeplived,fastdfs
       <pubDate>Fri, 14 Oct 2022 16:29:22 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux-sed/</guid>
-      <description>语法 sed命令是利用脚本来处理文本文件，可依照脚本的指令来处理、编辑文本文件。主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。 sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script&amp;gt;] [filename]。 参数说明 -e&amp;lt;script&amp;gt;或--expression=&amp;lt;script&amp;gt;：以指定的script来处理输入的文本文件。 -f&amp;lt;script_file&amp;gt;或--file=&amp;lt;script_file&amp;gt;：以指定的script文件来处理输入的文本文件。 -h或--help：显示帮助。 -n或--quiet或--silent：仅显示script处理后的结果。 -V或--version：显示版本信息。 动作说明 a：新增，后面可以接字串，字符串插入在当前行后的新行。 c：取代，后面可以接字串，字串可以取代n1,n2之间的行。 d：删除，后面通常没有内容。 i：插入，后面可以接字串，字符串插入在当前行前的新行。 p：打印，将某个选择的数据印出，通常与参数sed -n一起运行。 s：取代，通常搭配正则表达式使用。 实例 </description>
+      <description>语法 sed命令是利用脚本来处理文本文件，可依照脚本的指令来处理、编辑文本文件。主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。 流编辑器，文本编辑工具，使用单引号。 sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script&amp;gt;] [filename]。 参数说明 -e&amp;lt;script&amp;gt;或--expression=&amp;lt;script&amp;gt;：以指定的script来处理输入的文本文件。 -f&amp;lt;script_file&amp;gt;或--file=&amp;lt;script_file&amp;gt;：以指定的script文件来处理输入的文本文件。 -h或--help：显示帮助。 -i: 直接将修改结果写入文件，不适用该参数时修改的是内存数据。 -n或--quiet或--silent：仅显示script处理后的行。 -r: 支持扩展正则表达式。 -V或--version：显示版本信息。 内置命令字符 a：新增，后面可以接字串，字符串插入在当前行后的新行。 c：取代，后面可以接字串，字串可以取代n1,n2之间的行。 d：删除，后面通常没有内容。 i：插入，后面可以接字串，字符串插入在当前行前的新行。 p：打印，将某个选择的数据印出，通常与参数sed -n一起运行。 s/正则/替换内容/g：取代，通常搭配正则表达式使用。 匹配范围 空地址：全文处理； 单地址：指定文件某一行； pattern：被模式匹配到的每一行； 范围区间：10,20表示十到二十行，10,+5表示从第十行开始向下五行； 步长：1~2表示从一开始步长为2。 实例 ## 输出第2，3行的数据 sed -n &amp;#39;2,3p&amp;#39; filename.txt ## 过滤含有linux的行 sed -n &amp;#39;/linux/p&amp;#39; filename.txt ## 删除包含game的行 sed &amp;#39;/game/d&amp;#39; filename.txt ## 删除第5行之后的行 sed &amp;#39;5,$d&amp;#39; filename.txt ## 所有的My替换为I sed &amp;#39;s/My/I/g&amp;#39; filename.txt ## 多提替换，My替换为I，同时替换数字 sed -e &amp;#39;s/My/I/g&amp;#39; -e &amp;#39;s/888/666/g&amp;#39; filename.txt ## 第二行后插入内容，添加多行信息使用\n换行 sed -i &amp;#39;2a I am good.</description>
     </item>
     
     <item>
@@ -160,7 +210,7 @@ MQ类,Keeplived,fastdfs
     </item>
     
     <item>
-      <title>Storage Netapp</title>
+      <title>Netapp存储</title>
       <link>https://supersonnya.github.io/operation/storage-netapp/</link>
       <pubDate>Tue, 30 Aug 2022 09:25:24 +0800</pubDate>
       
@@ -438,7 +488,7 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
       <pubDate>Thu, 04 Aug 2022 11:00:54 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux-usefulcommands/</guid>
-      <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 fsck 检查和修复文件系统，使用fsck检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候 fsck 分区名: 指定需要检查的文件系统 fsck -p: 会读取fstab文件来确定检查哪些文件系统 -f: 强制检查新的文件系统 grep [OPTIONS] PATTERN [FILE&amp;hellip;] 查找文件内容，返回所在行 搜索内容包含空格时必须加单引号 groupadd head | tail 显示文件的开头和结尾 -n: 指定显示的行数 history 查看历史操作，仅在BASH中适用，只能列出当前用户的操作记录 管理员需要查看其他用户的操作记录，可读取该用户主目录下的.</description>
+      <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 cpu lscpu、top、htop、glances df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 disk fdisk、iotop fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 fsck 检查和修复文件系统，使用fsck检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候 fsck 分区名: 指定需要检查的文件系统 fsck -p: 会读取fstab文件来确定检查哪些文件系统 -f: 强制检查新的文件系统 grep [OPTIONS] PATTERN [FILE&amp;hellip;] 查找文件内容，返回所在行 搜索内容包含空格时必须加单引号 groupadd head | tail 显示文件的开头和结尾 -n: 指定显示的行数 history 查看历史操作，仅在BASH中适用，只能列出当前用户的操作记录 管理员需要查看其他用户的操作记录，可读取该用户主目录下的.</description>
     </item>
     
     <item>
@@ -474,7 +524,7 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
       <pubDate>Tue, 26 Jul 2022 14:39:54 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/tools-regexp/</guid>
-      <description>简介 Regexg是正则表达式Regular Expression的简称，用于匹配、查找和管理文本。正则表达式是表示搜索模式的字符串，常用于查找和替换文本中的字词。 基础使用 基本匹配 直接输入查找的字符或单词，类似搜索 模式匹配 . : 匹配任何字符，包括特殊字符和空格 [abc] : 可选字符匹配 [^abc] ： 否定字符集 [a-z] : 字母范围，包括首尾 [0-9] : 数字范围，包括首尾 * ： 一个字符不出现、出现一次或多次 + ： 一个字符出现一次或多次 ？ ： 一个字符不出现或出现一次 {n} ： 一个字符出现的确切次数 {n, } ： 一个字符至少出现多少次 {m, n} : 至少和至多出现的次数 () : 分组 ()-\1 : 引用组 (?: ) : 非捕获分组 | ： 允许表达式包含多个不同的分支，在表达式层面上运作 \ : 匹配特殊字符 ^ : 加在表达式前，仅查找行首 $ : 匹配字符串的结束 \w : 用于查找字母、数字和下划线 \W : 除字母、数字和下划线之外的字符 \d : 匹配数字 \D : 除数字之外的字符 \s : 空白字符 \S : 除空白符之外的字符 零宽断言 需要匹配的字符出现在另一个词语之前或之后，使用零宽断言 正向先行断言: (?</description>
+      <description>简介 Regexg是正则表达式Regular Expression的简称，用于匹配、查找和管理文本。正则表达式是表示搜索模式的字符串，常用于查找和替换文本中的字词。 基础使用 基本匹配 直接输入查找的字符或单词，类似搜索 模式匹配 ## BRE \ : 匹配特殊字符 ^ : 加在表达式前，仅查找行首 $ : 匹配字符串的结束 ^$ : 匹配空行 . : 匹配任何字符，包括特殊字符和空格 [abc] : 可选字符匹配 [^abc] ： 否定字符集 [a-z] : 字母范围，包括首尾 [0-9] : 数字范围，包括首尾 * ： 一个字符不出现、出现一次或多次 .* : 匹配所有内容 ^.* : 匹配任意多个字符开头的内容 $.* : 匹配任意多个字符结尾的内容 ## ERE，使用grep -E才能生效 + ： 一个字符出现一次或多次 [:/]+ : 匹配括号内的字符一次或多次 ？ ： 一个字符不出现或出现一次 {n} ： 一个字符出现的确切次数 {n, } ： 一个字符至少出现多少次 {, m} ： 一个字符最多出现多少次 {n, m} : 至少和至多出现的次数 () : 分组 ()-\1 : 引用组 (?</description>
     </item>
     
     <item>
@@ -730,7 +780,7 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools-bookmark/</guid>
-      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS V2cross 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 优聚搜 虫部落 TG搜索 学吧导航 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 教务系统 统一身份认证 </description>
+      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger FreeCodeCamp Learn X in Y Minutes: Scenic Programming Language Tours OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Excel函数大全 Image to Text 即时工具 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 虫部落 TG搜索 学吧导航 乌鸦搜 数字生活指南 淘链客 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 豌豆PRO MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 好讀 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 鲤考考 教务系统 统一身份认证 </description>
     </item>
     
     <item>

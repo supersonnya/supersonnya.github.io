@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux常用命令</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 04, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 12 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 13 minutes.</p>
     
 <hr class="full-width">
 
@@ -606,6 +606,10 @@ div .highlight {
 <li><code>-b</code>: 在目标目录的同名文件的文件名后加<code>~</code></li>
 <li><code>-r</code>: 将子目录连同其中的文件一起复制到另一个子目录下</li>
 </ul>
+<h4 id="cpu">cpu</h4>
+<ul>
+<li><code>lscpu</code>、<code>top</code>、<code>htop</code>、<code>glances</code></li>
+</ul>
 <h4 id="df">df</h4>
 <ul>
 <li>查看磁盘使用情况</li>
@@ -615,6 +619,10 @@ div .highlight {
 <ul>
 <li><code>dir</code>: 列出目录内容</li>
 <li><code>vdir</code>: 相当于为<code>ls</code>命令加上<code>-l</code>选项</li>
+</ul>
+<h4 id="disk">disk</h4>
+<ul>
+<li><code>fdisk</code>、<code>iotop</code></li>
 </ul>
 <h4 id="fdisk">fdisk</h4>
 <ul>
@@ -653,6 +661,8 @@ div .highlight {
 <li>查看历史操作，仅在<code>BASH</code>中适用，只能列出当前用户的操作记录</li>
 <li>管理员需要查看其他用户的操作记录，可读取该用户主目录下的<code>.bash_history</code></li>
 <li><code>history n</code>: 列出最近使用的n条命令</li>
+<li><code>!行号</code>：执行指定行号的命令</li>
+<li><code>!!</code>：执行上次执行的命令</li>
 </ul>
 <h4 id="id">id</h4>
 <ul>
@@ -733,6 +743,10 @@ div .highlight {
 <ul>
 <li><code>netstat -r</code>: 查看当前系统中的路由信息</li>
 </ul>
+<h4 id="network">network</h4>
+<ul>
+<li><code>iftop</code></li>
+</ul>
 <h4 id="nice">nice</h4>
 <ul>
 <li>查看默认谦让度</li>
@@ -779,6 +793,11 @@ div .highlight {
 <ul>
 <li>受限的特权，管理员通过配置<code>/etc/sudoers </code>指定用户可以执行的特权命令。修改sudoers文件应该使用visudo命令。</li>
 <li><code>sudo -u username</code>: 改变执行命令用户身份</li>
+</ul>
+<h4 id="tab">tab</h4>
+<ul>
+<li>命令补全：<code>$PATH</code>路径中存在的命令</li>
+<li>文件路径补全：显示文件夹名</li>
 </ul>
 <h4 id="top">top</h4>
 <ul>
@@ -833,7 +852,13 @@ div .highlight {
 <li>查看当前系统中登录的用户，以及工作的控制台</li>
 </ul>
 <h4 id="whoami">whoami</h4>
-
+<h2 id="快捷键">快捷键</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + a <span style="color:#999;font-style:italic">## 移动到行首</span>
+</span></span><span style="display:flex;"><span>Ctrl + e <span style="color:#999;font-style:italic">## 移动到行尾</span>
+</span></span><span style="display:flex;"><span>Ctrl + u <span style="color:#999;font-style:italic">## 删除光标之前的字符</span>
+</span></span><span style="display:flex;"><span>Ctrl + k <span style="color:#999;font-style:italic">## 删除光标之后的字符</span>
+</span></span><span style="display:flex;"><span>Ctrl + l <span style="color:#999;font-style:italic">## 清屏，同clear</span>
+</span></span></code></pre></div>
 </div>
 </div>
 </div>
