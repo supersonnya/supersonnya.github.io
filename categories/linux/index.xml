@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 28 Oct 2022 10:01:22 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Learnplans</title>
-      <link>https://supersonnya.github.io/operation/linux-learnplans/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-learnplans/</link>
       <pubDate>Fri, 28 Oct 2022 10:01:22 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-learnplans/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-learnplans/</guid>
       <description>组态管理工具 (Puppet, SaltStack, Chef, Ansible) 部署：saltstack, puppet, ansible
 监控：cati, zabbix, nigos
 熟悉Linux等操作系统的安装、配置、更新、维护操作，掌握系统命令，调试方法,熟练使用grep/sed/awk;
@@ -31,19 +31,19 @@ MQ类,Keeplived,fastdfs
     
     <item>
       <title>Linux Grep</title>
-      <link>https://supersonnya.github.io/operation/linux-grep/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-grep/</link>
       <pubDate>Fri, 14 Oct 2022 16:30:38 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-grep/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-grep/</guid>
       <description>语法 grep用于查找文件里符合条件的字符串。grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。 文本搜索工具，根据用户指定的模式对目标文本逐行进行匹配检查，打印匹配到的行。 模式：由正则表达式的元字符及文本字符所编写出的过滤条件。 grep [-abcEFGhHilLnqrsvVwxy][-A&amp;lt;显示行数&amp;gt;][-B&amp;lt;显示列数&amp;gt;][-C&amp;lt;显示列数&amp;gt;][-d&amp;lt;进行动作&amp;gt;][-e&amp;lt;范本样式&amp;gt;][-f&amp;lt;范本文件&amp;gt;][--help][范本样式][文件或目录...]。 grep需要使用参数- E支持正则表达式，egrep不推荐使用，使用grep -E代替。 grep不加参数，需要在特殊字符前加\，识别为正则表达式。 参数说明 `-a 或 &amp;ndash;text** : 不要忽略二进制的数据。 `-A&amp;lt;显示行数&amp;gt; 或 &amp;ndash;after-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。 `-b 或 &amp;ndash;byte-offset** : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。 `-B&amp;lt;显示行数&amp;gt; 或 &amp;ndash;before-context=&amp;lt;显示行数&amp;gt;** : 除了显示符合样式的那一行之外，并显示该行之前的内容。 `-c 或 &amp;ndash;count** : 计算符合样式的行数。 -C&amp;lt;显示行数&amp;gt; 或 --context=&amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt;：除了显示符合样式的那一行之外，并显。该行之前后的内容。 -d &amp;lt;动作&amp;gt; 或 --directories=&amp;lt;动作&amp;gt;：当指定要查找的是目录而非文件时，必须使用这项参数。否则grep指令将回报信息并停止动作。 -e&amp;lt;范本样式&amp;gt; 或 --regexp=&amp;lt;范本样式&amp;gt;：指定字符串做为查找文件内容的样式。 -E 或 --extended-regexp：将样式为延伸的正则表达式来使用。 -f&amp;lt;规则文件&amp;gt; 或 --file=&amp;lt;规则文件&amp;gt;：指定规则文件，其内容含有一个或多个规则样式，让gre。查找符合规则条件的文件内容，格式为每行一个规则样式。 -F 或 --fixed-regexp：将样式视为固定字符串的列表。 -G 或 --basic-regexp：将样式视为普通的表示法来使用。 -h 或 --no-filename：在显示符合样式的那一行之前，不标示该行所属的文件名称。 -H 或 --with-filename：在显示符合样式的那一行之前，表示该行所属的文件名称。 -i 或 --ignore-case：忽略字符大小写的差别。 -l 或 --file-with-matches：列出文件内容符合指定的样式的文件名称。 -L 或 --files-without-match：列出文件内容不符合指定的样式的文件名称。 -n 或 --line-number：在显示符合样式的那一行之前，标示出该行的列数编号。 -o 或 --only-matching：只显示匹配PATTERN 部分。 -q 或 --quiet或--silent：不显示任何信息。 -r 或 --recursive：此参数的效果和指定&amp;quot;-d recurse&amp;quot;参数相同。 -s 或 --no-messages：不显示错误信息。 -v 或 --invert-match：显示不包含匹配文本的所有行。 -V 或 --version：显示版本信息。 -w 或 --word-regexp：只显示全字符合的列。 -x --line-regexp：只显示全列符合的列。 -y：此参数的效果和指定&amp;quot;-i&amp;quot;参数相同。 实例 在Linux平台，所有的文件结尾都有一个$符号，使用cat -En filename.</description>
     </item>
     
     <item>
       <title>Linux Awk</title>
-      <link>https://supersonnya.github.io/operation/linux-awk/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-awk/</link>
       <pubDate>Fri, 14 Oct 2022 16:29:26 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-awk/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-awk/</guid>
       <description>语法 awk是一种处理文本文件的语言，是一个强大的文本分析工具。 Linux文本报告生成器——格式化文本，Linux上是gawk。 awk [选项参数] &#39;script&#39; var=value file(s)或awk [选项参数] -f scriptfile var=value file(s)。 默认以空格为分隔符，多个空格也识别为一个空格作为分隔符，$0代表整行，$1代表第一列，$NF表示当前分割后的最后一列，$(NF-1)为倒数第二列，FS指定分隔符，NR代表当前记录数。 awk按行处理文件，一行处理完毕再处理下一行，根据用户指定的分隔符工作，未指定则默认空格。 外层必须单引号，内层双引号，内置变量不得添加双引号，否则识别为文本。 参数 -F -v: 定义或修改内部变量 -f: 从脚本文件读取命令
 内置变量
 FS: 输入字段分隔符，默认空白字符。 OFS: 输出字段分隔符，默认空白字符。 RS: 指定输入时的换行符。 ORS: 指定输出时的换行符。 NF: 当前行的字段个数。 NR: 当前处理的文本的行号。 FNR: 各文件分别计数的行号。 FILENAME: 当前文件名。 ARGC: 命令行参数个数。 ARGV: 数组，保存命令行传递的所有参数。 选项参数说明 -F fsor--field-separator fs：指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式。 -v var=valueor--asign var=value：赋值一个用户定义变量。 -f scripfileor--file scriptfile：从脚本文件中读取awk命令。 -mf nnn and -mr nnn：对nnn值设置内在限制，-mf选项限制分配给nnn的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。 -W compact or --compat, -W traditional or --traditional：在兼容模式下运行awk。所以gawk的行为和标准的awk完全一样，所有的awk扩展都被忽略。 -W copyleft or --copyleft, -W copyright or --copyright：打印简短的版权信息。 -W help or --help, -W usage or --usage：打印全部awk选项和每个选项的简短说明。 -W lint or --lint：打印不能向传统unix平台移植的结构的警告。 -W lint-old or --lint-old：打印关于不能向传统unix平台移植的结构的警告。 -W posix：打开兼容模式。但有以下限制，不识别：/x、函数关键字、func、换码序列以及当fs是一个空格时，将新行作为一个域分隔符；操作符和=不能代替^和^=；fflush无效。 -W re-interval or --re-inerval：允许间隔正则表达式的使用，参考(grep中的Posix字符类)，如括号表达式[[:alpha:]]。 -W source program-text or --source program-text：使用program-text作为源代码，可与-f命令混用。 -W version or --version：打印bug报告信息的版本。 实例 ## 一次输出多列，逗号输出默认分隔符 awk &amp;#39;{print $1,$2}&amp;#39; filename.</description>
@@ -51,83 +51,83 @@ FS: 输入字段分隔符，默认空白字符。 OFS: 输出字段分隔符，�
     
     <item>
       <title>Linux Sed</title>
-      <link>https://supersonnya.github.io/operation/linux-sed/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-sed/</link>
       <pubDate>Fri, 14 Oct 2022 16:29:22 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-sed/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-sed/</guid>
       <description>语法 sed命令是利用脚本来处理文本文件，可依照脚本的指令来处理、编辑文本文件。主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。 流编辑器，文本编辑工具，使用单引号。 sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script&amp;gt;] [filename]。 参数说明 -e&amp;lt;script&amp;gt;或--expression=&amp;lt;script&amp;gt;：以指定的script来处理输入的文本文件。 -f&amp;lt;script_file&amp;gt;或--file=&amp;lt;script_file&amp;gt;：以指定的script文件来处理输入的文本文件。 -h或--help：显示帮助。 -i: 直接将修改结果写入文件，不适用该参数时修改的是内存数据。 -n或--quiet或--silent：仅显示script处理后的行。 -r: 支持扩展正则表达式。 -V或--version：显示版本信息。 内置命令字符 a：新增，后面可以接字串，字符串插入在当前行后的新行。 c：取代，后面可以接字串，字串可以取代n1,n2之间的行。 d：删除，后面通常没有内容。 i：插入，后面可以接字串，字符串插入在当前行前的新行。 p：打印，将某个选择的数据印出，通常与参数sed -n一起运行。 s/正则/替换内容/g：取代，通常搭配正则表达式使用。 匹配范围 空地址：全文处理； 单地址：指定文件某一行； pattern：被模式匹配到的每一行； 范围区间：10,20表示十到二十行，10,+5表示从第十行开始向下五行； 步长：1~2表示从一开始步长为2。 实例 ## 输出第2，3行的数据 sed -n &amp;#39;2,3p&amp;#39; filename.txt ## 过滤含有linux的行 sed -n &amp;#39;/linux/p&amp;#39; filename.txt ## 删除包含game的行 sed &amp;#39;/game/d&amp;#39; filename.txt ## 删除第5行之后的行 sed &amp;#39;5,$d&amp;#39; filename.txt ## 所有的My替换为I sed &amp;#39;s/My/I/g&amp;#39; filename.txt ## 多提替换，My替换为I，同时替换数字 sed -e &amp;#39;s/My/I/g&amp;#39; -e &amp;#39;s/888/666/g&amp;#39; filename.txt ## 第二行后插入内容，添加多行信息使用\n换行 sed -i &amp;#39;2a I am good.</description>
     </item>
     
     <item>
       <title>Shell编程基础</title>
-      <link>https://supersonnya.github.io/operation/linux-shell_programbasical_three/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-shell_programbasical_three/</link>
       <pubDate>Tue, 13 Sep 2022 20:35:00 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical_three/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-shell_programbasical_three/</guid>
       <description>基本文本处理 使用echo输出文本 1、显示普通字符串 echo基本语法：echo [options] string…，-n选项表示不输出行尾换行符。 2、显示转义字符 使用-e选项使echo支持转义字符。 ## echo命令的转义字符 \a ## 报警符，相当于ASCII码的BEL字符 \b ## 退格符 \c ## 禁止继续输出文本,包括最后的换行符 \f ## 换页符 \n ## 换行符 \r ## 回车符 \t ## 水平制表符 \v ## 垂直制表符 \\ ## 反斜线 3、显示变量 echo &amp;quot;$name&amp;quot;，有时需要使用花括号将变量名括起来。 如果变量名与不能作为变量名的字符，如-、’、/等连接在一起时，可以不使用花括号。 4、显示命令执行结果 echo可将Shell命令执行结果显示出来，在显示命令执行结果的时候，需使用反引号将命令引用起来。 文本的格式化输出 使用UNIX制表符。 使用fold命令格式化行。 ## options表示选项,file指定要输出的文件名，可以是多个文件，用空格隔开 fold [options] [file…] ## 常用的选项有如下所列。 -b ## 按字节计算宽度，默认情况下，fold按列来计算宽度 -s ## 在空格处折断行 -w ## 指定宽度，默认值是80列 使用fmt命令格式化段落：fmt比fold提供了更多的功能。 ## -width选项指定文本行的列数，默认为75列 ## file为要格式化内容的文件名，可以同时指定多个文件，用空格隔开 ## 如果指定文件名为-，会从标准输入即键盘读取文本 fmt [-width] [option].</description>
     </item>
     
     <item>
       <title>Shell编程基础</title>
-      <link>https://supersonnya.github.io/operation/linux-shell_programbasical_two/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-shell_programbasical_two/</link>
       <pubDate>Thu, 01 Sep 2022 09:18:38 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical_two/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-shell_programbasical_two/</guid>
       <description>函数 基本介绍 1、什么是函数 对于一个单独的 Shell 脚本来说，在执行的时候，会为其创建一个新的Shell 进程，来解释并执行脚本中的代码，当脚本执行完成，该 Shell 进程就会自动结束；而对于一个函数来说，在调用的时候，系统并不会为其单独创建一个 Shell 进程，而是在调用者的 Shell 进程中直接解释并执行函数中的代码。 2、函数的定义 Shell规定，函数必须在调用前定义。 [function] function_name () { statement1 statement2 ... statement n } 3、函数的调用 通过函数名来调用该函数：function_name param1 param2 …。 当用户定义一个函数后，该函数就成为一个合法的Shell命令，可在后继的脚本中使用。定义函数时需要使用圆括号，调用函数时无需圆括号。 4、函数链接 函数链接指在某个Shell函数中调用另外一个函数的过程，Shell允许用户函数的嵌套调用。 函数链接不仅仅局限于在某个函数中调用另外一个函数，还可进行多层嵌套调用，或在某个函数中调用多个函数。 5、函数的返回值 用户可使用return语句返回某个数值，在Shell中，return只能返回0～255之间的整数值。 在函数中，用户将需要返回的数据写入到标准输出，通常使用echo语句完成，然后在调用程序中将函数的执行结果赋给一个变量。通过echo可以将各种数据作为返回值返回给函数调用者，而不仅仅局限于整数。 6、函数和别名 与函数相比，别名的功能比较简单，不能为一组命令指定别名，别名中不能通过系统变量操作参数列表。 函数参数 1、含有参数的函数的调用方法 function_name arg1 arg2 ...。 2、获取函数参数的个数 在函数内部，通过位置变量来接收参数的值。 通过系统变量$#来获取脚本的参数的个数。 参数以空格隔开，如果某个参数中含有空格，应该使用引号将其引用起来。 3、通过位置变量接收参数值 使用位置变量来获取参数值，$0表示脚本名称，$1表示第1个参数，$2表示第2个参数等。通过系统变量$@和$*获取所有参数的值。 4、移动位置参数 在函数中，用户可以使用shift命令来使得脚本的所有的位置参数向左移动一个位置，使用户可通过9以内的位置变量来获取超过9个的参数。 shift命令会影响到系统变量$#的值。 5、通过getopts接收函数参数 getopts是bash内置的一个命令，该命令可以获取函数的选项以及参数值，或者是脚本的命令行选项以及参数值，基本语法：getopts optstring [args]。参数optstring包含一个可以被getopts命令识别的选项名称列表。如果选项名称的后面带冒号，表示可为该选项提供参数值，参数值将被保存到一个名称为$OPTARG的内置系统变量中。getopts命令会依次遍历每个选项，选项名称将被保存到args变量中。 6、间接参数传递 间接参数传递指通过间接变量引用来实现函数参数的传递。如果某个变量的值又是另外一个变量的变量名，则该变量称为间接变量。 变量的间接引用语法：${!var_name}。 7、通过全局变量传递数据 参数的作用是在主程序和函数之间传递数据。除了使用参数传递数据外，还可通过全局变量来传递。 8、传递数组参数 严格地讲，Shell不支持将数组作为参数传递给函数，但可通过一些变通的方法实现数组参数的传递。 #! /bin/bash func() { echo &amp;#34;number of elements is $#.</description>
     </item>
     
     <item>
       <title>Shell编程基础</title>
-      <link>https://supersonnya.github.io/operation/linux-shell_programbasical/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-shell_programbasical/</link>
       <pubDate>Thu, 25 Aug 2022 16:16:48 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-shell_programbasical/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-shell_programbasical/</guid>
       <description>变量和引用 深入认识变量 1、什么是变量 变量就是在程序中保存用户数据的一块内存空间，变量名就是这块内存空间的地址。 在程序的执行过程中，保存数据的内存空间的内容可能会不断地发生变化，代表内存地址的变量名保持不变。 2、变量的命名 变量名可以由字母、数字或者下划线组成，且只能以字母或者下划线开头，变量名的大小写是敏感的。 通常应尽可能选择有明确意义的英文单词作为变量名。 3、变量的类型 在Shell中，变量的数据类型无需显示地声明，变量的数据类型会根据不同的操作有所变化。Shell中的变量不分数据类型，统一地按照字符串存储。 为执行加法运算，Shell自动进行数据类型的转换，如果遇到含有非数字的字符串、空串、没有定义的变量，该变量将被转换成整数0。 4、变量的定义 当第一次使用某个变量名时就同时定义了这个变量，在变量的作用域内，都可以使用该变量。 使用命令来声明变量 ## attribute 表示变量的属性，常用的属性 ### -p 显示所有变量的值 ### -i 将变量定义为整数，如果求值失败或者不是整数，就设置为0 ### -r 将变量声明为只读变量，不允许修改，也不允许删除 ### -a 变量声明为数组变量 ### -f 显示所有自定义函数，包括名称和函数体 ### -x 将变量设置成环境变量，在随后的脚本和程序中可以使用 ### declare又写做typeset declare attribute variable ## 求表达式的值 x=$[6/3] x=$((6/3)) 5、变量和引号 Shell语言中一共有3 种引号，分别为单引号、双引号和反引号。 单引号括起来的字符都作为普通字符出现。 双引号括起来的字符，除“$”、“\”、“&#39;”、“&amp;quot;”这几个字符仍是特殊字符并保留其特殊功能外，其余字符仍作为普通字符对待。 反引号括起来的字串被Shell解释为命令，在执行时首先执行该命令，并以它的标准输出结果取代整个反引号部分。 6、变量的作用域 全局变量：全局变量可以在脚本中定义，也可以在某个函数中定义。在脚本中定义的变量都是全局变量，函数内部定义的变量默认情况下也是全局变量，其作用域为从被定义的地方开始，一直到脚本结束或者被显式地删除。 局部变量：仅限于某个程序段访问，在函数内部通过local关键字定义局部变量，函数的参数是局部变量。在出现同名的情况下，函数内部的局部变量会优先被使用。 Shell中变量的原型为${var}，常用的书写形式$var是一个简写。某些情况下，简写形式会导致程序执行错误。 7、系统变量 系统变量主要在对参数判断和命令返回值判断时使用，包括脚本和函数的参数，以及脚本和函数的返回值。 $n ## n是一个整数，从1开始，表示参数的位置 $# ## 命令行参数的个数 $0 ## 当前脚本的名称 $? ## 前一个命令或者函数的返回状态码 $* ## 以“参数 1 参数 2 ……”的形式将所有的参数通过一个字符串返回 $@ ## 以“参数 1 ”“参数 2 ”……的形式返回每个参数 $$ ## 返回本程序的进程ID（ PID ） 8、环境变量 Shell的环境变量是所有Shell 程序都可以使用的变量。环境变量会影响到所有脚本的执行结果。 可使用set命令列出所有的环境变量。 ## 常用的Shell环境变量 PATH ## 命令搜索路径，以冒号为分隔符，当前目录不在系统路径里 HOME ## 用户主目录的路径名，cd命令的默认参数 COLUMNS ## 定义了命令编辑模式下可使用命令行的长度 HISTFILE ## 命令历史文件 HISTSIZE ## 命令历史文件中最多可包含的命令条数 HISTFILESIZE ## 命令历史文件中包含的最大行数 IFS ## Shell使用的分隔符 LOGNAME ## 当前的登录名 SHELL ## Shell的全路径名 TERM ## 终端类型 TMOUT ## Shell自动退出的时间，单位为秒，设为0则禁止Shell自动退出 PWD ## 当前工作目录 变量的赋值和清空 1、变量赋值 赋值语法：variable_name=value。 如果value中包含空格、制表符和换行符，必须用单引号或者双引号引起来。 中间的等于号称为赋值符号，赋值符号的左右两边不能直接跟空格，否则Shell会将其视为命令。 Shell允许只包含数字的变量值参与数值运算。 2、引用变量的值 可通过在变量名前面加上$来获取变量的值。 为正确界定变量名，避免混淆，引用变量时使用大括号将变量名括起来：${v4}。 3、清除变量 变量不再需要时可以将清除，变量被清除后，代表的值也会消失：unset variable_name。 引用和替换 1、引用 引用是指将字符串用引用符号包括起来，以防止其中的特殊字符被Shell解释为其他涵义。 转义：反斜线屏蔽后的字符的特殊意义，\$SHELL。 全引用：当一个字符串被单引号引用起来之后，其中所有的字符，除单引号本身之外，都将被解释为字面意义。 部分引用：使用双引号将字符串引用起来，则其中所包含的字符除$、反引号、\外的其他字符，都将被解释为字面意义。 命令替换：反引号和圆括号，&#39;shell_command&#39;，$(shell_command)。 条件测试和判断语句 条件测试 1、基本语法 用户可以使用测试语句来测试指定的条件表达式的条件的真或者假。当指定的条件为真时，整个条件测试的返回值为0；如果指定的条件为假，则条件测试语句的返回值为非0值。 条件测试的语法有两种，分别是test命令和[命令。 ## expression表示需要进行测试的条件表达式 ## 可由字符串、整数、文件名，以及各种运算符组成 test expression ## [是条件测试命令，expression的语法与test命令中的语法相同 ## 条件表达式和左右方括号之间都必须有一个空格 [ expression ] 2、字符串测试 字符串中的字母是区分大小写的。 string ## 判断指定的字符串是否为空，只能使用test测试是否为空串 string1 = string2 ## 判断两个字符串 string1 和 string2 是否相等 string1 !</description>
     </item>
     
     <item>
       <title>Shell入门基础</title>
-      <link>https://supersonnya.github.io/operation/linux-shell_basical/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-shell_basical/</link>
       <pubDate>Wed, 24 Aug 2022 14:47:37 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-shell_basical/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-shell_basical/</guid>
       <description>什么是Shell Shell的存在，向普通的用户隐藏了许多关于系统内核的细节。Shell又称命令解释器，能识别用户输入的各种命令，并传递给操作系统。在UNIX或者Linux中，Shell既是用户交互的界面，也是控制系统的脚本语言。 获取当前系统默认Shell：echo $SHELL。 查看bash当前版本：echo $BASH_VERSION。 出于安全考虑，用户只能使用/etc/shells中列出的Shell。若要使用新的Shell，需要将其加入配置文件中。 Shell脚本程序执行方式： 交互式执行 [root@linux ~]$ for filename in &amp;#39;ls .&amp;#39; &amp;gt; do &amp;gt; if echo &amp;#34;$filename&amp;#34; | grep &amp;#34;xml&amp;#34; &amp;gt; then &amp;gt; echo &amp;#34;$filename&amp;#34; &amp;gt; fi &amp;gt; done 作为程序执行 将脚本文件授予用户执行权限之后，就可以执行脚本。 #! /bin/sh for filename in &amp;#39;ls .&amp;#39; do if echo &amp;#34;$filename&amp;#34; | grep &amp;#34;xml&amp;#34; then echo &amp;#34;$filename&amp;#34; fi done 向脚本传递参数 从命令行传递给Shell脚本的参数又称为位置参数，因为Shell脚本根据参数的位置来接收它们的值。 ## 常用的与参数传递有关的系统变量 $n ## 表示传递给脚本的第n个参数，$1 表示第1个参数 $# ## 命令行参数的个数 $0 ## 当前脚本的名称 $* ## 以&amp;#34;参数1 参数2 参数3 ……&amp;#34;的形式返回所有参数的值 $@ ## 以&amp;#34;参数1&amp;#34;&amp;#34;参数2&amp;#34;&amp;#34;参数3&amp;#34;……的形式返回所有参数的值 $_ ## 保存之前执行的命令的最后一个参数 对于包含空白字符或者其他的特殊字符的参数，需要使用单引号或者双引号进行传递。 如果用户传递的参数中包含空格或者其他的特殊字符，需使用$@来获取所有的参数的值，不能使用$*。 执行Shell程序 授予用户执行该脚本文件的权限: chmod u+x xxx.</description>
     </item>
     
     <item>
       <title>HTTP服务器</title>
-      <link>https://supersonnya.github.io/operation/linux-httpserver/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-httpserver/</link>
       <pubDate>Mon, 22 Aug 2022 16:08:56 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-httpserver/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-httpserver/</guid>
       <description>Apache基础 </description>
     </item>
     
     <item>
       <title>管理守护进程</title>
-      <link>https://supersonnya.github.io/operation/linux-daemonmanager/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-daemonmanager/</link>
       <pubDate>Mon, 22 Aug 2022 10:09:55 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-daemonmanager/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-daemonmanager/</guid>
       <description>系统引导 Linux启动的基本步骤 加载并初始化 Linux 内核。 配置硬件设备。 内核创建自发进程。 由用户决定是否进入手工引导模式。 （由 init 进程）执行系统启动脚本。 进入多用户模式。 init和运行级 Linux的init进程总共支持10个运行级，但实际定义的运行级只有7个。 0 ## 系统关闭 1 或 S ## 单用户模式，用于系统救援 2 ## 功能受限的多用户模式 3 ## 完整的多用户模式 4 ## 一般不用，留作用户自己定义 5 ## 多用户模式，运行 X 窗口系统 6 ## 重新启动 ## telinit 命令强制系统进入某个运行级 telinit 6 init的配置文件是/etc/inittab，文件中定义了每个运行级上需要做的事。inittab文件通常并不会列出所有应该执行的脚本，而是调用rc脚本（通常是/etc/init.d/rc）改变运行级。rc脚本随后根据传给它的参数查找与运行级有关的目录，并执行其中的脚本。 这些目录在/etc或/etc/init.d 目录下。 服务器启动脚本 用于启动服务器应用程序服务器守护进程的脚本全部位于/etc/init.d目录下，每个脚本控制一个特定的守护进程。所有的脚本都应该认识start和stop参数，分别表示启动和停止服务器守护进程。 init在执行脚本的时候，会给以字母S开头的脚本文件传递start参数，给以字母K开头的脚本文件传递stop参数。 脚本文件名中的数字描述了脚本运行的先后顺序，数字较小的脚本首先被执行。 管理守护进程 一种是随系统启动而启动，并持续在后台监听连接请求，称为standalone模式。 借助于inetd/xinetd，在需要的时候启动，完成任务后把监听任务交还给inetd/xinetd，称为inetd/xinetd模式。 并不是所有的服务器守护进程都支持inetd和xinetd。应用程序必须在编写的时候加入对这种模式的支持。 xinetd xinetd守护进程依照/etc/xinetd.conf配置执行。不推荐通过直接编辑/etc/xinetd.conf来添加服务，应为每个服务单独开辟一个文件，存放在/etc/xinetd.d目录下。 通过 xinetd 启动 SSH 服务 在xinetd中添加服务步骤 ## 修改（增加）配置文件 vi /etc/xinetd.d/ssh service ssh { socket_type = stream protocol = tcp wait = no user = root server = /usr/sbin/sshd server_args = -i log_on_success += DURATION disable = no } ## 停用该服务的守护进程 /etc/init.</description>
     </item>
     
     <item>
       <title>Vim编辑器</title>
-      <link>https://supersonnya.github.io/operation/linux-vim/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-vim/</link>
       <pubDate>Mon, 15 Aug 2022 15:35:38 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-vim/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-vim/</guid>
       <description>编辑、保存、退出 ## 编辑一个文件，如果文件不存在，会自动新建 ## 使用不带任何参数的vim命令，在保存的时候需要指定文件名 vim file :e ## 打开另外一个文件，将文件名作为参数 ## 退出 :q :q! # 强制退出，丢弃修改内容 :w filename ## 另存为filename ## 保存并退出 :wq 文本操作 a ## 在当前光标所处位置的右边插入文本 i ## 在当前光标所处位置的左边插入文本 A ## 在当前行的末尾追加文本 I ## 在当前行的开始处插入文本 O ## 在当前行的上面插入一个新行 o ## 在当前行的下面插入一个新行 R ## 覆盖当前光标所在的位置以及后面的若干文本 J ## 将当前光标所在行与下面的一行合并为一行 光标移动 移动光标的时候，可以在命令前加上数字，表示重复多少次移动。
 向下、 j、空格 ## 光标向正下方移动 1 行 向上、 k、backspace ## 光标向正上方移动 1 行 向左、h ## 光标向左移动过 1 个字符 向右、l ## 光标向右移动 1 个字符 回车 ## 光标会移动到下 1 行的行首 - ## 光标会移动到上 1 行的行首 G ## 将光标移动到文件最后 1 行的行首 ^ ## 移动光标到行首 $ ## 移动光标到行尾 Gg ## 移动光标到文件头 W ## 移动光标到下一个单词 B ## 移动光标到前一个单词 Ctrl+f ## 向前（朝向文件尾）翻动一页 Ctrl+b ## 向后（朝向文件头）翻动一页 文本复制、粘贴 yy ## 将当前行复制到缓冲区 nyy ## 将当前行以及下面的n行复制到缓冲区，其中n表示一个整数 yw ## 复制从光标当前位置到当前单词词尾的字符 nyw ## n是一个整数，从光标当前位置开始，复制后面的n个单词 y^ ## 从当前光标所处的位置开始，复制到当前行的行首 y$ ## 从当前光标所处的位置开始，复制到当前行的行尾 p ## 将缓冲区中的字符串插入点当前光标所处位置的后面 P ## 将将缓冲区中的字符串插入到当前光标所处位置的前面 删除文本 x ## 删除光标所在的位置的字符 nx ## 删除从光标所在位置开始，后面的n个字符 dd ## 删除光标所处的整个行 ndd ## 删除包括当前行在内的n行 D ## 删除光标所在位置到行尾之间所有的字符 u ## 撤销刚刚执行的操作 U ## 撤销针对当前行的所有操作 Ctrl+R ## 重做被撤销的操作 跳转搜索替换 ## 跳到行号为n的行 :n ## 向下跳n行 :n+ ## 向上跳n行 :n- ## 向前查找字符串 :/string ## 向后查找字符串 :?</description>
     </item>
     
     <item>
       <title>远程登录</title>
-      <link>https://supersonnya.github.io/operation/linux-remotelogin/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-remotelogin/</link>
       <pubDate>Thu, 11 Aug 2022 17:25:05 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-remotelogin/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-remotelogin/</guid>
       <description>登录Linux服务器 SSH 为什么不使用telnet: telnet使用明文口令，用户口令以明文的形式在网络上传输，任何人都有机会通过网络嗅探工具直接获取口令。Linux已不再包含telnet服务器程序，也不推荐用户使用。
 OpenSSH是Linux下最常用的SSH服务器/客户端软件，可通过发行版的安装源安装: apt-get install ssh。 SSH会对用户的身份进行验证，并加密两台主机之间的通信。 ## 登录到远程服务器 ssh -l login_name hostname | IP ## 默认端口为22，-p指定连接的端口 ssh -l login_name -p port hostname | IP ## 要在远程主机上运行X应用程序，应该保证服务器开启X窗口系统 ## 使用带-X参数命令显式启动X转发功能 ssh -X -l login_name hostname | IP VNC VNC用于图形化的远程登录: apt-get install vnc4-common vnc4server。 ## 运行vncserver脚本生成配置文件 vncserver ## 登录远程主机 vncviewer hostname:desktop_id Windows上同样可使用SSH和VNC连接工具连接远程Linux服务器。
 登录Windows服务器 VNC 在Windows上安装VNC Server的软件，在Linux上可以通过VNC登录到Windows服务器。
@@ -137,19 +137,19 @@ RDP Linux可直接通过RDP协议连接到 Windows服务器。
     
     <item>
       <title>文件传输工具</title>
-      <link>https://supersonnya.github.io/operation/linux-transferfiles/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-transferfiles/</link>
       <pubDate>Thu, 11 Aug 2022 17:11:10 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-transferfiles/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-transferfiles/</guid>
       <description>NFS - Linux主机间共享文件 ## 安装NFS文件系统 ### 需指定远程主机名或IP mount hostname:/pathname pathname/ ### 以可读写方式安装文件系统，若服务器不允许外部可写，会自动选择只读安装 mount -o rw hostname:/pathname pathname/ ### 以可读写、硬安装、可中断、后台重试安装请求的方式安装文件系统 mount -o rw,hard,intr,bg ## 查看服务器端导出的目录 showmount -e [hostname | IP] ## 卸载NFS文件系统，卸载时没有其他进程使用 umount pathname/ ### 强制卸载文件系统 umount -f pathname/ ## 启动时自动安装远程文件系统，写入/etc/fstab 10.171.37.1:/srv/nfs_share /home/lewis/share nfs rw,hard,intr,bg 0 0 ### fstab文件中对NFS的配置立即生效 mount -a -t nfs Samba - Linux与Windows间共享文件 ## 列出当前网络上的共享主机列表 smbtree -S ## 连接共享主机 ### -U指定用户名，-b使用广播的方式搜寻整个网络 smbtree -b -U smbuser ## 查询主机对应的IP nmblookup hostname ## Linux下的Samba客户端: smbclient ### 基本语法，不允许匿名用户登录时应使用-U指定用户名 smbclient //servername/sharename [-U username] ### 修改当前本地目录 lcd /pathname ### 下载文件 get filename ### 退出 quit ## 挂载Windows共享目录 ### 不允许匿名用户登录时应使用-o跟上user指定用户名 mount.</description>
     </item>
     
     <item>
       <title>硬盘分区管理</title>
-      <link>https://supersonnya.github.io/operation/linux-diskmanager/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-diskmanager/</link>
       <pubDate>Mon, 08 Aug 2022 22:37:27 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-diskmanager/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-diskmanager/</guid>
       <description>安装硬盘和分区 使用 fdisk 建立分区表 使用 mkfs 建立文件系统 使用 fsck 检查文件系统 测试分区 创建并激活交换分区 配置 fstab 文件 重新启动系统 如果某个文件系统出了问题，系统将不能正常启动，而是引导进入救援模式。 在这种情况下，用户应该依次按照下面这些步骤来手动解决问题。 提供 root 口令，以 root 身份登录系统。 使用 fsck 检查并试图修复受损的文件系统。 如果问题依然存在，运行 mkfs 重新在分区上建立文件系统 不太幸运的话，可能需要使用 fdisk 重新建立分区表。 总是可以通过删除 fstab 文件中对应的配置行（或者给它打上注释符号），来临时解决系统无法正常启动的问题。 高级硬盘管理 独立磁盘冗余阵列：RAID 磁盘阵列，独立磁盘构成的具有冗余能力的阵列，磁盘阵列就是由很多价格较为便宜的磁盘，以硬件或者软件的形式形成一个巨大的磁盘组，利用多个磁盘组、多个磁盘组合在一起，提升整个磁盘系统效能。同时还可以通过减少磁盘容量为代价去增加数据的安全性。 RAID实现方式 硬RAID：使用硬件阵列卡，用专门的RAID控制器将硬盘和电脑连接起来，RAID控制器负责将所有的RAID成员磁盘配置成一个虚拟的RAID磁盘卷。对于操作系统而言，只能识别到由RAID控制器配置后的虚拟磁盘，而无法识别到组成RAID的各个成员盘。这种技术一般由供应商提供，不需要特殊操作。 软RAID：通过操作系统软件去实现，在Linux中可通过mdadm命令实现。 RAID 0 条带式，最早出现的RAID模式。
 工作模式：将资料分成多个部分，再将多个部分同时往两块磁盘里写入数据，跟内存的双通道技术相似。
 最少需要磁盘数：2块。
@@ -169,28 +169,28 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
     
     <item>
       <title>压缩存档备份</title>
-      <link>https://supersonnya.github.io/operation/linux-compressedarchives/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-compressedarchives/</link>
       <pubDate>Mon, 08 Aug 2022 16:54:10 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-compressedarchives/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-compressedarchives/</guid>
       <description>压缩工具 gzip 压缩后只生成新压缩文件，不保留原文件 # 压缩文件 gzip &amp;lt;filename&amp;gt; # 解压文件，支持的扩展名.gz、.Z、-gz、.z、-z、z gunzip &amp;lt;filename&amp;gt; gzip -d &amp;lt;filename&amp;gt; # 查看压缩效果 gzip -l &amp;lt;filename&amp;gt; # 测试压缩文件的完整性 gzip -tv &amp;lt;filename&amp;gt; bzip2 提供比gzip更高的压缩率，速度比gzip慢 # 压缩文件 bzip2 &amp;lt;filename&amp;gt; # 解压文件，支持的扩展名.bz2、.bz、.tbz2、.tbz、bzip2 bunzip2 &amp;lt;filename&amp;gt; bzip2 -d &amp;lt;filename&amp;gt; # 测试压缩文件的完整性 bzip2 -tv &amp;lt;filename&amp;gt; RAR for linux # 解压文件 rar x xxx.rar 存档工具 tar # 文件打包，不会删除原来的文件，命令选项前的-可省略 ## -c创建归档文件，-v显示命令的执行过程，-f指定归档文件的文件名 ## 最后一个（或者几个）参数指定了需要打包的文件和目录 tar -cvf xxx.tar xxx/ tar -xvf xxx.tar ## -w每次将单个文件加入（或者抽出）归档文件时询问，yn回答 tar -cvwf xxx.tar xxx/ tar -xvwf xxx.</description>
     </item>
     
     <item>
       <title>Linux 软件包管理</title>
-      <link>https://supersonnya.github.io/operation/linux-packagemanager/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-packagemanager/</link>
       <pubDate>Thu, 04 Aug 2022 15:43:20 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-packagemanager/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-packagemanager/</guid>
       <description>dpkg 管理.deb软件包 ## 安装软件包 ### 安装软件之前会删除旧版本 dpkg [-i | --install] *.deb ## 查看已安装的软件包 ### 查找当前系统中软件版本信息 dpkg -l ### 安装的软件向系统中复制的文件列表 dpkg -S ## 卸载软件包 dpkg [-r | --remove] APT 高级软件包工具，可以自动检测软件依赖问题，下载和安装所有文件 ## 下载和安装软件包 ### 更新当前apt-get缓存中的软件包信息，以保证获得的软件包是最新的 apt-get update ### 下载并安装软件包 apt-get install ### 下载并安装在本系统上已有的软件包的最新版本 apt-get upgrade ### 卸载特定的软件包 apt-get remove ### 下载特定的软件源代码 apt-get source ### 删除所有已下载的包文件 apt-get clean ## 查询软件包信息 ### 搜索软件包列表中特定的软件包 apt-cache search ### 列出特定软件包的依赖关系 apt-cache depends ## 配置apt-get ### 用于下载软件的地址通常称之为安装源，配置文件目录为/etc/apt/sources.list apt-get rpm 管理RPM软件包 ## 安装软件包 ### -v用于显示当前正在执行的工作 ### -h打印一系列的#提示当前的安装进度 rpm -i ## 升级软件包 rpm -U ## 查看已安装的软件包 ### 加上-a列出当前系统上已经安装的所有软件包 rpm -q ## 卸载软件包 ### --test要求模拟删除软件包的全过程，但并不真的执行删除操作 ### -vv要求输出完整的调试信息 rpm -e yum 一个开源、流行的命令行包管理器，和APT拥有相同的功，管理RPM软件包。 ## yum源配置 vi /etc/yum.</description>
     </item>
     
     <item>
       <title>Linux常用命令</title>
-      <link>https://supersonnya.github.io/operation/linux-usefulcommands/</link>
+      <link>https://supersonnya.github.io/operation/linux/linux-usefulcommands/</link>
       <pubDate>Thu, 04 Aug 2022 11:00:54 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/operation/linux-usefulcommands/</guid>
+      <guid>https://supersonnya.github.io/operation/linux/linux-usefulcommands/</guid>
       <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 cpu lscpu、top、htop、glances df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 disk fdisk、iotop fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 fsck 检查和修复文件系统，使用fsck检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候 fsck 分区名: 指定需要检查的文件系统 fsck -p: 会读取fstab文件来确定检查哪些文件系统 -f: 强制检查新的文件系统 grep [OPTIONS] PATTERN [FILE&amp;hellip;] 查找文件内容，返回所在行 搜索内容包含空格时必须加单引号 groupadd head | tail 显示文件的开头和结尾 -n: 指定显示的行数 history 查看历史操作，仅在BASH中适用，只能列出当前用户的操作记录 管理员需要查看其他用户的操作记录，可读取该用户主目录下的.</description>
     </item>
     

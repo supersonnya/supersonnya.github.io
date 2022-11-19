@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 25 Jul 2022 16:52:39 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/operation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小米刷机</title>
-      <link>https://supersonnya.github.io/records/operation-miui/</link>
+      <link>https://supersonnya.github.io/records/operation/operation-miui/</link>
       <pubDate>Mon, 25 Jul 2022 16:52:39 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/records/operation-miui/</guid>
+      <guid>https://supersonnya.github.io/records/operation/operation-miui/</guid>
       <description>解锁 下载小米官方解锁工具 在手机上进入设置 -&amp;gt; 开发者选项 -&amp;gt; 设备解锁状态中绑定账号和设备； 在Windows系统上打开miflash_unlock*.exe，填写小米账号密码，需联网登录，登录时可能需要手机验证码，手机先不要关机。 在手机上退出登录的小米账号，否则刷机后可能会锁定设备； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机，点击 解锁。解锁成功后重启手机即可。 要使用数据线而不是充电线，数据线既能传输数据，也能充电；而充电线只能充电，不能传输数据。 线刷 - MIUI 国际版刷机 下载小米官方刷机工具和对应机型的官方的ROM包； 手机关机，同时按住开机键和音量下键进入Fastboot模式（兔子界面），通过USB连接手机； 打开Mifalsh工具，在里面选择解压后ROM包的文件夹，加载设备并选中查找到的设备；若没有识别手机，可尝试点击Driver安装驱动后重试； 国际版MIUI不可选择全部删除并lock，选择全部删除 完成后手机会自动重启进入系统。 卡刷 - MIUI EU版刷机 下载对应机型的TEWPimg包和EU版ROM包 刷入第三方recovery（twrp） fastboot device fastboot flash recovery &amp;lt;imgfile_path&amp;gt; 长按电源键和音量+进入TWRP，清除数据后点击安装选择ROM包安装，安装完成后需要在清除中清除/data，否则重新会一直停在MIUI开机界面无法进入系统。 MIUI欧版本地化 MIUI EU本地化 </description>
     </item>
     

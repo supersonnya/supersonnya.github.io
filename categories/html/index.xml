@@ -9,19 +9,19 @@
     <lastBuildDate>Sun, 09 Aug 2020 14:10:02 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>标签页图标</title>
-      <link>https://supersonnya.github.io/frontend/html_pageicon/</link>
+      <link>https://supersonnya.github.io/frontend/html/html_pageicon/</link>
       <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/frontend/html_pageicon/</guid>
+      <guid>https://supersonnya.github.io/frontend/html/html_pageicon/</guid>
       <description>三种网页图标 &amp;lt;link rel=&amp;#34;Bookmark&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;shortcut icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; shortcut icon，特指浏览器中地址栏左侧显示的图标，一般大小为16x16，后缀名为.icon； icon，指的是图标，格式可为PNG\GIF\JPEG，尺寸一般为16x16、24x24、36x36等。把这个图标放到网站的根目录下就可以了，页面加载时浏览器会自动检索这个图标然后把它加到标题上（当然也可以放在一个页面可以请求到的目录下）。 Bookmark，当网站收藏到收藏夹中时，显示在前面的图标 </description>
     </item>
     
     <item>
       <title>Href的值类型</title>
-      <link>https://supersonnya.github.io/frontend/html_href/</link>
+      <link>https://supersonnya.github.io/frontend/html/html_href/</link>
       <pubDate>Sun, 10 May 2020 01:31:47 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/frontend/html_href/</guid>
+      <guid>https://supersonnya.github.io/frontend/html/html_href/</guid>
       <description>绝对URL 指向另一个站点：href=&amp;ldquo;http://www.example.com/index.html&amp;quot; 绝对地址可以是路由：href=&amp;ldquo;http://www.example.com/index&amp;quot; 相对URL 指向站点内的某个文件：href=&amp;ldquo;index.html&amp;rdquo; 相对地址可以是路由：href=&amp;quot;/index&amp;quot;或href=&amp;ldquo;index&amp;rdquo; 锚URL 指向页面中的锚：href=&amp;quot;#top&amp;rdquo; </description>
     </item>
     

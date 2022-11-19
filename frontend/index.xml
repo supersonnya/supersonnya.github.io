@@ -9,28 +9,28 @@
     <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://supersonnya.github.io/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typescript Base</title>
-      <link>https://supersonnya.github.io/frontend/typescript-base/</link>
+      <link>https://supersonnya.github.io/frontend/typescript/typescript-base/</link>
       <pubDate>Wed, 27 Jul 2022 10:48:28 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/frontend/typescript-base/</guid>
+      <guid>https://supersonnya.github.io/frontend/typescript/typescript-base/</guid>
       <description>声明文件 1. 声明文件 使用第三方库时，需要引用声明文件才能有对应的代码补全、接口提示等功能 1.1 声明语句 JavaScript中使用第三方库jQuery，使用&amp;lt;script&amp;gt;引入，使用全局变量$或jQuery 在Typescript中，没有$和jQuery，需要使用declare var来定义它的类型 // 定义全局变量jQuery的类型，用于编译时检查，编译结束后会被删除 // declare var就是声明语句 declare var jQuery: (selector: string) =&amp;gt; any; jQuery(&amp;#39;#name&amp;#39;); 1.2 声明文件 存放声明语句的单独文件，必须以.d.ts为后缀 1.3 第三方声明文件 // 使用@types统一管理第三方库的声明文件 npm install @types/jquery --save-dev 2. 书写声明文件 当第三方库没有提供声明文件时，需要自己书写 2.1 全局变量 // 全局变量声明语法 // 一般来说，全局变量都是禁止修改的常量，大部分情况应使用const定义 // 声明语句只能定义类型，不能有具体实现 declare var|let|const jQuery: (selector: string) =&amp;gt; any; // 定义全局函数类型，支持重载 declare function jQuery(selector: string): any; // 定义全局类，不能有具体实现，只定义类型 declare class Animal { name: string; constructor(name: string); sayHi(): string; } // 声明全局枚举类型，被称作外部枚举 // 仅用于定义类型，而不是具体的值 declare enum Colors { Red, Green, Blue} // 声明（含有子属性的）全局对象 // declare namespace内部，直接使用function ajax声明函数，不用declare function ajax // 使用嵌套的namespace来声明深层的属性的类型 declare namespace jQuery { function ajax(url: string, settings?</description>
     </item>
     
     <item>
       <title>标签页图标</title>
-      <link>https://supersonnya.github.io/frontend/html_pageicon/</link>
+      <link>https://supersonnya.github.io/frontend/html/html_pageicon/</link>
       <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/frontend/html_pageicon/</guid>
+      <guid>https://supersonnya.github.io/frontend/html/html_pageicon/</guid>
       <description>三种网页图标 &amp;lt;link rel=&amp;#34;Bookmark&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;shortcut icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; href=&amp;#34;b/img/icon/favicon.icon&amp;#34; /&amp;gt; shortcut icon，特指浏览器中地址栏左侧显示的图标，一般大小为16x16，后缀名为.icon； icon，指的是图标，格式可为PNG\GIF\JPEG，尺寸一般为16x16、24x24、36x36等。把这个图标放到网站的根目录下就可以了，页面加载时浏览器会自动检索这个图标然后把它加到标题上（当然也可以放在一个页面可以请求到的目录下）。 Bookmark，当网站收藏到收藏夹中时，显示在前面的图标 </description>
     </item>
     
     <item>
       <title>Href的值类型</title>
-      <link>https://supersonnya.github.io/frontend/html_href/</link>
+      <link>https://supersonnya.github.io/frontend/html/html_href/</link>
       <pubDate>Sun, 10 May 2020 01:31:47 +0800</pubDate>
       
-      <guid>https://supersonnya.github.io/frontend/html_href/</guid>
+      <guid>https://supersonnya.github.io/frontend/html/html_href/</guid>
       <description>绝对URL 指向另一个站点：href=&amp;ldquo;http://www.example.com/index.html&amp;quot; 绝对地址可以是路由：href=&amp;ldquo;http://www.example.com/index&amp;quot; 相对URL 指向站点内的某个文件：href=&amp;ldquo;index.html&amp;rdquo; 相对地址可以是路由：href=&amp;quot;/index&amp;quot;或href=&amp;ldquo;index&amp;rdquo; 锚URL 指向页面中的锚：href=&amp;quot;#top&amp;rdquo; </description>
     </item>
     
