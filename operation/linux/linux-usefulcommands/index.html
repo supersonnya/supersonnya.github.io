@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux常用命令</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 04, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 13 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 14 minutes.</p>
     
 <hr class="full-width">
 
@@ -638,7 +638,12 @@ div .highlight {
 <li><code>-atime +[-]n</code>: 最近<code>n</code>天[没有]使用过的文件</li>
 <li><code>-mtime +[-]n</code>: 最近<code>n</code>天[没有]修改过的文件</li>
 </ul>
-<h4 id="fsck">fsck</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . -name <span style="color:#ed9d13">&#34;*.log&#34;</span> -ls <span style="color:#999;font-style:italic"># 以.log结尾的文件，并显示详细信息</span>
+</span></span><span style="display:flex;"><span>find /root/ -perm <span style="color:#3677a9">777</span> <span style="color:#999;font-style:italic"># /root/目录下权限为777的文件</span>
+</span></span><span style="display:flex;"><span>find . -type f -name <span style="color:#ed9d13">&#34;*.log&#34;</span> <span style="color:#999;font-style:italic"># 当前目录以.log结尾的普通文件</span>
+</span></span><span style="display:flex;"><span>find . -type d | sort <span style="color:#999;font-style:italic"># 当前目录下所有目录并排序</span>
+</span></span><span style="display:flex;"><span>find . -size +100M <span style="color:#999;font-style:italic"># 当前目录下大于100M的文件</span>
+</span></span></code></pre></div><h4 id="fsck">fsck</h4>
 <ul>
 <li>检查和修复文件系统，使用<code>fsck</code>检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候</li>
 <li><code>fsck 分区名</code>: 指定需要检查的文件系统</li>
@@ -683,9 +688,12 @@ div .highlight {
 </ul>
 <h4 id="locate">locate</h4>
 <ul>
-<li>更快速地定位文件，自动建立整个文件名数据库</li>
+<li>更快速地定位文件，自动建立整个文件名数据库<code>/var/lib/locatedb</code>，默认每天自动更新一次，查不到最新的变动，可在使用之前使用<code>updatedb</code>手动更新数据库。</li>
 </ul>
-<h4 id="ln-target-link_name">ln TARGET LINK_NAME</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yum install mlocate
+</span></span><span style="display:flex;"><span>locate /etc/sh <span style="color:#999;font-style:italic"># etc目录下所有以sh开头的文件</span>
+</span></span><span style="display:flex;"><span>locate <span style="color:#24909d">pwd</span> <span style="color:#999;font-style:italic"># 和pwd相关的所有文件</span>
+</span></span></code></pre></div><h4 id="ln-target-link_name">ln TARGET LINK_NAME</h4>
 <ul>
 <li>创建硬链接，硬链接是直接引用，符号链接通过名称进行引用</li>
 <li><code>-s</code>: 创建软链接，可用于文件和目录</li>
@@ -788,11 +796,13 @@ div .highlight {
 <li>Ubuntu默认情况系统没有合法的 root 口令，不能使用su提升至root权限，必须用sudo获得root访问权。</li>
 <li><code>su username</code>: 切换到其他用户。</li>
 <li>尽量通过绝对路径使用su命令，通常保存在/bin 目录下。这将在一定程度上防止溜入到搜索路径下的名为 su 的程序窃取用户口令。</li>
+<li><code>-</code>表示同时切换目录</li>
 </ul>
 <h4 id="sudo">sudo</h4>
 <ul>
-<li>受限的特权，管理员通过配置<code>/etc/sudoers </code>指定用户可以执行的特权命令。修改sudoers文件应该使用visudo命令。</li>
+<li>受限的特权，管理员通过配置<code>/etc/sudoers </code>指定用户可以执行的特权命令，临时具有超级权限。修改sudoers文件应该使用visudo命令。</li>
 <li><code>sudo -u username</code>: 改变执行命令用户身份</li>
+<li>网络中的主机，执行命令的身份，命令名：ALL=(ALL) ALL</li>
 </ul>
 <h4 id="tab">tab</h4>
 <ul>
@@ -844,10 +854,20 @@ div .highlight {
 </ul>
 <h4 id="whereis">whereis</h4>
 <ul>
+<li>定位可执行文件、源代码文件、帮助文件在文件系统中的位置</li>
 <li>查找程序文件，<code>whereis</code>检索的子目录固定编写在程序中</li>
 <li><code>-b</code>: 只查找二进制可执行文件</li>
 </ul>
-<h4 id="who">who</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whereis ls <span style="color:#999;font-style:italic"># 查找ls相关文件</span>
+</span></span><span style="display:flex;"><span>whereis -m ls <span style="color:#999;font-style:italic"># 查找ls命令说明文档路径</span>
+</span></span><span style="display:flex;"><span>whereis -s ls <span style="color:#999;font-style:italic"># 查找ls源文件</span>
+</span></span></code></pre></div><h4 id="which">WHICH</h4>
+<ul>
+<li>在<code>PATH</code>变量指定的路径中搜索某个命令的位置并返回第一个搜索结果，可以查看某个系统命令是否存在以及执行文件的位置</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which <span style="color:#24909d">pwd</span>
+</span></span><span style="display:flex;"><span>which java
+</span></span></code></pre></div><h4 id="who">who</h4>
 <ul>
 <li>查看当前系统中登录的用户，以及工作的控制台</li>
 </ul>

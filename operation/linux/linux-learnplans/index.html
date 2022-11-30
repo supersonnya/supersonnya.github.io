@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Learnplans</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 28, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 4 minutes.</p>
     
 <hr class="full-width">
 
@@ -585,7 +585,42 @@ div .highlight {
 <p>计算机网络设备及各类网络协议的概念和作用，了解常用公有云计算、存储、网络、安全类产品构成;</p>
 </li>
 </ul>
-
+<h2 id="常用巡检命令">常用巡检命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uname -a <span style="color:#999;font-style:italic"># 查看内核/操作系统/CPU信息</span>
+</span></span><span style="display:flex;"><span>head -n <span style="color:#3677a9">1</span> /etc/issue <span style="color:#999;font-style:italic"># 查看操作系统版本</span>
+</span></span><span style="display:flex;"><span>cat /proc/cpuinfo <span style="color:#999;font-style:italic"># 查看CPU信息</span>
+</span></span><span style="display:flex;"><span>hostname <span style="color:#999;font-style:italic"># 查看计算机名</span>
+</span></span><span style="display:flex;"><span>lspci -tv <span style="color:#999;font-style:italic"># 列出所有PCI设备</span>
+</span></span><span style="display:flex;"><span>lsusb -tv <span style="color:#999;font-style:italic"># 列出所有USB设备</span>
+</span></span><span style="display:flex;"><span>lsmod <span style="color:#999;font-style:italic"># 列出加载的内核模块</span>
+</span></span><span style="display:flex;"><span>env <span style="color:#999;font-style:italic"># 查看环境变量</span>
+</span></span><span style="display:flex;"><span>free -m <span style="color:#999;font-style:italic"># 查看内存使用量和交换区使用量</span>
+</span></span><span style="display:flex;"><span>df -h <span style="color:#999;font-style:italic"># 查看各分区使用情况</span>
+</span></span><span style="display:flex;"><span>du -sh &lt; 目录名&gt; <span style="color:#999;font-style:italic"># 查看指定目录的大小</span>
+</span></span><span style="display:flex;"><span>grep MemTotal /proc/meminfo <span style="color:#999;font-style:italic"># 查看内存总量</span>
+</span></span><span style="display:flex;"><span>grep MemFree /proc/meminfo <span style="color:#999;font-style:italic"># 查看空闲内存量</span>
+</span></span><span style="display:flex;"><span>uptime <span style="color:#999;font-style:italic"># 查看系统运行时间、用户数、负载</span>
+</span></span><span style="display:flex;"><span>cat /proc/loadavg <span style="color:#999;font-style:italic"># 查看系统负载</span>
+</span></span><span style="display:flex;"><span>mount | column -t <span style="color:#999;font-style:italic"># 查看挂接的分区状态</span>
+</span></span><span style="display:flex;"><span>fdisk -l <span style="color:#999;font-style:italic"># 查看所有分区</span>
+</span></span><span style="display:flex;"><span>swapon -s <span style="color:#999;font-style:italic"># 查看所有交换分区</span>
+</span></span><span style="display:flex;"><span>hdparm -i /dev/hda <span style="color:#999;font-style:italic"># 查看磁盘参数(仅适用于IDE设备)</span>
+</span></span><span style="display:flex;"><span>dmesg | grep IDE <span style="color:#999;font-style:italic"># 查看启动时IDE设备检测状况</span>
+</span></span><span style="display:flex;"><span>ifconfig <span style="color:#999;font-style:italic"># 查看所有网络接口的属性</span>
+</span></span><span style="display:flex;"><span>iptables -L <span style="color:#999;font-style:italic"># 查看防火墙设置</span>
+</span></span><span style="display:flex;"><span>route -n <span style="color:#999;font-style:italic"># 查看路由表</span>
+</span></span><span style="display:flex;"><span>netstat -lntp <span style="color:#999;font-style:italic"># 查看所有监听端口</span>
+</span></span><span style="display:flex;"><span>netstat -antp <span style="color:#999;font-style:italic"># 查看所有已经建立的连接</span>
+</span></span><span style="display:flex;"><span>netstat -s <span style="color:#999;font-style:italic"># 查看网络统计信息</span>
+</span></span><span style="display:flex;"><span>ps -ef <span style="color:#999;font-style:italic"># 查看所有进程</span>
+</span></span><span style="display:flex;"><span>top <span style="color:#999;font-style:italic"># 实时显示进程状态</span>
+</span></span><span style="display:flex;"><span>w <span style="color:#999;font-style:italic"># 查看活动用户</span>
+</span></span><span style="display:flex;"><span>id &lt; 用户名&gt; <span style="color:#999;font-style:italic"># 查看指定用户信息</span>
+</span></span><span style="display:flex;"><span>last <span style="color:#999;font-style:italic"># 查看用户登录日志</span>
+</span></span><span style="display:flex;"><span>cut -d: -f1 /etc/passwd <span style="color:#999;font-style:italic"># 查看系统所有用户</span>
+</span></span><span style="display:flex;"><span>cut -d: -f1 /etc/group <span style="color:#999;font-style:italic"># 查看系统所</span>
+</span></span><span style="display:flex;"><span>crontab -l <span style="color:#999;font-style:italic"># 查看所有用户的定时任务</span>
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

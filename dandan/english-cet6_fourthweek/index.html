@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The notes website of Sonnya.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="dandan">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/dandan">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/dandan">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+<section class="page-header blog-single-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          CET6 - 复习第四周
+        </h2>
+        <div class="post-meta">
+          <ul>
+            <li>
+              <img src="https://supersonnya.github.io/images/avatar/author.png" alt="author-thumb" />
+            </li>
+            <li>
+              <h5>
+                Jessica
+              </h5>
+            </li>
+            <li>
+              November 27, 2022
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <article class="blog-single-post">
+          <h2 id="本周复习计划">本周复习计划</h2>
+<ul>
+<li>复习整理的语法笔记，背诵生词、短语。</li>
+</ul>
+<h2 id="计划完成情况">计划完成情况</h2>
+<h2 id="复习第四周总结">复习第四周总结</h2>
+<ol>
+<li>
+<p>especially
+adv. 特别; 格外; 尤其; 主要；考试时，这个空前面一般是逗号。
+如：Millions of wild flowers colour the valleys, especially in April and May.
+漫山遍野的野花点缀着山谷，特别是每到四月和五月的时候。</p>
+</li>
+<li>
+<p>average
+adj. 一般的; 通常的; 平均的；
+常考结构：the average … of
+如：The average age of the students is 19.
+学生的平均年龄是19岁。
+on average 按平均数计算</p>
+</li>
+<li>
+<p>challenges
+n. 挑战；
+v. 向&hellip;挑战, 怀疑, 要求; 挑战, 反对</p>
+</li>
+<li>
+<p>consequently
+adv. 结果，必然地，因此
+这个词场常位于句首，且其后为逗号；或位于and后。
+如：This poses a threat to agriculture and the food chain, and consequently to human health.
+这对农业和食物链都造成了威胁，因此必定会危害人类健康。</p>
+</li>
+<li>
+<p>total
+n. 总数, 合计, 全体；adj. 总计的, 全体的
+常考搭配：in total 总共，共计</p>
+</li>
+<li>
+<p>potential
+adj. 有潜力的, 潜在的, 可能的
+常考搭配：
+the potential for sth. 某事发生的潜在性; 可能性</p>
+</li>
+<li>
+<p>maintain
+v. 维持; 保持; 维修, 保养
+常与以下词搭配使用：
+maintain friendly relations, contacts, etc (with sb)
+（与某人）保持友好关系﹑ 接触等</p>
+</li>
+<li>
+<p>naturally
+adv. 自然地, 天生地</p>
+</li>
+<li>
+<p>characters
+n. 品质，特性；特点；人物；
+字母，符号或记号</p>
+</li>
+<li>
+<p>limited
+adj. 有限制的, 少的, 有限的
+常考搭配：
+(be of) limited use/value：使用、价值有限</p>
+</li>
+<li>
+<p>excess
+n. 过火，过头，无节制
+常考搭配：
+an excess of sth. 过度；过分；过量；过多
+还考过它的形容词形式，excessive：过分的，过度的；极度的
+这个词一定要认识哦！有一年作文题目叫on Excessive Package（论过度包装）。
+excess还可做形容词，表示“额外的，附加的”
+常见搭配如：excess baggage 超重的行李</p>
+</li>
+<li>
+<p>determine
+v. 确定；决定
+常考搭配：
+determine to do sth. 决心做某事
+determine on/upon sth. 决定做；下定决心</p>
+</li>
+<li>
+<p>including
+动词原形include，表示“包括，包含（某人/事物）在内”
+考试时，including前通常是逗号，且其后常跟名词短语。
+常考搭配：
+sth be included in：某物被包含在&hellip;里</p>
+</li>
+<li>
+<p>dependent
+adj. 依赖的, 从属的
+常考搭配：
+dependent on/upon sb./sth. 取决于、依赖某人或某事</p>
+</li>
+<li>
+<p>critically
+adv. 严重地；批判性地；危急地；苛求地
+跟不同的词搭配，意义不同：
+critically ill/injured：病、伤得很重
+critically important：非常重要
+think critically：批判性地思考</p>
+</li>
+<li>
+<p>commitment
+n. 托付, 交托; 委任，常和to搭配使用
+常考搭配：
+make a commitment to do sth. 承诺会做某事</p>
+</li>
+<li>
+<p>chances
+n. 机会, 可能性, 意外
+常考搭配：
+chances are是固定搭配，表示“可能……（发生某事）”</p>
+</li>
+<li>
+<p>tend
+v. 倾向; 趋向（常和to搭配，必背）;照管, 照料</p>
+</li>
+<li>
+<p>performance
+n. 履行, 成绩, 执行；演出, 表演</p>
+</li>
+<li>
+<p>enhance
+v. 提高, 增加, 加强</p>
+</li>
+<li>
+<p>associated
+adj. 伙伴的; 合伙的; 共事的; 副的
+常考搭配：
+associate常和with连用，表示把两个人或事联系起来；</p>
+</li>
+<li>
+<p>ranging
+v. 范围从……到……；
+常考搭配：
+range between A and B/from A to B；
+在A和B之间变化或变动; 从A延伸到B；</p>
+</li>
+<li>
+<p>develop
+v. 发展; 发扬; 发达; 发展; 发育; 生长
+多义词，和不同的词搭配有不同的意思。
+比如出现某种疾病的症状(develop a symptom)；冲洗照片；开发土地等等</p>
+</li>
+<li>
+<p>impact
+v./n. 影响
+常考搭配：impact on/upon sb./ sth.
+对某人[某事物]的强烈的印象或巨大的影响</p>
+</li>
+<li>
+<p>contributing
+动词原形 contribute；常和to搭配，表示“捐助; 促成; 帮助”</p>
+</li>
+<li>
+<p>recession
+n. （经济）衰退; 不景气
+常考搭配：
+the economic/industrial/trade recession
+经济、工业、贸易的衰退或萧条；</p>
+</li>
+<li>
+<p>involved
+adj. 有关的，牵扯在内的；涉及到
+常考搭配：
+be/get involved in 被牵涉到某个事件或活动中
+如：More than 30 software firms were involved in the project.
+超过30多家软件公司与这个项目有关。</p>
+</li>
+<li>
+<p>dramatically
+adv. 戏剧性地，引人注目地
+The city break market has grown dramatically since the mid-1980s.
+城市休息市场从1980年代中期开始大量涌现。</p>
+</li>
+<li>
+<p>declining
+动词原形：decline v. 拒绝；下降，减少，衰退
+decline也可以做名词，表数量、力量和权力的消减，常和in搭配。
+a decline in population, prices, popularity 人口﹑ 价格﹑ 声望的降低</p>
+</li>
+<li>
+<p>significant
+adj. 有意义的；重要的，重大的；
+比如significant improvement显著的提高或进步；
+或It is significant：某事是有意义的</p>
+</li>
+<li>
+<p>eventually
+adv. 终于，最后，等于in the end
+常考用法：
+常放在句子的开头，逗号跟后面的句子隔开。也灵活放在句首或动词前等位置。
+如：Eventually, the army caught up with him in Latvia.
+最后，军队在拉脱维亚抓住了他。
+It might take him ages but he&rsquo;ll do it eventually.
+尽管要耗费他数年时间，他最后还是做到了。</p>
+</li>
+<li>
+<p>vulnerable
+adj. 易受伤的，脆弱的；易受攻击的
+常考用法：be vulnerable to sth./sb.
+如：Cyclists are more vulnerable than motorists.
+骑自行车的人比开汽车的人容易受伤。</p>
+</li>
+<li>
+<p>potential
+n. 潜在性，可能性
+adj. 有潜力的, 潜在的, 可能的
+常考搭配：
+the potential for sth. 某事发生的潜在性; 可能性</p>
+</li>
+<li>
+<p>simultaneously
+adv. 同时发生地，同时存在地，同步地</p>
+</li>
+<li>
+<p>impact
+n./v. 影响，作用，冲击
+常考搭配：
+impact on/upon sb./ sth. 对某人[某事物]的强烈的印象或巨大的影响
+如：They say they expect the meeting to have a marked impact on the future of the country.
+他说他们希望这次会议能对国家的将来产生深远的影响。</p>
+</li>
+<li>
+<p>spectators
+n. （尤指表演或比赛的）观众；观看者</p>
+</li>
+<li>
+<p>permanent
+adj. 永久(性)的；长期的；固定的
+如：Heavy drinking can cause permanent damage to the brain.
+大量饮酒会对大脑造成永久性的损伤。</p>
+</li>
+<li>
+<p>notably
+adv. 显著地，特别地 = particularly/ most importantly
+Some early doctors, notably Hippocrates, thought that diet was important.
+早期的一些医生，特别是Hippocrates，认为饮食是非常重要的。</p>
+</li>
+<li>
+<p>indefinite
+adj. 不确定的，不明确的；无限期的；模糊的
+The store will be closed for an indefinite period.
+这家商店将无限期关闭。</p>
+</li>
+<li>
+<p>volunteers
+n. 志愿者；
+v. 自愿或无偿地给予或提供帮助、建议等
+常考搭配：volunteer for/to do sth. 自告奋勇做某事</p>
+</li>
+<li>
+<p>benefits
+n.益处；救济(保险)金 vt.有益于 vi.得益
+常考搭配：
+the benefit of sth.：某事/物的好处
+benefit from：得益于
+如：I have benefited greatly from her wisdom.
+她的睿智让我受益匪浅。
+benefit to：对……有益
+Knowledge is benefit to us. 知识对大有益处。
+to one’s benefit：对某人有益，有帮助</p>
+</li>
+<li>
+<p>identified
+动词原形是identify，表 “确认、证明、鉴别出（某人或某事物）”
+常考搭配：
+identify sb/sth as sb/sth 确认/认出某人或某物是&hellip;
+identify onself with sb/sth 与某人/某事物有关联
+identify sth with sth 认为某事物与某事物等同
+One cannot identify happiness with wealth.
+幸福和财富不能混为一谈.</p>
+</li>
+<li>
+<p>assess
+v. 对…进行估价；评价，评论
+常和以下词语搭配：
+assess sb&rsquo;s taxes/income 评定某人的税额[总收入]
+assessment n. 评价，评定
+Each group consisted of around 120 adults of similar age and education, and the test assessed their language skills.
+每个小组由大约120名同龄，且教育背景相同的成年人组成。这个测试对他们的语言技能进行评估。</p>
+</li>
+<li>
+<p>inquiring
+adj. 打听的，怀疑的，爱追根究底的
+inquire v. 询问；打听消息
+常考搭配：
+inquire about/into sb./sth. 调查/查问/打听消息</p>
+</li>
+<li>
+<p>primarily
+adv. 主要地，首先
+Wastage tends to occur primarily at the farmer-producer end of the supply chain. 浪费多发生在供应链末端的农民到制造商这里。</p>
+</li>
+<li>
+<p>desperate
+adj. 孤注一掷的；极需要的；绝望的，危急的
+常考搭配：
+desperate for sth: 极需要某事物
+desperate for money极需钱
+desperate to do sth: 极需要做某事
+desperate to see her很想见她</p>
+</li>
+<li>
+<p>incidentally
+adv. 偶然地；不经意地；附带地；顺便提一句 = by the way</p>
+</li>
+<li>
+<p>undertakes
+vt.承担，着手做；同意，答应，保证
+常与以下词语搭配：
+undertake a mission, task, project, etc 承担使命﹑ 任务﹑ 工程项目等</p>
+</li>
+<li>
+<p>monopolized
+动词原形monopolize，表 “垄断”
+trying to monopolize the supply of oil 企图垄断石油供应</p>
+</li>
+<li>
+<p>instantaneous
+adj. 即时的，同时发生的，瞬间的
+注意还有一个近义词，近年也常考↓
+simultaneous adj.同时发生的，同时存在的，同步的</p>
+</li>
+<li>
+<p>subordinate
+adj. 下级的，附属的，次要的，常和to搭配</p>
+</li>
+<li>
+<p>subsequently
+v. 后来，随后；= later, afterwards</p>
+</li>
+<li>
+<p>diminish
+vi.变少，变小，降低 vt.减少，减小，降低
+常考搭配：
+常用在hopes, supplies, funds等词的后面，
+表示 “希望逐渐渺茫”， “物资渐渐用完”，“资金渐渐枯竭”。</p>
+</li>
+<li>
+<p>advocates
+v. 拥护,提倡,支持 n.拥护者；辩护者
+做动词时，advocate后跟动词的动名词（ing）形式：
+如：Do you advocate banning cars in the city centre?
+你支持禁止汽车在市中心通行这一主张吗?</p>
+</li>
+<li>
+<p>equivalent
+adj. 相等的，同意义的，相当的
+常考搭配：
+be equivalent to：表示（价值﹑ 数量﹑ 意义﹑ 重要性等）相同的</p>
+</li>
+<li>
+<p>accustomed
+adj. (to)习惯于…的，适应了的；通常的
+常考搭配：
+be/become accustomed to：习惯、适应于…的，
+如：My eyes were becoming accustomed to the gloom.
+我的眼睛逐渐适应了黑暗。</p>
+</li>
+<li>
+<p>inherent
+adj. 内在的，固有的，本来的
+常考搭配：
+inherent in sb/sth. 天生的，本身的，内在固有的</p>
+</li>
+<li>
+<p>overwhelmed
+动词原形overwhelm，表示“战胜，压倒，征服，被淹没”，常用于被动语态。
+He was overwhelmed by a longing for times past.</p>
+</li>
+<li>
+<p>recognition
+n. 认识; 认出; 承认；认可；赏识，表彰
+常考用法：
+change beyond/out of (all) recognition：变化大得认不出来
+如：When he returned to his home town after the war, he found it had changed out of all/beyond all recognition.
+战争结束后，他回到家乡，却发现自己完全认不出这里来了。</p>
+</li>
+<li>
+<p>deterioration
+n. 恶化，变坏，堕落，退化
+动词形式，deteriorate。
+一般主语常常是condition或situation，其后常跟介词into。</p>
+</li>
+</ol>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Themify -->
+<link rel="stylesheet" href="https://supersonnya.github.io/themify/themify.css">
+
+<!-- Critical CSS -->
+
+<link href="https://supersonnya.github.io/scss/critical.min.css" rel="stylesheet" />
+
+
+<link href="https://supersonnya.github.io/scss/non-critical.min.css" rel="stylesheet" />
+
+<script src="https://supersonnya.github.io/js/vendor.min.js"></script>
+
+<script src="https://supersonnya.github.io/js/script.min.js"></script>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

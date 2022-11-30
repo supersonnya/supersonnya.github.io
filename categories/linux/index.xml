@@ -13,7 +13,7 @@
       <pubDate>Fri, 28 Oct 2022 10:01:22 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux/linux-learnplans/</guid>
-      <description>组态管理工具 (Puppet, SaltStack, Chef, Ansible) 部署：saltstack, puppet, ansible
+      <description> 组态管理工具 (Puppet, SaltStack, Chef, Ansible) 部署：saltstack, puppet, ansible
 监控：cati, zabbix, nigos
 熟悉Linux等操作系统的安装、配置、更新、维护操作，掌握系统命令，调试方法,熟练使用grep/sed/awk;
 熟悉Jenkins，gitlab，svn，nginx，tomcat, zookeeper等软件;
@@ -26,7 +26,8 @@ MQ类,Keeplived,fastdfs
 熟悉阿里云或者腾讯云的产品，孰悉云服务管理及维护;
 主流网络安全产品，如WAF、防火墙、日志审计、IPS等安全产品;
 服务器、网络设备的运行特点，能够对常见故障进行排查;
-计算机网络设备及各类网络协议的概念和作用，了解常用公有云计算、存储、网络、安全类产品构成;</description>
+计算机网络设备及各类网络协议的概念和作用，了解常用公有云计算、存储、网络、安全类产品构成;
+常用巡检命令 uname -a # 查看内核/操作系统/CPU信息 head -n 1 /etc/issue # 查看操作系统版本 cat /proc/cpuinfo # 查看CPU信息 hostname # 查看计算机名 lspci -tv # 列出所有PCI设备 lsusb -tv # 列出所有USB设备 lsmod # 列出加载的内核模块 env # 查看环境变量 free -m # 查看内存使用量和交换区使用量 df -h # 查看各分区使用情况 du -sh &amp;lt; 目录名&amp;gt; # 查看指定目录的大小 grep MemTotal /proc/meminfo # 查看内存总量 grep MemFree /proc/meminfo # 查看空闲内存量 uptime # 查看系统运行时间、用户数、负载 cat /proc/loadavg # 查看系统负载 mount | column -t # 查看挂接的分区状态 fdisk -l # 查看所有分区 swapon -s # 查看所有交换分区 hdparm -i /dev/hda # 查看磁盘参数(仅适用于IDE设备) dmesg | grep IDE # 查看启动时IDE设备检测状况 ifconfig # 查看所有网络接口的属性 iptables -L # 查看防火墙设置 route -n # 查看路由表 netstat -lntp # 查看所有监听端口 netstat -antp # 查看所有已经建立的连接 netstat -s # 查看网络统计信息 ps -ef # 查看所有进程 top # 实时显示进程状态 w # 查看活动用户 id &amp;lt; 用户名&amp;gt; # 查看指定用户信息 last # 查看用户登录日志 cut -d: -f1 /etc/passwd # 查看系统所有用户 cut -d: -f1 /etc/group # 查看系统所 crontab -l # 查看所有用户的定时任务 </description>
     </item>
     
     <item>
@@ -191,7 +192,7 @@ RAID 5 工作模式：条带化，利用数据的异或运算，在n个磁盘中
       <pubDate>Thu, 04 Aug 2022 11:00:54 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/linux/linux-usefulcommands/</guid>
-      <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 cpu lscpu、top、htop、glances df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 disk fdisk、iotop fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 fsck 检查和修复文件系统，使用fsck检查并修复文件系统是存在风险的，特别是当磁盘错误非常严重的时候 fsck 分区名: 指定需要检查的文件系统 fsck -p: 会读取fstab文件来确定检查哪些文件系统 -f: 强制检查新的文件系统 grep [OPTIONS] PATTERN [FILE&amp;hellip;] 查找文件内容，返回所在行 搜索内容包含空格时必须加单引号 groupadd head | tail 显示文件的开头和结尾 -n: 指定显示的行数 history 查看历史操作，仅在BASH中适用，只能列出当前用户的操作记录 管理员需要查看其他用户的操作记录，可读取该用户主目录下的.</description>
+      <description>命令 要在命令后加上&amp;amp;，指导程序在后台运行 &amp;gt; | &amp;gt; &amp;gt; &amp;gt;: 把程序的输出写入目标文件，若文件不存在则新建，覆盖原来内容 &amp;gt;&amp;gt;: 把程序的输出追加到目标文件 &amp;lt; | &amp;lt; &amp;lt; &amp;lt;: 输入重定向，让程序从一个文件中获取输入 &amp;lt;&amp;lt;: 立即文档，指定一个代表输入结束的分隔符，遇到这个单词的时候，即认为输入结束，并把键盘输入一起传递给命令 输入重定向和输出重定向可结合在一起使用 | 管道，将一条命令的输出连接到另一条命令输入 cat | more | less cat: 查看文件内容，后跟文件名作为参数 -n: 在每一行前显示行号 more: 一页一页地显示文件内容 空格键向下翻动一页，Enter键向下滚动一行，Q键退出 less: 更好的文本阅读工具 -M: 阅读文件时在底部显示更多的文件信息 空格键向下翻一页；B键向上翻一页；/跟上查找的内容搜索某个字符串，继续查找相同的内容，再次输入/，并按下回车键；Q键退出 cd 改变目录 chgrp 设置文件的属组 -R: 改变一个目录及其下所有文件和子目录的所有权 chmod 改变文件的权限，只有文件的属主和root用户才有权修改文件的权限 用户组包括文件属主u、文件属组g、其他人o和所有人a，权限包括读取r、写入w和执行x 设置权限规则：用户组+/-权限、用户组=权限、用户组1=用户组2 可使用八进制语法设置文件权限 chown [OPTION]&amp;hellip; [OWNER][:[GROUP]] FILE&amp;hellip; 改变文件的所有权，参数OWNER或:GROUP可省略 -R: 改变一个目录及其下所有文件和子目录的所有权 cp -i: 目标目录有同名文件时提示是否覆盖 -b: 在目标目录的同名文件的文件名后加~ -r: 将子目录连同其中的文件一起复制到另一个子目录下 cpu lscpu、top、htop、glances df 查看磁盘使用情况 -t: 用于显示特定的文件系统 dir | vdir dir: 列出目录内容 vdir: 相当于为ls命令加上-l选项 disk fdisk、iotop fdisk 建立分区表 m显示所有可用的命令及其简要介绍 find [OPTION] [path&amp;hellip;] [expression] 在指定范围内查找文件 -name: 指定文件名 -type: 指定文件类型 -print: 表示将结果输出到标准输出 -atime +[-]n: 最近n天[没有]使用过的文件 -mtime +[-]n: 最近n天[没有]修改过的文件 find .</description>
     </item>
     
   </channel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>japanese on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/japanese/</link>
+    <description>Recent content in japanese on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 23 Nov 2022 23:11:53 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/japanese/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日语音素</title>
+      <link>https://supersonnya.github.io/foreignlang/japanese/japanese-phone/</link>
+      <pubDate>Wed, 23 Nov 2022 23:11:53 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/japanese/japanese-phone/</guid>
+      <description>字母和音素 平假名：来源于汉字草书； 片假名：来源于汉字楷书的偏旁部首，主要用于外来语、拟声拟态词、动植物名称等； 罗马字：使用拉丁字母表示字母发音，用于招牌、广告以及录入文字。 </description>
+    </item>
+    
+  </channel>
+</rss>

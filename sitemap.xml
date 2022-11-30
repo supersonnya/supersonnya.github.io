@@ -2,11 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://supersonnya.github.io/dandan/english-cet6_thirdweek/</loc>
-    <lastmod>2022-11-18T20:18:07+06:00</lastmod>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_fourthweek/</loc>
+    <lastmod>2022-11-27T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-11-11T14:48:11+08:00</lastmod>
+    <lastmod>2022-11-23T23:11:53+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/japanese/</loc>
+    <lastmod>2022-11-23T23:11:53+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/foreignlang/japanese/japanese-phone/</loc>
+    <lastmod>2022-11-23T23:11:53+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/french/</loc>
+    <lastmod>2022-11-23T15:16:53+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/foreignlang/french/french-phone/</loc>
+    <lastmod>2022-11-23T15:16:53+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_thirdweek/</loc>
+    <lastmod>2022-11-18T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/devops/</loc>
     <lastmod>2022-11-11T14:48:11+08:00</lastmod>
@@ -14,13 +29,16 @@
     <loc>https://supersonnya.github.io/operation/devops/devops-jumpserver/</loc>
     <lastmod>2022-11-11T14:48:11+08:00</lastmod>
   </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_sixthweek/</loc>
+    <lastmod>2022-11-09T20:18:07+06:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/operation/storage/storage-emc_cx/</loc>
     <lastmod>2022-11-09T16:54:02+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/storage/</loc>
     <lastmod>2022-11-09T16:54:02+08:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/moments/20221109/</loc>
+    <loc>https://supersonnya.github.io/moments/2022110901/</loc>
     <lastmod>2022-11-09T09:24:38+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/tags/</loc>
@@ -34,6 +52,9 @@
   </url><url>
     <loc>https://supersonnya.github.io/dandan/english-cet6_secondweek/</loc>
     <lastmod>2022-11-07T20:18:07+06:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</loc>
+    <lastmod>2022-11-04T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022110301/</loc>
     <lastmod>2022-11-03T10:53:08+08:00</lastmod>
@@ -86,7 +107,7 @@
     <loc>https://supersonnya.github.io/tags/%E5%8A%9D%E5%AD%A6/</loc>
     <lastmod>2022-09-20T15:57:46+08:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/tags/%E5%8F%A4%E8%AF%97/</loc>
+    <loc>https://supersonnya.github.io/tags/%E6%83%9C%E6%97%B6/</loc>
     <lastmod>2022-09-20T15:57:46+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/linux/linux-shell_programbasical_three/</loc>
@@ -262,24 +283,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/dandan/</loc>
     <lastmod>2020-10-20T00:00:00+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/hugo-and-its-future/</loc>
-    <lastmod>2020-09-07T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/is-working-from-home-effective/</loc>
-    <lastmod>2020-09-05T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/know-when-to-take-break/</loc>
-    <lastmod>2020-09-04T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/future-of-cloud-computing/</loc>
-    <lastmod>2020-09-03T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/how-solve-coding-problem/</loc>
-    <lastmod>2020-09-03T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/freelancing-and-corona/</loc>
-    <lastmod>2020-09-02T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/sonnya/example/</loc>
     <lastmod>2020-08-26T12:14:34+06:00</lastmod>

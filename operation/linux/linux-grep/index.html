@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Grep</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 14, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 9 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 10 minutes.</p>
     
 <hr class="full-width">
 
@@ -598,6 +598,17 @@ div .highlight {
 </span></span><span style="display:flex;"><span>grep -i -n <span style="color:#ed9d13">&#39;.&#39;</span> filename.txt
 </span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## .* 匹配所有内容，包含空行</span>
 </span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;.*&#39;</span> filename.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ps -ef | grep sshd
+</span></span><span style="display:flex;"><span>ps -ef | grep sshd | grep -v grep <span style="color:#999;font-style:italic"># 查找指定进程，排除grep本身</span>
+</span></span><span style="display:flex;"><span>ps -ef | grep sshd -c <span style="color:#999;font-style:italic"># 进程个数</span>
+</span></span><span style="display:flex;"><span>cat a.txt | grep -f b.txt <span style="color:#999;font-style:italic"># 输出a中含有从b中读取的关键字的内容行</span>
+</span></span><span style="display:flex;"><span>cat a.txt | grep -nf b.txt
+</span></span><span style="display:flex;"><span>grep -n <span style="color:#ed9d13">&#39;linux&#39;</span> test.txt
+</span></span><span style="display:flex;"><span>cat test.txt | grep ^u
+</span></span><span style="display:flex;"><span>cat test.txt | grep ^[^u]
+</span></span><span style="display:flex;"><span>cat test.txt | grep hat$
+</span></span><span style="display:flex;"><span>cat test.txt | grep -E <span style="color:#ed9d13">&#34;ed|at&#34;</span> <span style="color:#999;font-style:italic"># 包含ed或at</span>
 </span></span></code></pre></div><h2 id="练习">练习</h2>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## roo相关的行</span>
 </span></span><span style="display:flex;"><span>grep <span style="color:#ed9d13">&#39;root&#39;</span> /etc/passwd

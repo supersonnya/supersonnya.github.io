@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>french on Sonnya</title>
+    <link>https://supersonnya.github.io/categories/french/</link>
+    <description>Recent content in french on Sonnya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 23 Nov 2022 15:16:53 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/french/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>法语音素</title>
+      <link>https://supersonnya.github.io/foreignlang/french/french-phone/</link>
+      <pubDate>Wed, 23 Nov 2022 15:16:53 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/foreignlang/french/french-phone/</guid>
+      <description>字母和音素 音素是构成语音的最小单位，一个音标符号代表一个音素。法语有35个音素，元音音素15个，辅音音素17个，半元音音素3个。 法语有26个字母，元音字母有6个：a, e, i, o, u, y。 辅音音素 [p]: [b]: [t]: [d]: [k]: [g]: [f]: [v]: [s]: [z]: [ʃ]: [ʒ]: [l]: [m]: [n]: [ɲ]: [r]: 元音音素 [a]: [ε]: [ə]: [œ]: [ø]: [e]: [i]: [ɔ]: [o]: [u]: [y]: [œ̃]: [ɑ̃]: [ɔ̃]: [ɛ̃]: 半元音音素 [w]: [ч]: [j]: 音素
+常见拼写
+例词
+[a]
+类似于汉语a，但舌尖要抵下齿
+a
+à
+â
+在词中e+mm/nn
+date,salle
+là
+gâteau
+femme, solennel
+[ε]
+舌尖抵下齿，开口度小于[a]
+è,ê,ë
+ei
+ai,aî
+e在闭音节中
+词末-et，-êt,-ect
+mère,être,Noël
+Seine,pleine
+lait,aimer,maître</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -585,6 +585,22 @@ div .highlight {
 </span></span><span style="display:flex;"><span>lun show -m <span style="color:#999;font-style:italic">## 查看lun的map情况</span>
 </span></span><span style="display:flex;"><span>sysstat -x <span style="color:#3677a9">2</span> <span style="color:#999;font-style:italic">## 查看系统当前性能信息</span>
 </span></span><span style="display:flex;"><span>rdfile /etc/messages <span style="color:#999;font-style:italic">## 查看系统日志信息</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>system health status show
+</span></span><span style="display:flex;"><span>storage show disk
+</span></span><span style="display:flex;"><span>environment status
+</span></span><span style="display:flex;"><span>sysconfig -av
+</span></span><span style="display:flex;"><span>sysconfig -r
+</span></span><span style="display:flex;"><span>license
+</span></span><span style="display:flex;"><span>cf status
+</span></span><span style="display:flex;"><span>qtree status
+</span></span><span style="display:flex;"><span>ifconfig -a
+</span></span><span style="display:flex;"><span>disk show -r
+</span></span><span style="display:flex;"><span>aggr status -r
+</span></span><span style="display:flex;"><span>vol status -r
+</span></span><span style="display:flex;"><span>df -Vh
+</span></span><span style="display:flex;"><span>sysstat -x <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span>rdfile /etc/messages
 </span></span></code></pre></div><h3 id="cluster-failover">Cluster Failover</h3>
 <ul>
 <li>双机双活配置，当一台机器发生故障，另一台可完全接管坏机的工作。</li>
