@@ -53,7 +53,7 @@
   <meta name="theme-color" content="#ffffff">
   
   
-  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.954c7d638331350cadfa9584299a4f12956cebb417be3c556ff42d05e9e21b7e.css">
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.5eda6424eeb5869fa8bd4e5577365da4bf2d967864f5d24ebab356489da9a431.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
   
@@ -895,7 +895,16 @@ cfgsave
 </span></span><span style="display:flex;"><span>Do you want to <span style="color:#24909d">enable</span> <span style="color:#ed9d13">&#39;USA_cfg&#39;</span> configuration (yes, y,no, n): [no] y
 </span></span><span style="display:flex;"><span>zone config <span style="color:#ed9d13">&#34;USA_cfg&#34;</span> is in effect
 </span></span><span style="display:flex;"><span>Updating flash ...
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="告警处理">告警处理</h2>
+<h3 id="c3-timeout">C3 Timeout</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># Port 3/21, Condition=ALL_E_PORTS(C3TXTO/min&gt;5), Current Value:[C3TXTO,907 Timeouts], RuleName=defALL_E_PORTSC3TXTO_5, Dashboard Category=Port Health.Port 3/21, Condition=ALL_E_PORTS(C3TXTO/min&gt;5), Current Value:[C3TXTO,907 Timeouts], RuleName=defALL_E_PORTSC3TXTO_5, Dashboard Category=Port Health.</span>
+</span></span></code></pre></div><ul>
+<li>本身问题
+两边交换机非级联f口有问题，hba 光衰大</li>
+<li>有问题，io，3/21 转移
+业务口</li>
+</ul>
+
 </div>
 </div>
 </div>

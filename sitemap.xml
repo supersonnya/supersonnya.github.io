@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://supersonnya.github.io/categories/</loc>
+    <lastmod>2022-12-02T10:08:33+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/music/</loc>
+    <lastmod>2022-12-02T10:08:33+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/records/music/music-guitar/</loc>
+    <lastmod>2022-12-02T10:08:33+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</loc>
+    <lastmod>2022-11-29T20:18:07+06:00</lastmod>
+  </url><url>
     <loc>https://supersonnya.github.io/dandan/english-cet6_fourthweek/</loc>
     <lastmod>2022-11-27T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-11-23T23:11:53+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/japanese/</loc>
     <lastmod>2022-11-23T23:11:53+08:00</lastmod>
@@ -29,9 +38,6 @@
     <loc>https://supersonnya.github.io/operation/devops/devops-jumpserver/</loc>
     <lastmod>2022-11-11T14:48:11+08:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/dandan/english-cet6_sixthweek/</loc>
-    <lastmod>2022-11-09T20:18:07+06:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/operation/storage/storage-emc_cx/</loc>
     <lastmod>2022-11-09T16:54:02+08:00</lastmod>
   </url><url>
@@ -52,9 +58,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/dandan/english-cet6_secondweek/</loc>
     <lastmod>2022-11-07T20:18:07+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</loc>
-    <lastmod>2022-11-04T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022110301/</loc>
     <lastmod>2022-11-03T10:53:08+08:00</lastmod>
@@ -290,24 +293,6 @@
     <loc>https://supersonnya.github.io/supersonnya/linux_wordpress/</loc>
     <lastmod>2020-08-26T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress1/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress2/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress3/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress4/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress5/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/linux_wordpress6/</loc>
-    <lastmod>2020-08-26T12:14:34+06:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/operation/tools/tools-chartjs/</loc>
     <lastmod>2020-08-09T14:10:02+08:00</lastmod>
   </url><url>
@@ -359,9 +344,6 @@
     <loc>https://supersonnya.github.io/about/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>https://supersonnya.github.io/supersonnya/</loc>
-    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
-  </url><url>
     <loc>https://supersonnya.github.io/contact/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url><url>
@@ -378,6 +360,9 @@
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/records/</loc>
+    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/supersonnya/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/</loc>

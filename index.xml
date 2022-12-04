@@ -8,6 +8,24 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Music Guitar</title>
+      <link>https://supersonnya.github.io/records/music/music-guitar/</link>
+      <pubDate>Fri, 02 Dec 2022 10:08:33 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/records/music/music-guitar/</guid>
+      <description>右手练习 Level Ⅰ 6321、63231323、632123、64323432、64321232 Level Ⅱ 63(12)3、632132、 Level Ⅲ Level Ⅳ Level Ⅴ Level Ⅵ Level Ⅶ </description>
+    </item>
+    
+    <item>
+      <title>CET6 - 复习第五周</title>
+      <link>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</link>
+      <pubDate>Tue, 29 Nov 2022 20:18:07 +0600</pubDate>
+      
+      <guid>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</guid>
+      <description>本周复习计划 复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第五周总结 </description>
+    </item>
+    
+    <item>
       <title>CET6 - 复习第四周</title>
       <link>https://supersonnya.github.io/dandan/english-cet6_fourthweek/</link>
       <pubDate>Sun, 27 Nov 2022 20:18:07 +0600</pubDate>
@@ -79,15 +97,6 @@ lait,aimer,maître</description>
     </item>
     
     <item>
-      <title>CET6 - 复习第六周</title>
-      <link>https://supersonnya.github.io/dandan/english-cet6_sixthweek/</link>
-      <pubDate>Wed, 09 Nov 2022 20:18:07 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/dandan/english-cet6_sixthweek/</guid>
-      <description>本周复习计划 复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第六周总结 </description>
-    </item>
-    
-    <item>
       <title>EMC CX存储</title>
       <link>https://supersonnya.github.io/operation/storage/storage-emc_cx/</link>
       <pubDate>Wed, 09 Nov 2022 16:54:02 +0800</pubDate>
@@ -123,15 +132,6 @@ lait,aimer,maître</description>
       
       <guid>https://supersonnya.github.io/dandan/english-cet6_secondweek/</guid>
       <description>本周复习计划 语法书3-5章内容学习及笔记整理； 真题2022年06月第二套练习，整理生词、短语； 每天复习整理的语法笔记，背诵生词、短语。 计划完成情况 语法内容基本没有完成； 真题2022年06月第二套真题完成大部分，整理了生词； 之前的生词没有及时复习。 复习第二周总结 本周是虚度光阴的一周，只有周一去了图书馆认真学习，周二放飞自我了然后周三晚上回来封宿舍之后越来越放飞。周六直接睡到十一点，一周都没有好好学习，周日去图书馆早上效率还可以，中午就学不进去。要赶快调整状态，坚持还有一个月不到的时间就考试了，到时候又怪自己不好好努力，抓紧时间，期末也快到了，学习学习！越往后任务越多，要赶快完成所有东西，明年安心准备考研。</description>
-    </item>
-    
-    <item>
-      <title>CET6 - 复习第五周</title>
-      <link>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</link>
-      <pubDate>Fri, 04 Nov 2022 20:18:07 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/dandan/english-cet6_fifthweek/</guid>
-      <description>本周复习计划 复习整理的语法笔记，背诵生词、短语。 计划完成情况 复习第五周总结 </description>
     </item>
     
     <item>
@@ -682,60 +682,6 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
     </item>
     
     <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress1/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress1/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress2/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress2/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress3/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress3/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress4/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress4/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress5/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress5/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
-      <title>在Linux上部署WordPress环境</title>
-      <link>https://supersonnya.github.io/supersonnya/linux_wordpress6/</link>
-      <pubDate>Wed, 26 Aug 2020 12:14:34 +0600</pubDate>
-      
-      <guid>https://supersonnya.github.io/supersonnya/linux_wordpress6/</guid>
-      <description>一、源码安装Nginx # nginx官网下载nginx.tar.gz安装包 # 安装依赖 yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel \ openssl openssl-devel # 解压 tar -zxvf nginx.tar.gz cd nginx # 配置 ./configure \ --prefix=/usr/local/nginx \ --conf-path=/usr/local/nginx/conf/nginx.conf \ --pid-path=/usr/local/nginx/conf/nginx.pid \ --lock-path=/usr/local/nginx/lock/nginx.lock # 编译 make # 安装 make install # 启动 cd /usr/local/nginx/sbin/ ./nginx # 查看进程 ps -ef | grep nginx # 关闭防火墙 systemctl status firewalld systemctl stop firewalld.service systemctl disable firewalld.service # 错误信息 # nginx: [emerg] bind() to 0.</description>
-    </item>
-    
-    <item>
       <title>ChartJS介绍及基础使用</title>
       <link>https://supersonnya.github.io/operation/tools/tools-chartjs/</link>
       <pubDate>Sun, 09 Aug 2020 14:10:02 +0800</pubDate>
@@ -795,7 +741,7 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools/tools-bookmark/</guid>
-      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger FreeCodeCamp Learn X in Y Minutes: Scenic Programming Language Tours OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Excel函数大全 Image to Text 即时工具 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo SoftwareTools GLaDOS 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 虫部落 TG搜索 学吧导航 乌鸦搜 数字生活指南 淘链客 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 豌豆PRO MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 好讀 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 鲤考考 教务系统 统一身份认证 </description>
+      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger FreeCodeCamp Learn X in Y Minutes: Scenic Programming Language Tours OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote m3u8在线播放器 Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Excel函数大全 Image to Text 即时工具 一份爱小工具 100加减运算生成器 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo PixelSquid SoftwareTools GLaDOS 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 虫部落 TG搜索 学吧导航 国外网址导航 乌鸦搜 数字生活指南 淘链客 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 豌豆PRO MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 好讀 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 试题大全 enncy题库 鲤考考 教务系统 统一身份认证 </description>
     </item>
     
     <item>
