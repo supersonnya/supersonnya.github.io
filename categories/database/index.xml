@@ -6,7 +6,16 @@
     <description>Recent content in database on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Aug 2022 16:29:00 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Dec 2022 16:43:38 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Redis</title>
+      <link>https://supersonnya.github.io/operation/database/redis/database-redis/</link>
+      <pubDate>Fri, 09 Dec 2022 16:43:38 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database/redis/database-redis/</guid>
+      <description>NoSQL数据库 Web发展历史 Web1.0：以门户网站为代表，主要以用户阅读、浏览为主，没有太大性能问题。 Web2.0：用户参与，网站和数据库压力越来越大。 数据库性能瓶颈：单机数据库的性能有限，需要使用Redis作为缓存数据块，解决高并发问题缓解数据库的压力。 NoSQL数据库 非关系型数据库或Not Only SQL，不保证ACID特性。 特点：非关系型；没有模式，可存储结构化、非结构化或半结构化数据；速度快；支持海量数据存储。 应用场景：高并发读写、海量数据读写、高可扩展、速度快。 不适用场景：事务支持、结构化查询。 NoSQL数据库：memcache、Redis、mongoDB。 NewSQL：基于NoSQL又可支持SQL操作，例如HBase。 Redis介绍 基本介绍 开源的、使用ANSI、C语言编写的key-value数据库。 与Memcache类似，数据缓存在计算机内存中。 应用场景 取出最新N个数据。 排行榜应用，取出TOP N操作。 需要精准设定过期时间的应用，例如短信验证码。 计数器应用。 获取某段时间所有数据去重值。 实时系统，反垃圾系统，用于存储一些规则。 缓存，数据之间存放在内存中。 特点 高效性：高速读写。 原子性：所有操作都是原子性的。 支持多种数据结构：字符串、列表、集合、哈希、有序集合。 稳定性：持久化、主从复制集群。 其他特性：过期时间、事务、消息订阅。 Redis安装 ## 获取安装包redis.tar.gz ## 解压安装包 tar -zxvf redis.tar.gz ## 安装C程序运行环境 yum install gcc-c++ -y ## 安装新版本tcl，控制Linux中命令的执行流程 yum install tcl -y ## 编译redis make make test &amp;amp;&amp;amp; make install ## 修改redis配置文件 mkdir -p ./redis-x.x.x/log mkdir -p ./redis-x.x.x/data vi redis.</description>
+    </item>
+    
     <item>
       <title>Database Oracle_tablespaceanddatafile</title>
       <link>https://supersonnya.github.io/operation/database/oracle/database-oracle_tablespaceanddatafile/</link>

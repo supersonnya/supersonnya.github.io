@@ -601,7 +601,7 @@ div .highlight {
 </span></span><span style="display:flex;"><span>rpm -e
 </span></span></code></pre></div><h3 id="yum">yum</h3>
 <ul>
-<li>一个开源、流行的命令行包管理器，和<code>APT</code>拥有相同的功，管理<code>RPM</code>软件包。</li>
+<li>一个开源、流行的命令行包管理器，和<code>APT</code>拥有相同的功能，自动处理依赖关系并一次安装所有依赖的软件包，管理<code>RPM</code>软件包。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## yum源配置</span>
 </span></span><span style="display:flex;"><span>vi /etc/yum.repo.d/example.repo
@@ -629,6 +629,18 @@ div .highlight {
 </span></span><span style="display:flex;"><span>curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
 </span></span><span style="display:flex;"><span>wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
 </span></span><span style="display:flex;"><span>cat /etc/yum.repos.d/CentOS-Base.repo
+</span></span></code></pre></div><h4 id="本地yum源">本地YUM源</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 全局配置文件，不建议修改</span>
+</span></span><span style="display:flex;"><span>/etc/yum.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 自配置yum源</span>
+</span></span><span style="display:flex;"><span>/etc/yum.repos.d/*.repo
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 配置本地yum</span>
+</span></span><span style="display:flex;"><span>[local_yum]
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">name</span>=<span style="color:#24909d">local</span> yum
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">baseurl</span>=file:///media
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">enabled</span>=<span style="color:#3677a9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">gpgcheck</span>=<span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#40ffff">gpgkey</span>=
 </span></span></code></pre></div><h3 id="源代码编译安装软件">源代码编译安装软件</h3>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#999;font-style:italic"># 1.下载解压软件源代码</span>
 </span></span><span style="display:flex;"><span>tar zxvf *.tar.gz  

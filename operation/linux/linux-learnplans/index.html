@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux Learnplans</h1>
     
     <p class="uk-text-center uk-text-muted">Oct 28, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 4 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 7 minutes.</p>
     
 <hr class="full-width">
 
@@ -620,6 +620,73 @@ div .highlight {
 </span></span><span style="display:flex;"><span>cut -d: -f1 /etc/passwd <span style="color:#999;font-style:italic"># 查看系统所有用户</span>
 </span></span><span style="display:flex;"><span>cut -d: -f1 /etc/group <span style="color:#999;font-style:italic"># 查看系统所</span>
 </span></span><span style="display:flex;"><span>crontab -l <span style="color:#999;font-style:italic"># 查看所有用户的定时任务</span>
+</span></span></code></pre></div><h4 id="系统服务管理">系统服务管理</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service --status-all <span style="color:#999;font-style:italic"># 系统所有的后台服务进程</span>
+</span></span><span style="display:flex;"><span>service sshd status <span style="color:#999;font-style:italic"># 服务进程状态</span>
+</span></span><span style="display:flex;"><span>service sshd stop/start/restart
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 配置开机自启动</span>
+</span></span><span style="display:flex;"><span>chkconfig httpd on/off
+</span></span></code></pre></div><h4 id="网络管理">网络管理</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 主机名配置</span>
+</span></span><span style="display:flex;"><span>hostname
+</span></span><span style="display:flex;"><span>hostname new_name <span style="color:#999;font-style:italic"># 重启后失效</span>
+</span></span><span style="display:flex;"><span>vi /etc/sysconfig/network <span style="color:#999;font-style:italic"># 永久生效</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## IP配置</span>
+</span></span><span style="display:flex;"><span>setup <span style="color:#999;font-style:italic"># 交互修改界面，需要安装setuptool软件</span>
+</span></span><span style="display:flex;"><span>vi /etc/sysconfig/network-scripts/ifcfg-eth0 <span style="color:#999;font-style:italic"># 永久生效</span>
+</span></span><span style="display:flex;"><span>ifconfig eth0 ip_addr <span style="color:#999;font-style:italic"># 重启后失效</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 域名映射</span>
+</span></span><span style="display:flex;"><span>vi /etc/hosts
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 网络端口监听</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># netstat: 列出系统上所有的网络socket连接情况</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -a: 所有选项，默认不显示LISTEN相关 -t -u </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -n: 只显示IP，禁用域名反向解析 </span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -l: 仅显示在Listen的服务状态</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -p: 显示建立相关链接的进程信息</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## -ep: 同时查看进程名和用户名</span>
+</span></span><span style="display:flex;"><span>netstat -nlpt <span style="color:#999;font-style:italic"># 获取进程名、进程号及用户ID</span>
+</span></span><span style="display:flex;"><span>netstat -tnl <span style="color:#999;font-style:italic"># 处于监听状态的TCP端口和连接</span>
+</span></span></code></pre></div><h3 id="crontab">crontab</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 设置周期性执行指定的指令或脚本</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装</span>
+</span></span><span style="display:flex;"><span>yum install crontabs
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 服务操作</span>
+</span></span><span style="display:flex;"><span>service crond start/stop/restart/status
+</span></span><span style="display:flex;"><span>service crond reload <span style="color:#999;font-style:italic"># 重新载入配置</span>
+</span></span><span style="display:flex;"><span>chkconfig crond --list <span style="color:#999;font-style:italic"># 是否已设置开机启动</span>
+</span></span><span style="display:flex;"><span>chkconfig crond on
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 命令格式</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### file: 命令文件的名字</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -u: 设定某个用户的crontab服务</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -e: 编辑某个用户的crontab文件内容，不指定默认当前用户</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -l: 显示某个用户的crontab文件内容，不指定默认当前用户</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### -r: 删除某个用户的crontab文件，，不指定默认当前用户</span>
+</span></span><span style="display:flex;"><span>crontab [-u user] file
+</span></span><span style="display:flex;"><span>crontab [-u user] [-e | -l | -r]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 配置说明</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## *  *  *  *  *  command</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 分 时 日 月 周 命令</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 1~59分，每分钟用*或*/1表示</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 0~23时</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 1~31日</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 1~12月</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 0~6，0表示星期天</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 实例</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 每分钟执行一次date</span>
+</span></span><span style="display:flex;"><span>*/1 * * * * date &gt;&gt; /root/date.txt
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 每晚21:30重启apache</span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">30</span> <span style="color:#3677a9">21</span> * * * /usr/local/etc/rc.d/httpd restart
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 每月1、10、22日的4:45重启apache</span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">45</span> <span style="color:#3677a9">4</span> 1,10,22 * * /usr/local/etc/rc.d/httpd restart
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 每周六、周日的1:10重启apache</span>
+</span></span><span style="display:flex;"><span><span style="color:#3677a9">10</span> <span style="color:#3677a9">1</span> * * 6,0 /usr/local/etc/rc.d/httpd restart
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 每天18:00-23:00之间每隔30分钟重启apache</span>
+</span></span><span style="display:flex;"><span>0,30 18-23 * * * /usr/local/etc/rc.d/httpd restart
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### 23:00-7:00，每隔1小时重启apache</span>
+</span></span><span style="display:flex;"><span>* 23-7/1 * * * /usr/local/etc/rc.d/httpd restart
 </span></span></code></pre></div>
 </div>
 </div>

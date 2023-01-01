@@ -3,7 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-12-02T10:08:33+08:00</lastmod>
+    <lastmod>2022-12-09T16:43:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/database/</loc>
+    <lastmod>2022-12-09T16:43:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/database/redis/database-redis/</loc>
+    <lastmod>2022-12-09T16:43:38+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/dandan/english-cet6_sixthweek/</loc>
+    <lastmod>2022-12-05T20:18:07+06:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/music/</loc>
     <lastmod>2022-12-02T10:08:33+08:00</lastmod>
@@ -172,9 +181,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/operation/middleware/middleware-whatismiddleware/</loc>
     <lastmod>2022-08-18T16:49:48+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/database/</loc>
-    <lastmod>2022-08-18T16:29:00+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/database/oracle/database-oracle_tablespaceanddatafile/</loc>
     <lastmod>2022-08-18T16:29:00+08:00</lastmod>

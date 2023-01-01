@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Sonnya</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" property="og:description" content="The notes website of Sonnya.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="SuperSonnya">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+  
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="stylesheet" href="https://supersonnya.github.io/css/style-refractored.min.5eda6424eeb5869fa8bd4e5577365da4bf2d967864f5d24ebab356489da9a431.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+  
+   
+</head>
+<body class="operation">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/frontend">Frontend</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/programlang">Programlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/foreignlang">Foreignlang</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/countdown">Countdown</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/dandan">Jessica</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/supersonnya">Sonnya</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/moments">Moments</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://supersonnya.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/frontend">Frontend</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/programlang">Programlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/foreignlang">Foreignlang</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/countdown">Countdown</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/dandan">Jessica</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/supersonnya">Sonnya</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/moments">Moments</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    :root {
+        --title-color: #8064a9;
+        --text-color: #444444;
+        --light-text-color: #666666;
+        --lighter-text-color: #888888;
+        --link-color: #2aa899;
+        --code-color: #745fb5;
+        --border-quote: rgba(116, 95, 181, 0.2);
+        --border-quote-grey: #c8c8c8;
+        --border: #e7e7e7;
+        --link-bottom: #bbb;
+        --shadow: 3px 3px 10px var(--shadow-color);
+        --inline-code-bg: #f4f2f9;
+        --header-weight: normal;
+        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --title-font: "EB Garamond", "Source Sans Pro", serif;
+        --monospace: Courier, Monospace !important;
+    }
+
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: initial;
+    }
+
+    body {
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
+    }
+
+     
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: var(--header-weight);
+        line-height: 1.3;
+        cursor: text;
+        color: var(--title-color) !important;
+        font-family: var(--title-font);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    h1:after {
+        content: "";
+        display: block;
+        margin: 0.2rem auto 0;
+        width: 6rem;
+        height: 2px;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    h3 {
+        padding-left: 0.4em;
+        border-left: 0.4em solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    h1 tt,
+    h1 code {
+        font-size: inherit;
+    }
+    h2 tt,
+    h2 code {
+        font-size: inherit;
+    }
+    h3 tt,
+    h3 code {
+        font-size: inherit;
+    }
+    h4 tt,
+    h4 code {
+        font-size: inherit;
+    }
+    h5 tt,
+    h5 code {
+        font-size: inherit;
+    }
+    h6 tt,
+    h6 code {
+        font-size: inherit;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+        margin: 0.8em 0;
+    }
+
+
+     
+
+    hr {
+        margin: 1.5em auto;
+        border-top: 1px solid var(--border);
+    }
+
+
+     
+
+    li>ol,
+    li>ul {
+        margin: 0 0;
+    }
+
+    li p.first {
+        display: inline-block;
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
+
+    ul:first-child,
+    ol:first-child {
+        margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+
+     
+
+    blockquote {
+        border-left: 0.3rem solid var(--border-quote);
+        padding-left: 1em;
+        font-family: var(--base-font);
+    }
+
+
+     
+
+    table {
+        margin-bottom: 1.25rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.25rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+
+    table thead th {
+        vertical-align: middle;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fcfcfc;
+    }
+
+    code,
+    tt {
+        padding: 0px 0px;
+        font-family: var(--monospace);
+        font-size: 0.9rem;
+        color: var(--code-color) !important;
+        background-color: var(--inline-code-bg);
+        margin: 0 2px;
+    }
+
+    .uk-container {
+        max-width: 900px;
+    }
+
+    pre {
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        margin-bottom: 0px;
+    }
+
+    .post-content pre code {
+     font-family: Consolas;
+ }
+
+ pre::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+div .highlight {
+	overflow: hidden;
+	border-radius: 20px !important;
+}
+</style>
+
+<section>
+  <div class="uk-container uk-margin-medium-bottom">
+    <h1 class="uk-text-center uk-heading-small">Database Redis</h1>
+    
+    <p class="uk-text-center uk-text-muted">Dec 09, 2022</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 10 minutes.</p>
+    
+<hr class="full-width">
+
+<div class="content">
+  <h3 id="nosql数据库">NoSQL数据库</h3>
+<h4 id="web发展历史">Web发展历史</h4>
+<ul>
+<li><code>Web1.0</code>：以门户网站为代表，主要以用户阅读、浏览为主，没有太大性能问题。</li>
+<li><code>Web2.0</code>：用户参与，网站和数据库压力越来越大。</li>
+<li>数据库性能瓶颈：单机数据库的性能有限，需要使用<code>Redis</code>作为缓存数据块，解决高并发问题缓解数据库的压力。</li>
+</ul>
+<h4 id="nosql数据库-1">NoSQL数据库</h4>
+<ul>
+<li>非关系型数据库或<code>Not Only SQL</code>，不保证<code>ACID</code>特性。</li>
+<li>特点：非关系型；没有模式，可存储结构化、非结构化或半结构化数据；速度快；支持海量数据存储。</li>
+<li>应用场景：高并发读写、海量数据读写、高可扩展、速度快。</li>
+<li>不适用场景：事务支持、结构化查询。</li>
+<li><code>NoSQL</code>数据库：<code>memcache</code>、<code>Redis</code>、<code>mongoDB</code>。</li>
+<li><code>NewSQL</code>：基于<code>NoSQL</code>又可支持<code>SQL</code>操作，例如<code>HBase</code>。</li>
+</ul>
+<h3 id="redis介绍">Redis介绍</h3>
+<h4 id="基本介绍">基本介绍</h4>
+<ul>
+<li>开源的、使用<code>ANSI、C</code>语言编写的<code>key-value</code>数据库。</li>
+<li>与<code>Memcache</code>类似，数据缓存在计算机内存中。</li>
+</ul>
+<h4 id="应用场景">应用场景</h4>
+<ul>
+<li>取出最新<code>N</code>个数据。</li>
+<li>排行榜应用，取出<code>TOP N</code>操作。</li>
+<li>需要精准设定过期时间的应用，例如短信验证码。</li>
+<li>计数器应用。</li>
+<li>获取某段时间所有数据去重值。</li>
+<li>实时系统，反垃圾系统，用于存储一些规则。</li>
+<li>缓存，数据之间存放在内存中。</li>
+</ul>
+<h4 id="特点">特点</h4>
+<ul>
+<li>高效性：高速读写。</li>
+<li>原子性：所有操作都是原子性的。</li>
+<li>支持多种数据结构：字符串、列表、集合、哈希、有序集合。</li>
+<li>稳定性：持久化、主从复制集群。</li>
+<li>其他特性：过期时间、事务、消息订阅。</li>
+</ul>
+<h3 id="redis安装">Redis安装</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 获取安装包redis.tar.gz</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 解压安装包</span>
+</span></span><span style="display:flex;"><span>tar -zxvf redis.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装C程序运行环境</span>
+</span></span><span style="display:flex;"><span>yum install gcc-c++ -y
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 安装新版本tcl，控制Linux中命令的执行流程</span>
+</span></span><span style="display:flex;"><span>yum install tcl -y
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 编译redis</span>
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>make <span style="color:#24909d">test</span> &amp;&amp; make install
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改redis配置文件</span>
+</span></span><span style="display:flex;"><span>mkdir -p ./redis-x.x.x/log
+</span></span><span style="display:flex;"><span>mkdir -p ./redis-x.x.x/data
+</span></span><span style="display:flex;"><span>vi redis.conf
+</span></span><span style="display:flex;"><span><span style="color:#24909d">bind</span> ip_addr
+</span></span><span style="display:flex;"><span>daemonize yes
+</span></span><span style="display:flex;"><span>logfile <span style="color:#ed9d13">&#34;./redis-x.x.x/log/redis.log&#34;</span>
+</span></span><span style="display:flex;"><span>dir ./redis-x.x.x/data
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 启动redis</span>
+</span></span><span style="display:flex;"><span>bin/redis-server redis.conf
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 关闭redis</span>
+</span></span><span style="display:flex;"><span>bin/redis-cli -h host_name shutdown
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 连接redis</span>
+</span></span><span style="display:flex;"><span>bin/redis-cli -h host_name
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## Windows客户端Redis Desktop Manager</span>
+</span></span></code></pre></div><ul>
+<li>生产环境关闭<code>Redis</code>时，不要使用<code>kill</code>命令，否则可能导致数据丢失。</li>
+</ul>
+<h3 id="redis数据类型">Redis数据类型</h3>
+<h4 id="string操作">String操作</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 设置获取值</span>
+</span></span><span style="display:flex;"><span>SET key value
+</span></span><span style="display:flex;"><span>GET key
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 批量设置获取</span>
+</span></span><span style="display:flex;"><span>MSET key1 value1 key2 value2 ...
+</span></span><span style="display:flex;"><span>MGET key1 key2
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 赋新值并返回旧值</span>
+</span></span><span style="display:flex;"><span>GETSET key value
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 设置key过期时间</span>
+</span></span><span style="display:flex;"><span>SETEX key seconds value
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## key不存在时设置key的值</span>
+</span></span><span style="display:flex;"><span>SETNX key value
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将key中存储的数字值加一</span>
+</span></span><span style="display:flex;"><span>INCR key
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将key中存储的数字值增加指定增量</span>
+</span></span><span style="display:flex;"><span>INCRBY key increment
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 将key中存储的数字值减一</span>
+</span></span><span style="display:flex;"><span>DECR key
+</span></span><span style="display:flex;"><span>DECRBY key increment
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## key存储字符串长度</span>
+</span></span><span style="display:flex;"><span>STRLEN key
+</span></span></code></pre></div><ul>
+<li>执行累加操作，不可使用<code>GET+SET</code>，会造成数据覆盖，应使用<code>INCR</code>。</li>
+</ul>
+<h4 id="hash列表操作">Hash列表操作</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 设置获取值</span>
+</span></span><span style="display:flex;"><span>HSET key field value
+</span></span><span style="display:flex;"><span>HGET key field
+</span></span><span style="display:flex;"><span>HMSET key field1 value1 field2 value2 ...
+</span></span><span style="display:flex;"><span>HMGET key field1 field2 ...
+</span></span><span style="display:flex;"><span>HSETNX key field value
+</span></span><span style="display:flex;"><span>HEXIST key field
+</span></span><span style="display:flex;"><span>HGETALL key
+</span></span><span style="display:flex;"><span>HKEYS key
+</span></span><span style="display:flex;"><span>HVALS key
+</span></span><span style="display:flex;"><span>HLEN key
+</span></span><span style="display:flex;"><span>HINCRBY key field increment
+</span></span><span style="display:flex;"><span>HDEL key fiedl1 [field2]
+</span></span></code></pre></div><h4 id="list列表操作">List列表操作</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>LPUSH key value1 [value2]
+</span></span><span style="display:flex;"><span>LRANGE key start stop <span style="color:#999;font-style:italic"># 0到-1获取所有元素</span>
+</span></span><span style="display:flex;"><span>LPUSHX key value
+</span></span><span style="display:flex;"><span>RPUSHX key value
+</span></span><span style="display:flex;"><span>RPUSH key value1 [value2]
+</span></span><span style="display:flex;"><span>LINSERT key BEFORE|AFTER pivot value
+</span></span><span style="display:flex;"><span>LINDEX key index
+</span></span><span style="display:flex;"><span>LSET key index value
+</span></span><span style="display:flex;"><span>LLEN key
+</span></span><span style="display:flex;"><span>LPOP key <span style="color:#999;font-style:italic"># 移除并获取第一个元素</span>
+</span></span><span style="display:flex;"><span>RPOP key <span style="color:#999;font-style:italic"># 移除并获取最后一个元素</span>
+</span></span><span style="display:flex;"><span>BLPOP key1 [key2] timeout <span style="color:#999;font-style:italic"># 移除并获取第一个元素，没有元素阻塞等待</span>
+</span></span><span style="display:flex;"><span>BRPOP key1 [key2] timeout <span style="color:#999;font-style:italic"># 移除并获取最后一个元素，没有元素阻塞等待</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 移除列表最后一个元素，添加到另一个列表并返回该元素</span>
+</span></span><span style="display:flex;"><span>RPOPLPUSH <span style="color:#24909d">source</span> destination
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 移除列表最后一个元素，添加到另一个列表并返回该元素，，没有元素阻塞等待</span>
+</span></span><span style="display:flex;"><span>BRPOPLPUSH <span style="color:#24909d">source</span> destination timeout
+</span></span><span style="display:flex;"><span>LTRIM key start stop <span style="color:#999;font-style:italic"># 只保留指定区间内元素</span>
+</span></span><span style="display:flex;"><span>DEL key1 key2
+</span></span></code></pre></div><h4 id="set集合操作">Set集合操作</h4>
+<ul>
+<li><code>String</code>类型的无序集合，集合成员唯一，不能出现重复数据；通过哈希表实现，添加、删除、查找复杂度为<code>O(1)</code>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SADD key member1 [member2]
+</span></span><span style="display:flex;"><span>SMEMBERS key <span style="color:#999;font-style:italic"># 获取所有成员</span>
+</span></span><span style="display:flex;"><span>SCARD key <span style="color:#999;font-style:italic"># 获取成员数</span>
+</span></span><span style="display:flex;"><span>SDIFF key1 [key2] <span style="color:#999;font-style:italic"># 返回所有集合的差集</span>
+</span></span><span style="display:flex;"><span>SDIFFSTORE destination key1 [key2] <span style="color:#999;font-style:italic"># 返回所有集合的差集并存储到目标集合</span>
+</span></span><span style="display:flex;"><span>SINTER key1 [key2] <span style="color:#999;font-style:italic"># 返回所有集合的交集</span>
+</span></span><span style="display:flex;"><span>SINTERSTORE destination key1 [key2] <span style="color:#999;font-style:italic"># 返回所有集合的交集并存储到目标集合</span>
+</span></span><span style="display:flex;"><span>SISMEMBER key member
+</span></span><span style="display:flex;"><span>SMOVE <span style="color:#24909d">source</span> destination member
+</span></span><span style="display:flex;"><span>SPOP key <span style="color:#999;font-style:italic"># 移除并返回随机元素</span>
+</span></span><span style="display:flex;"><span>SRANDMEMBER key [count] <span style="color:#999;font-style:italic"># 返回一个或多个随机数</span>
+</span></span><span style="display:flex;"><span>SREM key member1 [member2] <span style="color:#999;font-style:italic"># 移除一个或多个成员</span>
+</span></span><span style="display:flex;"><span>SUNION key1 [key2]
+</span></span><span style="display:flex;"><span>SUNIONSTORE destination key1 [key2]
+</span></span></code></pre></div><h4 id="key的操作">key的操作</h4>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DEL key
+</span></span><span style="display:flex;"><span>DUMP key <span style="color:#999;font-style:italic"># 序列化key并返回被序列化的值</span>
+</span></span><span style="display:flex;"><span>EXISTS key <span style="color:#999;font-style:italic"># 1存在，0不存在</span>
+</span></span><span style="display:flex;"><span>EXPIRE key seconds
+</span></span><span style="display:flex;"><span>PEXPIRE key milliseconds
+</span></span><span style="display:flex;"><span>KEYS pattern <span style="color:#999;font-style:italic"># 符合指定模式的key</span>
+</span></span><span style="display:flex;"><span>PERSIST key <span style="color:#999;font-style:italic"># 移除过期时间</span>
+</span></span><span style="display:flex;"><span>PTTL key <span style="color:#999;font-style:italic"># 毫秒为单位返回剩余过期时间</span>
+</span></span><span style="display:flex;"><span>TTL key <span style="color:#999;font-style:italic"># 秒为单位返回剩余过期时间</span>
+</span></span><span style="display:flex;"><span>RANDOMKEY <span style="color:#999;font-style:italic"># 随机返回一个key</span>
+</span></span><span style="display:flex;"><span>RENAME key newkey
+</span></span><span style="display:flex;"><span>RENAMENX key newkey
+</span></span><span style="display:flex;"><span>TYPE key
+</span></span></code></pre></div><h4 id="zset操作">ZSet操作</h4>
+<ul>
+<li>有序集合，<code>String</code>类型，不允许重复成员，保存需要排序的数据，每个数据都带有权重，以此来对元素进行排序。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ZADD key score1 member1 [score2 member2]
+</span></span><span style="display:flex;"><span>ZCARD key
+</span></span><span style="display:flex;"><span>ZCOUNT key min max <span style="color:#999;font-style:italic"># 指定权重区间的成员数</span>
+</span></span><span style="display:flex;"><span>ZINCRBY key increment member
+</span></span><span style="display:flex;"><span>ZINTERSTORE destination numkeys key [key ...]
+</span></span><span style="display:flex;"><span>ZRANGE key start stop [WITHSCORES]
+</span></span><span style="display:flex;"><span>ZRANGEBUSCORE key min max [WITHSCORES][LIMITS]
+</span></span><span style="display:flex;"><span>ZRANK key member <span style="color:#999;font-style:italic"># 获取指定成员的索引，默认排序从小到大</span>
+</span></span><span style="display:flex;"><span>ZREM key member [member ...] <span style="color:#999;font-style:italic"># 移除一个或多个成员</span>
+</span></span><span style="display:flex;"><span>ZREVRANGE key start stop [WITHSCORES]
+</span></span><span style="display:flex;"><span>ZREVRANK key member
+</span></span><span style="display:flex;"><span>ZSCORE key member
+</span></span></code></pre></div><h4 id="bitmaps操作">BitMaps操作</h4>
+<ul>
+<li>针对位操作，更加节省空间，不是一种数据结构，操作是基于<code>String</code>结构的。</li>
+<li>与使用字符串的方法不相同，类似于一个以位为单位的数组，数组的每个元素只能存储<code>0</code>或<code>1</code>，数组下标称为平移量。</li>
+<li>应用：可将每个独立用户是否访问过网站存放在<code>BitMaps</code>中，访问的用户记为<code>1</code>，未访问的记为<code>0</code>，偏移量作为用户<code>ID</code>。</li>
+<li>应用以指定数字开头时偏移量过大会导致空间浪费，每次操作时减去这个指定数字。</li>
+<li>第一次初始化时，如果偏移量比较大，初始化过程会比较慢，可能导致<code>Redis</code>阻塞。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SETBIT key offset value <span style="color:#999;font-style:italic"># value只能取0或1，offset从0开始</span>
+</span></span><span style="display:flex;"><span>GETBIT key offset
+</span></span><span style="display:flex;"><span>BITCOUNT key [start end]
+</span></span><span style="display:flex;"><span>BITOP operation destkey key [key ...] <span style="color:#999;font-style:italic"># AND交集、OR并集、NOT、XOR</span>
+</span></span></code></pre></div><h4 id="hyperloglog结构操作">HyperLogLog结构操作</h4>
+<ul>
+<li>只用于大数据量的统计，存在一定误差，提供不精确的去重计数，例如页面访问量或用户访问量统计。</li>
+<li><code>Redis</code>实现<code>HyperLogLog</code>算法，在<code>2.8.9</code>版本添加<code>HyperLogLog</code>结构。</li>
+<li><code>Redis HyperLogLog</code>是用于技术统计的算法，在输入元素的数量或体积非常大时，计算基数所需的空间时很小且固定的，每个键使用<code>12kb</code>内存计算接近<code>2^64</code>个不同元素的基数。只会根据输入元素计算基数，不存储输入元素本身。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PFADD key element [element ...]
+</span></span><span style="display:flex;"><span>PFCOUNT key [key ...]
+</span></span><span style="display:flex;"><span>PFMERGE destkey sourcekey [sourcekey ...]
+</span></span></code></pre></div><h3 id="离线架构和实时架构">离线架构和实时架构</h3>
+<ul>
+<li>埋点：将一些Javascript的片段插入到页面中。点击一个链接、访问</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 0.5rem">
+  	<a href="https://supersonnya.github.io/" uk-icon="icon: home; ratio: 1.1">
+      <span class="uk-text-muted">2020-2022@SuperSonnya</span>
+    </a>   
+  </div>
+</footer>
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

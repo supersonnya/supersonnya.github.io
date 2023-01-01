@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Linux常用命令</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 04, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 14 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 15 minutes.</p>
     
 <hr class="full-width">
 
@@ -737,12 +737,20 @@ div .highlight {
 <h4 id="mount">mount</h4>
 <ul>
 <li>用户不能直接通过设备文件访问存储设备，所有的存储设备（包括硬盘、光盘等）在使用之前必须首先被挂载到一个目录下</li>
-<li><code>mount /dev/cdrom /mnt/cdrom/</code>: 挂载光盘</li>
-<li><code>-t</code>: 指明设备所使用的文件系统类型</li>
-<li><code>-r</code>: 以只读模式挂载设备</li>
-<li><code>-w</code>: 可读写模式挂载设备</li>
+<li><code>-t</code>: 指明设备所使用的文件系统类型，会自动选择正确的类型</li>
+<li><code>-o</code>: 设备或档案的挂载方式，常用参数:
+<ul>
+<li><code>loop</code>: 把一个文件挂载到目录</li>
+<li><code>-ro</code>: 只读模式挂载设备</li>
+<li><code>-rw</code>: 读写模式挂载设备</li>
 </ul>
-<h4 id="mv">mv</h4>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 挂载光驱</span>
+</span></span><span style="display:flex;"><span>mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom/
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 挂载光盘镜像文件</span>
+</span></span><span style="display:flex;"><span>mount -o loop /root/CentOS.iso /mnt/centos
+</span></span></code></pre></div><h4 id="mv">mv</h4>
 <ul>
 <li><code>-i</code>: 目标目录有同名文件时提示是否覆盖</li>
 <li><code>-b</code>: 在目标目录的同名文件的文件名后加<code>~</code></li>
