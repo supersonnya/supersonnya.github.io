@@ -8,6 +8,15 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://supersonnya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Windows WSL</title>
+      <link>https://supersonnya.github.io/operation/windows/windows-wsl/</link>
+      <pubDate>Tue, 03 Jan 2023 17:27:07 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/windows/windows-wsl/</guid>
+      <description>WSL磁盘迁移 ## 查看wsl状态为Stopped wsl -l -v ## 导出系统镜像 wsl --export Ubuntu V:\ubuntu.tar ## 注销linux系统 wsl --unregister Ubuntu22 ## 查看系统状态，确认是否注销成功 wsl -l -v ## 导入系统 wsl --import &amp;lt;导入后系统名称&amp;gt; &amp;lt;导入后系统盘路径&amp;gt; &amp;lt;系统包路径&amp;gt; --version 2 wsl --import Ubuntu22 V:\ V:\ubuntu.tar --version 2 ## 修改默认登录用户 ### Ubuntu-22.04=ubuntu2204.exe ubuntu22.exe config --default-user ubuntu22 </description>
+    </item>
+    
+    <item>
       <title>Database Redis</title>
       <link>https://supersonnya.github.io/operation/database/redis/database-redis/</link>
       <pubDate>Fri, 09 Dec 2022 16:43:38 +0800</pubDate>
@@ -310,7 +319,7 @@ FS: 输入字段分隔符，默认空白字符。 OFS: 输出字段分隔符，�
       <pubDate>Tue, 30 Aug 2022 09:25:24 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/storage/storage-netapp/</guid>
-      <description>netapp硬盘更换 sysconfig -r ## 查看数据重建进度和磁盘状态 disk show -v ## 坏盘状态为failed aggr status -s | -f ## 查看热备盘|坏盘 priv set advanced ## 进入维护模式 blink_on diskname ## 点亮磁盘黄灯 disk assign diskname ## 分配磁盘 disk unfail -s diskname ## 将磁盘转换为热备盘 disk zero spares ## 格式化热备盘 rdfile /etc/messages ## 出现reconstruction completed可以更换硬盘 常用巡检命令 environment status ## 查看环境信息 version ## 查看OS版本 sysconfig -v ## 查看系统信息(设备序列号 系统软、硬件信息等) sysconfig -a ## 查看系统信息详情 sysconfig –v ## 查看基本配置 sysconfig -av sysconfig -r ## 查看RAID信息(spare盘及故障硬盘会在这里显示) license ## 查看许可信息 cf status ## 查看HA状态 qtree status ## 显示qtree状态 vif status ## VIF所有端口是否正常 ifconfig -a ## 查看网络配置 disk show ## 查看磁盘分配信息 disk show -v ## 查看磁盘owner信息 aggr status ## 查看raid组信息 aggr status -r ## 查看raid组详情 vol status ## 查看卷状态 vol status -r ## 查看卷详情 lun show lun show -v ## 查看LUN信息 igroup show ## 查看igroup信息 df -Vh ## 查看卷空间 df -Ah ## 查看aggr空间 df –i ## 查看卷的inode使用情况 snap list ## 查看快照情况 fcp status ## 查看FCP服务是否开启 fcp show initiator ## 查看FCP连接 fcp show adapter ## 查看FC端口 igroup show ## 查看map情况 igroup show -v ## 查看map详情 lun show -m ## 查看lun的map情况 sysstat -x 2 ## 查看系统当前性能信息 rdfile /etc/messages ## 查看系统日志信息 system health status show storage show disk environment status sysconfig -av sysconfig -r license cf status qtree status ifconfig -a disk show -r aggr status -r vol status -r df -Vh sysstat -x 2 rdfile /etc/messages Cluster Failover 双机双活配置，当一台机器发生故障，另一台可完全接管坏机的工作。 cf status ## 检查cluster状态 cf enable | cf disable ## 开启|关闭cluster cf takeover ## 强制接管 partner ## 在接管模式下切换到partner管理界面 cf giveback ## 在接管模式下,将接管的功能服务返回给原节点 OceanStor9000 show task general task_name=data_scrub ## result=failed pause task task_id ## Error: Failed to suspend a task continue task task_id ## 重新启动即可 </description>
+      <description>netapp硬盘更换 sysconfig -r ## 查看数据重建进度和磁盘状态 disk show -v ## 坏盘状态为failed aggr status -s | -f ## 查看热备盘|坏盘 priv set advanced ## 进入维护模式 blink_on diskname ## 点亮磁盘黄灯 disk assign diskname ## 分配磁盘 disk unfail -s diskname ## 将磁盘转换为热备盘 disk zero spares ## 格式化热备盘 rdfile /etc/messages ## 出现reconstruction completed可以更换硬盘 常用巡检命令 system health status show environment status ## 查看环境信息 version ## 查看OS版本 sysconfig -v ## 查看系统信息(设备序列号 系统软、硬件信息等) sysconfig -a ## 查看系统信息详情 sysconfig –v ## 查看基本配置 sysconfig -av sysconfig -r ## 查看RAID信息(spare盘及故障硬盘会在这里显示) license ## 查看许可信息 cf status ## 查看HA状态 qtree status ## 显示qtree状态 vif status VIF ## VIF所有端口是否正常 ifconfig -a ## 查看网络配置 disk show ## 查看磁盘分配信息 disk show -v ## 查看磁盘owner信息 disk show -r storage show disk aggr status ## 查看raid组信息 aggr status -r ## 查看raid组详情 vol status ## 查看卷状态 vol status -r ## 查看卷详情 lun show lun show -v ## 查看LUN信息 lun show -m ## 查看lun的map情况 igroup show ## 查看igroup信息 df -Vh ## 查看卷空间 df -Ah ## 查看aggr空间 df –i ## 查看卷的inode使用情况 snap list ## 查看快照情况 fcp status ## 查看FCP服务是否开启 fcp show initiator ## 查看FCP连接 fcp show adapter ## 查看FC端口 igroup show ## 查看map情况 igroup show -v ## 查看map详情 lun show -m ## 查看lun的map情况 sysstat -x 2 ## 查看系统当前性能信息 rdfile /etc/messages ## 查看系统日志信息 cluster show ## 集群状态检查 cluster statistics show ## 集群统计状态检查 node show ## 查看节点信息 system license show ## 查看序列号 system health subsystem show ## 查看子系统健康状态 metrocluster show ## 查看MCC集群信息状态及节点信息状态 system controller show ## 查看控制器状态 storage disk show -broken ## 查看故障硬盘 storage disk show -spare ## 查看spare硬盘 storage bridge show ## 查看SAS桥故障 storage switch show ## 查看光纤交换机故障 storage failover show ## 查看failover状态 event log show -severity critical ## 查看严重告警日志及错误告警日志 vol show -aggregate aggr_data_A1 ## 查看某个聚合下的Volume状态信息 run -node cluster1-01 ## 进入某一节点 vol status -s ## 节点下查看spare disks vol status -f ## 节点下查看fail disk disk show -n ## 显示没有ownership（归属权）的硬盘 disk assign all ## 分配硬盘的归属(硬盘更换常用） storage show disk -p ## 查看所有硬盘位置信息 disk show hostname ## 主机磁盘信息 storage show disk hostname ## 磁盘存储信息 Cluster Failover 双机双活配置，当一台机器发生故障，另一台可完全接管坏机的工作。 cf status ## 检查cluster状态 cf enable | cf disable ## 开启|关闭cluster cf takeover ## 强制接管 partner ## 在接管模式下切换到partner管理界面 cf giveback ## 在接管模式下,将接管的功能服务返回给原节点 OceanStor9000 show task general task_name=data_scrub ## result=failed pause task task_id ## Error: Failed to suspend a task continue task task_id ## 重新启动即可 </description>
     </item>
     
     <item>
@@ -750,7 +759,7 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools/tools-perferapps/</guid>
-      <description>Windows应用 eDiary FreePDF SQLiteStudio Scoop NVM EV录屏 Notable PotPlayer Wing FTP Server MobaXterm ToDesk 向日葵 Snipaste Quicklook Mouseinc Ultraliso Fiddler Android应用 酷安 阅读 Via IPad应用 Alook </description>
+      <description>Windows应用 eDiary AppFlowy FreePDF SQLiteStudio Scoop NVM EV录屏 Notable PotPlayer Wing FTP Server MobaXterm ToDesk 向日葵 Snipaste Quicklook Mouseinc Ultraliso Fiddler Android应用 酷安 阅读 Via IPad应用 Alook </description>
     </item>
     
     <item>
@@ -759,31 +768,7 @@ Or, being hated, don&amp;rsquo;t give way to hating, 或遭人憎恨却不以恶
       <pubDate>Mon, 20 Jul 2020 17:03:39 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/records/tools/tools-bookmark/</guid>
-      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips Dailywritingtips ITReferences 编程宝库
-运维派
-Linux公社
-CentOS中文站
-PyeCharts
-Zabbix
-Linux命令行大全
-Golang
-Packages For Linux
-伯乐在线
-前端导航
-Javascript教程
-EnjoyCSS
-Web开发技术
-CanIUse
-Linux工具快速教程
-Linux常用50命令
-Linux运维
-鸟哥的Linux私房菜
-计算机教育中缺失的一课
-程序员导航
-SaltTiger
-FreeCodeCamp
-Learn X in Y Minutes: Scenic Programming Language Tours
-OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote m3u8在线播放器 Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Excel函数大全 Image to Text 即时工具 一份爱小工具 100加减运算生成器 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo PixelSquid SoftwareTools GLaDOS 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 虫部落 TG搜索 学吧导航 国外网址导航 乌鸦搜 数字生活指南 淘链客 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 豌豆PRO MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 好讀 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 教务系统 统一身份认证 </description>
+      <description>ForeignLanguages 英语学习导航 英语句子语法分析 法语角 English Level Up Tips 法语法国词典 ELLLO 雅思在线 Ebooks libres et gratuits Se former en liberté Dailysciencefiction Short Stories&amp;amp;Classic Literature 轻松背单词 英语音标输入 Dailywritingtips CrashCourse ITReferences 编程宝库 运维派 Linux公社 CentOS中文站 PyeCharts Zabbix Linux命令行大全 Golang Packages For Linux 伯乐在线 前端导航 Javascript教程 EnjoyCSS Web开发技术 CanIUse Linux工具快速教程 Linux常用50命令 Linux运维 鸟哥的Linux私房菜 计算机教育中缺失的一课 程序员导航 SaltTiger FreeCodeCamp Learn X in Y Minutes: Scenic Programming Language Tours OnlineTools 论文检测 在线识别 图形方格纸 在线工具 在线PDF转换 在线小工具 在线文本 开发工具箱 DAREBEE 中国图书分类 Office模板 天眼查 化简 Typing-Courses Privnote m3u8在线播放器 Zhelper V3 网址 文字倒序工具 手写生成器 对话生成器 在线LaTeX公式编辑 简历模板 Excel函数大全 Image to Text 即时工具 一份爱小工具 100加减运算生成器 Pics&amp;amp;Icons 夜空中国 Wallhaven 图片素材 Photopea 生成电子印章 Vectoricons Yeelogo Shopify SeekLogo PixelSquid SoftwareTools GLaDOS 小众软件 快吧软件 反码软件 MSDN 清华开源镜像 Essay and primary document GreasyFork 淼搜-安卓应用 苹果软件 Collections 思谷搜 虫部落 TG搜索 学吧导航 国外网址导航 乌鸦搜 数字生活指南 淘链客 Films&amp;amp;Musics CupFox SouPian 人人电影网 影视网 影视森林 电影狗搜索 剧嗨 努努影院 蛋蛋赞影院 简影 奈飞中文电影站 奈飞影视 555电影 泥巴影院 国图公开课 OnestopRadio Onelist AnFuns动漫 优质资源库 刚刚影视 Listen 1 音乐播放器 豌豆PRO MaterialsBank 数字图书馆 Lore Free 电子书导航 书乐里 好讀 漢典 Just Laws 法律数据库 财税百科 Math Fun 真题库 出版物数据中心 库问搜索 iData OpenAccessLib 国家数字图书馆 全历史 教务系统 统一身份认证 </description>
     </item>
     
     <item>

@@ -6,7 +6,16 @@
     <description>Recent content in windows on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:07 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 17:27:07 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows WSL</title>
+      <link>https://supersonnya.github.io/operation/windows/windows-wsl/</link>
+      <pubDate>Tue, 03 Jan 2023 17:27:07 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/windows/windows-wsl/</guid>
+      <description>WSL磁盘迁移 ## 查看wsl状态为Stopped wsl -l -v ## 导出系统镜像 wsl --export Ubuntu V:\ubuntu.tar ## 注销linux系统 wsl --unregister Ubuntu22 ## 查看系统状态，确认是否注销成功 wsl -l -v ## 导入系统 wsl --import &amp;lt;导入后系统名称&amp;gt; &amp;lt;导入后系统盘路径&amp;gt; &amp;lt;系统包路径&amp;gt; --version 2 wsl --import Ubuntu22 V:\ V:\ubuntu.tar --version 2 ## 修改默认登录用户 ### Ubuntu-22.04=ubuntu2204.exe ubuntu22.exe config --default-user ubuntu22 </description>
+    </item>
+    
     <item>
       <title>Windows Ftpserver</title>
       <link>https://supersonnya.github.io/operation/windows/windows-ftpserver/</link>

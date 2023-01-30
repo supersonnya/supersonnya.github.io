@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="The notes website of Sonnya.">
+  <meta name="description" property="og:description" content="Windows系统使用WSL">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -63,7 +63,7 @@
   
    
 </head>
-<body class="records">
+<body class="operation">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -101,7 +101,9 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/operation">Operation</a></li>
                 
                 
                 
@@ -121,9 +123,7 @@
                 
                 
                 
-                <li class="uk-active">
-                    <a style="font-size: 18px; text-transform:none"
-                        href="/records">Records</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/records">Records</a></li>
                 
                 
                 
@@ -220,7 +220,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
             
             
             
@@ -240,7 +240,7 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/records">Records</a></li>
+            <li><a style="font-size: 18px" href="/records">Records</a></li>
             
             
             
@@ -533,40 +533,30 @@ div .highlight {
 
 <section>
   <div class="uk-container uk-margin-medium-bottom">
-    <h1 class="uk-text-center uk-heading-small">常用应用工具</h1>
+    <h1 class="uk-text-center uk-heading-small">Windows WSL</h1>
     
-    <p class="uk-text-center uk-text-muted">Jul 20, 2020</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 0 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Jan 03, 2023</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 1 minutes.</p>
     
 <hr class="full-width">
 
 <div class="content">
-  <h3 id="windows应用">Windows应用</h3>
-<h4 id="ediary">eDiary</h4>
-<h4 id="appflowy">AppFlowy</h4>
-<h4 id="freepdf">FreePDF</h4>
-<h4 id="sqlitestudio">SQLiteStudio</h4>
-<h4 id="scoop">Scoop</h4>
-<h4 id="nvm">NVM</h4>
-<h4 id="ev录屏">EV录屏</h4>
-<h4 id="notable">Notable</h4>
-<h4 id="potplayer">PotPlayer</h4>
-<h4 id="wing-ftp-server">Wing FTP Server</h4>
-<h4 id="mobaxterm">MobaXterm</h4>
-<h4 id="todesk">ToDesk</h4>
-<h4 id="向日葵">向日葵</h4>
-<h4 id="snipaste">Snipaste</h4>
-<h4 id="quicklook">Quicklook</h4>
-<h4 id="mouseinc">Mouseinc</h4>
-<h4 id="ultraliso">Ultraliso</h4>
-<h4 id="fiddler">Fiddler</h4>
-<h3 id="android应用">Android应用</h3>
-<h4 id="酷安">酷安</h4>
-<h4 id="阅读">阅读</h4>
-<h4 id="via">Via</h4>
-<h3 id="ipad应用">IPad应用</h3>
-<h4 id="alook">Alook</h4>
-
+  <h3 id="wsl磁盘迁移">WSL磁盘迁移</h3>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看wsl状态为Stopped</span>
+</span></span><span style="display:flex;"><span>wsl -l -v
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 导出系统镜像</span>
+</span></span><span style="display:flex;"><span>wsl --export Ubuntu V:<span style="color:#ed9d13">\u</span>buntu.tar
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 注销linux系统</span>
+</span></span><span style="display:flex;"><span>wsl --unregister Ubuntu22
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 查看系统状态，确认是否注销成功</span>
+</span></span><span style="display:flex;"><span>wsl -l -v
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 导入系统</span>
+</span></span><span style="display:flex;"><span>wsl --import &lt;导入后系统名称&gt; &lt;导入后系统盘路径&gt; &lt;系统包路径&gt; --version <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span>wsl --import Ubuntu22 V:<span style="color:#ed9d13">\ </span>V:<span style="color:#ed9d13">\u</span>buntu.tar --version <span style="color:#3677a9">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">## 修改默认登录用户</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">### Ubuntu-22.04=ubuntu2204.exe</span>
+</span></span><span style="display:flex;"><span>ubuntu22.exe config --default-user ubuntu22
+</span></span></code></pre></div>
 </div>
 </div>
 </div>

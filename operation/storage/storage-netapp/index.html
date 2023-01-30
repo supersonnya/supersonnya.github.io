@@ -536,7 +536,7 @@ div .highlight {
     <h1 class="uk-text-center uk-heading-small">Netapp存储</h1>
     
     <p class="uk-text-center uk-text-muted">Aug 30, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 3 minutes.</p>
+    <p class="uk-text-center uk-text-muted">Reading time: 5 minutes.</p>
     
 <hr class="full-width">
 
@@ -552,7 +552,8 @@ div .highlight {
 </span></span><span style="display:flex;"><span>disk zero spares <span style="color:#999;font-style:italic">## 格式化热备盘</span>
 </span></span><span style="display:flex;"><span>rdfile /etc/messages <span style="color:#999;font-style:italic">## 出现reconstruction completed可以更换硬盘</span>
 </span></span></code></pre></div><h3 id="常用巡检命令">常用巡检命令</h3>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>environment status <span style="color:#999;font-style:italic">## 查看环境信息</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>system health status show
+</span></span><span style="display:flex;"><span>environment status <span style="color:#999;font-style:italic">## 查看环境信息</span>
 </span></span><span style="display:flex;"><span>version <span style="color:#999;font-style:italic">## 查看OS版本</span>
 </span></span><span style="display:flex;"><span>sysconfig -v <span style="color:#999;font-style:italic">## 查看系统信息(设备序列号 系统软、硬件信息等)</span>
 </span></span><span style="display:flex;"><span>sysconfig -a <span style="color:#999;font-style:italic">## 查看系统信息详情</span>
@@ -562,16 +563,19 @@ div .highlight {
 </span></span><span style="display:flex;"><span>license <span style="color:#999;font-style:italic">## 查看许可信息</span>
 </span></span><span style="display:flex;"><span>cf status <span style="color:#999;font-style:italic">## 查看HA状态</span>
 </span></span><span style="display:flex;"><span>qtree status <span style="color:#999;font-style:italic">## 显示qtree状态</span>
-</span></span><span style="display:flex;"><span>vif status <span style="color:#999;font-style:italic">## VIF所有端口是否正常</span>
+</span></span><span style="display:flex;"><span>vif status VIF <span style="color:#999;font-style:italic">## VIF所有端口是否正常</span>
 </span></span><span style="display:flex;"><span>ifconfig -a <span style="color:#999;font-style:italic">## 查看网络配置</span>
 </span></span><span style="display:flex;"><span>disk show <span style="color:#999;font-style:italic">## 查看磁盘分配信息</span>
 </span></span><span style="display:flex;"><span>disk show -v <span style="color:#999;font-style:italic">## 查看磁盘owner信息</span>
+</span></span><span style="display:flex;"><span>disk show -r
+</span></span><span style="display:flex;"><span>storage show disk
 </span></span><span style="display:flex;"><span>aggr status <span style="color:#999;font-style:italic">## 查看raid组信息</span>
 </span></span><span style="display:flex;"><span>aggr status -r <span style="color:#999;font-style:italic">## 查看raid组详情</span>
 </span></span><span style="display:flex;"><span>vol status <span style="color:#999;font-style:italic">## 查看卷状态</span>
 </span></span><span style="display:flex;"><span>vol status -r <span style="color:#999;font-style:italic">## 查看卷详情</span>
 </span></span><span style="display:flex;"><span>lun show
 </span></span><span style="display:flex;"><span>lun show -v <span style="color:#999;font-style:italic">## 查看LUN信息</span>
+</span></span><span style="display:flex;"><span>lun show -m <span style="color:#999;font-style:italic">## 查看lun的map情况</span>
 </span></span><span style="display:flex;"><span>igroup show <span style="color:#999;font-style:italic">## 查看igroup信息</span>
 </span></span><span style="display:flex;"><span>df -Vh <span style="color:#999;font-style:italic">## 查看卷空间</span>
 </span></span><span style="display:flex;"><span>df -Ah <span style="color:#999;font-style:italic">## 查看aggr空间</span>
@@ -586,21 +590,29 @@ div .highlight {
 </span></span><span style="display:flex;"><span>sysstat -x <span style="color:#3677a9">2</span> <span style="color:#999;font-style:italic">## 查看系统当前性能信息</span>
 </span></span><span style="display:flex;"><span>rdfile /etc/messages <span style="color:#999;font-style:italic">## 查看系统日志信息</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>system health status show
-</span></span><span style="display:flex;"><span>storage show disk
-</span></span><span style="display:flex;"><span>environment status
-</span></span><span style="display:flex;"><span>sysconfig -av
-</span></span><span style="display:flex;"><span>sysconfig -r
-</span></span><span style="display:flex;"><span>license
-</span></span><span style="display:flex;"><span>cf status
-</span></span><span style="display:flex;"><span>qtree status
-</span></span><span style="display:flex;"><span>ifconfig -a
-</span></span><span style="display:flex;"><span>disk show -r
-</span></span><span style="display:flex;"><span>aggr status -r
-</span></span><span style="display:flex;"><span>vol status -r
-</span></span><span style="display:flex;"><span>df -Vh
-</span></span><span style="display:flex;"><span>sysstat -x <span style="color:#3677a9">2</span>
-</span></span><span style="display:flex;"><span>rdfile /etc/messages
+</span></span><span style="display:flex;"><span>cluster show <span style="color:#999;font-style:italic">## 集群状态检查</span>
+</span></span><span style="display:flex;"><span>cluster statistics show <span style="color:#999;font-style:italic">## 集群统计状态检查</span>
+</span></span><span style="display:flex;"><span>node show <span style="color:#999;font-style:italic">## 查看节点信息</span>
+</span></span><span style="display:flex;"><span>system license show <span style="color:#999;font-style:italic">## 查看序列号</span>
+</span></span><span style="display:flex;"><span>system health subsystem show <span style="color:#999;font-style:italic">## 查看子系统健康状态</span>
+</span></span><span style="display:flex;"><span>metrocluster show <span style="color:#999;font-style:italic">## 查看MCC集群信息状态及节点信息状态</span>
+</span></span><span style="display:flex;"><span>system controller show <span style="color:#999;font-style:italic">## 查看控制器状态</span>
+</span></span><span style="display:flex;"><span>storage disk show -broken <span style="color:#999;font-style:italic">## 查看故障硬盘</span>
+</span></span><span style="display:flex;"><span>storage disk show -spare <span style="color:#999;font-style:italic">## 查看spare硬盘</span>
+</span></span><span style="display:flex;"><span>storage bridge show <span style="color:#999;font-style:italic">## 查看SAS桥故障</span>
+</span></span><span style="display:flex;"><span>storage switch show <span style="color:#999;font-style:italic">## 查看光纤交换机故障</span>
+</span></span><span style="display:flex;"><span>storage failover show <span style="color:#999;font-style:italic">## 查看failover状态</span>
+</span></span><span style="display:flex;"><span>event log show -severity critical <span style="color:#999;font-style:italic">## 查看严重告警日志及错误告警日志</span>
+</span></span><span style="display:flex;"><span>vol show -aggregate aggr_data_A1 <span style="color:#999;font-style:italic">## 查看某个聚合下的Volume状态信息</span>
+</span></span><span style="display:flex;"><span>run -node cluster1-01 <span style="color:#999;font-style:italic">## 进入某一节点</span>
+</span></span><span style="display:flex;"><span>vol status -s <span style="color:#999;font-style:italic">## 节点下查看spare disks</span>
+</span></span><span style="display:flex;"><span>vol status -f <span style="color:#999;font-style:italic">## 节点下查看fail disk</span>
+</span></span><span style="display:flex;"><span>disk show -n <span style="color:#999;font-style:italic">## 显示没有ownership（归属权）的硬盘</span>
+</span></span><span style="display:flex;"><span>disk assign all <span style="color:#999;font-style:italic">## 分配硬盘的归属(硬盘更换常用）</span>
+</span></span><span style="display:flex;"><span>storage show disk -p <span style="color:#999;font-style:italic">## 查看所有硬盘位置信息</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>disk show hostname <span style="color:#999;font-style:italic">## 主机磁盘信息</span>
+</span></span><span style="display:flex;"><span>storage show disk hostname <span style="color:#999;font-style:italic">## 磁盘存储信息</span>
 </span></span></code></pre></div><h3 id="cluster-failover">Cluster Failover</h3>
 <ul>
 <li>双机双活配置，当一台机器发生故障，另一台可完全接管坏机的工作。</li>

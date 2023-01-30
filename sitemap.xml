@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://supersonnya.github.io/categories/</loc>
-    <lastmod>2022-12-09T16:43:38+08:00</lastmod>
+    <lastmod>2023-01-03T17:27:07+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/categories/windows/</loc>
+    <lastmod>2023-01-03T17:27:07+08:00</lastmod>
+  </url><url>
+    <loc>https://supersonnya.github.io/operation/windows/windows-wsl/</loc>
+    <lastmod>2023-01-03T17:27:07+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/categories/database/</loc>
     <lastmod>2022-12-09T16:43:38+08:00</lastmod>
@@ -91,9 +97,6 @@
   </url><url>
     <loc>https://supersonnya.github.io/moments/2022102601/</loc>
     <lastmod>2022-10-26T10:53:08+08:00</lastmod>
-  </url><url>
-    <loc>https://supersonnya.github.io/categories/windows/</loc>
-    <lastmod>2022-10-26T10:50:07+08:00</lastmod>
   </url><url>
     <loc>https://supersonnya.github.io/operation/windows/windows-ftpserver/</loc>
     <lastmod>2022-10-26T10:50:07+08:00</lastmod>
