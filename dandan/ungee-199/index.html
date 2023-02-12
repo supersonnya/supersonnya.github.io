@@ -19,7 +19,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" property="og:description" content="EMC CX系列存储">
+  <meta name="description" property="og:description" content="The notes website of Sonnya.">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="SuperSonnya">
   <meta name="generator" content="Hugo 0.101.0" />
@@ -63,7 +63,7 @@
   
    
 </head>
-<body class="operation">
+<body class="dandan">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -101,9 +101,7 @@
                 
                 
                 
-                <li class="uk-active">
-                    <a style="font-size: 18px; text-transform:none"
-                        href="/operation">Operation</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="/operation">Operation</a></li>
                 
                 
                 
@@ -143,7 +141,9 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/dandan">Jessica</a></li>
+                <li class="uk-active">
+                    <a style="font-size: 18px; text-transform:none"
+                        href="/dandan">Jessica</a></li>
                 
                 
                 
@@ -220,7 +220,7 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/operation">Operation</a></li>
+            <li><a style="font-size: 18px" href="/operation">Operation</a></li>
             
             
             
@@ -260,7 +260,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/dandan">Jessica</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/dandan">Jessica</a></li>
             
             
             
@@ -300,282 +300,77 @@
 
 
 
-
-<style>
-    :root {
-        --title-color: #8064a9;
-        --text-color: #444444;
-        --light-text-color: #666666;
-        --lighter-text-color: #888888;
-        --link-color: #2aa899;
-        --code-color: #745fb5;
-        --border-quote: rgba(116, 95, 181, 0.2);
-        --border-quote-grey: #c8c8c8;
-        --border: #e7e7e7;
-        --link-bottom: #bbb;
-        --shadow: 3px 3px 10px var(--shadow-color);
-        --inline-code-bg: #f4f2f9;
-        --header-weight: normal;
-        --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --title-font: "EB Garamond", "Source Sans Pro", serif;
-        --monospace: Courier, Monospace !important;
-    }
-
-    html {
-        font-size: 16px;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-rendering: optimizelegibility;
-        -webkit-font-smoothing: initial;
-    }
-
-    body {
-        color: var(--text-color);
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.6;
-        letter-spacing: 0;
-        overflow-x: hidden;
-    }
-
-     
-
-    a {
-        color: var(--link-color);
-        text-decoration: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        position: relative;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        font-weight: var(--header-weight);
-        line-height: 1.3;
-        cursor: text;
-        color: var(--title-color) !important;
-        font-family: var(--title-font);
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        line-height: 1.5;
-    }
-
-    h1:after {
-        content: "";
-        display: block;
-        margin: 0.2rem auto 0;
-        width: 6rem;
-        height: 2px;
-        border-bottom: 2px solid var(--title-color);
-    }
-
-    h3 {
-        padding-left: 0.4em;
-        border-left: 0.4em solid var(--title-color);
-        border-bottom: 1px solid var(--title-color);
-    }
-
-    h1 tt,
-    h1 code {
-        font-size: inherit;
-    }
-    h2 tt,
-    h2 code {
-        font-size: inherit;
-    }
-    h3 tt,
-    h3 code {
-        font-size: inherit;
-    }
-    h4 tt,
-    h4 code {
-        font-size: inherit;
-    }
-    h5 tt,
-    h5 code {
-        font-size: inherit;
-    }
-    h6 tt,
-    h6 code {
-        font-size: inherit;
-    }
-
-    p,
-    blockquote,
-    ul,
-    ol,
-    dl,
-    table {
-        margin: 0.8em 0;
-    }
-
-
-     
-
-    hr {
-        margin: 1.5em auto;
-        border-top: 1px solid var(--border);
-    }
-
-
-     
-
-    li>ol,
-    li>ul {
-        margin: 0 0;
-    }
-
-    li p.first {
-        display: inline-block;
-    }
-
-    ul,
-    ol {
-        padding-left: 2rem;
-    }
-
-    ul:first-child,
-    ol:first-child {
-        margin-top: 0;
-    }
-
-    ul:last-child,
-    ol:last-child {
-        margin-bottom: 0;
-    }
-
-
-     
-
-    blockquote {
-        border-left: 0.3rem solid var(--border-quote);
-        padding-left: 1em;
-        font-family: var(--base-font);
-    }
-
-
-     
-
-    table {
-        margin-bottom: 1.25rem;
-    }
-
-    table th,
-    table td {
-        padding: 8px;
-        line-height: 1.25rem;
-        vertical-align: middle;
-        border: 1px solid #ddd;
-    }
-
-    table th {
-        font-weight: bold;
-    }
-
-    table thead th {
-        vertical-align: middle;
-    }
-
-    table tr:nth-child(2n),
-    thead {
-        background-color: #fcfcfc;
-    }
-
-    code,
-    tt {
-        padding: 0px 0px;
-        font-family: var(--monospace);
-        font-size: 0.9rem;
-        color: var(--code-color) !important;
-        background-color: var(--inline-code-bg);
-        margin: 0 2px;
-    }
-
-    .uk-container {
-        max-width: 900px;
-    }
-
-    pre {
-        position: relative;
-        padding: 20px 10px 0px 10px;
-        margin-bottom: 0px;
-    }
-
-    .post-content pre code {
-     font-family: Consolas;
- }
-
- pre::after {
-    display: block;
-    content: " ";
-    position: absolute;
-    border-radius: 50%;
-    background: #ff5f56;
-    width: 12px;
-    height: 12px;
-    top: 0;
-    left: 12px;
-    margin-top: 12px;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
-}
-div .highlight {
-	overflow: hidden;
-	border-radius: 20px !important;
-}
-</style>
-
-<section>
-  <div class="uk-container uk-margin-medium-bottom">
-    <h1 class="uk-text-center uk-heading-small">EMC CX存储</h1>
-    
-    <p class="uk-text-center uk-text-muted">Nov 09, 2022</p>
-    <p class="uk-text-center uk-text-muted">Reading time: 2 minutes.</p>
-    
-<hr class="full-width">
-
-<div class="content">
-  <h2 id="pn">PN</h2>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#40ffff">005048829</span>=<span style="color:#40ffff">005049541</span>=<span style="color:#40ffff">005049412PWR</span>=<span style="color:#3677a9">005048797</span>
-</span></span><span style="display:flex;"><span><span style="color:#40ffff">005049031</span>=<span style="color:#3677a9">005048950</span>
-</span></span><span style="display:flex;"><span><span style="color:#40ffff">005048632</span>=<span style="color:#3677a9">005048807</span>
-</span></span><span style="display:flex;"><span><span style="color:#40ffff">005048808</span>=<span style="color:#3677a9">005048751</span>
-</span></span></code></pre></div><h2 id="注册hba卡">注册HBA卡</h2>
-<ol>
-<li>在<code>Hosts</code>标签页中打开右侧<code>Storage System Connectivity Status</code>，选中需要注册的<code>HBA</code>卡，点击<code>Edit</code>，选择归属主机，<code>Initiator Information</code>选择<code>CLARiiON Open</code>，<code>Failover Mode</code>选择<code>Active-Active mode(ALUA)-failovermode4</code>，点击确定。</li>
-<li>删除不需要的<code>HBA</code>配置项。</li>
-<li>分配存储组：选择<code>Storage</code>下的<code>Storage Groups</code>，选中需要分配的主机组，点击<code>Connect Hosts</code>，选中需要加入的主机，点击应用。</li>
-</ol>
-<h3 id="重启">重启</h3>
-<h4 id="出现以下情况的时候可能需要重启navisphere-management-server">出现以下情况的时候，可能需要重启<code>Navisphere Management Server</code></h4>
-<ul>
-<li>一些物理部件上出现错误图标(&ldquo;F&quot;标记)，但Navisphere CLI未报告错误</li>
-<li>主机上出现&quot;U&quot;标记，即使重启主机也无效</li>
-<li>Navisphere UI出现错误信息，但Navisphere CLI未报告或显示不一样的错误信息</li>
-<li>解除管理的SP仍拥有某些LUN</li>
-<li>Navisphere UI显示错误信息，但当点击的时候报告阵列工作正常</li>
-<li>Navisphere Manager未能识别新添加的DAE</li>
-<li>重启Navisphere Management Server (CIMOM)可能会解决上述问题，步骤如下：</li>
-</ul>
-<h4 id="重启步骤">重启步骤</h4>
-<ul>
-<li>需在两台SP上分别执行。</li>
-</ul>
-<pre tabindex="0"><code>http: //&lt;IP_address_of_SP&gt;/setup
-进入Navisphere User Interface (UI)
-点击Restart Management Server
-点击Yes并Submit
-</code></pre>
-</div>
-</div>
-</div>
+<section class="page-header blog-single-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          UNGEE - 管理类综合
+        </h2>
+        <div class="post-meta">
+          <ul>
+            <li>
+              <img src="https://supersonnya.github.io/images/avatar/author.png" alt="author-thumb" />
+            </li>
+            <li>
+              <h5>
+                Jessica
+              </h5>
+            </li>
+            <li>
+              February 6, 2023
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <article class="blog-single-post">
+          <h2 id="数学">数学</h2>
+<ul>
+<li>基础：老吕《要点精编》重做题；陈剑《高分指南》重知识全面</li>
+<li>提升：韩超数学101技，超哥各个板块进行的总结很好</li>
+<li>练题：《老吕母题800》。数学和逻辑刷题我首选的都是800练，这个对我来说难度适中，而且母题总结的很成体系，节约了很多时间</li>
+</ul>
+<h2 id="逻辑">逻辑</h2>
+<ul>
+<li>用书：老吕《<a href="https://www.zhihu.com/search?q=%E9%80%BB%E8%BE%91%E8%A6%81%E7%82%B9%E7%B2%BE%E7%BC%96&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">逻辑要点精编</a>》、王诚逻辑历年真题</li>
+<li><a href="https://www.zhihu.com/search?q=%E5%BD%A2%E5%BC%8F%E9%80%BB%E8%BE%91&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">形式逻辑</a>：老吕，比鑫全的好理解。我一开始听了<a href="https://www.zhihu.com/search?q=%E9%91%AB%E5%85%A8&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">鑫全</a>的形式逻辑感觉还是云里雾里的，老吕讲的一些公式和方法更容易上手。</li>
+<li>论证逻辑：形式逻辑老吕和其他，论证逻辑赵鑫全和其他</li>
+<li>刷题：《<a href="https://www.zhihu.com/search?q=%E6%AF%8D%E9%A2%98800%E7%BB%83&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">母题800练</a>》。主要是用来训练做题速度，前期错误率比较高错个八九道都是很正常的。</li>
+</ul>
+<h2 id="写作">写作</h2>
+<ul>
+<li>用书：老吕《写作母题33篇》、王诚《<a href="https://www.zhihu.com/search?q=%E9%AB%98%E5%88%86%E6%8C%87%E5%8D%97&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">高分指南</a>写作分册》</li>
+<li>老吕的《写作母题33篇》最后冲刺真的帮大忙，前期如果没有特别多的时间积累素材什么的，33篇里的范文模板可以拿来就用，就像<a href="https://www.zhihu.com/search?q=%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">排列组合</a>，写文章真的很快很快，最后分数也不低。去年是买老吕的写作33篇，就会拉到一个带背群里，视频课每天更新，群里也有助教老师带着一起背，我觉得这个挺好的。临考前一天抽了时间专门又过了一遍33篇的题，最后估分是48左右</li>
+<li>写作批改：我建议是找学长学姐或者跟自己目标院校水平差不多的研友批改，并且跟的最好是相同的老师。因为自己看自己的文章很容易看不出问题（反正我是这样的）前期可以用<a href="https://www.zhihu.com/search?q=%E7%94%B5%E8%84%91%E6%89%93%E5%AD%97&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2448643343%7D">电脑打字</a>，后期一定要自己用纸笔写，训练自己的速度。</li>
+</ul>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Themify -->
+<link rel="stylesheet" href="https://supersonnya.github.io/themify/themify.css">
+
+<!-- Critical CSS -->
+
+<link href="https://supersonnya.github.io/scss/critical.min.css" rel="stylesheet" />
+
+
+<link href="https://supersonnya.github.io/scss/non-critical.min.css" rel="stylesheet" />
+
+<script src="https://supersonnya.github.io/js/vendor.min.js"></script>
+
+<script src="https://supersonnya.github.io/js/script.min.js"></script>
 
     </div>
 <footer class="footer">

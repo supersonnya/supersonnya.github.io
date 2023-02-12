@@ -13,7 +13,7 @@
       <pubDate>Wed, 09 Nov 2022 16:54:02 +0800</pubDate>
       
       <guid>https://supersonnya.github.io/operation/storage/storage-emc_cx/</guid>
-      <description>PN 005048829=005049541=005049412PWR=005048797 005049031=005048950 005048632=005048807 005048808=005048751 注册HBA卡 在Hosts标签页中打开右侧Storage System Connectivity Status，选中需要注册的HBA卡，点击Edit，选择归属主机，Initiator Information选择CLARiiON Open，Failover Mode选择Active-Active mode(ALUA)-failovermode4，点击确定。 删除不需要的HBA配置项。 分配存储组：选择Storage下的Storage Groups，选中需要分配的主机组，点击Connect Hosts，选中需要加入的主机，点击应用。 </description>
+      <description>PN 005048829=005049541=005049412PWR=005048797 005049031=005048950 005048632=005048807 005048808=005048751 注册HBA卡 在Hosts标签页中打开右侧Storage System Connectivity Status，选中需要注册的HBA卡，点击Edit，选择归属主机，Initiator Information选择CLARiiON Open，Failover Mode选择Active-Active mode(ALUA)-failovermode4，点击确定。 删除不需要的HBA配置项。 分配存储组：选择Storage下的Storage Groups，选中需要分配的主机组，点击Connect Hosts，选中需要加入的主机，点击应用。 重启 出现以下情况的时候，可能需要重启Navisphere Management Server 一些物理部件上出现错误图标(&amp;ldquo;F&amp;quot;标记)，但Navisphere CLI未报告错误 主机上出现&amp;quot;U&amp;quot;标记，即使重启主机也无效 Navisphere UI出现错误信息，但Navisphere CLI未报告或显示不一样的错误信息 解除管理的SP仍拥有某些LUN Navisphere UI显示错误信息，但当点击的时候报告阵列工作正常 Navisphere Manager未能识别新添加的DAE 重启Navisphere Management Server (CIMOM)可能会解决上述问题，步骤如下： 重启步骤 需在两台SP上分别执行。 http: //&amp;lt;IP_address_of_SP&amp;gt;/setup 进入Navisphere User Interface (UI) 点击Restart Management Server 点击Yes并Submit </description>
     </item>
     
     <item>
