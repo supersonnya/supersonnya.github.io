@@ -6,7 +6,16 @@
     <description>Recent content in database on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Dec 2022 16:43:38 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 14:10:02 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL高可用集群</title>
+      <link>https://supersonnya.github.io/operation/database/mysql/database-ha/</link>
+      <pubDate>Fri, 24 Feb 2023 14:10:02 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/database/mysql/database-ha/</guid>
+      <description>主从复制 故障自动切换后恢复主从复制 ## 主库执行 show master status\G ## 从库执行 stop slave; show master status\G reset master; reset slave all; change master to master_host=&amp;#39;&amp;#39;, master_port=, master_user=&amp;#39;&amp;#39;, master_password=&amp;#39;&amp;#39;, master_log_file=&amp;#39;&amp;#39;, master_log_pos=&amp;#39;&amp;#39;; start slave; show slave status\G </description>
+    </item>
+    
     <item>
       <title>Database Redis</title>
       <link>https://supersonnya.github.io/operation/database/redis/database-redis/</link>

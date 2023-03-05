@@ -6,7 +6,16 @@
     <description>Recent content in storage on Sonnya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Nov 2022 16:54:02 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/storage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 17:25:24 +0800</lastBuildDate><atom:link href="https://supersonnya.github.io/categories/storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM存储</title>
+      <link>https://supersonnya.github.io/operation/storage/storage-ibm/</link>
+      <pubDate>Wed, 22 Feb 2023 17:25:24 +0800</pubDate>
+      
+      <guid>https://supersonnya.github.io/operation/storage/storage-ibm/</guid>
+      <description>IBM V7000虚拟化 光纤交换机：将外部存储器与V7000端口划Zone。 外部存储器：添加V7000主机，配置主机端口，并映射卷空间给主机。 V7000：在外部存储器处扫描出映射的外部存储器。 </description>
+    </item>
+    
     <item>
       <title>EMC CX存储</title>
       <link>https://supersonnya.github.io/operation/storage/storage-emc_cx/</link>
